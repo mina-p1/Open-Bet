@@ -52,5 +52,6 @@ export default function OddsTable({ odds }) {
         </tbody>
       </table>
     </div>
+    
   );
 }
