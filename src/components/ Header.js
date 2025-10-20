@@ -23,9 +23,7 @@ function Header() {
           <Link className="btn btn-ghost" to="/liveodds">
             Live Odds
           </Link>
-          <Link className="btn btn-ghost" to="/Arbitrage">
-            Arbitrage Bets
-          </Link>
+          
         </div>
       </nav>
     </header>
