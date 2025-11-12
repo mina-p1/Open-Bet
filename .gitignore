@@ -1,0 +1,11 @@
+# Ignore the large database file
+src/backend/archive/nba.sqlite
+
+# Ignore the entire folder of large CSV files
+src/backend/archive/csv/
+
+# Ignore all node_modules folders (anywhere in the project)
+**/node_modules/
+
+# Ignore Python cache directories (anywhere in the project)
+**/__pycache__/
