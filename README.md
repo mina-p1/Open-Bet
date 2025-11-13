@@ -1,3 +1,15 @@
+#To run\
+Open terminal\
+Go to src/backend/archive/\
+then run python3 app.py\
+*make sure nba.sqlite and csv are in archive folder
+
+then open a new terminal and run npm start
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
