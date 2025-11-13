@@ -12,7 +12,7 @@ function LiveOddsPage() {
 
     useEffect(() => {
         // Fetch data from our Python backend
-        fetch('http://127.0.0.1:5000/api/live-nba-odds')
+        fetch('http://127.0.0.1:5050/api/live-nba-odds')
             .then(response => response.json())
             .then(data => {
                 if (data.error) {

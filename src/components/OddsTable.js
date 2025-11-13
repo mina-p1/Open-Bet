@@ -1,149 +1,375 @@
-import React from 'react';
+import React, { useState } from "react";
 
-// Helper function for format 
+// ---------- Helper functions -------------
+function formatAmerican(num, isHome, isSpread) {
+    if (num === undefined || num === null || num === "-") return "-";
+    const n = Number(num);
+    if (isNaN(n)) return num;
+    if (isSpread) return (n > 0 ? `+${n}` : `${n}`);
+    return n > 0 ? `+${n}` : `${n}`;
+}
+function formatOdds(num) {
+    if (num === undefined || num === null || num === "-") return "-";
+    const n = Number(num);
+    if (isNaN(n)) return num;
+    return n > 0 ? `+${n}` : `${n}`;
+}
 function formatTimestamp(isoString) {
+    if (!isoString) return '';
     const date = new Date(isoString);
     return date.toLocaleString('en-US', {
-        month: 'short',
-        day: 'numeric',
-        hour: 'numeric',
-        minute: '2-digit',
-        hour12: true
+        weekday: 'short', month: 'short', day: 'numeric',
+        hour: 'numeric', minute: '2-digit', hour12: true, timeZone: 'America/New_York'
     });
 }
+function getBookmaker(game, key) {
+    if (!game.bookmakers) return null;
+    return game.bookmakers.find(bk => bk.key === key);
+}
+function getMarket(book, marketKey) {
+    if (!book || !book.markets) return null;
+    return book.markets.find(mkt => mkt.key === marketKey);
+}
+function getOutcome(market, teamName) {
+    if (!market || !market.outcomes) return null;
+    return market.outcomes.find(o => o.name === teamName);
+}
+function getOutcomeTotals(market, type) {
+    if (!market || !market.outcomes) return null;
+    return market.outcomes.find(o => o.name === type);
+}
 
-function OddsTable({ gamesData }) {
+function getEasternToday() {
+    const now = new Date();
+    const dtf = new Intl.DateTimeFormat('en-US', {
+        timeZone: 'America/New_York',
+        year: 'numeric', month: '2-digit', day: '2-digit'
+    });
+    const [{ value: month },,{ value: day },,{ value: year }] = dtf.formatToParts(now);
+    return new Date(`${year}-${month}-${day}T00:00:00-05:00`);
+}
 
-    if (!gamesData || gamesData.length === 0) {
-        return <p>No games available.</p>;
+// -------- Bookmaker Dropdown ---------
+function BookmakerDropdown({ bookmakerList, current, onChange }) {
+    if (!bookmakerList.length) return null;
+    return (
+        <div style={{
+            position: "absolute", top: 24, right: 36, zIndex: 4
+        }}>
+            <select
+                value={current}
+                onChange={e => onChange(e.target.value)}
+                style={{
+                    background: "#152540",
+                    color: "#fff",
+                    border: "2px solid #2774cf",
+                    borderRadius: 9,
+                    fontWeight: 700,
+                    fontSize: 16,
+                    padding: "7px 15px 7px 9px",
+                    appearance: "none",
+                    minWidth: 130,
+                    boxShadow: "0 1px 7px #1d223133"
+                }}>
+                {bookmakerList.map(bk => (
+                    <option key={bk} value={bk}>
+                        {bk.toUpperCase()}
+                    </option>
+                ))}
+            </select>
+        </div>
+    );
+}
+
+// --------- DateBar uses ET "today"/navigation logic ----------
+function DateBar({ selectedDate, setSelectedDate }) {
+    function changeDate(days) {
+        const est = new Date(selectedDate);
+        est.setDate(est.getDate() + days);
+        setSelectedDate(est);
     }
-
-    // Helper to get outcome by team name or "Over"/"Under"
-    const getOutcome = (outcomes, name) => {
-        if (!outcomes || !Array.isArray(outcomes)) return { price: 'N/A', point: '' };
-        const outcome = outcomes.find(o => o.name === name);
-        return {
-            price: outcome ? outcome.price : 'N/A',
-            point: outcome ? outcome.point : ''
-        };
-    };
-    
-    
-    // To format euro odds to American ** dosent work yet
-    const formatNum = (num) => {
-        if (typeof num === 'number' && num > 0) {
-            return `+${num}`;
-        }
-        return num;
-    };
-
+    const estDtf = new Intl.DateTimeFormat('en-US', {
+        timeZone: 'America/New_York',
+        weekday: "short", month: "short", day: "numeric", year: "numeric"
+    });
+    const nowEst = getEasternToday();
+    const isToday =
+        selectedDate.getFullYear() === nowEst.getFullYear() &&
+        selectedDate.getMonth() === nowEst.getMonth() &&
+        selectedDate.getDate() === nowEst.getDate();
+    const label = estDtf.format(selectedDate);
 
     return (
-        <table className="odds-table" style={{ width: '100%', borderCollapse: 'collapse' }}>
-            <thead style={{ backgroundColor: '#1d232aff' }}>
+        <div style={{
+            display: "flex", alignItems: "center", justifyContent: "center",
+            marginTop: 0, marginBottom: 34
+        }}>
+            <button
+                onClick={() => changeDate(-1)}
+                style={{
+                    background: "none", border: "none", fontSize: 26, color: "#57BFFF",
+                    cursor: "pointer", padding: "0 22px 0 0", userSelect: "none"
+                }}
+                aria-label="Previous day"
+            >&#8592;</button>
+            <div style={{
+                fontWeight: 800,
+                letterSpacing: ".01em",
+                background: "#1d2231",
+                borderRadius: 14,
+                color: "#fff",
+                fontSize: "1.14em",
+                padding: "10px 38px",
+                minWidth: 260,
+                textAlign: "center",
+                boxShadow: "0 1px 8px #181a250a"
+            }}>
+                {isToday ? `Today, ${label}` : label}
+            </div>
+            <button
+                onClick={() => changeDate(1)}
+                style={{
+                    background: "none", border: "none", fontSize: 26, color: "#57BFFF",
+                    cursor: "pointer", padding: "0 0 0 22px", userSelect: "none"
+                }}
+                aria-label="Next day"
+            >&#8594;</button>
+        </div>
+    );
+}
+
+// -------- Odds Table Cards, OddsRow, Tile ---------
+function OddsTile({ value, label, sub, isHome, isSpread }) {
+    let mainValue = "-";
+    let oddsValue = "-";
+    if (label === "Spread") mainValue = formatAmerican(value, isHome, true);
+    else if (label === "Moneyline") mainValue = formatAmerican(value, isHome, false);
+    else mainValue = value !== undefined && value !== null ? value : "-";
+    if (sub !== undefined) oddsValue = formatOdds(sub);
+
+    return (
+        <div style={{
+            width: 98, height: 80,
+            background: "#070a0fff",
+            border: "2px solid #234283",
+            borderRadius: 11,
+            textAlign: "center",
+            boxSizing: "border-box",
+            margin: "0 auto",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center"
+        }}>
+            <span style={{
+                fontWeight: 650, color: "#60c0fd", fontSize: 15, marginBottom: 1, lineHeight: 1.1
+            }}>{label}</span>
+            <span style={{
+                fontWeight: 900, fontSize: 24, color: "#fff", lineHeight: 1.13
+            }}>{mainValue}</span>
+            {oddsValue !== "-" &&
+                <span style={{
+                    fontWeight: 900, fontSize: 17,
+                    color: "#3CB4FF", marginTop: 1, lineHeight: 1
+                }}>{oddsValue}</span>
+            }
+        </div>
+    );
+}
+function OddsRowAligned({ team, labelColor, spread, ml, total, totalLabel, isHome }) {
+    return (
+        <div style={{
+            display: "grid",
+            gridTemplateColumns: "1.7fr 1fr 1fr 1fr",
+            alignItems: "center",
+            gap: 12,
+            marginBottom: 9,
+            minHeight: 67,
+        }}>
+            <span style={{
+                fontWeight: 700, color: labelColor, fontSize: "1.16em", textAlign: "left", paddingLeft: 7
+            }}>{team}</span>
+            <OddsTile value={spread?.point ?? "-"} sub={spread?.price} label="Spread" isHome={isHome} isSpread />
+            <OddsTile value={ml?.price ?? "-"} label="Moneyline" isHome={isHome} />
+            <OddsTile value={total?.point ?? "-"} sub={total?.price} label={totalLabel} isHome={isHome} />
+        </div>
+    );
+}
+// -------------- Compare Table (Expand) -------------------
+function CompareTable({ game }) {
+    if (!game.bookmakers) return null;
+    return (
+        <table style={{
+            width: "99%", background: "#151e34", color: "#fff", borderRadius: 11,
+            margin: "0 auto 7px", fontSize: 15, borderCollapse: "collapse"
+        }}>
+            <thead>
                 <tr>
-                    <th style={{ border: '1px solid #ddd', padding: '8px' }}>Game</th>
-                    <th style={{ border: '1px solid #ddd', padding: '8px' }}>Time</th>
-                    <th style={{ border: '1px solid #ddd', padding: '8px' }}>Moneyline</th>
-                    <th style={{ border: '1px solid #ddd', padding: '8px' }}>Spread</th>
-                    <th style={{ border: '1px solid #ddd', padding: '8px' }}>Total (O/U)</th>
-                    <th style={{ border: '1px solid #ddd', padding: '8px', backgroundColor: '#1d232a' }}>Model Predction Value Identifier</th>
+                    <th style={{ color: "#57BFFF", padding: 7, textAlign: "center" }}>Bookmaker</th>
+                    <th style={{ color: "#73d0fd" }}>{game.away_team}</th>
+                    <th style={{ color: "#FFB085" }}>{game.home_team}</th>
                 </tr>
             </thead>
             <tbody>
-                {gamesData.map(game => {
-                    //Moneyline 
-                    const homeMoneyline = getOutcome(game.moneyline, game.home_team);
-                    const awayMoneyline = getOutcome(game.moneyline, game.away_team);
-
-                    // Spread 
-                    const homeSpread = getOutcome(game.spread, game.home_team);
-                    const awaySpread = getOutcome(game.spread, game.away_team);
-
-                    //Total 
-                    const overTotal = getOutcome(game.total, 'Over');
-                    const underTotal = getOutcome(game.total, 'Under');
-
-                    // Value Calculation Logic
-                    
-                    // Home Team 
-                    const homeSpreadPoint = parseFloat(homeSpread.point);
-                    const modelHomeSpread = parseFloat(game.model_spread.home_point);
-                    let homeValue = 'N/A';
-                    let homeValueColor = '#555'; 
-                    
-                    if (!isNaN(homeSpreadPoint) && !isNaN(modelHomeSpread)) {
-                        homeValue = modelHomeSpread - homeSpreadPoint;
-                        if (homeValue <= -1.0) homeValueColor = 'green';
-                        else if (homeValue >= 1.0) homeValueColor = 'red';
-                    }
-
-                    // Away Team 
-                    const awaySpreadPoint = parseFloat(awaySpread.point);
-                    const modelAwaySpread = parseFloat(game.model_spread.away_point);
-                    let awayValue = 'N/A';
-                    let awayValueColor = '#555';
-                    
-                    if (!isNaN(awaySpreadPoint) && !isNaN(modelAwaySpread)) {
-                        awayValue = modelAwaySpread - awaySpreadPoint;
-                        if (awayValue <= -1.0) awayValueColor = 'green';
-                        else if (awayValue >= 1.0) awayValueColor = 'red';
-                    }
-                    
-                  
-
+                {game.bookmakers.map(b => {
+                    const spread = getMarket(b, "spreads");
+                    const h2h = getMarket(b, "h2h");
+                    const totals = getMarket(b, "totals");
+                    const aSpread = getOutcome(spread, game.away_team);
+                    const hSpread = getOutcome(spread, game.home_team);
+                    const aML = getOutcome(h2h, game.away_team);
+                    const hML = getOutcome(h2h, game.home_team);
+                    const over = getOutcomeTotals(totals, "Over");
+                    const under = getOutcomeTotals(totals, "Under");
                     return (
-                        <tr key={game.id} style={{ borderBottom: '1px solid #ddd' }}>
-                            <td style={{ border: '1px solid #ddd', padding: '8px' }}>
-                                <strong>{game.away_team}</strong> @ <strong>{game.home_team}</strong>
+                        <tr key={b.key}>
+                            <td style={{ padding: 7, fontWeight: 700, textAlign: "center" }}>{b.title || b.key.toUpperCase()}</td>
+                            <td style={{ textAlign: "center", padding: 6 }}>
+                                Spread: {formatAmerican(aSpread?.point, false, true)} ({formatOdds(aSpread?.price)}) <br />
+                                ML: {formatAmerican(aML?.price, false, false)} <br />
+                                O: {over?.point || "-"} ({formatOdds(over?.price)})
                             </td>
-                            <td style={{ border: '1px solid #ddd', padding: '8px', fontSize: '0.9em' }}>
-                                {formatTimestamp(game.start_time)}
-                            </td>
-                            <td style={{ border: '1px solid #ddd', padding: '8px' }}>
-                                <div>{game.away_team}: {formatNum(awayMoneyline.price)}</div>
-                                <div>{game.home_team}: {formatNum(homeMoneyline.price)}</div>
-                            </td>
-                            <td style={{ border: '1px solid #ddd', padding: '8px' }}>
-                                <div>{game.away_team}: {formatNum(awaySpread.point)} ({formatNum(awaySpread.price)})</div>
-                                <div>{game.home_team}: {formatNum(homeSpread.point)} ({formatNum(homeSpread.price)})</div>
-                            </td>
-                            <td style={{ border: '1px solid #ddd', padding: '8px' }}>
-                                <div>Over: {formatNum(overTotal.point)} ({formatNum(overTotal.price)})</div>
-                                <div>Under: {formatNum(underTotal.point)} ({formatNum(underTotal.price)})</div>
-D"
-                            </td>
-                            
-                            {}
-                            <td style={{ border: '1px solid #ddd', padding: '8px', backgroundColor: '#1d232a', fontSize: '0.9em' }}>
-                                
-                                {}
-                                <div>
-                                    {game.away_team}: 
-                                    <span style={{ fontWeight: 'bold' }}> Model: {formatNum(modelAwaySpread)}</span>
-                                </div>
-                                <div>
-                                    <span style={{ color: awayValueColor, fontWeight: 'bold' }}>
-                                        Val: {awayValue !== 'N/A' ? awayValue.toFixed(1) : 'N/A'}
-                                    </span>
-                                </div>
-                                
-                                {}
-                                <div style={{marginTop: '8px'}}>
-                                    {game.home_team}: 
-                                    <span style={{ fontWeight: 'bold' }}> Model: {formatNum(modelHomeSpread)}</span>
-                                </div>
-                                <div>
-                                    <span style={{ color: homeValueColor, fontWeight: 'bold' }}>
-                                        Val: {homeValue !== 'N/A' ? homeValue.toFixed(1) : 'N/A'}
-                                    </span>
-                                </div>
+                            <td style={{ textAlign: "center", padding: 6 }}>
+                                Spread: {formatAmerican(hSpread?.point, true, true)} ({formatOdds(hSpread?.price)}) <br />
+                                ML: {formatAmerican(hML?.price, true, false)} <br />
+                                U: {under?.point || "-"} ({formatOdds(under?.price)})
                             </td>
                         </tr>
                     );
                 })}
             </tbody>
         </table>
+    );
+}
+function OddsCard({ game, bookmakerKey }) {
+    const [compareOpen, setCompareOpen] = useState(false);
+    const book = getBookmaker(game, bookmakerKey);
+    const mlMarket = getMarket(book, 'h2h');
+    const spreadMarket = getMarket(book, 'spreads');
+    const totalsMarket = getMarket(book, 'totals');
+    const awayMl = getOutcome(mlMarket, game.away_team);
+    const awaySpread = getOutcome(spreadMarket, game.away_team);
+    const homeMl = getOutcome(mlMarket, game.home_team);
+    const homeSpread = getOutcome(spreadMarket, game.home_team);
+    const totalOver = getOutcomeTotals(totalsMarket, "Over");
+    const totalUnder = getOutcomeTotals(totalsMarket, "Under");
+    return (
+        <div style={{
+            background: '#23293a',
+            borderRadius: 18,
+            color: '#fff',
+            padding: '1.3em 1.2em 1.45em 1.2em',
+            minWidth: 450,
+            maxWidth: 450,
+            width: "100%",
+            display: "flex",
+            flexDirection: "column",
+            boxShadow: "0 2px 16px #1d23366c"
+        }}>
+            <div style={{
+                fontWeight: 800, fontSize: '1.16em', marginBottom: 6, color: '#7EC6F7', textAlign: "left"
+            }}>
+                {game.away_team} @ {game.home_team}
+            </div>
+            <div style={{ marginBottom: 11, color: '#bbc8d3', fontSize: '1em' }}>
+                Tip-off: {formatTimestamp(game.start_time || game.commence_time || game.event_time || "")}
+            </div>
+            <div style={{ display: "flex", flexDirection: "column", gap: 4, width: "100%" }}>
+                <OddsRowAligned
+                    team={game.away_team}
+                    labelColor="#60c0fc"
+                    spread={awaySpread}
+                    ml={awayMl}
+                    total={totalOver}
+                    totalLabel="Over"
+                    isHome={false}
+                />
+                <OddsRowAligned
+                    team={game.home_team}
+                    labelColor="#FF8B64"
+                    spread={homeSpread}
+                    ml={homeMl}
+                    total={totalUnder}
+                    totalLabel="Under"
+                    isHome={true}
+                />
+            </div>
+            <button
+                style={{
+                    margin: "14px auto 0", padding: "7px 19px", borderRadius: 8, border: "none", background: "#378aff",
+                    color: "#fff", fontWeight: 600, fontSize: 15, cursor: "pointer"
+                }}
+                onClick={() => setCompareOpen((o) => !o)}
+            >
+                {compareOpen ? "Hide Comparison" : "Compare Bookmakers"}
+            </button>
+            {compareOpen &&
+                <div style={{ marginTop: 13 }}>
+                    <CompareTable game={game} />
+                </div>
+            }
+        </div>
+    );
+}
+
+// ============== MAIN ODDS TABLE ==============
+function OddsTable({ gamesData }) {
+    const [selectedDate, setSelectedDate] = useState(getEasternToday);
+    const [bookmakerKey, setBookmakerKey] = useState('fanduel');
+
+    // Create NY "YYYY-MM-DD" for filtering
+    const estIsoString = selectedDate.toLocaleDateString('en-US', { timeZone: 'America/New_York', year: 'numeric', month: '2-digit', day: '2-digit' });
+    const [estMonth, estDay, estYear] = estIsoString.split('/');
+    const estDateStr = `${estYear}-${estMonth.padStart(2, '0')}-${estDay.padStart(2, '0')}`;
+
+
+    const filteredGames = gamesData.filter(game => {
+        const tipoffIso = game.start_time || game.commence_time || game.event_time || "";
+        if (!tipoffIso) return false;
+        const gameDateObj = new Date(tipoffIso);
+        const gameDateEst = gameDateObj.toLocaleDateString('en-US', {
+            timeZone: 'America/New_York',
+            year: 'numeric', month: '2-digit', day: '2-digit'
+        });
+        const [gMonth, gDay, gYear] = gameDateEst.split('/');
+        const gameEstDateStr = `${gYear}-${gMonth.padStart(2, '0')}-${gDay.padStart(2, '0')}`;
+        return gameEstDateStr === estDateStr;
+    });
+
+    // List available bookmakers for the filtered games
+    const allBookmakerKeys = Array.from(
+        new Set(filteredGames.flatMap(g => g.bookmakers ? g.bookmakers.map(b => b.key) : []))
+    ).sort();
+
+    return (
+        <div style={{ position: 'relative' }}>
+            <BookmakerDropdown bookmakerList={allBookmakerKeys} current={bookmakerKey} onChange={setBookmakerKey} />
+            <DateBar selectedDate={selectedDate} setSelectedDate={setSelectedDate} />
+            {filteredGames.length === 0 ? (
+                <div style={{ color: "#99aacc", textAlign: "center", margin: "36px 0", fontSize: "1.1em" }}>
+                    No odds available for today's games.
+                </div>
+            ) : (
+                <div style={{
+                    display: 'grid',
+                    gridTemplateColumns: 'repeat(3, 1fr)',
+                    gap: '32px 38px',
+                    margin: '36px auto',
+                    maxWidth: 1340,
+                    width: "100%",
+                    justifyItems: "center",
+                    padding: "0 1vw"
+                }}>
+                    {filteredGames.map((game, idx) =>
+                        <OddsCard
+                            key={game.id || idx}
+                            game={game}
+                            bookmakerKey={bookmakerKey}
+                        />
+                    )}
+                </div>
+            )}
+        </div>
     );
 }
 

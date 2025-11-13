@@ -1,5 +1,3 @@
-
-
 import React, { useState, useEffect } from 'react';
 import Loader from '../components/Loader'; 
 
@@ -13,7 +11,7 @@ function HomePage() {
   // This useEffect fetches the historical data when the page loads
   useEffect(() => {
    
-    fetch('http://127.0.0.1:5000/api/historical-data')
+    fetch('http://127.0.0.1:5050/api/historical-data')
         .then(response => response.json())
         .then(data => {
             if (data.error) {
@@ -88,12 +86,7 @@ function HomePage() {
             />
             
             {}
-            <a
-              href={`/liveodds?date=${selectedDate}`}
-              className="btn btn-primary btn-wide"
-            >
-              View Odds
-            </a>
+            <a href={`/liveodds?date=${selectedDate}`} className="btn btn-primary btn-wide">View Odds</a>
           </div>
         </div>
       </section>
