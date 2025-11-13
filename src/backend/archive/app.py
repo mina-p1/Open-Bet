@@ -45,7 +45,7 @@ def get_historical_data():
 # --- LIVE NBA ODDS (The Odds API) ---
 @app.route('/api/live-nba-odds')
 def get_live_nba_odds():
-    API_KEY = '1f04e4ad7a4d6a25e084dd308753ce6d'
+    API_KEY = '39fc4ed3a7caf51b49d87d08ec90658a'
     THE_ODDS_API_URL = "https://api.the-odds-api.com/v4/sports/basketball_nba/odds"
     params = {
         "regions": "us,us2",
