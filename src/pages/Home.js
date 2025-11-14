@@ -1,103 +1,138 @@
 import React, { useState, useEffect } from 'react';
-import Loader from '../components/Loader'; 
+import Loader from '../components/Loader';
+
+function addDays(dateString, numDays) {
+  const d = new Date(dateString);
+  d.setDate(d.getDate() + numDays);
+  return d.toISOString().slice(0, 10);
+}
 
 function HomePage() {
-  const [selectedDate, setSelectedDate] = useState(new Date().toISOString().slice(0, 10));
-
+  const todayStr = new Date().toISOString().slice(0, 10);
+  const [selectedDate, setSelectedDate] = useState('');
   const [histGames, setHistGames] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  // This useEffect fetches the historical data when the page loads
   useEffect(() => {
-   
-    fetch('http://127.0.0.1:5050/api/historical-data')
-        .then(response => response.json())
-        .then(data => {
-            if (data.error) {
-                setError(data.error); // Show error from backend
-            } else {
-                setHistGames(data); 
-            }
-            setIsLoading(false);
-        })
-        .catch(error => {
-            console.error("Error fetching historical data:", error);
-            setError(error.message);
-            setIsLoading(false);
-        });
-  }, []); 
+    setIsLoading(true);
+    setError(null);
+    let url = 'http://127.0.0.1:5050/api/historical-data';
+    if (selectedDate) url += `?date=${selectedDate}`;
+    fetch(url)
+      .then(response => response.json())
+      .then(data => {
+        if (data.error) setError(data.error);
+        else setHistGames(data);
+        setIsLoading(false);
+      })
+      .catch(error => {
+        setError(error.message);
+        setIsLoading(false);
+      });
+  }, [selectedDate]);
 
-  // This function renders the  table 
   const renderHistoricalTable = () => {
     if (isLoading) return <Loader />;
-    if (error) return <p style={{ color: 'red' }}>Error: {error}</p>;
-    
+    if (error) return <p style={{ color: 'red', textAlign: 'center' }}>Error: {error}</p>;
+    if (!histGames.length)
+      return (
+        <div className="text-center text-gray-400 pb-8" style={{ textAlign: "center", color: "#bbb", fontSize: 16 }}>No games found for that date.</div>
+      );
     return (
-        <table style={{ width: '100%', borderCollapse: 'collapse', marginTop: '20px' }}>
-            <thead>
-                <tr>
-                    <th style={{ border: '1px solid black', padding: '8px' }}>Game ID</th>
-                    <th style={{ border: '1px solid black', padding: '8px' }}>Date</th>
-                    <th style={{ border: '1px solid black', padding: '8px' }}>Home Team</th>
-                    <th style={{ border: '1px solid black', padding: '8px' }}>Away Team</th>
-                    <th style={{ border: '1px solid black', padding: '8px' }}>Home Score</th>
-                    <th style={{ border: '1px solid black', padding: '8px' }}>Away Score</th>
-                    <th style={{ border: '1px solid black', padding: '8px' }}>Season</th>
-                </tr>
-            </thead>
-            <tbody>
-                {histGames.map(game => (
-                    
-                    <tr key={game.game_id}> 
-                        <td style={{ border: '1px solid black', padding: '8px' }}>{game.game_id}</td>
-                        <td style={{ border: '1px solid black', padding: '8px' }}>{game.game_date}</td>
-                        <td style={{ border: '1px solid black', padding: '8px' }}>{game.team_name_home}</td>
-                        <td style={{ border: '1px solid black', padding: '8px' }}>{game.team_name_away}</td>
-                        <td style={{ border: '1px solid black', padding: '8px' }}>{game.pts_home}</td>
-                        {}
-                        <td style={{ border: '1px solid black', padding: '8px' }}>{game.pts_away}</td>
-                        <td style={{ border: '1px solid black', padding: '8px' }}>{game.season_id}</td>
-                    </tr>
-                ))}
-            </tbody>
+      <div style={{ display: "flex", justifyContent: "center", marginTop: 18 }}>
+        <table style={{
+          borderCollapse: "collapse", minWidth: 600, background: "#181e2a", color: "#e5e7ef",
+          borderRadius: 13, boxShadow: "0 1px 6px #2223"
+        }}>
+          <thead>
+            <tr style={{ backgroundColor: "#21306e", color: "#64befa" }}>
+              <th style={{ padding: 10, fontWeight: '700', textAlign: "center" }}>Date</th>
+              <th style={{ padding: 10, fontWeight: '700', textAlign: "center" }}>Home</th>
+              <th style={{ padding: 10, fontWeight: '700', textAlign: "center" }}>Away</th>
+              <th style={{ padding: 10, fontWeight: '700', textAlign: "center" }}>Home Score</th>
+              <th style={{ padding: 10, fontWeight: '700', textAlign: "center" }}>Away Score</th>
+            </tr>
+          </thead>
+          <tbody>
+            {histGames.map(game => (
+              <tr key={game.game_id} style={{ borderBottom: "1px solid #262f45", textAlign: "center" }}>
+                <td style={{ padding: 10 }}>
+                  {new Date(game.game_date).toLocaleDateString("en-US", { year: "numeric", month: "short", day: "2-digit" })}
+                </td>
+                <td style={{ padding: 10, fontWeight: 600, color: "#8ee7f9" }}>{game.team_name_home}</td>
+                <td style={{ padding: 10, fontWeight: 600, color: "#FFC7A1" }}>{game.team_name_away}</td>
+                <td style={{ padding: 10, fontWeight: 800 }}>{game.pts_home}</td>
+                <td style={{ padding: 10, fontWeight: 800 }}>{game.pts_away}</td>
+              </tr>
+            ))}
+          </tbody>
         </table>
+      </div>
     );
   };
 
   return (
-   
-    <div className="container mx-auto py-10 px-4">
-      
-      {}
-      <section className="flex flex-col items-center justify-center py-16">
-        <div className="card w-full max-w-xl bg-base-100 shadow-xl">
+    <div className="container mx-auto py-10 px-4" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+      <section className="flex flex-col items-center justify-center py-10" style={{ width: "100%", maxWidth: 960 }}>
+        <div className="card w-full max-w-xl bg-base-100 shadow-xl" style={{ margin: "0 auto", textAlign: "center" }}>
           <div className="card-body items-center text-center">
-            <h1 className="card-title text-4xl text-primary mb-4">Welcome to OpenBet!</h1>
-            <p className="mb-6">
-              Discover basketball odds and compare lines. Select a date below to view the games and line values.
+            <h1 className="mt-2 mb-5" style={{
+              fontWeight: 900, fontSize: "2rem", color: "#77caff", 
+            }}>
+              Welcome to OpenBet!
+            </h1>
+            <h2 className="mt-2 mb-5" style={{
+              fontWeight: 800, fontSize: "1.55rem", color: "#6ecaff"
+            }}>
+              Historical Basketball Scores
+            </h2>
+            <p className="mb-6" style={{ color: "#c5e0f7" }}>
+              Discover basketball odds and compare lines. Use the calendar or arrows to view previous days.
             </p>
-            {}
-            <input
-              type="date"
-              value={selectedDate}
-              onChange={(e) => setSelectedDate(e.target.value)}
-              className="input input-bordered w-full max-w-xs mb-4"
-            />
-            
-            {}
-            <a href={`/liveodds?date=${selectedDate}`} className="btn btn-primary btn-wide">View Odds</a>
+            <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 10, margin: "16px 0 26px 0" }}>
+              <button
+                aria-label="Previous day"
+                onClick={() => setSelectedDate(selectedDate ? addDays(selectedDate, -1) : todayStr)}
+                style={{
+                  background: "#21306e", color: "#57bfff", border: "none", fontSize: 32,
+                  borderRadius: "50%", width: 42, height: 42, cursor: "pointer"
+                }}
+              >&larr;</button>
+              <input
+                type="date"
+                value={selectedDate}
+                max={todayStr}
+                onChange={e => setSelectedDate(e.target.value)}
+                className="input input-bordered w-full max-w-xs"
+                style={{
+                  textAlign: "center", fontSize: 18, borderRadius: 10, border: "1.5px solid #5377bf",
+                  background: "#171c2e", color: "#f8faff", boxShadow: "0 0 8px #14235515", padding: "8px 18px"
+                }}
+              />
+              <button
+                aria-label="Next day"
+                onClick={() => setSelectedDate(selectedDate ? addDays(selectedDate, 1) : todayStr)}
+                disabled={selectedDate >= todayStr}
+                style={{
+                  background: "#21306e", color: "#57bfff", border: "none", fontSize: 32,
+                  borderRadius: "50%", width: 42, height: 42, cursor: selectedDate >= todayStr ? "not-allowed" : "pointer",
+                  opacity: selectedDate >= todayStr ? 0.5 : 1
+                }}
+              >&rarr;</button>
+            </div>
+            <div style={{ textAlign: "center", marginTop: "40px" }}>
+            <a href={`/liveodds?date=${selectedDate || todayStr}`} className="btn btn-primary btn-wide" style={{ marginBottom: 20 }}>
+              View Live Odds
+            </a>
+          </div>
+
           </div>
         </div>
+        <div style={{ width: "100%", marginTop: 40 }}>
+          {renderHistoricalTable()}
+        </div>
       </section>
-
-      {}
-      <section className="mt-10">
-        <h2 className="text-xl font-bold text-center mb-4">PSPI Proof: Historical Data (2022-23)</h2>
-        {}
-        {renderHistoricalTable()}
-      </section>
-
     </div>
   );
 }

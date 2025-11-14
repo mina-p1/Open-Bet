@@ -1,4 +1,4 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify, request
 from flask_cors import CORS
 import sqlite3
 import requests
@@ -6,10 +6,8 @@ import requests
 app = Flask(__name__)
 CORS(app)
 
-
-# Helper for querying local SQLite (Kaggle dataset)
 def query_db(query, args=(), one=False):
-    db_path = 'nba.sqlite'     # This should be the path to your downloaded Kaggle dataset
+    db_path = 'nba.sqlite'
     conn = sqlite3.connect(db_path)
     conn.row_factory = sqlite3.Row
     cur = conn.cursor()
@@ -18,29 +16,35 @@ def query_db(query, args=(), one=False):
     conn.close()
     return (rv[0] if rv else None) if one else rv
 
-# --- HISTORICAL DATA (Kaggle, local SQLite) ---
 @app.route('/api/historical-data')
 def get_historical_data():
-    query = """
-    SELECT 
-        game_id, 
-        game_date,
-        team_name_home, 
-        team_name_away, 
-        pts_home, 
-        pts_away,
-        season_id
-    FROM game 
-    ORDER BY game_date DESC
-    LIMIT 20
-    """
+    # Get date param like "2023-06-12", or show most recent 20 games
+    game_date = request.args.get('date')
+    if game_date:
+        query = """
+        SELECT game_id, game_date, team_name_home, team_name_away, pts_home, pts_away, season_id
+        FROM game
+        WHERE DATE(game_date) = DATE(?)
+        ORDER BY game_date DESC
+        """
+        args = (game_date,)
+    else:
+        query = """
+        SELECT game_id, game_date, team_name_home, team_name_away, pts_home, pts_away, season_id
+        FROM game
+        ORDER BY game_date DESC
+        LIMIT 20
+        """
+        args = ()
     try:
-        games_from_db = query_db(query)
+        games_from_db = query_db(query, args)
         games_list = [dict(game) for game in games_from_db]
         return jsonify(games_list)
     except sqlite3.Error as e:
         print("Database error:", e)
         return jsonify({"error": "Database query failed"}), 500
+
+
 
 # --- LIVE NBA ODDS (The Odds API) ---
 @app.route('/api/live-nba-odds')
