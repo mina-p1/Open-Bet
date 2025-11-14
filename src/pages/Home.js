@@ -1,10 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import Loader from '../components/Loader';
 
-function addDays(dateString, numDays) {
-  const d = new Date(dateString);
-  d.setDate(d.getDate() + numDays);
-  return d.toISOString().slice(0, 10);
+// Helper to format YYYY-MM-DD as "Mon DD, YYYY"
+function prettyDate(dstr) {
+  // dstr is "YYYY-MM-DD"
+  const parts = dstr.split("-");
+  if (parts.length !== 3) return dstr;
+  // Use noon to avoid any timezone weirdness
+  const d = new Date(`${parts[0]}-${parts[1]}-${parts[2]}T12:00:00`);
+  return d.toLocaleDateString("en-US", { year: "numeric", month: "short", day: "2-digit" });
 }
 
 function HomePage() {
@@ -55,11 +59,9 @@ function HomePage() {
             </tr>
           </thead>
           <tbody>
-            {histGames.map(game => (
-              <tr key={game.game_id} style={{ borderBottom: "1px solid #262f45", textAlign: "center" }}>
-                <td style={{ padding: 10 }}>
-                  {new Date(game.game_date).toLocaleDateString("en-US", { year: "numeric", month: "short", day: "2-digit" })}
-                </td>
+            {histGames.map((game, i) => (
+              <tr key={game.game_date + game.team_name_home + i} style={{ borderBottom: "1px solid #262f45", textAlign: "center" }}>
+                <td style={{ padding: 10 }}>{prettyDate(game.game_date)}</td>
                 <td style={{ padding: 10, fontWeight: 600, color: "#8ee7f9" }}>{game.team_name_home}</td>
                 <td style={{ padding: 10, fontWeight: 600, color: "#FFC7A1" }}>{game.team_name_away}</td>
                 <td style={{ padding: 10, fontWeight: 800 }}>{game.pts_home}</td>
@@ -78,7 +80,7 @@ function HomePage() {
         <div className="card w-full max-w-xl bg-base-100 shadow-xl" style={{ margin: "0 auto", textAlign: "center" }}>
           <div className="card-body items-center text-center">
             <h1 className="mt-2 mb-5" style={{
-              fontWeight: 900, fontSize: "2rem", color: "#77caff", 
+              fontWeight: 900, fontSize: "2rem", color: "#77caff",
             }}>
               Welcome to OpenBet!
             </h1>
@@ -93,7 +95,9 @@ function HomePage() {
             <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 10, margin: "16px 0 26px 0" }}>
               <button
                 aria-label="Previous day"
-                onClick={() => setSelectedDate(selectedDate ? addDays(selectedDate, -1) : todayStr)}
+                onClick={() => setSelectedDate(selectedDate ? (
+                  new Date(new Date(selectedDate).setDate(new Date(selectedDate).getDate() - 1)).toISOString().slice(0, 10)
+                ) : todayStr)}
                 style={{
                   background: "#21306e", color: "#57bfff", border: "none", fontSize: 32,
                   borderRadius: "50%", width: 42, height: 42, cursor: "pointer"
@@ -112,7 +116,9 @@ function HomePage() {
               />
               <button
                 aria-label="Next day"
-                onClick={() => setSelectedDate(selectedDate ? addDays(selectedDate, 1) : todayStr)}
+                onClick={() => setSelectedDate(selectedDate ? (
+                  new Date(new Date(selectedDate).setDate(new Date(selectedDate).getDate() + 1)).toISOString().slice(0, 10)
+                ) : todayStr)}
                 disabled={selectedDate >= todayStr}
                 style={{
                   background: "#21306e", color: "#57bfff", border: "none", fontSize: 32,
@@ -122,11 +128,10 @@ function HomePage() {
               >&rarr;</button>
             </div>
             <div style={{ textAlign: "center", marginTop: "40px" }}>
-            <a href={`/liveodds?date=${selectedDate || todayStr}`} className="btn btn-primary btn-wide" style={{ marginBottom: 20 }}>
-              View Live Odds
-            </a>
-          </div>
-
+              <a href={`/liveodds?date=${selectedDate || todayStr}`} className="btn btn-primary btn-wide" style={{ marginBottom: 20 }}>
+                View Live Odds
+              </a>
+            </div>
           </div>
         </div>
         <div style={{ width: "100%", marginTop: 40 }}>

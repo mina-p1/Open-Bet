@@ -1,50 +1,49 @@
 from flask import Flask, jsonify, request
 from flask_cors import CORS
-import sqlite3
+import pandas as pd
+import os
 import requests
 
 app = Flask(__name__)
 CORS(app)
 
-def query_db(query, args=(), one=False):
-    db_path = 'nba.sqlite'
-    conn = sqlite3.connect(db_path)
-    conn.row_factory = sqlite3.Row
-    cur = conn.cursor()
-    cur.execute(query, args)
-    rv = cur.fetchall()
-    conn.close()
-    return (rv[0] if rv else None) if one else rv
+# Adjust if needed: here it expects Games.csv is in ./box_scores/
+CSV_PATH = os.path.join(os.path.dirname(__file__), "box_scores", "Games.csv")
 
 @app.route('/api/historical-data')
 def get_historical_data():
-    # Get date param like "2023-06-12", or show most recent 20 games
     game_date = request.args.get('date')
-    if game_date:
-        query = """
-        SELECT game_id, game_date, team_name_home, team_name_away, pts_home, pts_away, season_id
-        FROM game
-        WHERE DATE(game_date) = DATE(?)
-        ORDER BY game_date DESC
-        """
-        args = (game_date,)
-    else:
-        query = """
-        SELECT game_id, game_date, team_name_home, team_name_away, pts_home, pts_away, season_id
-        FROM game
-        ORDER BY game_date DESC
-        LIMIT 20
-        """
-        args = ()
     try:
-        games_from_db = query_db(query, args)
-        games_list = [dict(game) for game in games_from_db]
-        return jsonify(games_list)
-    except sqlite3.Error as e:
-        print("Database error:", e)
-        return jsonify({"error": "Database query failed"}), 500
+        # Only load the necessary columns, matching your CSV
+        df = pd.read_csv(CSV_PATH, usecols=[
+            'gameDate', 'hometeamName', 'awayteamName', 'homeScore', 'awayScore'
+        ])
 
+        # Always produce a "YYYY-MM-DD" date string (`gameDate` in your CSV is like '2025-11-13T21:00:00Z')
+        df['gameDateOnly'] = df['gameDate'].str.split('T').str[0]
 
+        if game_date:
+            filtered = df[df['gameDateOnly'] == game_date]
+        else:
+            filtered = df
+
+        # Sort recent first
+        filtered = filtered.sort_values("gameDate", ascending=False)
+
+        games_list = []
+        for idx, row in filtered.iterrows():
+            games_list.append({
+                "game_date": row['gameDateOnly'],  # Only show YYYY-MM-DD (matches NBA date exactly)
+                "team_name_home": row['hometeamName'],
+                "team_name_away": row['awayteamName'],
+                "pts_home": row['homeScore'],
+                "pts_away": row['awayScore'],
+            })
+
+        return jsonify(games_list if game_date else games_list[:20])
+    except Exception as e:
+        print("Data error:", e)
+        return jsonify({"error": str(e)}), 500
 
 # --- LIVE NBA ODDS (The Odds API) ---
 @app.route('/api/live-nba-odds')
@@ -56,7 +55,6 @@ def get_live_nba_odds():
         "markets": "h2h,spreads,totals",
         "oddsFormat": "american",
         "apiKey": API_KEY
-        
     }
     try:
         response = requests.get(THE_ODDS_API_URL, params=params)
@@ -68,10 +66,8 @@ def get_live_nba_odds():
         print("API error:", e)
         return jsonify({"error": str(e)}), 500
 
-
 if __name__ == '__main__':
     app.run(debug=True, port=5050)
-
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5050, debug=True)
