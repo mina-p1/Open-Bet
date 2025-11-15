@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import Loader from '../components/Loader';
 
-// Helper to format YYYY-MM-DD as "Mon DD, YYYY"
+// format YYYY-MM-DD as MMM DD, YYYY
 function prettyDate(dstr) {
-  // dstr is "YYYY-MM-DD"
   const parts = dstr.split("-");
   if (parts.length !== 3) return dstr;
-  // Use noon to avoid any timezone weirdness
+  // using noon to avoid any timezone weirdness
   const d = new Date(`${parts[0]}-${parts[1]}-${parts[2]}T12:00:00`);
   return d.toLocaleDateString("en-US", { year: "numeric", month: "short", day: "2-digit" });
 }

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-// ---------- Helper functions -------------
+// helper functions
 function formatAmerican(num, isHome, isSpread) {
     if (num === undefined || num === null || num === "-") return "-";
     const n = Number(num);
@@ -49,7 +49,7 @@ function getEasternToday() {
     return new Date(`${year}-${month}-${day}T00:00:00-05:00`);
 }
 
-// -------- Bookmaker Dropdown ---------
+//dropdown for the bookmaker picker (pick a sportsbook)
 function BookmakerDropdown({ bookmakerList, current, onChange }) {
     if (!bookmakerList.length) return null;
     return (
@@ -81,7 +81,7 @@ function BookmakerDropdown({ bookmakerList, current, onChange }) {
     );
 }
 
-// --------- DateBar uses ET "today"/navigation logic ----------
+// datebar/date picker function:
 function DateBar({ selectedDate, setSelectedDate }) {
     function changeDate(days) {
         const est = new Date(selectedDate);
@@ -138,7 +138,7 @@ function DateBar({ selectedDate, setSelectedDate }) {
     );
 }
 
-// -------- Odds Table Cards, OddsRow, Tile ---------
+// the current game odds "card"
 function OddsTile({ value, label, sub, isHome, isSpread }) {
     let mainValue = "-";
     let oddsValue = "-";
@@ -195,7 +195,7 @@ function OddsRowAligned({ team, labelColor, spread, ml, total, totalLabel, isHom
         </div>
     );
 }
-// -------------- Compare Table (Expand) -------------------
+// compare/expand for other book live odds
 function CompareTable({ game }) {
     if (!game.bookmakers) return null;
     return (
@@ -312,12 +312,11 @@ function OddsCard({ game, bookmakerKey }) {
     );
 }
 
-// ============== MAIN ODDS TABLE ==============
+// odds table (holding the odds card)
 function OddsTable({ gamesData }) {
     const [selectedDate, setSelectedDate] = useState(getEasternToday);
     const [bookmakerKey, setBookmakerKey] = useState('fanduel');
 
-    // Create NY "YYYY-MM-DD" for filtering
     const estIsoString = selectedDate.toLocaleDateString('en-US', { timeZone: 'America/New_York', year: 'numeric', month: '2-digit', day: '2-digit' });
     const [estMonth, estDay, estYear] = estIsoString.split('/');
     const estDateStr = `${estYear}-${estMonth.padStart(2, '0')}-${estDay.padStart(2, '0')}`;
@@ -336,7 +335,7 @@ function OddsTable({ gamesData }) {
         return gameEstDateStr === estDateStr;
     });
 
-    // List available bookmakers for the filtered games
+    // List available bookmakers for the filtered games:
     const allBookmakerKeys = Array.from(
         new Set(filteredGames.flatMap(g => g.bookmakers ? g.bookmakers.map(b => b.key) : []))
     ).sort();

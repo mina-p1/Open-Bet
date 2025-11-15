@@ -7,19 +7,18 @@ import requests
 app = Flask(__name__)
 CORS(app)
 
-# Adjust if needed: here it expects Games.csv is in ./box_scores/
 CSV_PATH = os.path.join(os.path.dirname(__file__), "box_scores", "Games.csv")
 
 @app.route('/api/historical-data')
 def get_historical_data():
     game_date = request.args.get('date')
     try:
-        # Only load the necessary columns, matching your CSV
+        # load the necessary columns, matching your CSV
         df = pd.read_csv(CSV_PATH, usecols=[
             'gameDate', 'hometeamName', 'awayteamName', 'homeScore', 'awayScore'
         ])
 
-        # Always produce a "YYYY-MM-DD" date string (`gameDate` in your CSV is like '2025-11-13T21:00:00Z')
+        # Always produce YYYY-MM-DD date string
         df['gameDateOnly'] = df['gameDate'].str.split('T').str[0]
 
         if game_date:
@@ -33,7 +32,7 @@ def get_historical_data():
         games_list = []
         for idx, row in filtered.iterrows():
             games_list.append({
-                "game_date": row['gameDateOnly'],  # Only show YYYY-MM-DD (matches NBA date exactly)
+                "game_date": row['gameDateOnly'],
                 "team_name_home": row['hometeamName'],
                 "team_name_away": row['awayteamName'],
                 "pts_home": row['homeScore'],
@@ -45,7 +44,7 @@ def get_historical_data():
         print("Data error:", e)
         return jsonify({"error": str(e)}), 500
 
-# --- LIVE NBA ODDS (The Odds API) ---
+# LIVE NBA ODDS (The Odds API)
 @app.route('/api/live-nba-odds')
 def get_live_nba_odds():
     API_KEY = '39fc4ed3a7caf51b49d87d08ec90658a'

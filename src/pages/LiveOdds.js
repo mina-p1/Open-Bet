@@ -1,5 +1,5 @@
 
-//  fetch  LIVE data from  backend .
+// get  live data from  backend
 
 import React, { useState, useEffect } from 'react';
 import OddsTable from '../components/OddsTable';
