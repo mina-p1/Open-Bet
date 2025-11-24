@@ -138,6 +138,47 @@ function DateBar({ selectedDate, setSelectedDate }) {
     );
 }
 
+// --- NEW COMPONENT: Displays the AI Prediction ---
+function PredictionDisplay({ prediction }) {
+    if (!prediction) return (
+        <div style={{
+            marginTop: 15, padding: "12px", background: "#151e34", borderRadius: 8,
+            textAlign: "center", color: "#8899aa", fontSize: 14, border: "1px dashed #2a3b55"
+        }}>
+            No prediction available for this matchup.
+        </div>
+    );
+
+    return (
+        <div style={{
+            marginTop: 15,
+            padding: "16px",
+            background: "linear-gradient(135deg, #1e2538 0%, #161b29 100%)",
+            borderRadius: 12,
+            border: "1px solid #4f46e5", // Purple/Blue border to signify AI
+            textAlign: "center",
+            boxShadow: "0 4px 12px rgba(0,0,0,0.3)",
+            animation: "fadeIn 0.3s ease-in-out"
+        }}>
+            <div style={{
+                fontSize: 11, fontWeight: 700, letterSpacing: "1.5px", textTransform: "uppercase",
+                color: "#a5b4fc", marginBottom: 6
+            }}>
+                OpenBet Model Projection
+            </div>
+            <div style={{
+                fontSize: 20, fontWeight: 800, color: "#fff", marginBottom: 4,
+                textShadow: "0 0 10px rgba(165, 180, 252, 0.3)"
+            }}>
+                {prediction.message}
+            </div>
+            <div style={{ fontSize: 13, color: "#cbd5e1" }}>
+                Predicted Margin: <span style={{ color: "#818cf8", fontWeight: 700 }}>{prediction.predicted_margin}</span> pts
+            </div>
+        </div>
+    );
+}
+
 // the current game odds "card"
 function OddsTile({ value, label, sub, isHome, isSpread }) {
     let mainValue = "-";
@@ -241,8 +282,11 @@ function CompareTable({ game }) {
         </table>
     );
 }
+
 function OddsCard({ game, bookmakerKey }) {
     const [compareOpen, setCompareOpen] = useState(false);
+    const [predictionOpen, setPredictionOpen] = useState(false); // New 
+
     const book = getBookmaker(game, bookmakerKey);
     const mlMarket = getMarket(book, 'h2h');
     const spreadMarket = getMarket(book, 'spreads');
@@ -253,61 +297,59 @@ function OddsCard({ game, bookmakerKey }) {
     const homeSpread = getOutcome(spreadMarket, game.home_team);
     const totalOver = getOutcomeTotals(totalsMarket, "Over");
     const totalUnder = getOutcomeTotals(totalsMarket, "Under");
+
     return (
         <div style={{
-            background: '#23293a',
-            borderRadius: 18,
-            color: '#fff',
-            padding: '1.3em 1.2em 1.45em 1.2em',
-            minWidth: 450,
-            maxWidth: 450,
-            width: "100%",
-            display: "flex",
-            flexDirection: "column",
-            boxShadow: "0 2px 16px #1d23366c"
+            background: '#23293a', borderRadius: 18, color: '#fff',
+            padding: '1.3em 1.2em 1.45em 1.2em', minWidth: 450, maxWidth: 450, width: "100%",
+            display: "flex", flexDirection: "column", boxShadow: "0 2px 16px #1d23366c"
         }}>
-            <div style={{
-                fontWeight: 800, fontSize: '1.16em', marginBottom: 6, color: '#7EC6F7', textAlign: "left"
-            }}>
+            <div style={{ fontWeight: 800, fontSize: '1.16em', marginBottom: 6, color: '#7EC6F7', textAlign: "left" }}>
                 {game.away_team} @ {game.home_team}
             </div>
             <div style={{ marginBottom: 11, color: '#bbc8d3', fontSize: '1em' }}>
                 Tip-off: {formatTimestamp(game.start_time || game.commence_time || game.event_time || "")}
             </div>
             <div style={{ display: "flex", flexDirection: "column", gap: 4, width: "100%" }}>
-                <OddsRowAligned
-                    team={game.away_team}
-                    labelColor="#60c0fc"
-                    spread={awaySpread}
-                    ml={awayMl}
-                    total={totalOver}
-                    totalLabel="Over"
-                    isHome={false}
-                />
-                <OddsRowAligned
-                    team={game.home_team}
-                    labelColor="#FF8B64"
-                    spread={homeSpread}
-                    ml={homeMl}
-                    total={totalUnder}
-                    totalLabel="Under"
-                    isHome={true}
-                />
+                <OddsRowAligned team={game.away_team} labelColor="#60c0fc" spread={awaySpread} ml={awayMl} total={totalOver} totalLabel="Over" isHome={false} />
+                <OddsRowAligned team={game.home_team} labelColor="#FF8B64" spread={homeSpread} ml={homeMl} total={totalUnder} totalLabel="Under" isHome={true} />
             </div>
-            <button
-                style={{
-                    margin: "14px auto 0", padding: "7px 19px", borderRadius: 8, border: "none", background: "#378aff",
-                    color: "#fff", fontWeight: 600, fontSize: 15, cursor: "pointer"
-                }}
-                onClick={() => setCompareOpen((o) => !o)}
-            >
-                {compareOpen ? "Hide Comparison" : "Compare Bookmakers"}
-            </button>
-            {compareOpen &&
-                <div style={{ marginTop: 13 }}>
-                    <CompareTable game={game} />
-                </div>
-            }
+
+            {/* 2. UPDATED BUTTONS SECTION */}
+            <div style={{ display: "flex", justifyContent: "center", gap: 12, marginTop: 14 }}>
+                <button
+                    style={{
+                        padding: "7px 19px", borderRadius: 8, border: "none", background: "#378aff",
+                        color: "#fff", fontWeight: 600, fontSize: 15, cursor: "pointer"
+                    }}
+                    onClick={() => {
+                        setCompareOpen(!compareOpen);
+                        if (predictionOpen) setPredictionOpen(false); // Close other tab if open
+                    }}
+                >
+                    {compareOpen ? "Hide Odds" : "Compare Books"}
+                </button>
+
+                {/* NEW PREDICTION BUTTON */}
+                <button
+                    style={{
+                        padding: "7px 19px", borderRadius: 8, border: "none",
+                        background: predictionOpen ? "#4f46e5" : "#6366f1", // Purple 
+                        color: "#fff", fontWeight: 600, fontSize: 15, cursor: "pointer",
+                        boxShadow: "0 2px 5px rgba(99, 102, 241, 0.4)"
+                    }}
+                    onClick={() => {
+                        setPredictionOpen(!predictionOpen);
+                        if (compareOpen) setCompareOpen(false); // Close other tab if open
+                    }}
+                >
+                    {predictionOpen ? "Hide Model" : "Our Prediction"}
+                </button>
+            </div>
+
+            {/* 3. RENDERS PREDICTION COMPONENT */}
+            {compareOpen && <div style={{ marginTop: 13 }}><CompareTable game={game} /></div>}
+            {predictionOpen && <PredictionDisplay prediction={game.openbet_prediction} />}
         </div>
     );
 }
