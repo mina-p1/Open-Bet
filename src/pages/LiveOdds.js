@@ -4,6 +4,7 @@
 import React, { useState, useEffect } from 'react';
 import OddsTable from '../components/OddsTable';
 import Loader from '../components/Loader';     
+import { fetchLiveNBAOdds } from '../api/oddsApi';
 
 function LiveOddsPage() {
     const [games, setGames] = useState([]); // Holds  game data from  API
@@ -12,9 +13,9 @@ function LiveOddsPage() {
 
     useEffect(() => {
         // Fetch data from our Python backend
-        fetch('http://127.0.0.1:5050/api/live-nba-odds')
-            .then(response => response.json())
+        fetchLiveNBAOdds()
             .then(data => {
+                // The helper already does response.json(), so we just get 'data' here
                 if (data.error) {
                     setError(data.error);
                 } else {
@@ -27,7 +28,7 @@ function LiveOddsPage() {
                 setError(error.message);
                 setIsLoading(false); 
             });
-    }, []); 
+    }, []);
 
     const renderContent = () => {
         if (isLoading) {
