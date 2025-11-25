@@ -16,11 +16,12 @@ def get_historical_data():
     try:
         # load the necessary columns, matching your CSV
         df = pd.read_csv(CSV_PATH, usecols=[
-            'gameDate', 'hometeamName', 'awayteamName', 'homeScore', 'awayScore'
+            'gameDateTimeEst', 'hometeamName', 'awayteamName', 'homeScore', 'awayScore'
         ])
 
-        # Always produce YYYY-MM-DD date string
-        df['gameDateOnly'] = df['gameDate'].str.split('T').str[0]
+        df = df.rename(columns={'gameDateTimeEst': 'gameDate'})
+
+        df['gameDateOnly'] = df['gameDate'].astype(str).str.split(' ').str[0]
 
         if game_date:
             filtered = df[df['gameDateOnly'] == game_date]

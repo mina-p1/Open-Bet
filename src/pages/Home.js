@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Loader from '../components/Loader';
+import { fetchHistoricalGames } from '../api/oddsApi'; // new import
 
 // format YYYY-MM-DD as MMM DD, YYYY
 function prettyDate(dstr) {
@@ -20,10 +21,7 @@ function HomePage() {
   useEffect(() => {
     setIsLoading(true);
     setError(null);
-    let url = 'http://127.0.0.1:5050/api/historical-data';
-    if (selectedDate) url += `?date=${selectedDate}`;
-    fetch(url)
-      .then(response => response.json())
+    fetchHistoricalGames(selectedDate)
       .then(data => {
         if (data.error) setError(data.error);
         else setHistGames(data);
