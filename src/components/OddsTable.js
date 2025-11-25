@@ -138,7 +138,7 @@ function DateBar({ selectedDate, setSelectedDate }) {
     );
 }
 
-// --- NEW COMPONENT: Displays the AI Prediction ---
+//NEW Displays the  Prediction
 function PredictionDisplay({ prediction }) {
     if (!prediction) return (
         <div style={{
@@ -155,7 +155,7 @@ function PredictionDisplay({ prediction }) {
             padding: "16px",
             background: "linear-gradient(135deg, #1e2538 0%, #161b29 100%)",
             borderRadius: 12,
-            border: "1px solid #4f46e5", // Purple/Blue border to signify AI
+            border: "1px solid #4f46e5", // Purple/Blue 
             textAlign: "center",
             boxShadow: "0 4px 12px rgba(0,0,0,0.3)",
             animation: "fadeIn 0.3s ease-in-out"
