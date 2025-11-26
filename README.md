@@ -1,13 +1,39 @@
-# To run\
-Open terminal\
-Go to cd src/backend/archive/\
-then run python3 app.py\
-*make sure nba.sqlite and csv are in archive folder*
+# Daily Update 
+Run his every morning to get today's games and update the site
 
-then open a new terminal and run npm start
+cd src/backend
+python daily_update.py
+git add src/backend/todays_data.json
+git commit -m "Daily odds update"
+git push
 
+# Deploy latest commit on render (Render should do this automaitclly)
 
+# Updated Python Code or Data:
+git push
 
+# Updated React app:
+cd src/frontend
+npm run build
+firebase deploy
+
+# First-Time Start
+Run this once to generate the Model and the initial json data file
+
+cd src/backend
+python model_train.py    *Creates nba_model.pkl
+python daily_update.py  *Creates todays_data.json
+
+# To run on local
+Run these in two separate terminals
+
+# Terminal 1 (Backend Server)
+cd src/backend
+python app.py
+
+# Terminal 2 (React Frontend)
+cd src/frontend
+npm start
 
 
 # Getting Started with Create React App

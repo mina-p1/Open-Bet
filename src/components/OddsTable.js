@@ -138,7 +138,7 @@ function DateBar({ selectedDate, setSelectedDate }) {
     );
 }
 
-//NEW Displays the  Prediction
+// NEW Predction display section
 function PredictionDisplay({ prediction }) {
     if (!prediction) return (
         <div style={{
@@ -155,7 +155,7 @@ function PredictionDisplay({ prediction }) {
             padding: "16px",
             background: "linear-gradient(135deg, #1e2538 0%, #161b29 100%)",
             borderRadius: 12,
-            border: "1px solid #4f46e5", // Purple/Blue 
+            border: "1px solid #4f46e5", 
             textAlign: "center",
             boxShadow: "0 4px 12px rgba(0,0,0,0.3)",
             animation: "fadeIn 0.3s ease-in-out"
@@ -166,12 +166,25 @@ function PredictionDisplay({ prediction }) {
             }}>
                 OpenBet Model Projection
             </div>
+            
+            {/* 1. Winner prediction*/}
             <div style={{
                 fontSize: 20, fontWeight: 800, color: "#fff", marginBottom: 4,
                 textShadow: "0 0 10px rgba(165, 180, 252, 0.3)"
             }}>
                 {prediction.message}
             </div>
+
+            {/* Score Predicion*/}
+            {prediction.home_score && (
+                <div style={{ fontSize: 15, color: "#94a3b8", marginBottom: 6, fontWeight: 500 }}>
+                    Projected Score: <span style={{ color: "#fff", fontWeight: 700 }}>
+                        {Math.round(prediction.away_score)} - {Math.round(prediction.home_score)}
+                    </span>
+                </div>
+            )}
+
+            {/*Margin display */}
             <div style={{ fontSize: 13, color: "#cbd5e1" }}>
                 Predicted Margin: <span style={{ color: "#818cf8", fontWeight: 700 }}>{prediction.predicted_margin}</span> pts
             </div>
