@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Loader from '../components/Loader';
-import { fetchHistoricalGames } from '../api/oddsApi'; // new import
+import { fetchHistoricalGames } from '../api/oddsApi'; 
+
 
 // format YYYY-MM-DD as MMM DD, YYYY
 function prettyDate(dstr) {

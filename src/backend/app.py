@@ -10,6 +10,7 @@ CORS(app)
 
 CSV_PATH = os.path.join(os.path.dirname(__file__), "archive", "box_scores", "Games.csv")
 
+
 @app.route('/api/historical-data')
 def get_historical_data():
     game_date = request.args.get('date')
@@ -46,6 +47,7 @@ def get_historical_data():
         print("Data error:", e)
         return jsonify({"error": str(e)}), 500
 
+
 @app.route('/api/live-nba-odds')
 def get_live_nba_odds():
     try:
@@ -64,6 +66,76 @@ def get_live_nba_odds():
     except Exception as e:
         print("Error serving batch data:", e)
         return jsonify({"error": str(e)}), 500
+
+
+@app.route('/api/player-props')
+def get_player_props():
+    """
+    Returns simplified NBA player props for today's games.
+    """
+    API_KEY = '39fc4ed3a7caf51b49d87d08ec90658a'
+    ODDS_API_URL = "https://api.the-odds-api.com/v4/sports/basketball_nba/odds"
+
+    player_markets = [
+        "player_points",
+        "player_rebounds",
+        "player_assists",
+        "player_threes",
+        "player_points_rebounds_assists",
+    ]
+
+    params = {
+        "regions": "us",
+        "markets": ",".join(player_markets),
+        "oddsFormat": "american",
+        "apiKey": API_KEY
+    }
+
+    try:
+        resp = requests.get(ODDS_API_URL, params=params, timeout=10)
+        resp.raise_for_status()
+        events = resp.json()
+    except requests.RequestException as e:
+        print("Player props API error:", e)
+        return jsonify({"error": str(e)}), 500
+
+    simplified = []
+
+    for event in events:
+        game_id = event.get("id")
+        home_team = event.get("home_team")
+        away_team = event.get("away_team")
+        commence_time = event.get("commence_time")
+
+        for bookmaker in event.get("bookmakers", []):
+            book_key = bookmaker.get("key")
+            book_title = bookmaker.get("title")
+
+            for market in bookmaker.get("markets", []):
+                market_key = market.get("key")
+                if market_key not in player_markets:
+                    continue
+
+                for outcome in market.get("outcomes", []):
+                    player_name = outcome.get("description") or outcome.get("name")
+                    line = outcome.get("point")
+                    price = outcome.get("price")
+
+                    simplified.append({
+                        "game_id": game_id,
+                        "home_team": home_team,
+                        "away_team": away_team,
+                        "commence_time": commence_time,
+                        "bookmaker": book_title or book_key,
+                        "market": market_key,
+                        "player": player_name,
+                        "line": line,
+                        "price": price,
+                        "openbet_flag": None  # for your model later
+                    })
+
+    return jsonify(simplified)
+
 
 if __name__ == "__main__":
     # host='0.0.0.0' allows access from network, port 5050 matches your React app
