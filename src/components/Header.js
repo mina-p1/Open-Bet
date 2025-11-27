@@ -28,24 +28,6 @@ function Header() {
             textDecoration: "none",
           }}
         >
-          <div
-            style={{
-              width: 38,
-              height: 38,
-              borderRadius: 12,
-              background:
-                "radial-gradient(circle at 30% 20%, #38bdf8, #0ea5e9 45%, #0f172a 80%)",
-              boxShadow: "0 0 18px rgba(56,189,248,0.6)",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              fontWeight: 800,
-              color: "#f9fafb",
-              fontSize: 16,
-            }}
-          >
-            OB
-          </div>
           <span
             style={{
               fontSize: 24,
@@ -64,6 +46,7 @@ function Header() {
             { to: "/", label: "Home" },
             { to: "/liveodds", label: "Live Odds" },
             { to: "/player-props", label: "Player Props" },
+            { to: "/arbitrage", label: "Arbitrage" },
             { to: "/about", label: "About" },
           ].map((item) => {
             const active = isActive(item.to);

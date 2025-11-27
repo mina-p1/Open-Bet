@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import Loader from "../components/Loader";
 
-const marketLabels = {
+const MARKET_LABELS = {
   player_points: "Points",
   player_rebounds: "Rebounds",
   player_assists: "Assists",
   player_threes: "3-Pointers",
-  player_points_rebounds_assists: "P + R + A",
+  player_points_rebounds_assists: "Points + Rebounds + Assists",
 };
 
 function formatCommence(timeStr) {
@@ -24,16 +24,23 @@ function PlayerProps() {
   const [propsData, setPropsData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [selectedMarket, setSelectedMarket] = useState("all");
-  const [search, setSearch] = useState("");
+  const [selectedGameId, setSelectedGameId] = useState(null);
 
   useEffect(() => {
     setIsLoading(true);
-    fetch("http://127.0.0.1:5050/api/player-props")
+    setError(null);
+
+    // If running locally:
+    // const url = "http://127.0.0.1:5050/api/player-props";
+    // If using Render:
+    // const url = "https://open-bet-capstone.onrender.com/api/player-props";
+    const url = "http://127.0.0.1:5050/api/player-props";
+
+    fetch(url)
       .then((res) => res.json())
       .then((data) => {
         if (data.error) {
-          setError(data.error);
+          setError(typeof data.error === "string" ? data.error : JSON.stringify(data));
         } else {
           setPropsData(data);
         }
@@ -45,22 +52,52 @@ function PlayerProps() {
       });
   }, []);
 
-  const filtered = propsData.filter((p) => {
-    if (selectedMarket !== "all" && p.market !== selectedMarket) return false;
-    if (search) {
-      const s = search.toLowerCase();
-      return (
-        (p.player || "").toLowerCase().includes(s) ||
-        (p.home_team || "").toLowerCase().includes(s) ||
-        (p.away_team || "").toLowerCase().includes(s)
-      );
+  // Group all props by game
+  const gamesMap = {};
+  propsData.forEach((p) => {
+    if (!gamesMap[p.game_id]) {
+      gamesMap[p.game_id] = {
+        game_id: p.game_id,
+        home_team: p.home_team,
+        away_team: p.away_team,
+        commence_time: p.commence_time,
+        props: [],
+      };
     }
-    return true;
+    gamesMap[p.game_id].props.push(p);
   });
+  const games = Object.values(gamesMap);
+
+  const selectedGame =
+    selectedGameId && gamesMap[selectedGameId] ? gamesMap[selectedGameId] : null;
+
+  // Helper: split props by team and group by market key
+  const groupPropsByMarket = (propsArr, teamName, isHome) => {
+    const grouped = {};
+    propsArr.forEach((p) => {
+      const belongs =
+        (isHome && p.home_team === teamName) ||
+        (!isHome && p.away_team === teamName);
+      if (!belongs) return;
+
+      const key = p.market || "other";
+      if (!grouped[key]) grouped[key] = [];
+      grouped[key].push(p);
+    });
+    return grouped;
+  };
+
+  const homeGrouped =
+    selectedGame &&
+    groupPropsByMarket(selectedGame.props, selectedGame.home_team, true);
+
+  const awayGrouped =
+    selectedGame &&
+    groupPropsByMarket(selectedGame.props, selectedGame.away_team, false);
 
   return (
     <div className="container mx-auto py-10 px-4">
-      <section className="flex flex-col items-center justify-center mb-10">
+      <section className="flex flex-col items-center justify-center mb-8">
         <div
           className="w-full max-w-4xl bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 rounded-2xl shadow-2xl border border-slate-700/80 p-8"
           style={{ boxShadow: "0 18px 40px rgba(0,0,0,0.6)" }}
@@ -68,45 +105,9 @@ function PlayerProps() {
           <h1 className="text-3xl md:text-4xl font-extrabold text-center mb-2 text-sky-300 tracking-tight">
             NBA Player Props Radar
           </h1>
-          <p className="text-center text-slate-300 mb-6">
-            Live player lines across books. Filter by market and name to spot edges.
+          <p className="text-center text-slate-300 mb-3">
+            Click any game to see player points lines for both teams, organized by category.
           </p>
-
-          <div className="flex flex-col md:flex-row gap-4 md:items-center md:justify-between">
-            <div className="flex gap-2 flex-wrap">
-              <button
-                className={`px-3 py-1.5 rounded-full text-sm border ${
-                  selectedMarket === "all"
-                    ? "bg-sky-500 text-white border-sky-400"
-                    : "bg-slate-800 text-slate-200 border-slate-600 hover:bg-slate-700"
-                }`}
-                onClick={() => setSelectedMarket("all")}
-              >
-                All Markets
-              </button>
-              {Object.entries(marketLabels).map(([key, label]) => (
-                <button
-                  key={key}
-                  className={`px-3 py-1.5 rounded-full text-sm border ${
-                    selectedMarket === key
-                      ? "bg-sky-500 text-white border-sky-400"
-                      : "bg-slate-800 text-slate-200 border-slate-600 hover:bg-slate-700"
-                  }`}
-                  onClick={() => setSelectedMarket(key)}
-                >
-                  {label}
-                </button>
-              ))}
-            </div>
-
-            <input
-              type="text"
-              placeholder="Search player or team..."
-              value={search}
-              onChange={(e) => setSearch(e.target.value)}
-              className="input input-bordered w-full md:w-64 bg-slate-900 border-slate-600 text-slate-100"
-            />
-          </div>
         </div>
       </section>
 
@@ -116,59 +117,145 @@ function PlayerProps() {
       )}
 
       {!isLoading && !error && (
-        <section className="max-w-6xl mx-auto">
-          {filtered.length === 0 ? (
+        <>
+          {games.length === 0 ? (
             <p className="text-center text-slate-400">
               No player props available right now. Try again closer to tip-off.
             </p>
           ) : (
-            <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-              {filtered.map((p, idx) => (
-                <div
-                  key={`${p.game_id}-${p.player}-${p.market}-${idx}`}
-                  className="rounded-2xl bg-slate-900/90 border border-slate-700 shadow-lg p-4 flex flex-col justify-between hover:border-sky-400/80 hover:-translate-y-0.5 transition-all duration-150"
+            <section className="max-w-5xl mx-auto">
+              {/* 2 columns, infinite rows */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {games.map((g) => (
+                  <button
+                    key={g.game_id}
+                    onClick={() => setSelectedGameId(g.game_id)}
+                    className="text-left rounded-2xl bg-slate-900/90 border border-slate-700 shadow-lg px-4 py-3 hover:border-sky-400/80 hover:-translate-y-0.5 transition-all duration-150 cursor-pointer"
+                  >
+                    <div className="text-xs text-slate-400 mb-1">
+                      {formatCommence(g.commence_time)}
+                    </div>
+                    <div className="text-base font-semibold text-slate-100 mb-1">
+                      {g.away_team} @ {g.home_team}
+                    </div>
+                    <div className="text-xs text-slate-500">
+                      {g.props.length} player lines available
+                    </div>
+                  </button>
+                ))}
+              </div>
+            </section>
+          )}
+
+          {/* Center modal */}
+          {selectedGame && (
+            <div
+              className="fixed inset-0 z-40 flex items-center justify-center bg-black/70"
+              onClick={() => setSelectedGameId(null)}
+            >
+              <div
+                className="relative w-full max-w-5xl bg-slate-950 rounded-2xl border border-slate-700 shadow-2xl p-6"
+                onClick={(e) => e.stopPropagation()}
+              >
+                <button
+                  onClick={() => setSelectedGameId(null)}
+                  className="absolute top-3 right-3 text-slate-400 hover:text-white text-xl"
                 >
-                  <div className="flex items-center justify-between mb-1">
-                    <span className="text-xs uppercase tracking-wide text-slate-400">
-                      {p.bookmaker}
-                    </span>
-                    <span className="text-xs text-slate-500">
-                      {formatCommence(p.commence_time)}
-                    </span>
+                  ×
+                </button>
+
+                {/* Modal header: game info */}
+                <div className="flex items-center justify-between mb-3">
+                  <div className="text-sm text-slate-400">
+                    {formatCommence(selectedGame.commence_time)}
                   </div>
-                  <div className="text-xs text-slate-400 mb-1">
-                    {p.away_team} @ {p.home_team}
-                  </div>
-                  <h3 className="text-lg font-semibold text-slate-100 mb-1">
-                    {p.player}
-                  </h3>
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="inline-flex items-center text-xs px-2 py-0.5 rounded-full bg-slate-800 text-sky-300 border border-sky-500/40">
-                      {marketLabels[p.market] || p.market}
-                    </span>
-                    <span className="text-sm font-semibold text-emerald-300">
-                      Line: {p.line ?? "-"}
-                    </span>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-xs text-slate-400">
-                      Odds:{" "}
-                      <span className="font-semibold text-slate-100">
-                        {p.price > 0 ? `+${p.price}` : p.price}
-                      </span>
-                    </span>
-                    {/* Placeholder badge for model result later */}
-                    {p.openbet_flag && (
-                      <span className="text-[10px] px-2 py-0.5 rounded-full bg-rose-900/60 text-rose-200 border border-rose-500/50">
-                        {p.openbet_flag}
-                      </span>
-                    )}
+                  <div className="text-sm text-slate-400">
+                    Player Props by Category
                   </div>
                 </div>
-              ))}
+
+                {/* Team names top left / right */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-2">
+                  <div>
+                    <h2 className="text-lg font-bold text-rose-300 mb-2">
+                      {selectedGame.away_team}
+                    </h2>
+                    {/* Away team props grouped by market */}
+                    <div className="space-y-3 max-h-80 overflow-y-auto pr-1">
+                      {Object.keys(awayGrouped).length === 0 && (
+                        <p className="text-xs text-slate-500">
+                          No props available for this team.
+                        </p>
+                      )}
+                      {Object.entries(awayGrouped).map(([marketKey, list]) => (
+                        <div
+                          key={marketKey}
+                          className="border border-slate-700 rounded-lg p-2 bg-slate-900/70"
+                        >
+                          <div className="text-xs font-semibold text-sky-300 mb-1">
+                            {MARKET_LABELS[marketKey] || marketKey}
+                          </div>
+                          {list.map((p, idx) => (
+                            <div
+                              key={idx}
+                              className="flex items-center justify-between text-xs text-slate-200 py-0.5 border-b border-slate-800/70 last:border-b-0"
+                            >
+                              <span className="font-medium">{p.player}</span>
+                              <span className="text-emerald-300 font-semibold">
+                                {p.line ?? "-"}
+                              </span>
+                              <span className="text-slate-400">
+                                {p.price > 0 ? `+${p.price}` : p.price}
+                              </span>
+                            </div>
+                          ))}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div>
+                    <h2 className="text-lg font-bold text-emerald-300 mb-2">
+                      {selectedGame.home_team}
+                    </h2>
+                    {/* Home team props grouped by market */}
+                    <div className="space-y-3 max-h-80 overflow-y-auto pr-1">
+                      {Object.keys(homeGrouped).length === 0 && (
+                        <p className="text-xs text-slate-500">
+                          No props available for this team.
+                        </p>
+                      )}
+                      {Object.entries(homeGrouped).map(([marketKey, list]) => (
+                        <div
+                          key={marketKey}
+                          className="border border-slate-700 rounded-lg p-2 bg-slate-900/70"
+                        >
+                          <div className="text-xs font-semibold text-sky-300 mb-1">
+                            {MARKET_LABELS[marketKey] || marketKey}
+                          </div>
+                          {list.map((p, idx) => (
+                            <div
+                              key={idx}
+                              className="flex items-center justify-between text-xs text-slate-200 py-0.5 border-b border-slate-800/70 last:border-b-0"
+                            >
+                              <span className="font-medium">{p.player}</span>
+                              <span className="text-emerald-300 font-semibold">
+                                {p.line ?? "-"}
+                              </span>
+                              <span className="text-slate-400">
+                                {p.price > 0 ? `+${p.price}` : p.price}
+                              </span>
+                            </div>
+                          ))}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           )}
-        </section>
+        </>
       )}
     </div>
   );

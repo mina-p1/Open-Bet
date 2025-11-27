@@ -16,3 +16,13 @@ export async function fetchLiveNBAOdds() {
   if (!resp.ok) throw new Error("Could not fetch live NBA odds");
   return resp.json();
 }
+
+// NEW: player props (points)
+export async function fetchPlayerProps() {
+  const resp = await fetch(`${API_BASE_URL}/api/player-props`);
+  if (!resp.ok) {
+    const text = await resp.text();
+    throw new Error(text || "Could not fetch player props");
+  }
+  return resp.json();
+}

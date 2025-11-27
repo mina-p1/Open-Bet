@@ -1,59 +1,156 @@
-// src/pages/Arbitrage.js
-import React, { useState } from "react";
-import ArbitrageTable from "../components/ArbitrageTable";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import Loader from "../components/Loader";
 
-// Import or copy the dummy odds here (same as LiveOdds)
-const initialOdds = [
-  {
-    event: "Lakers vs Raptors",
-    market: "Spread",
-    teams: ["Lakers", "Raptors"],
-    // Each sportsbook lists both teams' spreads
-    sportsbooks: {
-      FanDuel: { Lakers: "-2.5", Raptors: "+2.5" },
-      DraftKings: { Lakers: "-3.0", Raptors: "+3.0" },
-      Caesars: { Lakers: "-2.0", Raptors: "+2.0" },
-      Bet365: { Lakers: "-2.5", Raptors: "+2.5" },
-    },
-    lastUpdated: "1m ago",
-    arbitrage: true, // for testing arbitrage highlighting
-    arbBooks: { // sportsbook: team you should bet
-      DraftKings: "Lakers",
-      Caesars: "Raptors"
-    }
-  },
-  {
-    event: "Celtics vs Bulls",
-    market: "Spread",
-    teams: ["Celtics", "Bulls"],
-    sportsbooks: {
-      FanDuel: { Celtics: "-4.5", Bulls: "+4.5" },
-      DraftKings: { Celtics: "-4.0", Bulls: "+4.0" },
-      Caesars: { Celtics: "-5.0", Bulls: "+5.0" },
-      Bet365: { Celtics: "-4.5", Bulls: "+4.5" }
-    },
-    lastUpdated: "7m ago",
-    arbitrage: false,
-    arbBooks: {}
-  },
-  // ... add more as needed ...
-];
+function formatCommence(timeStr) {
+  if (!timeStr) return "";
+  const d = new Date(timeStr);
+  return d.toLocaleString("en-US", {
+    month: "short",
+    day: "numeric",
+    hour: "numeric",
+    minute: "2-digit",
+  });
+}
 
-export default function Arbitrage() {
-  const [odds] = useState(initialOdds);
-  // Only select arbitrage rows
-  const arbOpportunities = odds.filter((row) => row.arbitrage);
+function Arbitrage() {
+  const [arbs, setArbs] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    setIsLoading(true);
+    setError(null);
+
+    // Local backend:
+    // const url = "http://127.0.0.1:5050/api/arbitrage";
+    // Render backend:
+    // const url = "https://open-bet-capstone.onrender.com/api/arbitrage";
+    const url = "http://127.0.0.1:5050/api/arbitrage";
+
+    fetch(url)
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.error) {
+          setError(typeof data.error === "string" ? data.error : JSON.stringify(data));
+        } else {
+          setArbs(data);
+        }
+        setIsLoading(false);
+      })
+      .catch((err) => {
+        setError(err.message);
+        setIsLoading(false);
+      });
+  }, []);
 
   return (
-    <div className="container mx-auto py-10">
-      <h2 className="text-3xl font-bold text-green-600 mb-8 text-center">Arbitrage Opportunities</h2>
-      <ArbitrageTable odds={arbOpportunities} />
-      <div className="flex justify-center mt-8">
-        <Link to="/about" className="btn btn-secondary btn-wide">
-          What is Arbitrage Betting?
-        </Link>
-      </div>
+    <div className="container mx-auto py-10 px-4">
+      <section className="flex flex-col items-center justify-center mb-8">
+        <div
+          className="w-full max-w-4xl bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 rounded-2xl shadow-2xl border border-slate-700/80 p-8"
+          style={{ boxShadow: "0 18px 40px rgba(0,0,0,0.6)" }}
+        >
+          <h1 className="text-3xl md:text-4xl font-extrabold text-center mb-2 text-sky-300 tracking-tight">
+            NBA Arbitrage Scanner
+          </h1>
+          <p className="text-center text-slate-300 mb-1">
+            Scans live NBA moneylines from multiple bookmakers and flags sure-bet
+            opportunities where the implied probabilities add to less than 100%.
+          </p>
+          <p className="text-center text-xs text-slate-500">
+            Stakes shown assume a 100-unit bankroll for illustration only.
+          </p>
+        </div>
+      </section>
+
+      {isLoading && <Loader />}
+
+      {error && (
+        <p className="text-center text-red-400 font-medium">Error: {error}</p>
+      )}
+
+      {!isLoading && !error && (
+        <>
+          {arbs.length === 0 ? (
+            <p className="text-center text-slate-400">
+              No arbitrage opportunities detected right now. Try again closer to
+              game time.
+            </p>
+          ) : (
+            <section className="max-w-5xl mx-auto">
+              <div className="grid gap-4 md:grid-cols-2">
+                {arbs.map((arb, idx) => (
+                  <div
+                    key={arb.game_id + idx}
+                    className="rounded-2xl bg-slate-900/90 border border-emerald-500/60 shadow-lg p-4 flex flex-col justify-between"
+                  >
+                    <div className="flex items-center justify-between mb-1">
+                      <span className="text-xs text-slate-400">
+                        {formatCommence(arb.commence_time)}
+                      </span>
+                      <span className="text-xs font-semibold text-emerald-300">
+                        +{arb.guaranteed_profit_pct.toFixed(2)}% edge
+                      </span>
+                    </div>
+
+                    <div className="text-sm font-semibold text-slate-100 mb-2">
+                      {arb.away_team} @ {arb.home_team}
+                    </div>
+
+                    <div className="text-xs text-slate-300 mb-2">
+                      Total implied probability:{" "}
+                      <span className="font-semibold">
+                        {arb.total_implied_prob.toFixed(2)}%
+                      </span>
+                    </div>
+
+                    <div className="border border-slate-700 rounded-lg p-2 mb-2 text-xs text-slate-200">
+                      <div className="flex justify-between mb-1">
+                        <span>{arb.away_team}</span>
+                        <span>
+                          {arb.away_price > 0 ? `+${arb.away_price}` : arb.away_price} @{" "}
+                          <span className="font-semibold">{arb.away_book}</span>
+                        </span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span>{arb.home_team}</span>
+                        <span>
+                          {arb.home_price > 0 ? `+${arb.home_price}` : arb.home_price} @{" "}
+                          <span className="font-semibold">{arb.home_book}</span>
+                        </span>
+                      </div>
+                    </div>
+
+                    <div className="border border-emerald-600/70 rounded-lg p-2 text-xs text-slate-200 bg-emerald-900/10">
+                      <div className="flex justify-between mb-1">
+                        <span>Stake on {arb.away_team}</span>
+                        <span className="font-semibold text-emerald-300">
+                          {arb.stake_away.toFixed(2)} units
+                        </span>
+                      </div>
+                      <div className="flex justify-between mb-1">
+                        <span>Stake on {arb.home_team}</span>
+                        <span className="font-semibold text-emerald-300">
+                          {arb.stake_home.toFixed(2)} units
+                        </span>
+                      </div>
+                      <div className="flex justify-between mt-1">
+                        <span>Guaranteed profit (on 100u bankroll)</span>
+                        <span className="font-semibold text-emerald-400">
+                          {arb.guaranteed_profit.toFixed(2)}u (
+                          {arb.guaranteed_profit_pct.toFixed(2)}%)
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </section>
+          )}
+        </>
+      )}
     </div>
   );
 }
+
+export default Arbitrage;
