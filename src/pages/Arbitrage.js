@@ -1,15 +1,311 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import Loader from "../components/Loader";
 
-function formatCommence(timeStr) {
-  if (!timeStr) return "";
-  const d = new Date(timeStr);
-  return d.toLocaleString("en-US", {
+function formatTimestamp(isoString) {
+  if (!isoString) return "";
+  const date = new Date(isoString);
+  return date.toLocaleString("en-US", {
+    weekday: "short",
     month: "short",
     day: "numeric",
     hour: "numeric",
     minute: "2-digit",
+    hour12: true,
+    timeZone: "America/New_York",
   });
+}
+
+// LOGIC IS NOT RIGHT, WORK ON IT!!!!
+
+function formatOdds(num) {
+  if (num === undefined || num === null || num === "-") return "-";
+  const n = Number(num);
+  if (isNaN(n)) return num;
+  return n > 0 ? `+${n}` : `${n}`;
+}
+
+// helper to compute $10 payout for a single line
+function payout10(odds) {
+  const n = Number(odds);
+  if (isNaN(n)) return null;
+  let win;
+  if (n > 0) {
+    win = (10 * n) / 100;
+  } else {
+    win = (10 * 100) / Math.abs(n);
+  }
+  return 10 + win; // stake + win
+}
+
+function ArbCard({ arb }) {
+  const awayOdds = formatOdds(arb.away_price);
+  const homeOdds = formatOdds(arb.home_price);
+
+  // Backend stakes/profit are based on a 100‑unit bankroll (total risk = 100).
+  // For the UI example, scale that down so risk is $20 ($10 on each side).
+  const totalRiskBackend = arb.bankroll; // should be 100
+  const targetRisk = 20; // $10 + $10
+  const scale = targetRisk / totalRiskBackend;
+
+  const profitExample = arb.guaranteed_profit * scale;
+  const payoutExample = targetRisk + profitExample;
+
+  const awayPayout10 = payout10(arb.away_price);
+  const homePayout10 = payout10(arb.home_price);
+
+  return (
+    <div
+      style={{
+        background: "#23293a",
+        borderRadius: 18,
+        color: "#fff",
+        padding: "1.3em 1.2em 1.45em 1.2em",
+        minWidth: 450,
+        maxWidth: 450,
+        width: "100%",
+        display: "flex",
+        flexDirection: "column",
+        boxShadow: "0 2px 16px #1d23366c",
+        border: "2px solid #22c55e88",
+      }}
+    >
+      {/* Matchup header */}
+      <div
+        style={{
+          fontWeight: 800,
+          fontSize: "1.16em",
+          marginBottom: 6,
+          color: "#7EC6F7",
+          textAlign: "left",
+        }}
+      >
+        {arb.away_team} @ {arb.home_team}
+      </div>
+      <div
+        style={{
+          marginBottom: 11,
+          color: "#bbc8d3",
+          fontSize: "1em",
+        }}
+      >
+        Tip-off: {formatTimestamp(arb.commence_time)}
+      </div>
+
+      {/* Away row */}
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "1.7fr 1fr 1fr",
+          alignItems: "center",
+          gap: 12,
+          marginBottom: 9,
+          minHeight: 67,
+        }}
+      >
+        <span
+          style={{
+            fontWeight: 700,
+            color: "#60c0fc",
+            fontSize: "1.16em",
+            textAlign: "left",
+            paddingLeft: 7,
+          }}
+        >
+          {arb.away_team}
+        </span>
+        <div />
+        <div
+          style={{
+            width: 98,
+            height: 80,
+            background: "#070a0fff",
+            border: "2px solid #234283",
+            borderRadius: 11,
+            textAlign: "center",
+            boxSizing: "border-box",
+            margin: "0 auto",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <span
+            style={{
+              fontWeight: 650,
+              color: "#60c0fd",
+              fontSize: 15,
+              marginBottom: 1,
+              lineHeight: 1.1,
+            }}
+          >
+            Moneyline
+          </span>
+          <span
+            style={{
+              fontWeight: 900,
+              fontSize: 24,
+              color: "#fff",
+              lineHeight: 1.13,
+            }}
+          >
+            {awayOdds}
+          </span>
+          <span
+            style={{
+              fontWeight: 900,
+              fontSize: 13,
+              color: "#3CB4FF",
+              marginTop: 3,
+              lineHeight: 1,
+            }}
+          >
+            {arb.away_book}
+          </span>
+        </div>
+      </div>
+
+      {/* Home row */}
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "1.7fr 1fr 1fr",
+          alignItems: "center",
+          gap: 12,
+          marginBottom: 9,
+          minHeight: 67,
+        }}
+      >
+        <span
+          style={{
+            fontWeight: 700,
+            color: "#FF8B64",
+            fontSize: "1.16em",
+            textAlign: "left",
+            paddingLeft: 7,
+          }}
+        >
+          {arb.home_team}
+        </span>
+        <div />
+        <div
+          style={{
+            width: 98,
+            height: 80,
+            background: "#070a0fff",
+            border: "2px solid #234283",
+            borderRadius: 11,
+            textAlign: "center",
+            boxSizing: "border-box",
+            margin: "0 auto",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <span
+            style={{
+              fontWeight: 650,
+              color: "#60c0fd",
+              fontSize: 15,
+              marginBottom: 1,
+              lineHeight: 1.1,
+            }}
+          >
+            Moneyline
+          </span>
+          <span
+            style={{
+              fontWeight: 900,
+              fontSize: 24,
+              color: "#fff",
+              lineHeight: 1.13,
+            }}
+          >
+            {homeOdds}
+          </span>
+          <span
+            style={{
+              fontWeight: 900,
+              fontSize: 13,
+              color: "#3CB4FF",
+              marginTop: 3,
+              lineHeight: 1,
+            }}
+          >
+            {arb.home_book}
+          </span>
+        </div>
+      </div>
+
+      {/* Bottom summary bar */}
+      <div
+        style={{
+          marginTop: 8,
+          padding: "10px 12px",
+          background: "#151e34",
+          borderRadius: 11,
+          border: "1px solid #22c55e88",
+          fontSize: 13,
+          color: "#e5e7eb",
+        }}
+      >
+        
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            marginBottom: 4,
+          }}
+        >
+          <span>Edge</span>
+          <span style={{ color: "#4ade80", fontWeight: 700 }}>
+            +{arb.guaranteed_profit_pct.toFixed(2)}%
+          </span>
+        </div>
+        
+
+        {/* $10 on each team explanation */}
+        <div
+          style={{
+            marginTop: 6,
+            paddingTop: 6,
+            borderTop: "1px solid #1f2937",
+            fontSize: 12,
+            color: "#9ca3af",
+          }}
+        >
+          If you bet <strong>$10 on {arb.away_team}</strong> at this line, you
+          would get back{" "}
+          {awayPayout10 ? (
+            <span style={{ color: "#e5e7eb", fontWeight: 600 }}>
+              ${awayPayout10.toFixed(2)}
+            </span>
+          ) : (
+            "—"
+          )}{" "}
+          if they win.
+          <br />
+          If you bet <strong>$10 on {arb.home_team}</strong> at this line, you
+          would get back{" "}
+          {homePayout10 ? (
+            <span style={{ color: "#e5e7eb", fontWeight: 600 }}>
+              ${homePayout10.toFixed(2)}
+            </span>
+          ) : (
+            "—"
+          )}{" "}
+          if they win.
+          <br />
+          The green numbers above show how to size both bets together so, when
+          you place them at the same time, you lock in profit no matter who
+          wins.
+        </div>
+      </div>
+    </div>
+  );
 }
 
 function Arbitrage() {
@@ -21,11 +317,8 @@ function Arbitrage() {
     setIsLoading(true);
     setError(null);
 
-    // Local backend:
-    // const url = "http://127.0.0.1:5050/api/arbitrage";
-    // Render backend:
-    // const url = "https://open-bet-capstone.onrender.com/api/arbitrage";
     const url = "http://127.0.0.1:5050/api/arbitrage";
+    // For Render: const url = "https://open-bet-capstone.onrender.com/api/arbitrage";
 
     fetch(url)
       .then((res) => res.json())
@@ -45,108 +338,103 @@ function Arbitrage() {
 
   return (
     <div className="container mx-auto py-10 px-4">
-      <section className="flex flex-col items-center justify-center mb-8">
+      {/* Centered big title */}
+      <div
+        style={{
+          maxWidth: 1340,
+          margin: "0 auto 24px",
+          color: "#fff",
+          textAlign: "center",
+        }}
+      >
         <div
-          className="w-full max-w-4xl bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 rounded-2xl shadow-2xl border border-slate-700/80 p-8"
-          style={{ boxShadow: "0 18px 40px rgba(0,0,0,0.6)" }}
+          style={{
+            fontWeight: 800,
+            fontSize: "1.9rem",
+            marginBottom: 6,
+          }}
         >
-          <h1 className="text-3xl md:text-4xl font-extrabold text-center mb-2 text-sky-300 tracking-tight">
-            NBA Arbitrage Scanner
-          </h1>
-          <p className="text-center text-slate-300 mb-1">
-            Scans live NBA moneylines from multiple bookmakers and flags sure-bet
-            opportunities where the implied probabilities add to less than 100%.
-          </p>
-          <p className="text-center text-xs text-slate-500">
-            Stakes shown assume a 100-unit bankroll for illustration only.
-          </p>
+          NBA Arbitrage Scanner
         </div>
-      </section>
+        <div
+          style={{
+            color: "#9ca3af",
+            fontSize: 14,
+            maxWidth: 620,
+            margin: "0 auto",
+          }}
+        >
+          Arbitrage means you split your money between both teams at different
+          sportsbooks so you can&apos;t lose overall. We show where the math
+          works in your favor.
+        </div>
+      </div>
 
       {isLoading && <Loader />}
-
       {error && (
-        <p className="text-center text-red-400 font-medium">Error: {error}</p>
+        <div
+          style={{
+            color: "#f87171",
+            textAlign: "center",
+            marginTop: 20,
+            fontWeight: 600,
+          }}
+        >
+          Error: {error}
+        </div>
       )}
 
       {!isLoading && !error && (
         <>
           {arbs.length === 0 ? (
-            <p className="text-center text-slate-400">
-              No arbitrage opportunities detected right now. Try again closer to
-              game time.
-            </p>
+            <div
+              style={{
+                color: "#99aacc",
+                textAlign: "center",
+                margin: "36px 0",
+                fontSize: "1.1em",
+              }}
+            >
+              No arbitrage opportunities right now.
+            </div>
           ) : (
-            <section className="max-w-5xl mx-auto">
-              <div className="grid gap-4 md:grid-cols-2">
-                {arbs.map((arb, idx) => (
-                  <div
-                    key={arb.game_id + idx}
-                    className="rounded-2xl bg-slate-900/90 border border-emerald-500/60 shadow-lg p-4 flex flex-col justify-between"
-                  >
-                    <div className="flex items-center justify-between mb-1">
-                      <span className="text-xs text-slate-400">
-                        {formatCommence(arb.commence_time)}
-                      </span>
-                      <span className="text-xs font-semibold text-emerald-300">
-                        +{arb.guaranteed_profit_pct.toFixed(2)}% edge
-                      </span>
-                    </div>
-
-                    <div className="text-sm font-semibold text-slate-100 mb-2">
-                      {arb.away_team} @ {arb.home_team}
-                    </div>
-
-                    <div className="text-xs text-slate-300 mb-2">
-                      Total implied probability:{" "}
-                      <span className="font-semibold">
-                        {arb.total_implied_prob.toFixed(2)}%
-                      </span>
-                    </div>
-
-                    <div className="border border-slate-700 rounded-lg p-2 mb-2 text-xs text-slate-200">
-                      <div className="flex justify-between mb-1">
-                        <span>{arb.away_team}</span>
-                        <span>
-                          {arb.away_price > 0 ? `+${arb.away_price}` : arb.away_price} @{" "}
-                          <span className="font-semibold">{arb.away_book}</span>
-                        </span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span>{arb.home_team}</span>
-                        <span>
-                          {arb.home_price > 0 ? `+${arb.home_price}` : arb.home_price} @{" "}
-                          <span className="font-semibold">{arb.home_book}</span>
-                        </span>
-                      </div>
-                    </div>
-
-                    <div className="border border-emerald-600/70 rounded-lg p-2 text-xs text-slate-200 bg-emerald-900/10">
-                      <div className="flex justify-between mb-1">
-                        <span>Stake on {arb.away_team}</span>
-                        <span className="font-semibold text-emerald-300">
-                          {arb.stake_away.toFixed(2)} units
-                        </span>
-                      </div>
-                      <div className="flex justify-between mb-1">
-                        <span>Stake on {arb.home_team}</span>
-                        <span className="font-semibold text-emerald-300">
-                          {arb.stake_home.toFixed(2)} units
-                        </span>
-                      </div>
-                      <div className="flex justify-between mt-1">
-                        <span>Guaranteed profit (on 100u bankroll)</span>
-                        <span className="font-semibold text-emerald-400">
-                          {arb.guaranteed_profit.toFixed(2)}u (
-                          {arb.guaranteed_profit_pct.toFixed(2)}%)
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </section>
+            <div
+              style={{
+                display: "grid",
+                gridTemplateColumns: "repeat(3, 1fr)",
+                gap: "32px 38px",
+                margin: "36px auto",
+                maxWidth: 1340,
+                width: "100%",
+                justifyItems: "center",
+                padding: "0 1vw",
+              }}
+            >
+              {arbs.map((arb, idx) => (
+                <ArbCard key={arb.game_id || idx} arb={arb} />
+              ))}
+            </div>
           )}
+
+          {/* Simple explanation link */}
+          <div
+            style={{
+              maxWidth: 1340,
+              margin: "32px auto 0",
+              textAlign: "center",
+              fontSize: 13,
+              color: "#9ca3af",
+            }}
+          >
+            Want all the terms in everyday language (moneyline, edge,
+            arbitrage)?{" "}
+            <Link
+              to="/about"
+              style={{ color: "#38bdf8", textDecoration: "underline" }}
+            >
+              Open the About page for an explanation on Arbitrage
+            </Link>
+          </div>
         </>
       )}
     </div>
