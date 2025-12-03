@@ -131,7 +131,7 @@ print(f"Model complete. Test Set MAE: {mae:.2f}")
 print("\n--- 6. GENERATING HISTORY (Nov 1 to Today) ---")
 
 # Define prediciton Window 
-start_date = pd.Timestamp("2024-11-01").tz_localize('UTC') 
+start_date = pd.Timestamp("2025-11-01").tz_localize('UTC') 
 today = pd.Timestamp.now(tz='UTC')
 
 # Get past games 

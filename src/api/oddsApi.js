@@ -26,3 +26,9 @@ export async function fetchPlayerProps() {
   }
   return resp.json();
 }
+// nEW predicion history
+export async function fetchPredictionHistory() {
+  const resp = await fetch(`${API_BASE_URL}/api/prediction-history`);
+  if (!resp.ok) throw new Error("Could not fetch prediction history");
+  return resp.json();
+}
