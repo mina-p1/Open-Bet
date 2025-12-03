@@ -58,6 +58,17 @@ def get_live_nba_odds():
         print("Error serving batch data:", e)
         return jsonify({"error": str(e)}), 500
 
+# NEW HISTORIC predicitons route
+@app.route('/api/prediction-history')
+def get_prediction_history():
+    try:
+        # uses file generated from update_history.py
+        json_path = os.path.join(os.path.dirname(__file__), 'prediction_history.json')
+        with open(json_path, 'r') as f:
+            data = json.load(f)
+        return jsonify(data)
+    except FileNotFoundError:
+        return jsonify({"ERROR": "No history file. Did you run update_history.py?"}), 404
 
 @app.route('/api/player-props')
 def get_player_props():

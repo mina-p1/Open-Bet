@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Loader from '../components/Loader';
-import { fetchHistoricalGames } from '../api/oddsApi'; 
+import { fetchHistoricalGames, fetchPredictionHistory } from '../api/oddsApi'; // new import for historic
 
 
 // format YYYY-MM-DD as MMM DD, YYYY
@@ -16,20 +16,38 @@ function HomePage() {
   const todayStr = new Date().toISOString().slice(0, 10);
   const [selectedDate, setSelectedDate] = useState('');
   const [histGames, setHistGames] = useState([]);
+  const [predictionsMap, setPredictionsMap] = useState({}); // new state
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
 
+  // adjust to fetch both game sna predicitons
   useEffect(() => {
     setIsLoading(true);
     setError(null);
-    fetchHistoricalGames(selectedDate)
-      .then(data => {
-        if (data.error) setError(data.error);
-        else setHistGames(data);
+
+    Promise.all([
+      fetchHistoricalGames(selectedDate),
+      fetchPredictionHistory()
+    ])
+      .then(([gamesData, historyData]) => {
+        if (gamesData.error) throw new Error(gamesData.error);
+        setHistGames(gamesData);
+
+      
+        const map = {};
+        if (historyData.games) {
+          historyData.games.forEach(p => {
+            const key = `${p.date}_${p.home_team}`;
+            map[key] = p;
+          });
+        }
+        setPredictionsMap(map);
+
         setIsLoading(false);
       })
-      .catch(error => {
-        setError(error.message);
+      .catch(err => {
+        console.error(err);
+        setError("Could not load data.");
         setIsLoading(false);
       });
   }, [selectedDate]);
@@ -54,18 +72,37 @@ function HomePage() {
               <th style={{ padding: 10, fontWeight: '700', textAlign: "center" }}>Away</th>
               <th style={{ padding: 10, fontWeight: '700', textAlign: "center" }}>Home Score</th>
               <th style={{ padding: 10, fontWeight: '700', textAlign: "center" }}>Away Score</th>
+              {/* New col */}
+              <th style={{ padding: 10, fontWeight: '700', textAlign: "center", borderLeft: "1px solid #2a3b55" }}>Our Prediction</th>
             </tr>
           </thead>
           <tbody>
-            {histGames.map((game, i) => (
-              <tr key={game.game_date + game.team_name_home + i} style={{ borderBottom: "1px solid #262f45", textAlign: "center" }}>
-                <td style={{ padding: 10 }}>{prettyDate(game.game_date)}</td>
-                <td style={{ padding: 10, fontWeight: 600, color: "#8ee7f9" }}>{game.team_name_home}</td>
-                <td style={{ padding: 10, fontWeight: 600, color: "#FFC7A1" }}>{game.team_name_away}</td>
-                <td style={{ padding: 10, fontWeight: 800 }}>{game.pts_home}</td>
-                <td style={{ padding: 10, fontWeight: 800 }}>{game.pts_away}</td>
-              </tr>
-            ))}
+            {histGames.map((game, i) => {
+              // 5. Look up the prediction for this specific game row
+              const key = `${game.game_date}_${game.team_name_home}`;
+              const pred = predictionsMap[key];
+
+              return (
+                <tr key={key + i} style={{ borderBottom: "1px solid #262f45", textAlign: "center" }}>
+                  <td style={{ padding: 10 }}>{prettyDate(game.game_date)}</td>
+                  <td style={{ padding: 10, fontWeight: 600, color: "#8ee7f9" }}>{game.team_name_home}</td>
+                  <td style={{ padding: 10, fontWeight: 600, color: "#FFC7A1" }}>{game.team_name_away}</td>
+                  <td style={{ padding: 10, fontWeight: 800 }}>{game.pts_home}</td>
+                  <td style={{ padding: 10, fontWeight: 800 }}>{game.pts_away}</td>
+                  
+                  {/* 6. Display the Predicted Winner */}
+                  <td style={{ padding: 10, textAlign: "center", borderLeft: "1px solid #2a3b55" }}>
+                    {pred ? (
+                      <span style={{ color: "#a5b4fc", fontWeight: 700 }}>
+                        {pred.predicted_winner}
+                      </span>
+                    ) : (
+                      <span style={{ color: "#4b5563", fontSize: 12 }}>-</span>
+                    )}
+                  </td>
+                </tr>
+              );
+            })}
           </tbody>
         </table>
       </div>
