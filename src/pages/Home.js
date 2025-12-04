@@ -73,12 +73,11 @@ function HomePage() {
               <th style={{ padding: 10, fontWeight: '700', textAlign: "center" }}>Home Score</th>
               <th style={{ padding: 10, fontWeight: '700', textAlign: "center" }}>Away Score</th>
               {/* New col */}
-              <th style={{ padding: 10, fontWeight: '700', textAlign: "center", borderLeft: "1px solid #2a3b55" }}>Our Prediction</th>
+              <th style={{ padding: 10, fontWeight: '700', textAlign: "center", borderLeft: "1px solid #2a3b55" }}>Model Prediction</th>
             </tr>
           </thead>
           <tbody>
             {histGames.map((game, i) => {
-              // 5. Look up the prediction for this specific game row
               const key = `${game.game_date}_${game.team_name_home}`;
               const pred = predictionsMap[key];
 
@@ -90,12 +89,19 @@ function HomePage() {
                   <td style={{ padding: 10, fontWeight: 800 }}>{game.pts_home}</td>
                   <td style={{ padding: 10, fontWeight: 800 }}>{game.pts_away}</td>
                   
-                  {/* 6. Display the Predicted Winner */}
+                  {/* --- SIMPLE PREDICTION DISPLAY --- */}
                   <td style={{ padding: 10, textAlign: "center", borderLeft: "1px solid #2a3b55" }}>
                     {pred ? (
-                      <span style={{ color: "#a5b4fc", fontWeight: 700 }}>
-                        {pred.predicted_winner}
-                      </span>
+                      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                        {/* Winner Name */}
+                        <span style={{ color: "#a5b4fc", fontWeight: 700, fontSize: 13 }}>
+                          {pred.predicted_winner}
+                        </span>
+                        {/* Simple Score: 119 - 113 */}
+                        <span style={{ color: "#94a3b8", fontSize: 11 }}>
+                           {Math.round(pred.predicted_away_score)} - {Math.round(pred.predicted_home_score)}
+                        </span>
+                      </div>
                     ) : (
                       <span style={{ color: "#4b5563", fontSize: 12 }}>-</span>
                     )}
