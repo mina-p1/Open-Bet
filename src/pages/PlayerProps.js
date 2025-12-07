@@ -34,7 +34,7 @@ function PlayerProps() {
     // const url = "http://127.0.0.1:5050/api/player-props";
     // If using Render:
     // const url = "https://open-bet-capstone.onrender.com/api/player-props";
-    const url = "http://127.0.0.1:5050/api/player-props";
+    const url = "https://open-bet-capstone.onrender.com/api/player-props";
 
     fetch(url)
       .then((res) => res.json())

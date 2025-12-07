@@ -317,7 +317,7 @@ function Arbitrage() {
     setIsLoading(true);
     setError(null);
 
-    const url = "http://127.0.0.1:5050/api/arbitrage";
+    const url = "https://open-bet-capstone.onrender.com/api/arbitrage";
     // For Render: const url = "https://open-bet-capstone.onrender.com/api/arbitrage";
 
     fetch(url)
