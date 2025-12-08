@@ -18,7 +18,7 @@ function Header() {
           justifyContent: "space-between",
         }}
       >
-        {/* Left: Logo / Brand */}
+
         <Link
           to="/"
           style={{
