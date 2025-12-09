@@ -4,6 +4,7 @@ Run his every morning to get today's games and update the site
 cd src/backend
 python daily_update.py
 *NEW* python update_history.py
+UPDATE OddsTable Message
 git add src/backend/todays_data.json
 git commit -m "Daily odds update"
 git push

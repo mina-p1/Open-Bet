@@ -399,6 +399,13 @@ function OddsTable({ gamesData }) {
         <div style={{ position: 'relative' }}>
             <BookmakerDropdown bookmakerList={allBookmakerKeys} current={bookmakerKey} onChange={setBookmakerKey} />
             <DateBar selectedDate={selectedDate} setSelectedDate={setSelectedDate} />
+
+        {/* DAILY UPDATE */}
+      <p style={{ textAlign: "center", color: "#94a3b8", fontSize: "0.85em", marginTop: "-20px", marginBottom: "25px", fontStyle: "italic" }}>
+        Odds are as of 9:00 AM EST, 12/09/2025
+        </p>
+         {/* ------------------------- */}
+
             {filteredGames.length === 0 ? (
                 <div style={{ color: "#99aacc", textAlign: "center", margin: "36px 0", fontSize: "1.1em" }}>
                     No odds available for today's games.
