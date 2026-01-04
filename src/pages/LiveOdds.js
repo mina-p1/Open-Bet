@@ -2,8 +2,8 @@
 // get  live data from  backend
 
 import React, { useState, useEffect } from 'react';
-import OddsTable from '../components/OddsTable';
-import Loader from '../components/Loader';     
+import OddsTable from '../components/betting/OddsTable';
+import Loader from '../components/layout/Loader'; 
 import { fetchLiveNBAOdds } from '../api/oddsApi';
 
 function LiveOddsPage() {
