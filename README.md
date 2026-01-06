@@ -1,11 +1,13 @@
 # Daily Update 
 Run his every morning to get today's games and update the site
 
-cd src/backend
-python daily_update.py
-*NEW* python update_history.py
+cd Open-Bet/backend
+python3 daily_update.py
+*NEW* 
+python update_history.py
+
 UPDATE OddsTable Message
-git add src/backend/todays_data.json
+git add Open-Bet/backend/todays_data.json
 git commit -m "Daily odds update"
 git push
 
@@ -15,22 +17,24 @@ git push
 git push
 
 # Updated React app:
-cd src/frontend
+cd Open-Bet
 npm run build
 firebase deploy
+
+-------------------------
 
 # First-Time Start
 Run this once to generate the Model and the initial json data file
 
 cd src/backend
-python model_train.py    *Creates nba_model.pkl
-python daily_update.py  *Creates todays_data.json
+python3 model_train.py    *Creates nba_model.pkl
+python3 daily_update.py  *Creates todays_data.json
 
 # To run on local
 Run these in two separate terminals
 
 # Terminal 1 (Backend Server)
-cd src/backend
+cd Open-Bet/backend
 python app.py
 
 # Terminal 2 (React Frontend)

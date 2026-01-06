@@ -1,182 +1,315 @@
-import React, { useState, useEffect } from 'react';
-import Loader from '../components/layout/Loader';
-import { fetchHistoricalGames, fetchPredictionHistory } from '../api/oddsApi'; // new import for historic
+// HomePage shows the hero section and the historical scores table
+// You can pick a date and it loads games + model predictions for that day
 
-// format YYYY-MM-DD as MMM DD, YYYY
+import React, { useState, useEffect } from "react";
+import Loader from "../components/layout/Loader";
+import {
+  fetchHistoricalGames,
+  fetchPredictionHistory,
+} from "../api/oddsApi";
+
+// turn "YYYY-MM-DD" into "MMM DD, YYYY" (nice readable date)
 function prettyDate(dstr) {
   const parts = dstr.split("-");
   if (parts.length !== 3) return dstr;
-  // using noon to avoid any timezone weirdness
   const d = new Date(`${parts[0]}-${parts[1]}-${parts[2]}T12:00:00`);
-  return d.toLocaleDateString("en-US", { year: "numeric", month: "short", day: "2-digit" });
+  return d.toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "short",
+    day: "2-digit",
+  });
 }
 
 function HomePage() {
   const todayStr = new Date().toISOString().slice(0, 10);
-  const [selectedDate, setSelectedDate] = useState('');
+
+  // which date is selected in the calendar
+  const [selectedDate, setSelectedDate] = useState("");
+  // list of games for that date
   const [histGames, setHistGames] = useState([]);
-  const [predictionsMap, setPredictionsMap] = useState({}); // new state
+  // quick lookup map from date + home team => prediction
+  const [predictionsMap, setPredictionsMap] = useState({});
+  // loading + error state for the whole page
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  // adjust to fetch both game sna predicitons
+  // helper to move selectedDate by +1 / -1 day
+  const shiftDate = (days) => {
+    const base = selectedDate || todayStr;
+    const dateObj = new Date(base);
+    dateObj.setDate(dateObj.getDate() + days);
+    return dateObj.toISOString().slice(0, 10);
+  };
+
+  // grab games + prediction history whenever the date changes
   useEffect(() => {
     setIsLoading(true);
     setError(null);
 
-    Promise.all([
-      fetchHistoricalGames(selectedDate),
-      fetchPredictionHistory()
-    ])
+    Promise.all([fetchHistoricalGames(selectedDate), fetchPredictionHistory()])
       .then(([gamesData, historyData]) => {
         if (gamesData.error) throw new Error(gamesData.error);
-        setHistGames(gamesData);
+        setHistGames(gamesData || []);
 
-      
+        // build an easy map for predictions so we can look them up per row
         const map = {};
-        if (historyData.games) {
-          historyData.games.forEach(p => {
+        if (historyData && historyData.games) {
+          historyData.games.forEach((p) => {
             const key = `${p.date}_${p.home_team}`;
             map[key] = p;
           });
         }
         setPredictionsMap(map);
-
         setIsLoading(false);
       })
-      .catch(err => {
+      .catch((err) => {
         console.error(err);
         setError("Could not load data.");
         setIsLoading(false);
       });
   }, [selectedDate]);
 
+  // render the historical scores + prediction table
   const renderHistoricalTable = () => {
     if (isLoading) return <Loader />;
-    if (error) return <p style={{ color: 'red', textAlign: 'center' }}>Error: {error}</p>;
+    if (error)
+      return (
+        <p className="text-center text-sm font-medium text-red-400">
+          Error: {error}
+        </p>
+      );
     if (!histGames.length)
       return (
-        <div className="text-center text-gray-400 pb-8" style={{ textAlign: "center", color: "#bbb", fontSize: 16 }}>No games found for that date.</div>
+        <div className="pb-8 text-center text-sm text-slate-400">
+          No games found for that date.
+        </div>
       );
-    return (
-      <div style={{ display: "flex", justifyContent: "center", marginTop: 18 }}>
-        <table style={{
-          borderCollapse: "collapse", minWidth: 600, background: "#181e2a", color: "#e5e7ef",
-          borderRadius: 13, boxShadow: "0 1px 6px #2223"
-        }}>
-          <thead>
-            <tr style={{ backgroundColor: "#21306e", color: "#64befa" }}>
-              <th style={{ padding: 10, fontWeight: '700', textAlign: "center" }}>Date</th>
-              <th style={{ padding: 10, fontWeight: '700', textAlign: "center" }}>Home</th>
-              <th style={{ padding: 10, fontWeight: '700', textAlign: "center" }}>Away</th>
-              <th style={{ padding: 10, fontWeight: '700', textAlign: "center" }}>Home Score</th>
-              <th style={{ padding: 10, fontWeight: '700', textAlign: "center" }}>Away Score</th>
-              {/* New col */}
-              <th style={{ padding: 10, fontWeight: '700', textAlign: "center", borderLeft: "1px solid #2a3b55" }}>Model Prediction</th>
-            </tr>
-          </thead>
-          <tbody>
-            {histGames.map((game, i) => {
-              const key = `${game.game_date}_${game.team_name_home}`;
-              const pred = predictionsMap[key];
 
-              return (
-                <tr key={key + i} style={{ borderBottom: "1px solid #262f45", textAlign: "center" }}>
-                  <td style={{ padding: 10 }}>{prettyDate(game.game_date)}</td>
-                  <td style={{ padding: 10, fontWeight: 600, color: "#8ee7f9" }}>{game.team_name_home}</td>
-                  <td style={{ padding: 10, fontWeight: 600, color: "#FFC7A1" }}>{game.team_name_away}</td>
-                  <td style={{ padding: 10, fontWeight: 800 }}>{game.pts_home}</td>
-                  <td style={{ padding: 10, fontWeight: 800 }}>{game.pts_away}</td>
-                  
-                  {/* --- SIMPLE PREDICTION DISPLAY --- */}
-                  <td style={{ padding: 10, textAlign: "center", borderLeft: "1px solid #2a3b55" }}>
-                    {pred ? (
-                      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                        {/* Winner Name */}
-                        <span style={{ color: "#a5b4fc", fontWeight: 700, fontSize: 13 }}>
-                          {pred.predicted_winner}
-                        </span>
-                        {/* Simple Score: 119 - 113 */}
-                        <span style={{ color: "#94a3b8", fontSize: 11 }}>
-                           {Math.round(pred.predicted_away_score)} - {Math.round(pred.predicted_home_score)}
-                        </span>
+    return (
+      <div className="mt-6 flex justify-center">
+        <div className="w-full overflow-x-auto">
+          <table className="w-full min-w-[720px] border-separate border-spacing-0 overflow-hidden rounded-xl bg-slate-900 text-slate-100 shadow-md">
+            <thead>
+              <tr className="bg-sky-950 text-sky-300">
+                <th className="px-4 py-3 text-center text-sm font-semibold uppercase tracking-wide">
+                  Date
+                </th>
+                <th className="px-4 py-3 text-center text-sm font-semibold uppercase tracking-wide">
+                  Home
+                </th>
+                <th className="px-4 py-3 text-center text-sm font-semibold uppercase tracking-wide">
+                  Away
+                </th>
+                <th className="px-4 py-3 text-center text-sm font-semibold uppercase tracking-wide">
+                  Model Prediction
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {histGames.map((game) => {
+                const key = `${game.game_date}_${game.team_name_home}`;
+                const pred = predictionsMap[key];
+
+                // real winner from scores
+                let actualWinner = null;
+                if (
+                  typeof game.pts_home === "number" &&
+                  typeof game.pts_away === "number"
+                ) {
+                  if (game.pts_home > game.pts_away) {
+                    actualWinner = game.team_name_home;
+                  } else if (game.pts_away > game.pts_home) {
+                    actualWinner = game.team_name_away;
+                  }
+                }
+
+                const modelWinner = pred?.predicted_winner || null;
+                const gotItRight =
+                  actualWinner && modelWinner
+                    ? actualWinner === modelWinner
+                    : null;
+
+                return (
+                  <tr
+                    key={key}
+                    className="border-b border-slate-800 text-center text-sm last:border-b-0 hover:bg-slate-800/60"
+                  >
+                    {/* big date pill */}
+                    <td className="px-4 py-5 text-slate-200">
+                      <span className="inline-flex items-center rounded-full bg-slate-800 px-4 py-2 text-sm font-bold uppercase tracking-wide text-slate-100">
+                        {prettyDate(game.game_date)}
+                      </span>
+                    </td>
+
+                    {/* home team + score stacked */}
+                    <td className="px-4 py-5">
+                      <div
+                        className={`inline-flex flex-col items-center rounded-2xl px-5 py-3 ${
+                          actualWinner === game.team_name_home
+                            ? "bg-emerald-500/15 ring-2 ring-emerald-500/80 shadow-[0_0_18px_rgba(16,185,129,0.35)]"
+                            : "bg-slate-800/90"
+                        }`}
+                      >
+                        <div className="flex items-baseline gap-2">
+                          <span className="text-[14px] font-semibold uppercase tracking-wide text-cyan-300">
+                            {game.team_name_home}
+                          </span>
+                          <span className="text-lg font-extrabold text-slate-50">
+                            {game.pts_home}
+                          </span>
+                        </div>
+                        <div className="mt-1 flex items-center gap-2 text-[11px] uppercase tracking-wide text-slate-400">
+                          <span>Home</span>
+                          {actualWinner === game.team_name_home && (
+                            <span className="rounded-full bg-emerald-500/90 px-2 py-[2px] text-[10px] font-bold text-slate-950">
+                              Winner
+                            </span>
+                          )}
+                        </div>
                       </div>
-                    ) : (
-                      <span style={{ color: "#4b5563", fontSize: 12 }}>-</span>
-                    )}
-                  </td>
-                </tr>
-              );
-            })}
-          </tbody>
-        </table>
+                    </td>
+
+                    {/* away team + score stacked */}
+                    <td className="px-4 py-5">
+                      <div
+                        className={`inline-flex flex-col items-center rounded-2xl px-5 py-3 ${
+                          actualWinner === game.team_name_away
+                            ? "bg-emerald-500/15 ring-2 ring-emerald-500/80 shadow-[0_0_18px_rgba(16,185,129,0.35)]"
+                            : "bg-slate-800/90"
+                        }`}
+                      >
+                        <div className="flex items-baseline gap-2">
+                          <span className="text-[14px] font-semibold uppercase tracking-wide text-amber-200">
+                            {game.team_name_away}
+                          </span>
+                          <span className="text-lg font-extrabold text-slate-50">
+                            {game.pts_away}
+                          </span>
+                        </div>
+                        <div className="mt-1 flex items-center gap-2 text-[11px] uppercase tracking-wide text-slate-400">
+                          <span>Away</span>
+                          {actualWinner === game.team_name_away && (
+                            <span className="rounded-full bg-emerald-500/90 px-2 py-[2px] text-[10px] font-bold text-slate-950">
+                              Winner
+                            </span>
+                          )}
+                        </div>
+                      </div>
+                    </td>
+
+                    {/* prediction column with right/wrong badge */}
+                    <td className="px-4 py-5">
+                      {pred ? (
+                        <div className="flex flex-col items-center gap-2">
+                          <span
+                            className={`rounded-full px-3 py-1 text-[11px] font-semibold uppercase tracking-wide ${
+                              gotItRight === null
+                                ? "bg-slate-800 text-slate-300"
+                                : gotItRight
+                                ? "bg-emerald-500/15 text-emerald-300 ring-1 ring-emerald-500/60"
+                                : "bg-rose-500/10 text-rose-300 ring-1 ring-rose-500/60"
+                            }`}
+                          >
+                            {gotItRight === null
+                              ? "Model Prediction"
+                              : gotItRight
+                              ? "Model: Correct"
+                              : "Model: Wrong"}
+                          </span>
+                          <span className="rounded-full bg-slate-800 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-indigo-300">
+                            {pred.predicted_winner}
+                          </span>
+                          <span className="text-[12px] text-slate-300">
+                            {Math.round(pred.predicted_away_score)} -{" "}
+                            {Math.round(pred.predicted_home_score)}
+                          </span>
+                        </div>
+                      ) : (
+                        <span className="text-[11px] text-slate-500">
+                          No prediction
+                        </span>
+                      )}
+                    </td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </div>
       </div>
     );
   };
 
+  const effectiveDate = selectedDate || todayStr;
+  const nextDisabled = effectiveDate >= todayStr;
+
   return (
-    <div className="container mx-auto py-10 px-4" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-      <section className="flex flex-col items-center justify-center py-10" style={{ width: "100%", maxWidth: 960 }}>
-        <div className="card w-full max-w-xl bg-base-100 shadow-xl" style={{ margin: "0 auto", textAlign: "center" }}>
-          <div className="card-body items-center text-center">
-            <h1 className="mt-2 mb-5" style={{
-              fontWeight: 900, fontSize: "2rem", color: "#77caff",
-            }}>
-              Welcome to OpenBet!
-            </h1>
-            <h2 className="mt-2 mb-5" style={{
-              fontWeight: 800, fontSize: "1.55rem", color: "#6ecaff"
-            }}>
-              Historical Basketball Scores
-            </h2>
-            <p className="mb-6" style={{ color: "#c5e0f7" }}>
-              Discover basketball odds and compare lines. Use the calendar or arrows to view previous days.
-            </p>
-            <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 10, margin: "16px 0 26px 0" }}>
-              <button
-                aria-label="Previous day"
-                onClick={() => setSelectedDate(selectedDate ? (
-                  new Date(new Date(selectedDate).setDate(new Date(selectedDate).getDate() - 1)).toISOString().slice(0, 10)
-                ) : todayStr)}
-                style={{
-                  background: "#21306e", color: "#57bfff", border: "none", fontSize: 32,
-                  borderRadius: "50%", width: 42, height: 42, cursor: "pointer"
-                }}
-              >&larr;</button>
-              <input
-                type="date"
-                value={selectedDate}
-                max={todayStr}
-                onChange={e => setSelectedDate(e.target.value)}
-                className="input input-bordered w-full max-w-xs"
-                style={{
-                  textAlign: "center", fontSize: 18, borderRadius: 10, border: "1.5px solid #5377bf",
-                  background: "#171c2e", color: "#f8faff", boxShadow: "0 0 8px #14235515", padding: "8px 18px"
-                }}
-              />
-              <button
-                aria-label="Next day"
-                onClick={() => setSelectedDate(selectedDate ? (
-                  new Date(new Date(selectedDate).setDate(new Date(selectedDate).getDate() + 1)).toISOString().slice(0, 10)
-                ) : todayStr)}
-                disabled={selectedDate >= todayStr}
-                style={{
-                  background: "#21306e", color: "#57bfff", border: "none", fontSize: 32,
-                  borderRadius: "50%", width: 42, height: 42, cursor: selectedDate >= todayStr ? "not-allowed" : "pointer",
-                  opacity: selectedDate >= todayStr ? 0.5 : 1
-                }}
-              >&rarr;</button>
-            </div>
-            <div style={{ textAlign: "center", marginTop: "40px" }}>
-              <a href={`/liveodds?date=${selectedDate || todayStr}`} className="btn btn-primary btn-wide" style={{ marginBottom: 20 }}>
-                View Live Odds
-              </a>
-            </div>
+    <div className="flex flex-col items-center px-4 py-10">
+      <section className="flex w-full max-w-5xl flex-col items-center justify-center py-6">
+        {/* hero card */}
+        <div className="mx-auto w-full max-w-xl rounded-2xl bg-slate-900/90 p-8 text-center shadow-xl ring-1 ring-slate-800">
+          <h1 className="mb-3 text-3xl font-extrabold tracking-tight text-sky-300">
+            Welcome to OpenBet!
+          </h1>
+          <h2 className="mb-4 text-xl font-bold tracking-tight text-sky-200">
+            Historical Basketball Scores
+          </h2>
+          <p className="mb-6 text-sm text-slate-200">
+            Discover basketball odds and compare lines. Pick a date below to see
+            past games and how the model called them.
+          </p>
+
+          {/* date picker + arrows (nicer bar) */}
+          <div className="mb-8 mt-4 flex items-center justify-center gap-4 rounded-full bg-slate-950/90 px-4 py-3 ring-1 ring-slate-800 shadow-md">
+            {/* previous day button */}
+            <button
+              type="button"
+              aria-label="Previous day"
+              onClick={() => setSelectedDate(shiftDate(-1))}
+              className="flex h-9 w-9 items-center justify-center rounded-full bg-sky-900 text-lg text-sky-300 transition hover:bg-sky-800 hover:text-sky-100"
+            >
+              &larr;
+            </button>
+
+            {/* date input */}
+            <input
+              type="date"
+              value={selectedDate}
+              max={todayStr}
+              onChange={(e) => setSelectedDate(e.target.value)}
+              className="w-full max-w-md rounded-xl border border-sky-500/80 bg-slate-950 px-4 py-2.5 text-center text-base font-semibold text-slate-50 shadow-sm outline-none focus:border-sky-400 focus:ring-2 focus:ring-sky-500/60"
+            />
+
+            {/* next day button */}
+            <button
+              type="button"
+              aria-label="Next day"
+              onClick={() => setSelectedDate(shiftDate(1))}
+              disabled={nextDisabled}
+              className={`flex h-9 w-9 items-center justify-center rounded-full text-lg transition
+                ${
+                  nextDisabled
+                    ? "cursor-not-allowed bg-slate-800 text-slate-500 opacity-60"
+                    : "bg-sky-900 text-sky-300 hover:bg-sky-800 hover:text-sky-100"
+                }`}
+            >
+              &rarr;
+            </button>
+          </div>
+
+          {/* link to live odds for the same date */}
+          <div className="mt-6">
+            <a
+              href={`/liveodds?date=${effectiveDate}`}
+              className="inline-flex w-full max-w-xs items-center justify-center rounded-full bg-sky-500 px-6 py-2 text-sm font-semibold text-slate-950 shadow-md transition hover:bg-sky-400"
+            >
+              View Live Odds
+            </a>
           </div>
         </div>
-        <div style={{ width: "100%", marginTop: 40 }}>
-          {renderHistoricalTable()}
-        </div>
+
+        {/* historical table */}
+        <div className="mt-10 w-full">{renderHistoricalTable()}</div>
       </section>
     </div>
   );
