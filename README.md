@@ -4,7 +4,7 @@ Run his every morning to get today's games and update the site
 cd Open-Bet/backend
 python3 daily_update.py
 *NEW* 
-python update_history.py
+python3 update_history.py
 
 UPDATE OddsTable Message
 git add Open-Bet/backend/todays_data.json
@@ -35,7 +35,7 @@ Run these in two separate terminals
 
 # Terminal 1 (Backend Server)
 cd Open-Bet/backend
-python app.py
+python3 app.py
 
 # Terminal 2 (React Frontend)
 cd src/frontend

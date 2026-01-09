@@ -18,7 +18,7 @@ function Header() {
   const [sportsOpen, setSportsOpen] = useState(false);
 
   const isActive = (path) => location.pathname === path;
-  const isAnySportActive = sportsNav.some((s) => isActive(s.to));
+
 
   return (
     <header className="sticky top-0 z-30 border-b border-slate-800 bg-[#020617]/95 backdrop-blur-xl">

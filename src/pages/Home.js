@@ -246,7 +246,7 @@ function HomePage() {
   return (
     <div className="flex flex-col items-center px-4 py-10">
       <section className="flex w-full max-w-5xl flex-col items-center justify-center py-6">
-        {/* hero card */}
+        {/* main card */}
         <div className="mx-auto w-full max-w-xl rounded-2xl bg-slate-900/90 p-8 text-center shadow-xl ring-1 ring-slate-800">
           <h1 className="mb-3 text-3xl font-extrabold tracking-tight text-sky-300">
             Welcome to OpenBet!
