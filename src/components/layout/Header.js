@@ -12,12 +12,6 @@ const mainNav = [
   { to: "/about", label: "About" },
 ];
 
-const sportsNav = [
-  { to: "/sports/nba", label: "NBA" },
-  { to: "/sports/mlb", label: "MLB" },
-  { to: "/sports/nfl", label: "NFL" },
-  { to: "/sports/nhl", label: "NHL" },
-];
 
 function Header() {
   const location = useLocation();
@@ -69,64 +63,9 @@ function Header() {
               );
             })}
 
-            {/* SPORTS DROPDOWN PILL */}
-            <div className="relative">
-              <button
-                type="button"
-                onClick={() => setSportsOpen((o) => !o)}
-                className={[
-                  "relative inline-flex items-center justify-center whitespace-nowrap rounded-full px-3.5 py-1.5 text-xs font-medium transition-all duration-200",
-                  "border border-slate-700/70 bg-slate-900/60 text-slate-300",
-                  "hover:text-slate-50 hover:border-sky-400/70 hover:bg-slate-900/90 hover:shadow-[0_0_18px_rgba(56,189,248,0.45)]",
-                  isAnySportActive &&
-                    "border-transparent bg-gradient-to-r from-sky-400 via-cyan-300 to-emerald-300 text-slate-950 shadow-[0_0_25px_rgba(56,189,248,0.9)]",
-                ]
-                  .filter(Boolean)
-                  .join(" ")}
-              >
-                {isAnySportActive && (
-                  <span className="pointer-events-none absolute inset-[-2px] rounded-full bg-sky-400/40 blur-[6px]" />
-                )}
-                <span className="relative mr-1">Sports</span>
-                <span
-                  className={`relative text-[10px] transition-transform ${
-                    sportsOpen ? "rotate-180" : "rotate-0"
-                  }`}
-                >
-                  ▼
-                </span>
-              </button>
-
-              {sportsOpen && (
-                <div className="absolute right-0 mt-2 w-40 rounded-xl border border-slate-800 bg-slate-950/98 p-1 shadow-xl shadow-slate-900/90 backdrop-blur-xl">
-                  {sportsNav.map((sport) => {
-                    const active = isActive(sport.to);
-                    return (
-                      <Link
-                        key={sport.to}
-                        to={sport.to}
-                        onClick={() => setSportsOpen(false)}
-                        className={[
-                          "flex items-center justify-between rounded-lg px-3 py-2 text-xs font-medium transition-colors",
-                          active
-                            ? "bg-slate-800 text-sky-300"
-                            : "text-slate-300 hover:bg-slate-900 hover:text-slate-50",
-                        ]
-                          .filter(Boolean)
-                          .join(" ")}
-                      >
-                        <span>{sport.label}</span>
-                        {active && (
-                          <span className="h-1.5 w-1.5 rounded-full bg-sky-400" />
-                        )}
-                      </Link>
-                    );
-                  })}
-                </div>
-              )}
+          
             </div>
           </div>
-        </div>
       </nav>
     </header>
   );
