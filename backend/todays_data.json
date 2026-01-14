@@ -1460,7 +1460,7 @@
                 },
                 {
                   "name": "Utah Jazz",
-                  "price": 142
+                  "price": 156
                 }
               ]
             },
@@ -1687,8 +1687,8 @@
                 },
                 {
                   "name": "Utah Jazz",
-                  "price": -108,
-                  "point": 3.5
+                  "price": -110,
+                  "point": 5.0
                 }
               ]
             },
