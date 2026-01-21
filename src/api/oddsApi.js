@@ -1,8 +1,8 @@
 const API_BASE_URL =
   process.env.NODE_ENV === "production"
-    ? "https://<your-render-backend>.onrender.com"
+    ? "https://open-bet-capstone.onrender.com"
     : "http://127.0.0.1:5050";
-
+  
 
 
 // historical games from Kaggle SQLite/Flask
