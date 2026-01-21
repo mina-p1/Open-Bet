@@ -30,8 +30,21 @@ cd src/backend
 python3 model_train.py    *Creates nba_model.pkl
 python3 daily_update.py  *Creates todays_data.json
 
+
+------------------------------
+# To start
+cd Open-Bet/backend
+python run_openbet_all.py
+
+# Then Update React app:
+cd Open-Bet
+npm run build
+firebase deploy
+
+Push to Github
+
 # To run on local
-Run these in two separate terminals
+Run these in three separate terminals
 
 # Terminal 1 (Backend Server)
 cd Open-Bet/backend
