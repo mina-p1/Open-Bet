@@ -9,8 +9,9 @@ from datetime import datetime
 
 # Config
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-DATA_DIR = os.path.join(BASE_DIR, 'archive', 'box_scores')
-OUTPUT_FILE = os.path.join(BASE_DIR, 'prediction_history.json')
+DATA_DIR = os.path.join(BASE_DIR, "data", "box_scores")
+OUTPUT_FILE = os.path.join(BASE_DIR, "data", "prediction_history.json")
+
 
 games_path = os.path.join(DATA_DIR, "Games.csv")
 stats_path = os.path.join(DATA_DIR, "TeamStatistics.csv")

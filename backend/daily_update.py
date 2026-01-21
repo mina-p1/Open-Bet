@@ -5,11 +5,12 @@ import os
 import pandas as pd
 from datetime import datetime
 
-# CONFIG
-API_KEY = "f4d213fc03016ee6e5d9992ced4b45e3"
+API_KEY = "22f30f632d7e13e59dcc26ce1ce70e8c"
 ODDS_API_URL = "https://api.the-odds-api.com/v4/sports/basketball_nba/odds"
-MODEL_PATH = "nba_model.pkl"
-OUTPUT_FILE = "todays_data.json"
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+MODEL_PATH = os.path.join(BASE_DIR, "data", "nba_model.pkl")
+OUTPUT_FILE = os.path.join(BASE_DIR, "data", "todays_data.json")
 
 TEAM_MAP = {
     "Atlanta Hawks": "1610612737",

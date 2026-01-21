@@ -1,5 +1,6 @@
 from flask import Flask, jsonify, request
 from flask_cors import CORS
+
 import pandas as pd
 import os
 import requests
@@ -9,21 +10,36 @@ import math
 app = Flask(__name__)
 CORS(app)
 
-CSV_PATH = os.path.join(os.path.dirname(__file__), "archive", "box_scores", "Games.csv")
+# ---------- BASE DATA DIR (SMALL FILES ONLY) ----------
+
+BASE_DIR = os.path.dirname(__file__)
+DATA_DIR = os.path.join(BASE_DIR, "data")
+BOX_DIR = os.path.join(DATA_DIR, "box_scores")
+
+CSV_PATH = os.path.join(BOX_DIR, "Games.csv")
 
 
-@app.route('/api/historical-data')
+# ---------- HISTORICAL SCORES ----------
+
+@app.route("/api/historical-data")
 def get_historical_data():
-    game_date = request.args.get('date')
+    game_date = request.args.get("date")
     try:
-        df = pd.read_csv(CSV_PATH, usecols=[
-            'gameDateTimeEst', 'hometeamName', 'awayteamName', 'homeScore', 'awayScore'
-        ])
-        df = df.rename(columns={'gameDateTimeEst': 'gameDate'})
-        df['gameDateOnly'] = df['gameDate'].astype(str).str.split(' ').str[0]
+        df = pd.read_csv(
+            CSV_PATH,
+            usecols=[
+                "gameDateTimeEst",
+                "hometeamName",
+                "awayteamName",
+                "homeScore",
+                "awayScore",
+            ],
+        )
+        df = df.rename(columns={"gameDateTimeEst": "gameDate"})
+        df["gameDateOnly"] = df["gameDate"].astype(str).str.split(" ").str[0]
 
         if game_date:
-            filtered = df[df['gameDateOnly'] == game_date]
+            filtered = df[df["gameDateOnly"] == game_date]
         else:
             filtered = df
 
@@ -31,13 +47,15 @@ def get_historical_data():
 
         games_list = []
         for _, row in filtered.iterrows():
-            games_list.append({
-                "game_date": row['gameDateOnly'],
-                "team_name_home": row['hometeamName'],
-                "team_name_away": row['awayteamName'],
-                "pts_home": row['homeScore'],
-                "pts_away": row['awayScore'],
-            })
+            games_list.append(
+                {
+                    "game_date": row["gameDateOnly"],
+                    "team_name_home": row["hometeamName"],
+                    "team_name_away": row["awayteamName"],
+                    "pts_home": row["homeScore"],
+                    "pts_away": row["awayScore"],
+                }
+            )
 
         return jsonify(games_list if game_date else games_list[:20])
     except Exception as e:
@@ -45,49 +63,51 @@ def get_historical_data():
         return jsonify({"error": str(e)}), 500
 
 
-@app.route('/api/live-nba-odds')
+# ---------- TODAY'S ODDS + PREDICTIONS ----------
+
+@app.route("/api/live-nba-odds")
 def get_live_nba_odds():
     try:
-        json_path = os.path.join(os.path.dirname(__file__), 'todays_data.json')
-        with open(json_path, 'r') as f:
+        json_path = os.path.join(DATA_DIR, "todays_data.json")
+        with open(json_path, "r") as f:
             data = json.load(f)
-        return jsonify(data['games'])
+        return jsonify(data["games"])
     except FileNotFoundError:
-        return jsonify({"error": "No daily data found. Run daily_update.py first."}), 404
+        return jsonify({"error": "No daily data found. Run run_openbet_all.py first."}), 404
     except Exception as e:
         print("Error serving batch data:", e)
         return jsonify({"error": str(e)}), 500
 
-# NEW HISTORIC predicitons route
-@app.route('/api/prediction-history')
+
+# ---------- HISTORICAL PREDICTION HISTORY ----------
+
+@app.route("/api/prediction-history")
 def get_prediction_history():
     try:
-        # uses file generated from update_history.py
-        json_path = os.path.join(os.path.dirname(__file__), 'prediction_history.json')
-        with open(json_path, 'r') as f:
+        json_path = os.path.join(DATA_DIR, "prediction_history.json")
+        with open(json_path, "r") as f:
             data = json.load(f)
         return jsonify(data)
     except FileNotFoundError:
-        return jsonify({"ERROR": "No history file. Did you run update_history.py?"}), 404
+        return jsonify({"ERROR": "No history file. Did you run run_openbet_all.py?"}), 404
+    except Exception as e:
+        print("History error:", e)
+        return jsonify({"error": str(e)}), 500
 
-@app.route('/api/player-props')
+
+# ---------- PLAYER PROPS (UNCHANGED) ----------
+
+@app.route("/api/player-props")
 def get_player_props():
     """
     Returns simplified NBA player points props for today's games.
-
-    Step 1: GET /v4/sports/basketball_nba/events
-    Step 2: For each event, GET /v4/sports/basketball_nba/events/{eventId}/odds
-            with markets=player_points, regions=us, oddsFormat=american
     """
-    API_KEY = '39fc4ed3a7caf51b49d87d08ec90658a'
+    API_KEY = "39fc4ed3a7caf51b49d87d08ec90658a"
     BASE_URL = "https://api.the-odds-api.com/v4/sports/basketball_nba"
 
-    # 1) Get events (does not count against quota)
     try:
         events_resp = requests.get(
-            f"{BASE_URL}/events",
-            params={"apiKey": API_KEY},
-            timeout=10,
+            f"{BASE_URL}/events", params={"apiKey": API_KEY}, timeout=10
         )
         events_resp.raise_for_status()
         events = events_resp.json()
@@ -97,7 +117,6 @@ def get_player_props():
 
     simplified = []
 
-    # 2) For each event, get player_points odds
     for ev in events:
         event_id = ev.get("id")
         home_team = ev.get("home_team")
@@ -144,26 +163,27 @@ def get_player_props():
                     line = outcome.get("point")
                     price = outcome.get("price")
 
-                    simplified.append({
-                        "game_id": event_id,
-                        "home_team": home_team,
-                        "away_team": away_team,
-                        "commence_time": commence_time,
-                        "bookmaker": book_title or book_key,
-                        "market": "player_points",
-                        "player": player_name,
-                        "line": line,
-                        "price": price,
-                        "openbet_flag": None,
-                    })
+                    simplified.append(
+                        {
+                            "game_id": event_id,
+                            "home_team": home_team,
+                            "away_team": away_team,
+                            "commence_time": commence_time,
+                            "bookmaker": book_title or book_key,
+                            "market": "player_points",
+                            "player": player_name,
+                            "line": line,
+                            "price": price,
+                            "openbet_flag": None,
+                        }
+                    )
 
     return jsonify(simplified)
 
 
-# --------- NEW: Arbitrage endpoint ---------
+# ---------- ARBITRAGE ENDPOINT (UNCHANGED) ----------
 
 def american_to_prob(odds):
-    """Convert American odds to implied probability (no vig)."""
     if odds is None:
         return None
     try:
@@ -176,13 +196,9 @@ def american_to_prob(odds):
         return -o / (-o + 100.0)
 
 
-@app.route('/api/arbitrage')
+@app.route("/api/arbitrage")
 def get_arbitrage():
-    """
-    Scan NBA moneyline odds from The Odds API and return simple 2-way arbitrage
-    opportunities between bookmakers.
-    """
-    API_KEY = '39fc4ed3a7caf51b49d87d08ec90658a'
+    API_KEY = "39fc4ed3a7caf51b49d87d08ec90658a"
     ODDS_URL = "https://api.the-odds-api.com/v4/sports/basketball_nba/odds"
 
     params = {
@@ -197,15 +213,18 @@ def get_arbitrage():
         resp.raise_for_status()
         events = resp.json()
     except requests.HTTPError as e:
-        body = resp.text if 'resp' in locals() else ''
+        body = resp.text if "resp" in locals() else ""
         print("Arb odds HTTP error:", e, body)
-        return jsonify({"error": str(e), "body": body}), resp.status_code if 'resp' in locals() else 500
+        return (
+            jsonify({"error": str(e), "body": body}),
+            resp.status_code if "resp" in locals() else 500,
+        )
     except requests.RequestException as e:
         print("Arb odds API error:", e)
         return jsonify({"error": str(e)}), 500
 
     opportunities = []
-    BANKROLL = 100.0  # for suggested stakes
+    BANKROLL = 100.0
 
     for ev in events:
         game_id = ev.get("id")
@@ -213,8 +232,7 @@ def get_arbitrage():
         away_team = ev.get("away_team")
         commence_time = ev.get("commence_time")
 
-        # Track best odds for each side
-        best_home = None  # (price, book)
+        best_home = None
         best_away = None
 
         for book in ev.get("bookmakers", []):
@@ -244,17 +262,13 @@ def get_arbitrage():
             continue
 
         total_prob = p_home + p_away
-        edge = 1.0 - total_prob  # positive = arbitrage
-
+        edge = 1.0 - total_prob
         if edge <= 0:
             continue
 
-        # stake sizing for bankroll B to lock profit:
-        # stake_home / stake_away proportional to implied probabilities
         stake_home = BANKROLL * (p_away / total_prob)
         stake_away = BANKROLL * (p_home / total_prob)
 
-        # Guaranteed return in either outcome
         if home_price > 0:
             ret_home = stake_home * (home_price / 100.0) + stake_home
         else:
@@ -269,23 +283,25 @@ def get_arbitrage():
         profit = guaranteed_return - BANKROLL
         profit_pct = profit / BANKROLL * 100.0
 
-        opportunities.append({
-            "game_id": game_id,
-            "home_team": home_team,
-            "away_team": away_team,
-            "commence_time": commence_time,
-            "home_book": home_book,
-            "home_price": home_price,
-            "away_book": away_book,
-            "away_price": away_price,
-            "total_implied_prob": round(total_prob * 100.0, 2),  # as %
-            "edge_percent": round(edge * 100.0, 2),
-            "bankroll": BANKROLL,
-            "stake_home": round(stake_home, 2),
-            "stake_away": round(stake_away, 2),
-            "guaranteed_profit": round(profit, 2),
-            "guaranteed_profit_pct": round(profit_pct, 2),
-        })
+        opportunities.append(
+            {
+                "game_id": game_id,
+                "home_team": home_team,
+                "away_team": away_team,
+                "commence_time": commence_time,
+                "home_book": home_book,
+                "home_price": home_price,
+                "away_book": away_book,
+                "away_price": away_price,
+                "total_implied_prob": round(total_prob * 100.0, 2),
+                "edge_percent": round(edge * 100.0, 2),
+                "bankroll": BANKROLL,
+                "stake_home": round(stake_home, 2),
+                "stake_away": round(stake_away, 2),
+                "guaranteed_profit": round(profit, 2),
+                "guaranteed_profit_pct": round(profit_pct, 2),
+            }
+        )
 
     return jsonify(opportunities)
 
