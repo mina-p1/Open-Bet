@@ -1,4 +1,6 @@
 const API_BASE_URL = "https://open-bet-capstone.onrender.com";
+//const API_BASE_URL = "http://127.0.0.1:5050";
+
 
 // historical games from Kaggle SQLite/Flask
 export async function fetchHistoricalGames(date = null) {

@@ -30,7 +30,7 @@ function Header() {
               OpenBet
             </div>
             <div className="text-[10px] font-medium uppercase text-slate-400 tracking-[0.22em]">
-              Smart • Social • Sharp
+              The Smart Basketball Betting Tool
             </div>
           </div>
         </Link>

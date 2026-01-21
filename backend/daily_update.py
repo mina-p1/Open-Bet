@@ -6,11 +6,10 @@ import pandas as pd
 from datetime import datetime
 
 # CONFIG
-API_KEY = '39fc4ed3a7caf51b49d87d08ec90658a'
+API_KEY = "f4d213fc03016ee6e5d9992ced4b45e3"
 ODDS_API_URL = "https://api.the-odds-api.com/v4/sports/basketball_nba/odds"
-MODEL_PATH = 'nba_model.pkl'
-OUTPUT_FILE = 'todays_data.json'
-
+MODEL_PATH = "nba_model.pkl"
+OUTPUT_FILE = "todays_data.json"
 
 TEAM_MAP = {
     "Atlanta Hawks": "1610612737",
@@ -43,92 +42,143 @@ TEAM_MAP = {
     "San Antonio Spurs": "1610612759",
     "Toronto Raptors": "1610612761",
     "Utah Jazz": "1610612762",
-    "Washington Wizards": "1610612764"
+    "Washington Wizards": "1610612764",
 }
+
 
 def main():
     # 1. Load the Model
     if not os.path.exists(MODEL_PATH):
-        print("'nba_model.pkl' not found did you run model_train.py ?")
+        print("'nba_model.pkl' not found. Did you run model_train.py?")
         return
-    
+
     print(f"Loading {MODEL_PATH}...")
     artifact = joblib.load(MODEL_PATH)
-    model = artifact['model']
-    latest_stats = artifact['latest_stats'] # Dictionary of team's last known stats
-    
+    model = artifact["model"]
+    latest_stats = artifact["latest_stats"]  # dict of teamId -> last stats row
+
     print("Fetching live odds...")
-    params = {"regions": "us", "markets": "h2h,spreads,totals", "oddsFormat": "american", "apiKey": API_KEY}
+    params = {
+        "regions": "us",
+        "markets": "h2h,spreads,totals",
+        "oddsFormat": "american",
+        "apiKey": API_KEY,
+    }
     resp = requests.get(ODDS_API_URL, params=params)
-    games = resp.json()
+
+    try:
+        games = resp.json()
+    except ValueError:
+        print("ERROR: Odds API returned non‑JSON:")
+        print(resp.text[:500])
+        return
+
+    # handle API error payloads
+    if not isinstance(games, list):
+        print("ERROR: Odds API did not return a list of games.")
+        print("Status code:", resp.status_code)
+        print("Body:", games)
+        return
 
     print(f"Found {len(games)} games.")
     for game in games:
-        home_name = game['home_team']
-        away_name = game['away_team']
+        if not isinstance(game, dict):
+            print("Skipping non-dict game entry:", game)
+            continue
+
+        home_name = game.get("home_team")
+        away_name = game.get("away_team")
+
+        if not home_name or not away_name:
+            print("Skipping game with missing team names:", game)
+            game["openbet_prediction"] = None
+            continue
 
         h_id = TEAM_MAP.get(home_name)
         a_id = TEAM_MAP.get(away_name)
 
         if h_id and a_id and h_id in latest_stats and a_id in latest_stats:
-            # 1. Get stats for both teams
             h_stats = latest_stats[h_id]
             a_stats = latest_stats[a_id]
 
-            # 2. Build Feature Row for HOME Team
-            home_features = pd.DataFrame([{
-                'home': 1, 
-                'fatigue_index': 0,
-                'home_strength_rating': h_stats.get('home_strength_rating', 0),
-                'rolling_teamScore': h_stats.get('rolling_teamScore', 0),
-                'rolling_possessions': h_stats.get('rolling_possessions', 0),
-                'rolling_fieldGoalsPercentage': h_stats.get('rolling_fieldGoalsPercentage', 0),
-                'opp_rolling_teamScore': a_stats.get('rolling_teamScore', 0),
-                'opp_rolling_possessions': a_stats.get('rolling_possessions', 0),
-                'opp_rolling_opponentScore': a_stats.get('rolling_opponentScore', 0),
-                'opp_fatigue_index': 0, 
-                'opp_home_strength_rating': a_stats.get('home_strength_rating', 0)
-            }])
+            home_features = pd.DataFrame(
+                [
+                    {
+                        "home": 1,
+                        "fatigue_index": 0,
+                        "home_strength_rating": h_stats.get("home_strength_rating", 0),
+                        "rolling_teamScore": h_stats.get("rolling_teamScore", 0),
+                        "rolling_possessions": h_stats.get("rolling_possessions", 0),
+                        "rolling_fieldGoalsPercentage": h_stats.get(
+                            "rolling_fieldGoalsPercentage", 0
+                        ),
+                        "opp_rolling_teamScore": a_stats.get("rolling_teamScore", 0),
+                        "opp_rolling_possessions": a_stats.get(
+                            "rolling_possessions", 0
+                        ),
+                        "opp_rolling_opponentScore": a_stats.get(
+                            "rolling_opponentScore", 0
+                        ),
+                        "opp_fatigue_index": 0,
+                        "opp_home_strength_rating": a_stats.get(
+                            "home_strength_rating", 0
+                        ),
+                    }
+                ]
+            )
 
-            # 3. Build Feature Row for AWAY Team (Inverse)
-            away_features = pd.DataFrame([{
-                'home': 0, 
-                'fatigue_index': 0,
-                'home_strength_rating': a_stats.get('home_strength_rating', 0),
-                'rolling_teamScore': a_stats.get('rolling_teamScore', 0),
-                'rolling_possessions': a_stats.get('rolling_possessions', 0),
-                'rolling_fieldGoalsPercentage': a_stats.get('rolling_fieldGoalsPercentage', 0),
-                'opp_rolling_teamScore': h_stats.get('rolling_teamScore', 0),
-                'opp_rolling_possessions': h_stats.get('rolling_possessions', 0),
-                'opp_rolling_opponentScore': h_stats.get('rolling_opponentScore', 0),
-                'opp_fatigue_index': 0, 
-                'opp_home_strength_rating': h_stats.get('home_strength_rating', 0)
-            }])
+            away_features = pd.DataFrame(
+                [
+                    {
+                        "home": 0,
+                        "fatigue_index": 0,
+                        "home_strength_rating": a_stats.get("home_strength_rating", 0),
+                        "rolling_teamScore": a_stats.get("rolling_teamScore", 0),
+                        "rolling_possessions": a_stats.get("rolling_possessions", 0),
+                        "rolling_fieldGoalsPercentage": a_stats.get(
+                            "rolling_fieldGoalsPercentage", 0
+                        ),
+                        "opp_rolling_teamScore": h_stats.get("rolling_teamScore", 0),
+                        "opp_rolling_possessions": h_stats.get(
+                            "rolling_possessions", 0
+                        ),
+                        "opp_rolling_opponentScore": h_stats.get(
+                            "rolling_opponentScore", 0
+                        ),
+                        "opp_fatigue_index": 0,
+                        "opp_home_strength_rating": h_stats.get(
+                            "home_strength_rating", 0
+                        ),
+                    }
+                ]
+            )
 
-            # 4. Predict Score for each
             pred_home_score = model.predict(home_features)[0]
             pred_away_score = model.predict(away_features)[0]
-            
-            # 5. Calculate Margin (Home - Away)
+
             pred_margin = pred_home_score - pred_away_score
             winner = home_name if pred_margin > 0 else away_name
 
-            game['openbet_prediction'] = {
-                'predicted_winner': winner,
-                'predicted_margin': round(abs(pred_margin), 1),
-                'raw_margin': pred_margin,
-                'message': f"{winner} by {round(abs(pred_margin), 1)}",
-                'home_score': round(pred_home_score, 1),
-                'away_score': round(pred_away_score, 1)
+            game["openbet_prediction"] = {
+                "predicted_winner": winner,
+                "predicted_margin": round(abs(pred_margin), 1),
+                "raw_margin": float(pred_margin),
+                "message": f"{winner} by {round(abs(pred_margin), 1)}",
+                "home_score": round(float(pred_home_score), 1),
+                "away_score": round(float(pred_away_score), 1),
             }
-            print(f"   {away_name} @ {home_name} -> Pred: {winner} ({round(pred_home_score)} - {round(pred_away_score)})")
+            print(
+                f"   {away_name} @ {home_name} -> Pred: "
+                f"{winner} ({round(pred_home_score)} - {round(pred_away_score)})"
+            )
         else:
             print(f"   Skipping {away_name} @ {home_name} (Stats missing)")
-            game['openbet_prediction'] = None
+            game["openbet_prediction"] = None
 
-    with open(OUTPUT_FILE, 'w') as f:
+    with open(OUTPUT_FILE, "w") as f:
         json.dump({"games": games, "last_updated": str(datetime.now())}, f, indent=2)
     print(f"Predictions saved to {OUTPUT_FILE}")
+
 
 if __name__ == "__main__":
     main()
