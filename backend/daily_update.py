@@ -1,12 +1,15 @@
+import os
 import requests
 import joblib
 import json
-import os
 import pandas as pd
 from datetime import datetime
 
-API_KEY = "22f30f632d7e13e59dcc26ce1ce70e8c"
+from config_odds import ODDS_API_KEY
+
+API_KEY = ODDS_API_KEY
 ODDS_API_URL = "https://api.the-odds-api.com/v4/sports/basketball_nba/odds"
+
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 MODEL_PATH = os.path.join(BASE_DIR, "data", "nba_model.pkl")

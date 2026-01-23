@@ -95,90 +95,34 @@ def get_prediction_history():
         return jsonify({"error": str(e)}), 500
 
 
-# ---------- PLAYER PROPS (UNCHANGED) ----------
+# ---------- PLAYER PROPS (SERVE SNAPSHOT) ----------
+
 
 @app.route("/api/player-props")
 def get_player_props():
     """
-    Returns simplified NBA player points props for today's games.
+    Returns snapshot of NBA player props saved by daily_player_props.py.
     """
-    API_KEY = "39fc4ed3a7caf51b49d87d08ec90658a"
-    BASE_URL = "https://api.the-odds-api.com/v4/sports/basketball_nba"
-
     try:
-        events_resp = requests.get(
-            f"{BASE_URL}/events", params={"apiKey": API_KEY}, timeout=10
+        json_path = os.path.join(DATA_DIR, "player_props.json")
+        with open(json_path, "r") as f:
+            data = json.load(f)
+        return jsonify(data.get("props", []))
+    except FileNotFoundError:
+        return (
+            jsonify(
+                {
+                    "error": "No player props snapshot found. Run run_openbet_all.py (daily_player_props.py)."
+                }
+            ),
+            404,
         )
-        events_resp.raise_for_status()
-        events = events_resp.json()
-    except requests.RequestException as e:
-        print("Events API error:", e)
-        return jsonify({"error": f"Events error: {e}"}), 500
+    except Exception as e:
+        print("Player props error:", e)
+        return jsonify({"error": str(e)}), 500
 
-    simplified = []
 
-    for ev in events:
-        event_id = ev.get("id")
-        home_team = ev.get("home_team")
-        away_team = ev.get("away_team")
-        commence_time = ev.get("commence_time")
 
-        if not event_id:
-            continue
-
-        try:
-            odds_resp = requests.get(
-                f"{BASE_URL}/events/{event_id}/odds",
-                params={
-                    "apiKey": API_KEY,
-                    "regions": "us",
-                    "markets": "player_points",
-                    "oddsFormat": "american",
-                },
-                timeout=10,
-            )
-            if odds_resp.status_code == 204 or not odds_resp.text.strip():
-                continue
-            odds_resp.raise_for_status()
-            odds_data = odds_resp.json()
-        except requests.HTTPError as e:
-            if odds_resp.status_code == 422:
-                continue
-            print("Event odds HTTP error:", e, odds_resp.text)
-            continue
-        except requests.RequestException as e:
-            print("Event odds API error:", e)
-            continue
-
-        for bookmaker in odds_data.get("bookmakers", []):
-            book_key = bookmaker.get("key")
-            book_title = bookmaker.get("title")
-
-            for market in bookmaker.get("markets", []):
-                if market.get("key") != "player_points":
-                    continue
-
-                for outcome in market.get("outcomes", []):
-                    player_name = outcome.get("description") or outcome.get("name")
-                    line = outcome.get("point")
-                    price = outcome.get("price")
-
-                    simplified.append(
-                        {
-                            "game_id": event_id,
-                            "home_team": home_team,
-                            "away_team": away_team,
-                            "commence_time": commence_time,
-                            "bookmaker": book_title or book_key,
-                            "market": "player_points",
-                            "player": player_name,
-                            "line": line,
-                            "price": price,
-                            "openbet_flag": None,
-                        }
-                    )
-
-    return jsonify(simplified)
 
 
 # ---------- ARBITRAGE ENDPOINT (UNCHANGED) ----------

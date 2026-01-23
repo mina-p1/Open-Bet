@@ -1,6 +1,4 @@
-// PlayerProps shows a list of games and a clean modal for props
-// Click a game, then switch tabs to see points, rebounds, assists, etc. for both teams
-
+// PlayerProps.js - Popup view, split by team, with Over/Under + Prediction column
 import React, { useEffect, useMemo, useState } from "react";
 import Loader from "../components/layout/Loader";
 
@@ -20,7 +18,6 @@ const MARKET_ORDER = [
   "player_points_rebounds_assists",
 ];
 
-// nice readable game time
 function formatCommence(timeStr) {
   if (!timeStr) return "";
   const d = new Date(timeStr);
@@ -32,21 +29,31 @@ function formatCommence(timeStr) {
   });
 }
 
+function formatOdds(price) {
+  if (price == null) return "-";
+  return price > 0 ? `+${price}` : `${price}`;
+}
+
 function PlayerProps() {
   const [propsData, setPropsData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
+
   const [selectedGameId, setSelectedGameId] = useState(null);
   const [activeMarket, setActiveMarket] = useState("player_points");
+  const [selectedBook, setSelectedBook] = useState("ALL");
 
-  // load data once on mount
+  // Load snapshot
   useEffect(() => {
     setIsLoading(true);
     setError(null);
 
-    const url = "https://open-bet-capstone.onrender.com/api/player-props";
+    const API_BASE_URL =
+      process.env.NODE_ENV === "production"
+        ? "https://open-bet-capstone.onrender.com"
+        : "http://127.0.0.1:5050";
 
-    fetch(url)
+    fetch(`${API_BASE_URL}/api/player-props`)
       .then((res) => res.json())
       .then((data) => {
         if (data?.error) {
@@ -64,7 +71,7 @@ function PlayerProps() {
       });
   }, []);
 
-  // group props by game id
+  // Group by game
   const gamesMap = useMemo(() => {
     const map = {};
     propsData.forEach((p) => {
@@ -82,249 +89,492 @@ function PlayerProps() {
     return map;
   }, [propsData]);
 
-  const games = Object.values(gamesMap);
+  const games = Object.values(gamesMap).sort(
+    (a, b) => new Date(a.commence_time) - new Date(b.commence_time)
+  );
 
   const selectedGame =
     selectedGameId && gamesMap[selectedGameId]
       ? gamesMap[selectedGameId]
       : null;
 
-  // when a game opens, default to Points tab
+  // When you open a game, default to FanDuel if available, else All
   useEffect(() => {
-    if (selectedGameId) {
-      setActiveMarket("player_points");
-    }
-  }, [selectedGameId]);
+    if (!selectedGame) return;
+    setActiveMarket("player_points");
 
-  // build data for the current tab (market) and game
-  const currentMarketData = useMemo(() => {
+    const books = new Set(
+      selectedGame.props.map((p) => p.bookmaker).filter(Boolean)
+    );
+    if (books.has("FanDuel")) {
+      setSelectedBook("FanDuel");
+    } else {
+      setSelectedBook("ALL");
+    }
+  }, [selectedGameId, selectedGame]);
+
+  // Bookmakers in this game
+  const availableBooks = useMemo(() => {
+    if (!selectedGame) return [];
+    const set = new Set();
+    selectedGame.props.forEach((p) => {
+      if (p.bookmaker) set.add(p.bookmaker);
+    });
+    return Array.from(set).sort();
+  }, [selectedGame]);
+
+  // Markets with data for this game + bookmaker
+  const availableMarkets = useMemo(() => {
+    if (!selectedGame) return [];
+    const found = new Set();
+    selectedGame.props.forEach((p) => {
+      if (
+        MARKET_ORDER.includes(p.market) &&
+        (selectedBook === "ALL" || p.bookmaker === selectedBook)
+      ) {
+        found.add(p.market);
+      }
+    });
+    return MARKET_ORDER.filter((m) => found.has(m));
+  }, [selectedGame, selectedBook]);
+
+  // Build rows for the current market split into HOME / AWAY sections
+  const currentMarketRows = useMemo(() => {
     if (!selectedGame) return { home: [], away: [] };
 
-    const home = [];
-    const away = [];
+    const homeRows = {};
+    const awayRows = {};
 
     selectedGame.props.forEach((p) => {
-      if ((p.market || "") !== activeMarket) return;
+      if (p.market !== activeMarket) return;
+      if (selectedBook !== "ALL" && p.bookmaker !== selectedBook) return;
+      if (!p.player || p.line == null) return;
 
-      const base = {
-        id: `${p.player}-${p.market}-${p.line}-${p.price}`,
-        player: p.player,
-        line: p.line,
-        price: p.price,
-      };
+      const teamSide = p.team_side || "AWAY"; // "HOME" / "AWAY" from backend
+      const key = `${p.player}-${p.line}-${p.bookmaker}`;
 
-      if (p.home_team === selectedGame.home_team) {
-        home.push(base);
-      } else if (p.away_team === selectedGame.away_team) {
-        away.push(base);
+      const targetMap = teamSide === "HOME" ? homeRows : awayRows;
+
+      if (!targetMap[key]) {
+        targetMap[key] = {
+          player: p.player,
+          line: p.line,
+          bookmaker: p.bookmaker,
+          over_price: null,
+          under_price: null,
+        };
+      }
+
+      const row = targetMap[key];
+      const ouName = (p.over_under || "").toLowerCase();
+      if (ouName === "over") {
+        row.over_price = p.price;
+      } else if (ouName === "under") {
+        row.under_price = p.price;
       }
     });
 
-    home.sort((a, b) => a.player.localeCompare(b.player));
-    away.sort((a, b) => a.player.localeCompare(b.player));
+    const toSortedArray = (map) =>
+      Object.values(map).sort((a, b) => a.player.localeCompare(b.player));
 
-    return { home, away };
-  }, [selectedGame, activeMarket]);
+    return {
+      home: toSortedArray(homeRows),
+      away: toSortedArray(awayRows),
+    };
+  }, [selectedGame, activeMarket, selectedBook]);
 
-  const hasAnyMarketForGame = (game) => {
-    if (!game) return false;
-    return game.props.some((p) => MARKET_ORDER.includes(p.market));
+  // ---- Styles ----
+  const styles = {
+    container: {
+      padding: "20px",
+      maxWidth: "1200px",
+      margin: "0 auto",
+      color: "#fff",
+      position: "relative",
+    },
+    header: { marginBottom: "20px" },
+    title: { fontSize: "28px", fontWeight: "bold", marginBottom: "8px" },
+    subtitle: { color: "#aaa", fontSize: "14px" },
+    error: { color: "#ff6b6b", padding: "20px", textAlign: "center" },
+    gamesGrid: {
+      display: "grid",
+      gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))",
+      gap: "16px",
+    },
+    gameCard: {
+      background: "#1e293b",
+      borderRadius: "12px",
+      padding: "16px",
+      cursor: "pointer",
+      border: "2px solid transparent",
+      transition: "all 0.2s",
+    },
+    gameCardHover: "#3b82f6",
+    gameTeams: { fontSize: "16px", fontWeight: "600", marginBottom: "8px" },
+    gameTime: { fontSize: "13px", color: "#94a3b8" },
+    noData: {
+      textAlign: "center",
+      padding: "40px",
+      color: "#94a3b8",
+    },
+    modalOverlay: {
+      position: "fixed",
+      inset: 0,
+      background: "rgba(15,23,42,0.85)",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      zIndex: 50,
+    },
+    modalContent: {
+      background: "#0f172a",
+      borderRadius: "16px",
+      width: "95%",
+      maxWidth: "1050px",
+      maxHeight: "90vh",
+      overflow: "hidden",
+      boxShadow: "0 20px 60px rgba(0,0,0,0.7)",
+      display: "flex",
+      flexDirection: "column",
+    },
+    modalHeader: {
+      padding: "16px 20px",
+      borderBottom: "1px solid #1e293b",
+      display: "flex",
+      justifyContent: "space-between",
+      alignItems: "center",
+    },
+    modalTitle: { fontSize: "18px", fontWeight: "600" },
+    modalSub: { fontSize: "13px", color: "#94a3b8" },
+    closeBtn: {
+      border: "none",
+      background: "#1e293b",
+      color: "#e5e7eb",
+      borderRadius: "999px",
+      padding: "6px 10px",
+      cursor: "pointer",
+      fontSize: "13px",
+    },
+    modalBody: {
+      padding: "16px 20px 20px",
+      overflowY: "auto",
+    },
+    tabsRow: {
+      display: "flex",
+      flexWrap: "wrap",
+      gap: "8px",
+      marginBottom: "16px",
+      alignItems: "center",
+      justifyContent: "space-between",
+    },
+    tabs: { display: "flex", flexWrap: "wrap", gap: "8px" },
+    tab: {
+      padding: "6px 12px",
+      borderRadius: "999px",
+      border: "none",
+      cursor: "pointer",
+      fontSize: "13px",
+      fontWeight: "500",
+      background: "#1f2937",
+      color: "#9ca3af",
+    },
+    tabActive: { background: "#3b82f6", color: "#fff" },
+    select: {
+      background: "#0f172a",
+      color: "#e5e7eb",
+      borderRadius: "999px",
+      border: "1px solid #374151",
+      padding: "6px 10px",
+      fontSize: "13px",
+    },
+    teamSection: {
+      marginTop: "8px",
+      marginBottom: "18px",
+      width: "100%",
+    },
+    teamTitle: {
+      fontSize: "14px",
+      fontWeight: "600",
+      marginBottom: "6px",
+      color: "#9ca3af",
+    },
+    table: {
+      width: "100%",
+      borderCollapse: "collapse",
+      background: "#020617",
+      borderRadius: "10px",
+      overflow: "hidden",
+    },
+    th: {
+      textAlign: "left",
+      padding: "8px 10px",
+      borderBottom: "1px solid #1f2933",
+      color: "#9ca3af",
+      fontSize: "12px",
+      fontWeight: "600",
+    },
+    td: {
+      padding: "8px 10px",
+      borderBottom: "1px solid #111827",
+      fontSize: "13px",
+    },
+    playerName: { fontWeight: "500", color: "#e5e7eb" },
+    line: { color: "#60a5fa", fontWeight: "600" },
+    oddsPos: { color: "#22c55e", fontWeight: "500" },
+    oddsNeg: { color: "#ef4444", fontWeight: "500" },
+    bookCell: { color: "#9ca3af", fontSize: "12px" },
+    rowTables: {
+      display: "grid",
+      gridTemplateColumns: "1fr 1fr",
+      gap: "16px",
+    },
   };
 
   return (
-    <div className="mx-auto max-w-6xl px-4 py-10">
-      {/* hero */}
-      <section className="mb-8 flex flex-col items-center justify-center">
-        <div className="w-full max-w-4xl rounded-2xl border border-slate-700/80 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 p-8 shadow-[0_18px_40px_rgba(0,0,0,0.6)]">
-          <h1 className="mb-2 text-center text-3xl font-extrabold tracking-tight text-sky-300 md:text-4xl">
-            NBA Player Props Radar
-          </h1>
-          <p className="text-center text-sm text-slate-300">
-            Pick a game, then switch tabs to see player points, rebounds,
-            assists, and more for both teams.
-          </p>
-        </div>
-      </section>
+    <div style={styles.container}>
+      <div style={styles.header}>
+        <h1 style={styles.title}>Player Props</h1>
+        <p style={styles.subtitle}>
+          Click a game to open a popup with player prop lines. Use the tabs and
+          bookmaker dropdown to explore different markets.
+        </p>
+      </div>
 
       {isLoading && <Loader />}
+      {error && <div style={styles.error}>Error: {error}</div>}
 
-      {error && !isLoading && (
-        <p className="text-center text-sm font-medium text-red-400">
-          Error: {error}
-        </p>
+      {!isLoading && !error && games.length === 0 && (
+        <div style={styles.noData}>
+          No player props available right now. Check back closer to game time.
+        </div>
       )}
 
-      {!isLoading && !error && (
-        <>
-          {games.length === 0 ? (
-            <p className="text-center text-sm text-slate-400">
-              No player props available right now. Try again closer to tip-off.
-            </p>
-          ) : (
-            <section className="mx-auto max-w-5xl">
-              {/* game cards */}
-              <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
-                {games.map((g) => (
-                  <button
-                    key={g.game_id}
-                    type="button"
-                    onClick={() => setSelectedGameId(g.game_id)}
-                    className="flex flex-col gap-2 rounded-2xl border border-slate-700/80 bg-slate-900/95 px-4 py-3 text-left shadow-lg transition-all duration-150 hover:-translate-y-0.5 hover:border-sky-400/80"
-                  >
-                    {/* time + line count */}
-                    <div className="flex items-center justify-between text-[11px]">
-                      <span className="font-medium uppercase tracking-wide text-slate-300">
-                        {formatCommence(g.commence_time)}
-                      </span>
-                      <span className="rounded-full bg-slate-800 px-2 py-[2px] text-[10px] font-semibold uppercase tracking-wide text-slate-300">
-                        {g.props.length} lines
-                      </span>
-                    </div>
-
-                    {/* away / home */}
-                    <div className="flex flex-col gap-1">
-                      <div className="flex items-center justify-between">
-                        <span className="text-[13px] font-semibold text-slate-100">
-                          {g.away_team}
-                        </span>
-                        <span className="rounded-full bg-slate-800 px-2 py-[2px] text-[10px] uppercase tracking-wide text-slate-400">
-                          Away
-                        </span>
-                      </div>
-                      <div className="flex items-center justify-between">
-                        <span className="text-[13px] font-semibold text-slate-100">
-                          {g.home_team}
-                        </span>
-                        <span className="rounded-full bg-slate-800 px-2 py-[2px] text-[10px] uppercase tracking-wide text-slate-400">
-                          Home
-                        </span>
-                      </div>
-                    </div>
-                  </button>
-                ))}
-              </div>
-            </section>
-          )}
-
-          {/* modal */}
-          {selectedGame && (
+      {!isLoading && !error && games.length > 0 && (
+        <div style={styles.gamesGrid}>
+          {games.map((game) => (
             <div
-              className="fixed inset-0 z-40 flex items-center justify-center bg-black/80 px-3"
-              onClick={() => setSelectedGameId(null)}
+              key={game.game_id}
+              style={styles.gameCard}
+              onClick={() => setSelectedGameId(game.game_id)}
+              onMouseEnter={(e) =>
+                (e.currentTarget.style.borderColor = styles.gameCardHover)
+              }
+              onMouseLeave={(e) =>
+                (e.currentTarget.style.borderColor = "transparent")
+              }
             >
-              <div
-                className="relative w-full max-w-5xl rounded-3xl border border-slate-800 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 p-6 shadow-[0_24px_60px_rgba(0,0,0,0.85)]"
-                onClick={(e) => e.stopPropagation()}
-              >
-                {/* close */}
-                <button
-                  type="button"
-                  onClick={() => setSelectedGameId(null)}
-                  className="absolute right-4 top-3 text-xl text-slate-400 transition hover:text-slate-100"
-                >
-                  ×
-                </button>
+              <div style={styles.gameTeams}>
+                {game.away_team} @ {game.home_team}
+              </div>
+              <div style={styles.gameTime}>
+                {formatCommence(game.commence_time)}
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
 
-                {/* header */}
-                <div className="mb-4 flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
-                  <div>
-                    <div className="text-xs font-medium uppercase tracking-wide text-slate-400">
-                      {formatCommence(selectedGame.commence_time)}
-                    </div>
-                    <div className="text-sm font-semibold text-slate-100">
-                      {selectedGame.away_team} @ {selectedGame.home_team}
-                    </div>
-                  </div>
-                  <div className="text-xs font-semibold uppercase tracking-wide text-slate-400">
-                    Player Props by Category
-                  </div>
+      {/* MODAL */}
+      {selectedGame && (
+        <div
+          style={styles.modalOverlay}
+          onClick={() => setSelectedGameId(null)}
+        >
+          <div
+            style={styles.modalContent}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div style={styles.modalHeader}>
+              <div>
+                <div style={styles.modalTitle}>
+                  {selectedGame.away_team} @ {selectedGame.home_team}
                 </div>
+                <div style={styles.modalSub}>
+                  {formatCommence(selectedGame.commence_time)}
+                </div>
+              </div>
+              <button
+                style={styles.closeBtn}
+                onClick={() => setSelectedGameId(null)}
+              >
+                ✕ Close
+              </button>
+            </div>
 
-                {/* market tabs */}
-                <div className="mb-4 flex flex-wrap items-center gap-2">
-                  {MARKET_ORDER.map((marketKey) => (
+            <div style={styles.modalBody}>
+              <div style={styles.tabsRow}>
+                <div style={styles.tabs}>
+                  {availableMarkets.map((m) => (
                     <button
-                      key={marketKey}
-                      type="button"
-                      onClick={() => setActiveMarket(marketKey)}
-                      className={`rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-wide transition ${
-                        activeMarket === marketKey
-                          ? "bg-sky-500 text-slate-950 shadow-md"
-                          : "bg-slate-800 text-slate-200 hover:bg-slate-700"
-                      }`}
+                      key={m}
+                      style={{
+                        ...styles.tab,
+                        ...(activeMarket === m ? styles.tabActive : {}),
+                      }}
+                      onClick={() => setActiveMarket(m)}
                     >
-                      {MARKET_LABELS[marketKey]}
+                      {MARKET_LABELS[m]}
                     </button>
                   ))}
+                  {availableMarkets.length === 0 && (
+                    <span style={{ color: "#9ca3af", fontSize: "13px" }}>
+                      No prop markets for this game yet.
+                    </span>
+                  )}
                 </div>
 
-                {!hasAnyMarketForGame(selectedGame) ? (
-                  <p className="text-center text-xs text-slate-500">
-                    No props for these stat categories in this game.
-                  </p>
-                ) : currentMarketData.home.length === 0 &&
-                  currentMarketData.away.length === 0 ? (
-                  <p className="text-center text-xs text-slate-500">
-                    No props for {MARKET_LABELS[activeMarket]} in this game.
-                  </p>
-                ) : (
-                  // two columns: away and home for the active category
-                  <div className="grid gap-6 md:grid-cols-2">
-                    {/* away side */}
-                    <div className="rounded-2xl bg-slate-950/70 p-3 ring-1 ring-slate-800/80">
-                      <h2 className="mb-2 text-base font-bold uppercase tracking-wide text-rose-300">
-                        {selectedGame.away_team}
-                      </h2>
-                      <div className="max-h-80 space-y-1 overflow-y-auto pr-1">
-                        {currentMarketData.away.map((p) => (
-                          <div
-                            key={p.id}
-                            className="flex items-center justify-between rounded-lg bg-slate-900/90 px-3 py-1.5 text-[11px] text-slate-200"
-                          >
-                            <span className="mr-2 flex-1 truncate font-medium">
-                              {p.player}
-                            </span>
-                            <span className="mx-2 text-[12px] font-semibold text-emerald-300">
-                              {p.line ?? "-"}
-                            </span>
-                            <span className="w-12 text-right text-slate-400">
-                              {p.price > 0 ? `+${p.price}` : p.price}
-                            </span>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-
-                    {/* home side */}
-                    <div className="rounded-2xl bg-slate-950/70 p-3 ring-1 ring-slate-800/80">
-                      <h2 className="mb-2 text-base font-bold uppercase tracking-wide text-emerald-300">
-                        {selectedGame.home_team}
-                      </h2>
-                      <div className="max-h-80 space-y-1 overflow-y-auto pr-1">
-                        {currentMarketData.home.map((p) => (
-                          <div
-                            key={p.id}
-                            className="flex items-center justify-between rounded-lg bg-slate-900/90 px-3 py-1.5 text-[11px] text-slate-200"
-                          >
-                            <span className="mr-2 flex-1 truncate font-medium">
-                              {p.player}
-                            </span>
-                            <span className="mx-2 text-[12px] font-semibold text-emerald-300">
-                              {p.line ?? "-"}
-                            </span>
-                            <span className="w-12 text-right text-slate-400">
-                              {p.price > 0 ? `+${p.price}` : p.price}
-                            </span>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
+                {availableBooks.length > 0 && (
+                  <div>
+                    <label style={{ fontSize: "12px", marginRight: "6px" }}>
+                      Bookmaker:
+                    </label>
+                    <select
+                      style={styles.select}
+                      value={selectedBook}
+                      onChange={(e) => setSelectedBook(e.target.value)}
+                    >
+                      <option value="ALL">All</option>
+                      {availableBooks.map((b) => (
+                        <option key={b} value={b}>
+                          {b}
+                        </option>
+                      ))}
+                    </select>
                   </div>
                 )}
               </div>
+
+              <div style={styles.rowTables}>
+                {/* Home table */}
+                <div style={styles.teamSection}>
+                  <div style={styles.teamTitle}>
+                    {selectedGame.home_team} – Home
+                  </div>
+                  <table style={styles.table}>
+                    <thead>
+                      <tr>
+                        <th style={styles.th}>Player</th>
+                        <th style={styles.th}>Line</th>
+                        <th style={styles.th}>Over Odds</th>
+                        <th style={styles.th}>Under Odds</th>
+                        <th style={styles.th}>Book</th>
+                        <th style={styles.th}>Prediction</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {currentMarketRows.home.map((row, idx) => (
+                        <tr key={idx}>
+                          <td style={{ ...styles.td, ...styles.playerName }}>
+                            {row.player}
+                          </td>
+                          <td style={{ ...styles.td, ...styles.line }}>
+                            {row.line}
+                          </td>
+                          <td
+                            style={{
+                              ...styles.td,
+                              ...(row.over_price > 0
+                                ? styles.oddsPos
+                                : styles.oddsNeg),
+                            }}
+                          >
+                            {row.over_price != null
+                              ? formatOdds(row.over_price)
+                              : "-"}
+                          </td>
+                          <td
+                            style={{
+                              ...styles.td,
+                              ...(row.under_price > 0
+                                ? styles.oddsPos
+                                : styles.oddsNeg),
+                            }}
+                          >
+                            {row.under_price != null
+                              ? formatOdds(row.under_price)
+                              : "-"}
+                          </td>
+                          <td style={{ ...styles.td, ...styles.bookCell }}>
+                            {row.bookmaker}
+                          </td>
+                          <td style={styles.td}>{/* future model */}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+
+                {/* Away table */}
+                <div style={styles.teamSection}>
+                  <div style={styles.teamTitle}>
+                    {selectedGame.away_team} – Away
+                  </div>
+                  <table style={styles.table}>
+                    <thead>
+                      <tr>
+                        <th style={styles.th}>Player</th>
+                        <th style={styles.th}>Line</th>
+                        <th style={styles.th}>Over Odds</th>
+                        <th style={styles.th}>Under Odds</th>
+                        <th style={styles.th}>Book</th>
+                        <th style={styles.th}>Prediction</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {currentMarketRows.away.map((row, idx) => (
+                        <tr key={idx}>
+                          <td style={{ ...styles.td, ...styles.playerName }}>
+                            {row.player}
+                          </td>
+                          <td style={{ ...styles.td, ...styles.line }}>
+                            {row.line}
+                          </td>
+                          <td
+                            style={{
+                              ...styles.td,
+                              ...(row.over_price > 0
+                                ? styles.oddsPos
+                                : styles.oddsNeg),
+                            }}
+                          >
+                            {row.over_price != null
+                              ? formatOdds(row.over_price)
+                              : "-"}
+                          </td>
+                          <td
+                            style={{
+                              ...styles.td,
+                              ...(row.under_price > 0
+                                ? styles.oddsPos
+                                : styles.oddsNeg),
+                            }}
+                          >
+                            {row.under_price != null
+                              ? formatOdds(row.under_price)
+                              : "-"}
+                          </td>
+                          <td style={{ ...styles.td, ...styles.bookCell }}>
+                            {row.bookmaker}
+                          </td>
+                          <td style={styles.td}>{/* future model */}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              {currentMarketRows.home.length === 0 &&
+                currentMarketRows.away.length === 0 &&
+                availableMarkets.length > 0 && (
+                  <div style={styles.noData}>
+                    No {MARKET_LABELS[activeMarket]} props for{" "}
+                    {selectedBook === "ALL" ? "this game" : selectedBook}.
+                  </div>
+                )}
             </div>
-          )}
-        </>
+          </div>
+        </div>
       )}
     </div>
   );

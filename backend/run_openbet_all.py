@@ -4,7 +4,6 @@ import sys
 import shutil
 import zipfile
 from pathlib import Path
-import glob
 
 DATASET = "eoinamoore/historical-nba-data-and-player-box-scores"
 
@@ -12,12 +11,14 @@ BASE_DIR = Path(__file__).resolve().parent
 TMP_DIR = BASE_DIR / "tmp_kaggle"
 BOX_DIR = BASE_DIR / "data" / "box_scores"
 
+
 def run_cmd(cmd_list, cwd=None):
     print(f"\n=== Running: {' '.join(cmd_list)} ===")
     result = subprocess.run(cmd_list, cwd=cwd)
     if result.returncode != 0:
         print(f"Command failed: {' '.join(cmd_list)}")
         sys.exit(result.returncode)
+
 
 def download_kaggle_csvs():
     if TMP_DIR.exists():
@@ -59,18 +60,32 @@ def download_kaggle_csvs():
         shutil.move(str(src), str(dst))
         print(f"Placed {name} at {dst}")
 
+
 def cleanup_temp():
     if TMP_DIR.exists():
         shutil.rmtree(TMP_DIR)
         print("Deleted", TMP_DIR)
 
+
 def main():
+    # 1) Fresh Kaggle data
     download_kaggle_csvs()
+
+    # 2) Train model
     run_cmd([sys.executable, "model_train.py"])
+
+    # 3) Historical prediction history
     run_cmd([sys.executable, "update_history.py"])
+
+    # 4) Today's odds + model predictions
     run_cmd([sys.executable, "daily_update.py"])
+
+    # 5) NEW: Player props snapshot
+    run_cmd([sys.executable, "daily_player_props.py"])
+
     cleanup_temp()
     print("\n✅ OpenBet pipeline complete.")
+
 
 if __name__ == "__main__":
     main()

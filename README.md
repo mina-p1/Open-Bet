@@ -34,7 +34,7 @@ python3 daily_update.py  *Creates todays_data.json
 ------------------------------
 # To start
 cd Open-Bet/backend
-python run_openbet_all.py
+python3 run_openbet_all.py
 
 # Then Update React app:
 cd Open-Bet
