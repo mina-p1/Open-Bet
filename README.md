@@ -58,3 +58,7 @@ npm start
 # Terminal 3 (Tailwind CSS)
 cd Open-Bet
 npm run build:css
+
+# Terminal 4 (for player props only if api doesnt cover it)
+cd Open-Bet/backend
+python3 daily_player_props.py
