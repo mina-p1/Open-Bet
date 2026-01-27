@@ -100,9 +100,6 @@ def get_prediction_history():
 
 @app.route("/api/player-props")
 def get_player_props():
-    """
-    Returns snapshot of NBA player props saved by daily_player_props.py.
-    """
     try:
         json_path = os.path.join(DATA_DIR, "player_props.json")
         with open(json_path, "r") as f:

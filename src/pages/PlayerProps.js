@@ -150,10 +150,11 @@ function PlayerProps() {
       if (selectedBook !== "ALL" && p.bookmaker !== selectedBook) return;
       if (!p.player || p.line == null) return;
 
-      const teamSide = p.team_side || "AWAY"; // "HOME" / "AWAY" from backend
+      const teamSide = p.team_side || "AWAY";
+      const targetMap = teamSide === "HOME" ? homeRows : awayRows;
       const key = `${p.player}-${p.line}-${p.bookmaker}`;
 
-      const targetMap = teamSide === "HOME" ? homeRows : awayRows;
+
 
       if (!targetMap[key]) {
         targetMap[key] = {
