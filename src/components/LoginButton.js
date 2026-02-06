@@ -7,7 +7,7 @@ const LoginButton = ({ onLogin }) => {
   const handleSuccess = async (credentialResponse) => {
     const token = credentialResponse.credential;
     try {
-      const response = await fetch('http://localhost:5050/api/auth/google', {
+      const response = await fetch('https://open-bet-capstone.onrender.com/api/auth/google', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ token: token }),

@@ -36,7 +36,7 @@ const Profile = ({ user, setUser }) => {
 
     try {
       // make sure port is 5050 to match app.py!!
-      const response = await fetch('http://localhost:5050/api/user/update', {
+      const response = await fetch('https://open-bet-capstone.onrender.com/api/user/update', {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

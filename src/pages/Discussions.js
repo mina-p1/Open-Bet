@@ -22,7 +22,7 @@ const Discussions = ({ user }) => {
 
   const fetchThreads = async () => {
     try {
-      const res = await fetch(`http://localhost:5050/api/discussions?date=${dateKey}`);
+      const res = await fetch(`https://open-bet-capstone.onrender.com/api/discussions?date=${dateKey}`);
       const data = await res.json();
       
       // safety check to make sure we got a list back
@@ -43,7 +43,7 @@ const Discussions = ({ user }) => {
     const authorName = user.displayName ? user.displayName : user.name;
 
     try {
-      const response = await fetch('http://localhost:5050/api/discussions', {
+      const response = await fetch('https://open-bet-capstone.onrender.com/api/discussions', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

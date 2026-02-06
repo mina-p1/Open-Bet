@@ -18,7 +18,13 @@ CORS(app)
 
 # --- FIREBASE SETUP 
 if not firebase_admin._apps:
-    cred = credentials.Certificate("serviceAccountKey.json") 
+    # Check if we are on Render Secret File
+    if os.path.exists("/etc/secrets/serviceAccountKey.json"):
+        cred = credentials.Certificate("/etc/secrets/serviceAccountKey.json")
+    else:
+        # Local fallback
+        cred = credentials.Certificate("serviceAccountKey.json") 
+        
     firebase_admin.initialize_app(cred)
 
 db = firestore.client()

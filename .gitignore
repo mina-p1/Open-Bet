@@ -15,3 +15,5 @@ src/backend/archive/csv/
 *.pkl
 src/backend/nba_model.pkl
 models/
+
+backend/serviceAccountKey.json
