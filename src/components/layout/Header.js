@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import LoginButton from "../LoginButton"; 
 
 const mainNav = [
   { to: "/", label: "Home" },
@@ -12,13 +13,17 @@ const mainNav = [
   { to: "/about", label: "About" },
 ];
 
-
-function Header() {
+function Header({ user, setUser }) {
   const location = useLocation();
   const [sportsOpen, setSportsOpen] = useState(false);
 
   const isActive = (path) => location.pathname === path;
 
+  // Logout Function
+  const handleLogout = () => {
+    setUser(null); // Clear the user state
+   
+  };
 
   return (
     <header className="sticky top-0 z-30 border-b border-slate-800 bg-[#020617]/95 backdrop-blur-xl">
@@ -38,7 +43,6 @@ function Header() {
         {/* Nav pills */}
         <div className="flex flex-1 items-center justify-end">
           <div className="inline-flex max-w-full flex-wrap items-center justify-end gap-2 rounded-full bg-slate-900/60 px-2 py-1 shadow-[0_0_40px_rgba(15,23,42,0.9)] ring-1 ring-slate-700/80">
-            {/* main nav items (no sports here) */}
             {mainNav.map((item) => {
               const active = isActive(item.to);
               return (
@@ -63,9 +67,39 @@ function Header() {
               );
             })}
 
-          
+           {/* auth stuff - pushed to the right */}
+            <div className="ml-4 pl-4 border-l border-slate-700 flex items-center">
+              
+              {/* check if user is logged in */}
+              {user ? (
+                <div className="flex items-center gap-3">
+                  {/* profile pic - made this smaller (w-6) */}
+                  {user.picture && (
+                    <img 
+                      src={user.picture} 
+                      alt="me" 
+                      className="w-6 h-6 rounded-full border border-slate-600 shadow-sm" 
+                    />
+                  )}
+                  
+                  {/* logout button */}
+                  <button 
+                    onClick={() => setUser(null)} 
+                    className="text-[10px] font-bold text-red-400 hover:text-red-300 uppercase tracking-wide"
+                  >
+                    Logout
+                  </button>
+                </div>
+              ) : (
+                // if not logged in show the google button
+                <div className="scale-90 origin-right"> 
+                   {/* scale-90 makes the big google button look a bit smaller/neater */}
+                   <LoginButton onLogin={(userData) => setUser(userData)} />
+                </div>
+              )}
             </div>
           </div>
+        </div>
       </nav>
     </header>
   );

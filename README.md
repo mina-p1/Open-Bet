@@ -2,6 +2,7 @@
 Run his every morning to get today's games and update the site
 
 cd Open-Bet/backend
+python model_train.py
 python3 daily_update.py
 *NEW* 
 python3 update_history.py

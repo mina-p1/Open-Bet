@@ -7,8 +7,156 @@ import requests
 import json
 import math
 
+# --- NEW IMPORTS FOR AUTH ---
+import firebase_admin
+from firebase_admin import credentials, firestore
+from google.oauth2 import id_token
+from google.auth.transport import requests as google_requests
+
 app = Flask(__name__)
 CORS(app)
+
+# --- FIREBASE SETUP 
+if not firebase_admin._apps:
+    cred = credentials.Certificate("serviceAccountKey.json") 
+    firebase_admin.initialize_app(cred)
+
+db = firestore.client()
+GOOGLE_CLIENT_ID = "67516129655-7dvqsh49bolnse50d2ibumtrsaj1gfkj.apps.googleusercontent.com"
+
+# ---------- AUTH ROUTE (NEW) ----------
+@app.route('/api/auth/google', methods=['POST'])
+def google_auth():
+    token = request.json.get('token')
+
+    try:
+        # verify token with google
+        id_info = id_token.verify_oauth2_token(
+            token, 
+            google_requests.Request(), 
+            GOOGLE_CLIENT_ID
+        )
+
+        # grab user info
+        uid = id_info['sub']
+        email = id_info['email']
+        name = id_info.get('name', 'User')
+        picture = id_info.get('picture', '')
+
+        # check if user exists in firestore
+        user_ref = db.collection('users').document(uid)
+        doc = user_ref.get()
+
+        if not doc.exists:
+            user_data = {
+                "uid": uid,
+                "email": email,
+                "name": name,
+                "picture": picture,
+                "role": "user",
+                "favorites": [],
+                "created_at": firestore.SERVER_TIMESTAMP 
+            }
+            # save new user
+            user_ref.set(user_data)
+            
+            # HAD TO FIX THIS:
+            # server timestamp crashes json so converting to string manually
+            user_data["created_at"] = str(firestore.SERVER_TIMESTAMP) 
+
+        else:
+            user_data = doc.to_dict()
+
+        return jsonify({"message": "Success", "user": user_data}), 200
+
+    except ValueError:
+        return jsonify({"error": "Invalid token"}), 401
+    
+
+@app.route('/api/user/update', methods=['PUT'])
+def update_user_profile():
+    # updates display name or fav team
+    data = request.json
+    uid = data.get('uid')
+    
+    if not uid:
+        return jsonify({"error": "User ID required"}), 400
+
+    try:
+        user_ref = db.collection('users').document(uid)
+        
+        updates = {}
+        if 'favoriteTeam' in data:
+            updates['favoriteTeam'] = data['favoriteTeam']
+        if 'displayName' in data:
+            updates['displayName'] = data['displayName']
+            
+        if updates:
+            user_ref.update(updates)
+            
+        # send back fresh data
+        updated_doc = user_ref.get()
+        return jsonify({"message": "Profile updated", "user": updated_doc.to_dict()}), 200
+
+    except Exception as e:
+        print("Update error:", e)
+        return jsonify({"error": str(e)}), 500
+
+
+#              DISCUSSION BOARD                    #
+####################################################
+
+@app.route('/api/discussions', methods=['GET'])
+def get_discussions():
+    # grab msgs for a specific date e.g. ?date=2026-02-06
+    date_str = request.args.get('date') 
+    
+    if not date_str:
+        return jsonify({"error": "Date required"}), 400
+
+    try:
+        # looking inside 'threads' -> date -> 'messages'
+        messages_ref = db.collection('threads').document(date_str).collection('messages')
+        
+        # newest first
+        docs = messages_ref.order_by('created_at', direction=firestore.Query.DESCENDING).stream()
+        
+        messages = []
+        for doc in docs:
+            msg = doc.to_dict()
+            msg['id'] = doc.id
+            # fix timestamp for json again
+            if 'created_at' in msg and msg['created_at']:
+                msg['created_at'] = str(msg['created_at'])
+            messages.append(msg)
+            
+        return jsonify(messages), 200
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+@app.route('/api/discussions', methods=['POST'])
+def create_discussion():
+    # posting to a specific date thread
+    data = request.json
+    date_str = data.get('date') 
+    
+    if not data.get('text') or not date_str:
+        return jsonify({"error": "Missing data"}), 400
+
+    try:
+        new_msg = {
+            "uid": data['uid'],
+            "name": data.get('name', 'Anonymous'),
+            "text": data['text'],
+            "created_at": firestore.SERVER_TIMESTAMP,
+        }
+        
+        # save it to the subcollection
+        db.collection('threads').document(date_str).collection('messages').add(new_msg)
+        
+        return jsonify({"message": "Posted!"}), 201
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
 
 # ---------- BASE DATA DIR (SMALL FILES ONLY) ----------
 
