@@ -947,7 +947,7 @@ gameId,gameDateTimeEst,homeTeamId,awayTeamId,homeTeamCity,homeTeamName,awayTeamC
 22500839,2026-02-24 21:00:00,1610612756,1610612738,Phoenix,Suns,Boston,Celtics,Tue,Mortgage Matchup Center,Phoenix,AZ,,,,,19
 22500841,2026-02-24 22:00:00,1610612757,1610612750,Portland,Trail Blazers,Minnesota,Timberwolves,Tue,Moda Center,Portland,OR,,,,,19
 22500840,2026-02-24 22:30:00,1610612747,1610612753,Los Angeles,Lakers,Orlando,Magic,Tue,Crypto.com Arena,Los Angeles,CA,,,,,19
-22500842,2026-02-25 19:00:00,1610612765,1610612760,Detroit,Pistons,Oklahoma City,Thunder,Wed,Little Caesars Arena,Detroit,MI,,,,,19
+22500842,2026-02-25 19:30:00,1610612765,1610612760,Detroit,Pistons,Oklahoma City,Thunder,Wed,Little Caesars Arena,Detroit,MI,,,,,19
 22500843,2026-02-25 19:30:00,1610612761,1610612759,Toronto,Raptors,San Antonio,Spurs,Wed,Scotiabank Arena,Toronto,ON,,,,,19
 22500844,2026-02-25 19:30:00,1610612763,1610612744,Memphis,Grizzlies,Golden State,Warriors,Wed,FedExForum,Memphis,TN,,,,,19
 22500845,2026-02-25 20:00:00,1610612745,1610612758,Houston,Rockets,Sacramento,Kings,Wed,Toyota Center,Houston,TX,,,,,19
@@ -1267,9 +1267,9 @@ gameId,gameDateTimeEst,homeTeamId,awayTeamId,homeTeamCity,homeTeamName,awayTeamC
 22501157,2026-04-07 23:00:00,1610612756,1610612745,Phoenix,Suns,Houston,Rockets,Tue,Mortgage Matchup Center,Phoenix,AZ,,,,,25
 22501158,2026-04-08 19:00:00,1610612739,1610612737,Cleveland,Cavaliers,Atlanta,Hawks,Wed,Rocket Arena,Cleveland,OH,,,,,25
 22501159,2026-04-08 19:00:00,1610612753,1610612750,Orlando,Magic,Minnesota,Timberwolves,Wed,Kia Center,Orlando,FL,,,,,25
-22501160,2026-04-08 19:30:00,1610612765,1610612749,Detroit,Pistons,Milwaukee,Bucks,Wed,Little Caesars Arena,Detroit,MI,,,,,25
-22501161,2026-04-08 20:00:00,1610612759,1610612757,San Antonio,Spurs,Portland,Trail Blazers,Wed,Frost Bank Center,San Antonio,TX,,,,,25
+22501160,2026-04-08 19:00:00,1610612765,1610612749,Detroit,Pistons,Milwaukee,Bucks,Wed,Little Caesars Arena,Detroit,MI,,,,,25
 22501162,2026-04-08 21:00:00,1610612743,1610612763,Denver,Nuggets,Memphis,Grizzlies,Wed,Ball Arena,Denver,CO,,,,,25
+22501161,2026-04-08 21:30:00,1610612759,1610612757,San Antonio,Spurs,Portland,Trail Blazers,Wed,Frost Bank Center,San Antonio,TX,,,,,25
 22501163,2026-04-08 22:00:00,1610612746,1610612760,LA,Clippers,Oklahoma City,Thunder,Wed,Intuit Dome,Inglewood,CA,,,,,25
 22501164,2026-04-08 22:00:00,1610612756,1610612742,Phoenix,Suns,Dallas,Mavericks,Wed,Mortgage Matchup Center,Phoenix,AZ,,,,,25
 22501165,2026-04-09 19:00:00,1610612761,1610612748,Toronto,Raptors,Miami,Heat,Thu,Scotiabank Arena,Toronto,ON,,,,,25

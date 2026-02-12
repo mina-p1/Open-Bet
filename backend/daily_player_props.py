@@ -3,6 +3,9 @@ import json
 import requests
 from datetime import datetime
 
+import numpy as np
+import joblib
+
 from config_odds import ODDS_API_KEY
 from nba_players_map import (
     build_player_team_map,
@@ -24,6 +27,24 @@ MARKETS = [
     "player_threes",
     "player_points_rebounds_assists",
 ]
+
+# ---------- LOAD PLAYER PROP MODEL (POINTS / REB / AST) ----------
+
+PLAYER_MODEL_PATH = os.path.join(BASE_DIR, "data", "player_prop_model.pkl")
+
+try:
+    player_artifact = joblib.load(PLAYER_MODEL_PATH)
+    pts_model = player_artifact["points_model"]
+    reb_model = player_artifact["rebounds_model"]
+    ast_model = player_artifact["assists_model"]
+    player_feature_cols = player_artifact["feature_cols"]
+    latest_player_stats = player_artifact["latest_player_stats"]
+    print(f"Loaded player prop model from {PLAYER_MODEL_PATH}")
+except Exception as e:
+    print("WARNING: Could not load player prop model:", e)
+    pts_model = reb_model = ast_model = None
+    player_feature_cols = []
+    latest_player_stats = {}
 
 
 def map_player_to_side(player_name, home_team, away_team, player_team_map):
@@ -60,6 +81,67 @@ def map_player_to_side(player_name, home_team, away_team, player_team_map):
         return "AWAY"
 
     return None
+
+
+def predict_player_stat(
+    player_name,
+    market_key,
+    latest_player_stats,
+    player_feature_cols,
+    pts_model,
+    reb_model,
+    ast_model,
+):
+    """
+    Returns a dict with prediction info for the given player and market, or None.
+
+    expected_value: projected stat (points / rebounds / assists)
+    label: name of stat
+    """
+    # Bail out if the model isn’t available
+    if (
+        not latest_player_stats
+        or not player_feature_cols
+        or pts_model is None
+        or reb_model is None
+        or ast_model is None
+    ):
+        return None
+
+    feat_row = latest_player_stats.get(player_name)
+    if not feat_row:
+        return None
+
+    try:
+        X = np.array(
+            [feat_row.get(c, 0.0) for c in player_feature_cols], dtype=float
+        ).reshape(1, -1)
+    except Exception:
+        return None
+
+    if market_key == "player_points":
+        model = pts_model
+        label = "points"
+    elif market_key == "player_rebounds":
+        model = reb_model
+        label = "rebounds"
+    elif market_key == "player_assists":
+        model = ast_model
+        label = "assists"
+    else:
+        # We only support these three right now
+        return None
+
+    try:
+        pred = float(model.predict(X)[0])
+    except Exception:
+        return None
+
+    return {
+        "expected_value": round(pred, 1),
+        "label": label,
+        "model": "rf_player_prop",
+    }
 
 
 def fetch_player_props():
@@ -136,10 +218,28 @@ def fetch_player_props():
                     team_side = map_player_to_side(
                         player_name, home_team, away_team, player_team_map
                     )
-
                     if team_side not in ("HOME", "AWAY"):
                         team_side = "UNKNOWN"
 
+                    # ---------- NEW: model prediction for points / reb / ast ----------
+                    prediction = predict_player_stat(
+                        player_name,
+                        market_key,
+                        latest_player_stats,
+                        player_feature_cols,
+                        pts_model,
+                        reb_model,
+                        ast_model,
+                    )
+
+                    edge_vs_line = None
+                    if prediction is not None and line is not None:
+                        try:
+                            edge_vs_line = round(
+                                prediction["expected_value"] - float(line), 1
+                            )
+                        except Exception:
+                            edge_vs_line = None
 
                     all_props.append(
                         {
@@ -154,6 +254,8 @@ def fetch_player_props():
                             "line": line,
                             "price": price,
                             "over_under": over_under,
+                            "prop_prediction": prediction,
+                            "edge_vs_line": edge_vs_line,
                         }
                     )
 

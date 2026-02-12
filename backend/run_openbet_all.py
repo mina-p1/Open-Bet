@@ -77,10 +77,14 @@ def main():
     # 3) Historical prediction history
     run_cmd([sys.executable, "update_history.py"])
 
-    # 4) Today's odds + model predictions
+    # 4) train player props model
+    run_cmd([sys.executable, "player_prop_model.py"])
+
+
+    # 5) Today's odds + model predictions
     run_cmd([sys.executable, "daily_update.py"])
 
-    # 5) NEW: Player props snapshot
+    # 6) NEW: Player props snapshot
     run_cmd([sys.executable, "daily_player_props.py"])
 
     cleanup_temp()
