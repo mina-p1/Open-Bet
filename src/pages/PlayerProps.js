@@ -150,11 +150,14 @@ function PlayerProps() {
       if (selectedBook !== "ALL" && p.bookmaker !== selectedBook) return;
       if (!p.player || p.line == null) return;
 
-      const teamSide = p.team_side || "AWAY";
+      // require a valid side; default unknown to away so at least shown
+      const teamSide =
+        p.team_side === "HOME" || p.team_side === "AWAY"
+          ? p.team_side
+          : "AWAY";
+
       const targetMap = teamSide === "HOME" ? homeRows : awayRows;
       const key = `${p.player}-${p.line}-${p.bookmaker}`;
-
-
 
       if (!targetMap[key]) {
         targetMap[key] = {
@@ -163,6 +166,9 @@ function PlayerProps() {
           bookmaker: p.bookmaker,
           over_price: null,
           under_price: null,
+          prop_prediction: p.prop_prediction || null,
+          edge_vs_line:
+            typeof p.edge_vs_line === "number" ? p.edge_vs_line : null,
         };
       }
 
@@ -172,6 +178,17 @@ function PlayerProps() {
         row.over_price = p.price;
       } else if (ouName === "under") {
         row.under_price = p.price;
+      }
+
+      // If any later record has a prediction/edge (e.g., from a different book), keep it
+      if (!row.prop_prediction && p.prop_prediction) {
+        row.prop_prediction = p.prop_prediction;
+      }
+      if (
+        row.edge_vs_line == null &&
+        typeof p.edge_vs_line === "number"
+      ) {
+        row.edge_vs_line = p.edge_vs_line;
       }
     });
 
@@ -498,7 +515,25 @@ function PlayerProps() {
                           <td style={{ ...styles.td, ...styles.bookCell }}>
                             {row.bookmaker}
                           </td>
-                          <td style={styles.td}>{/* future model */}</td>
+                          <td style={styles.td}>
+                            {row.prop_prediction ? (
+                              <span
+                                style={{
+                                  color:
+                                    row.edge_vs_line > 0
+                                      ? "#22c55e"
+                                      : row.edge_vs_line < 0
+                                      ? "#ef4444"
+                                      : "#e5e7eb",
+                                  fontWeight: 500,
+                                }}
+                              >
+                                {`Proj: ${row.prop_prediction.expected_value}`}
+                              </span>
+                            ) : (
+                              "-"
+                            )}
+                          </td>
                         </tr>
                       ))}
                     </tbody>
@@ -557,7 +592,25 @@ function PlayerProps() {
                           <td style={{ ...styles.td, ...styles.bookCell }}>
                             {row.bookmaker}
                           </td>
-                          <td style={styles.td}>{/* future model */}</td>
+                          <td style={styles.td}>
+                            {row.prop_prediction ? (
+                              <span
+                                style={{
+                                  color:
+                                    row.edge_vs_line > 0
+                                      ? "#22c55e"
+                                      : row.edge_vs_line < 0
+                                      ? "#ef4444"
+                                      : "#e5e7eb",
+                                  fontWeight: 500,
+                                }}
+                              >
+                                {`Proj: ${row.prop_prediction.expected_value}`}
+                              </span>
+                            ) : (
+                              "-"
+                            )}
+                          </td>
                         </tr>
                       ))}
                     </tbody>
