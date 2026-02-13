@@ -92,14 +92,30 @@ def main():
     p_features = play_art["feature_cols"]
 
     player_projections = []
-    for p_id, stats in p_latest.items():
-        today_feat = pd.DataFrame([stats])[p_features].fillna(0)
-        
-        p_entry = {"player_id": str(p_id), "name": stats.get('playerName', 'NBA Player')}
-        for target, model in p_models.items():
-            p_entry[target] = round(float(model.predict(today_feat)[0]), 2)
-        
-        player_projections.append(p_entry)
+    for p_id, stats_dict in p_latest.items():
+        try:
+            # Prepare features for the model
+            input_df = pd.DataFrame([stats_dict])[p_features].fillna(0)
+            
+            # Combine names if they aren't already combined
+            fname = stats_dict.get('firstName', '')
+            lname = stats_dict.get('lastName', '')
+            full_name = f"{fname} {lname}".strip()
+            if not full_name or full_name == "":
+                full_name = stats_dict.get('playerName', 'Unknown Player')
+
+            # Create entry with predictions from all 4 models
+            entry = {
+                "player_id": str(p_id),
+                "name": full_name,
+                "points": round(float(p_models['points'].predict(input_df)[0]), 2),
+                "reboundsTotal": round(float(p_models['reboundsTotal'].predict(input_df)[0]), 2),
+                "assists": round(float(p_models['assists'].predict(input_df)[0]), 2),
+                "threePointersMade": round(float(p_models['threePointersMade'].predict(input_df)[0]), 2)
+            }
+            player_projections.append(entry)
+        except Exception as e:
+            continue
 
     # 5. SAVE BOTH JSON FILES
     with open(TEAM_OUTPUT, "w") as f:

@@ -1,9 +1,9 @@
 {
-  "date": "2026-02-12",
+  "date": "2026-02-13",
   "projections": [
     {
       "player_id": "101108",
-      "name": "NBA Player",
+      "name": "Chris Paul",
       "points": 5.5,
       "reboundsTotal": 0.83,
       "assists": 2.31,
@@ -11,7 +11,7 @@
     },
     {
       "player_id": "1626143",
-      "name": "NBA Player",
+      "name": "Jahlil Okafor",
       "points": 0.83,
       "reboundsTotal": 0.65,
       "assists": 0.31,
@@ -19,7 +19,7 @@
     },
     {
       "player_id": "1626145",
-      "name": "NBA Player",
+      "name": "Tyus Jones",
       "points": 2.92,
       "reboundsTotal": 1.59,
       "assists": 3.01,
@@ -27,7 +27,7 @@
     },
     {
       "player_id": "1626153",
-      "name": "NBA Player",
+      "name": "Delon Wright",
       "points": 2.25,
       "reboundsTotal": 0.57,
       "assists": 1.01,
@@ -35,7 +35,7 @@
     },
     {
       "player_id": "1626156",
-      "name": "NBA Player",
+      "name": "D'Angelo Russell",
       "points": 1.22,
       "reboundsTotal": 0.9,
       "assists": 0.42,
@@ -43,7 +43,7 @@
     },
     {
       "player_id": "1626157",
-      "name": "NBA Player",
+      "name": "Karl-Anthony Towns",
       "points": 18.48,
       "reboundsTotal": 11.8,
       "assists": 3.58,
@@ -51,7 +51,7 @@
     },
     {
       "player_id": "1626158",
-      "name": "NBA Player",
+      "name": "Richaun Holmes",
       "points": 4.58,
       "reboundsTotal": 2.15,
       "assists": 0.28,
@@ -59,7 +59,7 @@
     },
     {
       "player_id": "1626162",
-      "name": "NBA Player",
+      "name": "Kelly Oubre Jr.",
       "points": 9.16,
       "reboundsTotal": 5.42,
       "assists": 2.72,
@@ -67,7 +67,7 @@
     },
     {
       "player_id": "1626164",
-      "name": "NBA Player",
+      "name": "Devin Booker",
       "points": 20.54,
       "reboundsTotal": 3.36,
       "assists": 6.65,
@@ -75,7 +75,7 @@
     },
     {
       "player_id": "1626166",
-      "name": "NBA Player",
+      "name": "Cameron Payne",
       "points": 2.75,
       "reboundsTotal": 1.11,
       "assists": 0.86,
@@ -83,7 +83,7 @@
     },
     {
       "player_id": "1626167",
-      "name": "NBA Player",
+      "name": "Myles Turner",
       "points": 12.86,
       "reboundsTotal": 7.06,
       "assists": 2.09,
@@ -91,7 +91,7 @@
     },
     {
       "player_id": "1626168",
-      "name": "NBA Player",
+      "name": "Trey Lyles",
       "points": 8.42,
       "reboundsTotal": 4.38,
       "assists": 1.28,
@@ -99,7 +99,7 @@
     },
     {
       "player_id": "1626171",
-      "name": "NBA Player",
+      "name": "Bobby Portis",
       "points": 13.9,
       "reboundsTotal": 6.25,
       "assists": 1.85,
@@ -107,7 +107,7 @@
     },
     {
       "player_id": "1626172",
-      "name": "NBA Player",
+      "name": "Kevon Looney",
       "points": 3.51,
       "reboundsTotal": 3.38,
       "assists": 0.28,
@@ -115,7 +115,7 @@
     },
     {
       "player_id": "1626174",
-      "name": "NBA Player",
+      "name": "Christian Wood",
       "points": 1.4,
       "reboundsTotal": 0.12,
       "assists": 0.26,
@@ -123,7 +123,7 @@
     },
     {
       "player_id": "1626179",
-      "name": "NBA Player",
+      "name": "Terry Rozier",
       "points": 0.78,
       "reboundsTotal": 1.4,
       "assists": 0.33,
@@ -131,7 +131,7 @@
     },
     {
       "player_id": "1626181",
-      "name": "NBA Player",
+      "name": "Norman Powell",
       "points": 14.64,
       "reboundsTotal": 2.91,
       "assists": 1.36,
@@ -139,7 +139,7 @@
     },
     {
       "player_id": "1626192",
-      "name": "NBA Player",
+      "name": "Pat Connaughton",
       "points": 0.56,
       "reboundsTotal": 0.35,
       "assists": 0.18,
@@ -147,7 +147,7 @@
     },
     {
       "player_id": "1626196",
-      "name": "NBA Player",
+      "name": "Josh Richardson",
       "points": 3.2,
       "reboundsTotal": 1.07,
       "assists": 1.51,
@@ -155,7 +155,7 @@
     },
     {
       "player_id": "1626204",
-      "name": "NBA Player",
+      "name": "Larry Nance Jr.",
       "points": 3.09,
       "reboundsTotal": 1.54,
       "assists": 0.7,
@@ -163,7 +163,7 @@
     },
     {
       "player_id": "1626220",
-      "name": "NBA Player",
+      "name": "Royce O'Neale",
       "points": 11.71,
       "reboundsTotal": 3.19,
       "assists": 1.73,
@@ -171,7 +171,7 @@
     },
     {
       "player_id": "1627732",
-      "name": "NBA Player",
+      "name": "Ben Simmons",
       "points": 3.51,
       "reboundsTotal": 3.13,
       "assists": 2.61,
@@ -179,7 +179,7 @@
     },
     {
       "player_id": "1627734",
-      "name": "NBA Player",
+      "name": "Domantas Sabonis",
       "points": 6.41,
       "reboundsTotal": 3.45,
       "assists": 2.81,
@@ -187,7 +187,7 @@
     },
     {
       "player_id": "1627736",
-      "name": "NBA Player",
+      "name": "Malik Beasley",
       "points": 21.04,
       "reboundsTotal": 3.13,
       "assists": 2.34,
@@ -195,7 +195,7 @@
     },
     {
       "player_id": "1627739",
-      "name": "NBA Player",
+      "name": "Kris Dunn",
       "points": 12.09,
       "reboundsTotal": 1.86,
       "assists": 5.73,
@@ -203,7 +203,7 @@
     },
     {
       "player_id": "1627741",
-      "name": "NBA Player",
+      "name": "Buddy Hield",
       "points": 6.51,
       "reboundsTotal": 1.14,
       "assists": 1.03,
@@ -211,7 +211,7 @@
     },
     {
       "player_id": "1627742",
-      "name": "NBA Player",
+      "name": "Brandon Ingram",
       "points": 16.26,
       "reboundsTotal": 2.48,
       "assists": 2.03,
@@ -219,7 +219,7 @@
     },
     {
       "player_id": "1627746",
-      "name": "NBA Player",
+      "name": "Skal Labissiere",
       "points": 1.17,
       "reboundsTotal": 0.56,
       "assists": 0.26,
@@ -227,7 +227,7 @@
     },
     {
       "player_id": "1627747",
-      "name": "NBA Player",
+      "name": "Caris LeVert",
       "points": 8.37,
       "reboundsTotal": 1.93,
       "assists": 2.14,
@@ -235,7 +235,7 @@
     },
     {
       "player_id": "1627749",
-      "name": "NBA Player",
+      "name": "Dejounte Murray",
       "points": 11.44,
       "reboundsTotal": 3.64,
       "assists": 3.64,
@@ -243,7 +243,7 @@
     },
     {
       "player_id": "1627750",
-      "name": "NBA Player",
+      "name": "Jamal Murray",
       "points": 25.02,
       "reboundsTotal": 5.02,
       "assists": 7.24,
@@ -251,7 +251,7 @@
     },
     {
       "player_id": "1627751",
-      "name": "NBA Player",
+      "name": "Jakob Poeltl",
       "points": 8.23,
       "reboundsTotal": 5.52,
       "assists": 1.43,
@@ -259,7 +259,7 @@
     },
     {
       "player_id": "1627752",
-      "name": "NBA Player",
+      "name": "Taurean Prince",
       "points": 2.42,
       "reboundsTotal": 1.31,
       "assists": 1.14,
@@ -267,7 +267,7 @@
     },
     {
       "player_id": "1627759",
-      "name": "NBA Player",
+      "name": "Jaylen Brown",
       "points": 22.69,
       "reboundsTotal": 4.36,
       "assists": 3.56,
@@ -275,7 +275,7 @@
     },
     {
       "player_id": "1627763",
-      "name": "NBA Player",
+      "name": "Malcolm Brogdon",
       "points": 7.6,
       "reboundsTotal": 1.77,
       "assists": 2.47,
@@ -283,7 +283,7 @@
     },
     {
       "player_id": "1627777",
-      "name": "NBA Player",
+      "name": "Georges Niang",
       "points": 3.81,
       "reboundsTotal": 1.14,
       "assists": 0.53,
@@ -291,7 +291,7 @@
     },
     {
       "player_id": "1627780",
-      "name": "NBA Player",
+      "name": "Gary Payton II",
       "points": 7.65,
       "reboundsTotal": 1.48,
       "assists": 2.02,
@@ -299,7 +299,7 @@
     },
     {
       "player_id": "1627783",
-      "name": "NBA Player",
+      "name": "Pascal Siakam",
       "points": 13.68,
       "reboundsTotal": 2.9,
       "assists": 2.47,
@@ -307,7 +307,7 @@
     },
     {
       "player_id": "1627814",
-      "name": "NBA Player",
+      "name": "Damion Lee",
       "points": 3.18,
       "reboundsTotal": 0.95,
       "assists": 0.53,
@@ -315,7 +315,7 @@
     },
     {
       "player_id": "1627824",
-      "name": "NBA Player",
+      "name": "Guerschon Yabusele",
       "points": 9.02,
       "reboundsTotal": 2.42,
       "assists": 1.28,
@@ -323,7 +323,7 @@
     },
     {
       "player_id": "1627826",
-      "name": "NBA Player",
+      "name": "Ivica Zubac",
       "points": 10.2,
       "reboundsTotal": 9.54,
       "assists": 1.97,
@@ -331,7 +331,7 @@
     },
     {
       "player_id": "1627827",
-      "name": "NBA Player",
+      "name": "Dorian Finney-Smith",
       "points": 3.08,
       "reboundsTotal": 1.55,
       "assists": 1.4,
@@ -339,7 +339,7 @@
     },
     {
       "player_id": "1627832",
-      "name": "NBA Player",
+      "name": "Fred VanVleet",
       "points": 13.99,
       "reboundsTotal": 4.08,
       "assists": 5.15,
@@ -347,7 +347,7 @@
     },
     {
       "player_id": "1627884",
-      "name": "NBA Player",
+      "name": "Derrick Jones Jr.",
       "points": 10.71,
       "reboundsTotal": 1.8,
       "assists": 2.08,
@@ -355,7 +355,7 @@
     },
     {
       "player_id": "1627936",
-      "name": "NBA Player",
+      "name": "Alex Caruso",
       "points": 2.88,
       "reboundsTotal": 1.56,
       "assists": 0.49,
@@ -363,7 +363,7 @@
     },
     {
       "player_id": "1628365",
-      "name": "NBA Player",
+      "name": "Markelle Fultz",
       "points": 1.79,
       "reboundsTotal": 1.03,
       "assists": 0.85,
@@ -371,7 +371,7 @@
     },
     {
       "player_id": "1628366",
-      "name": "NBA Player",
+      "name": "Lonzo Ball",
       "points": 4.34,
       "reboundsTotal": 3.58,
       "assists": 1.57,
@@ -379,7 +379,7 @@
     },
     {
       "player_id": "1628368",
-      "name": "NBA Player",
+      "name": "De'Aaron Fox",
       "points": 20.45,
       "reboundsTotal": 3.82,
       "assists": 7.06,
@@ -387,7 +387,7 @@
     },
     {
       "player_id": "1628369",
-      "name": "NBA Player",
+      "name": "Jayson Tatum",
       "points": 18.25,
       "reboundsTotal": 8.2,
       "assists": 6.6,
@@ -395,7 +395,7 @@
     },
     {
       "player_id": "1628370",
-      "name": "NBA Player",
+      "name": "Malik Monk",
       "points": 16.25,
       "reboundsTotal": 2.07,
       "assists": 2.8,
@@ -403,7 +403,7 @@
     },
     {
       "player_id": "1628371",
-      "name": "NBA Player",
+      "name": "Jonathan Isaac",
       "points": 1.11,
       "reboundsTotal": 0.69,
       "assists": 0.37,
@@ -411,7 +411,7 @@
     },
     {
       "player_id": "1628374",
-      "name": "NBA Player",
+      "name": "Lauri Markkanen",
       "points": 17.51,
       "reboundsTotal": 6.08,
       "assists": 2.54,
@@ -419,7 +419,7 @@
     },
     {
       "player_id": "1628378",
-      "name": "NBA Player",
+      "name": "Donovan Mitchell",
       "points": 30.36,
       "reboundsTotal": 3.17,
       "assists": 5.66,
@@ -427,7 +427,7 @@
     },
     {
       "player_id": "1628379",
-      "name": "NBA Player",
+      "name": "Luke Kennard",
       "points": 11.08,
       "reboundsTotal": 2.67,
       "assists": 2.83,
@@ -435,7 +435,7 @@
     },
     {
       "player_id": "1628380",
-      "name": "NBA Player",
+      "name": "Zach Collins",
       "points": 3.33,
       "reboundsTotal": 3.52,
       "assists": 0.63,
@@ -443,7 +443,7 @@
     },
     {
       "player_id": "1628381",
-      "name": "NBA Player",
+      "name": "John Collins",
       "points": 14.68,
       "reboundsTotal": 5.71,
       "assists": 1.46,
@@ -451,7 +451,7 @@
     },
     {
       "player_id": "1628384",
-      "name": "NBA Player",
+      "name": "OG Anunoby",
       "points": 12.02,
       "reboundsTotal": 3.13,
       "assists": 2.05,
@@ -459,7 +459,7 @@
     },
     {
       "player_id": "1628386",
-      "name": "NBA Player",
+      "name": "Jarrett Allen",
       "points": 19.05,
       "reboundsTotal": 9.28,
       "assists": 1.23,
@@ -467,7 +467,7 @@
     },
     {
       "player_id": "1628389",
-      "name": "NBA Player",
+      "name": "Bam Adebayo",
       "points": 20.88,
       "reboundsTotal": 11.86,
       "assists": 2.71,
@@ -475,7 +475,7 @@
     },
     {
       "player_id": "1628392",
-      "name": "NBA Player",
+      "name": "Isaiah Hartenstein",
       "points": 7.76,
       "reboundsTotal": 6.1,
       "assists": 4.88,
@@ -483,7 +483,7 @@
     },
     {
       "player_id": "1628396",
-      "name": "NBA Player",
+      "name": "Tony Bradley",
       "points": 4.74,
       "reboundsTotal": 3.53,
       "assists": 0.87,
@@ -491,7 +491,7 @@
     },
     {
       "player_id": "1628398",
-      "name": "NBA Player",
+      "name": "Kyle Kuzma",
       "points": 11.73,
       "reboundsTotal": 6.1,
       "assists": 2.23,
@@ -499,7 +499,7 @@
     },
     {
       "player_id": "1628401",
-      "name": "NBA Player",
+      "name": "Derrick White",
       "points": 17.05,
       "reboundsTotal": 4.23,
       "assists": 4.25,
@@ -507,7 +507,7 @@
     },
     {
       "player_id": "1628404",
-      "name": "NBA Player",
+      "name": "Josh Hart",
       "points": 11.92,
       "reboundsTotal": 7.06,
       "assists": 5.31,
@@ -515,7 +515,7 @@
     },
     {
       "player_id": "1628408",
-      "name": "NBA Player",
+      "name": "PJ Dozier",
       "points": 0.43,
       "reboundsTotal": 0.83,
       "assists": 0.47,
@@ -523,7 +523,7 @@
     },
     {
       "player_id": "1628415",
-      "name": "NBA Player",
+      "name": "Dillon Brooks",
       "points": 22.07,
       "reboundsTotal": 4.06,
       "assists": 3.0,
@@ -531,7 +531,7 @@
     },
     {
       "player_id": "1628418",
-      "name": "NBA Player",
+      "name": "Thomas Bryant",
       "points": 5.84,
       "reboundsTotal": 4.63,
       "assists": 1.04,
@@ -539,7 +539,7 @@
     },
     {
       "player_id": "1628420",
-      "name": "NBA Player",
+      "name": "Monte Morris",
       "points": 3.18,
       "reboundsTotal": 0.86,
       "assists": 0.79,
@@ -547,7 +547,7 @@
     },
     {
       "player_id": "1628427",
-      "name": "NBA Player",
+      "name": "Vlatko Cancar",
       "points": 0.75,
       "reboundsTotal": 0.37,
       "assists": 0.55,
@@ -555,7 +555,7 @@
     },
     {
       "player_id": "1628436",
-      "name": "NBA Player",
+      "name": "Luke Kornet",
       "points": 8.26,
       "reboundsTotal": 4.95,
       "assists": 2.22,
@@ -563,7 +563,7 @@
     },
     {
       "player_id": "1628449",
-      "name": "NBA Player",
+      "name": "Chris Boucher",
       "points": 0.27,
       "reboundsTotal": 0.24,
       "assists": 0.07,
@@ -571,7 +571,7 @@
     },
     {
       "player_id": "1628464",
-      "name": "NBA Player",
+      "name": "Daniel Theis",
       "points": 5.97,
       "reboundsTotal": 4.04,
       "assists": 1.82,
@@ -579,7 +579,7 @@
     },
     {
       "player_id": "1628467",
-      "name": "NBA Player",
+      "name": "Maxi Kleber",
       "points": 4.83,
       "reboundsTotal": 2.16,
       "assists": 0.31,
@@ -587,7 +587,7 @@
     },
     {
       "player_id": "1628470",
-      "name": "NBA Player",
+      "name": "Torrey Craig",
       "points": 1.61,
       "reboundsTotal": 0.75,
       "assists": 0.46,
@@ -595,7 +595,7 @@
     },
     {
       "player_id": "1628502",
-      "name": "NBA Player",
+      "name": "Nigel Hayes-Davis",
       "points": 0.96,
       "reboundsTotal": 0.53,
       "assists": 0.27,
@@ -603,7 +603,7 @@
     },
     {
       "player_id": "1628960",
-      "name": "NBA Player",
+      "name": "Grayson Allen",
       "points": 19.11,
       "reboundsTotal": 4.69,
       "assists": 4.34,
@@ -611,7 +611,7 @@
     },
     {
       "player_id": "1628963",
-      "name": "NBA Player",
+      "name": "Marvin Bagley III",
       "points": 8.25,
       "reboundsTotal": 6.2,
       "assists": 1.31,
@@ -619,7 +619,7 @@
     },
     {
       "player_id": "1628964",
-      "name": "NBA Player",
+      "name": "Mo Bamba",
       "points": 1.53,
       "reboundsTotal": 2.99,
       "assists": 0.48,
@@ -627,7 +627,7 @@
     },
     {
       "player_id": "1628969",
-      "name": "NBA Player",
+      "name": "Mikal Bridges",
       "points": 19.9,
       "reboundsTotal": 4.88,
       "assists": 4.98,
@@ -635,7 +635,7 @@
     },
     {
       "player_id": "1628970",
-      "name": "NBA Player",
+      "name": "Miles Bridges",
       "points": 8.1,
       "reboundsTotal": 3.0,
       "assists": 1.47,
@@ -643,7 +643,7 @@
     },
     {
       "player_id": "1628971",
-      "name": "NBA Player",
+      "name": "Bruce Brown",
       "points": 8.69,
       "reboundsTotal": 2.65,
       "assists": 1.93,
@@ -651,7 +651,7 @@
     },
     {
       "player_id": "1628973",
-      "name": "NBA Player",
+      "name": "Jalen Brunson",
       "points": 15.95,
       "reboundsTotal": 4.73,
       "assists": 5.48,
@@ -659,7 +659,7 @@
     },
     {
       "player_id": "1628975",
-      "name": "NBA Player",
+      "name": "Jevon Carter",
       "points": 1.11,
       "reboundsTotal": 0.5,
       "assists": 0.07,
@@ -667,7 +667,7 @@
     },
     {
       "player_id": "1628976",
-      "name": "NBA Player",
+      "name": "Wendell Carter Jr.",
       "points": 7.23,
       "reboundsTotal": 8.39,
       "assists": 2.24,
@@ -675,7 +675,7 @@
     },
     {
       "player_id": "1628978",
-      "name": "NBA Player",
+      "name": "Donte DiVincenzo",
       "points": 8.22,
       "reboundsTotal": 4.25,
       "assists": 4.78,
@@ -683,7 +683,7 @@
     },
     {
       "player_id": "1628981",
-      "name": "NBA Player",
+      "name": "Bruno Fernando",
       "points": 0.6,
       "reboundsTotal": 0.33,
       "assists": 0.13,
@@ -691,7 +691,7 @@
     },
     {
       "player_id": "1628983",
-      "name": "NBA Player",
+      "name": "Shai Gilgeous-Alexander",
       "points": 25.12,
       "reboundsTotal": 5.33,
       "assists": 7.57,
@@ -699,7 +699,7 @@
     },
     {
       "player_id": "1628988",
-      "name": "NBA Player",
+      "name": "Aaron Holiday",
       "points": 1.61,
       "reboundsTotal": 0.37,
       "assists": 0.27,
@@ -707,7 +707,7 @@
     },
     {
       "player_id": "1628989",
-      "name": "NBA Player",
+      "name": "Kevin Huerter",
       "points": 7.16,
       "reboundsTotal": 3.12,
       "assists": 1.27,
@@ -715,7 +715,7 @@
     },
     {
       "player_id": "1628991",
-      "name": "NBA Player",
+      "name": "Jaren Jackson Jr.",
       "points": 22.19,
       "reboundsTotal": 4.27,
       "assists": 2.26,
@@ -723,7 +723,7 @@
     },
     {
       "player_id": "1628995",
-      "name": "NBA Player",
+      "name": "Kevin Knox II",
       "points": 4.31,
       "reboundsTotal": 2.04,
       "assists": 0.72,
@@ -731,7 +731,7 @@
     },
     {
       "player_id": "1628997",
-      "name": "NBA Player",
+      "name": "Caleb Martin",
       "points": 6.98,
       "reboundsTotal": 4.61,
       "assists": 2.72,
@@ -739,7 +739,7 @@
     },
     {
       "player_id": "1628998",
-      "name": "NBA Player",
+      "name": "Cody Martin",
       "points": 3.18,
       "reboundsTotal": 1.46,
       "assists": 0.42,
@@ -747,7 +747,7 @@
     },
     {
       "player_id": "1629001",
-      "name": "NBA Player",
+      "name": "De'Anthony Melton",
       "points": 14.85,
       "reboundsTotal": 2.93,
       "assists": 4.0,
@@ -755,7 +755,7 @@
     },
     {
       "player_id": "1629003",
-      "name": "NBA Player",
+      "name": "Shake Milton",
       "points": 1.3,
       "reboundsTotal": 0.4,
       "assists": 0.08,
@@ -763,7 +763,7 @@
     },
     {
       "player_id": "1629004",
-      "name": "NBA Player",
+      "name": "Svi Mykhailiuk",
       "points": 6.8,
       "reboundsTotal": 1.23,
       "assists": 1.16,
@@ -771,7 +771,7 @@
     },
     {
       "player_id": "1629006",
-      "name": "NBA Player",
+      "name": "Josh Okogie",
       "points": 2.2,
       "reboundsTotal": 1.95,
       "assists": 0.57,
@@ -779,7 +779,7 @@
     },
     {
       "player_id": "1629008",
-      "name": "NBA Player",
+      "name": "Michael Porter Jr.",
       "points": 16.84,
       "reboundsTotal": 4.28,
       "assists": 2.77,
@@ -787,7 +787,7 @@
     },
     {
       "player_id": "1629011",
-      "name": "NBA Player",
+      "name": "Mitchell Robinson",
       "points": 4.69,
       "reboundsTotal": 7.51,
       "assists": 1.33,
@@ -795,7 +795,7 @@
     },
     {
       "player_id": "1629012",
-      "name": "NBA Player",
+      "name": "Collin Sexton",
       "points": 11.59,
       "reboundsTotal": 3.0,
       "assists": 1.56,
@@ -803,7 +803,7 @@
     },
     {
       "player_id": "1629013",
-      "name": "NBA Player",
+      "name": "Landry Shamet",
       "points": 9.11,
       "reboundsTotal": 1.81,
       "assists": 3.26,
@@ -811,7 +811,7 @@
     },
     {
       "player_id": "1629014",
-      "name": "NBA Player",
+      "name": "Anfernee Simons",
       "points": 12.9,
       "reboundsTotal": 3.49,
       "assists": 2.02,
@@ -819,7 +819,7 @@
     },
     {
       "player_id": "1629018",
-      "name": "NBA Player",
+      "name": "Gary Trent Jr.",
       "points": 2.61,
       "reboundsTotal": 1.77,
       "assists": 0.56,
@@ -827,7 +827,7 @@
     },
     {
       "player_id": "1629020",
-      "name": "NBA Player",
+      "name": "Jarred Vanderbilt",
       "points": 7.75,
       "reboundsTotal": 4.53,
       "assists": 1.67,
@@ -835,7 +835,7 @@
     },
     {
       "player_id": "1629021",
-      "name": "NBA Player",
+      "name": "Moritz Wagner",
       "points": 10.1,
       "reboundsTotal": 4.02,
       "assists": 2.92,
@@ -843,7 +843,7 @@
     },
     {
       "player_id": "1629022",
-      "name": "NBA Player",
+      "name": "Lonnie Walker IV",
       "points": 12.84,
       "reboundsTotal": 3.45,
       "assists": 2.92,
@@ -851,7 +851,7 @@
     },
     {
       "player_id": "1629023",
-      "name": "NBA Player",
+      "name": "P.J. Washington",
       "points": 10.05,
       "reboundsTotal": 4.13,
       "assists": 0.98,
@@ -859,7 +859,7 @@
     },
     {
       "player_id": "1629026",
-      "name": "NBA Player",
+      "name": "Kenrich Williams",
       "points": 12.76,
       "reboundsTotal": 4.7,
       "assists": 1.95,
@@ -867,7 +867,7 @@
     },
     {
       "player_id": "1629027",
-      "name": "NBA Player",
+      "name": "Trae Young",
       "points": 4.83,
       "reboundsTotal": 1.1,
       "assists": 2.77,
@@ -875,7 +875,7 @@
     },
     {
       "player_id": "1629028",
-      "name": "NBA Player",
+      "name": "Deandre Ayton",
       "points": 8.1,
       "reboundsTotal": 7.55,
       "assists": 0.58,
@@ -883,7 +883,7 @@
     },
     {
       "player_id": "1629029",
-      "name": "NBA Player",
+      "name": "Luka Doncic",
       "points": 21.05,
       "reboundsTotal": 5.7,
       "assists": 5.63,
@@ -891,7 +891,7 @@
     },
     {
       "player_id": "1629048",
-      "name": "NBA Player",
+      "name": "Goga Bitadze",
       "points": 1.57,
       "reboundsTotal": 1.35,
       "assists": 0.28,
@@ -899,7 +899,7 @@
     },
     {
       "player_id": "1629052",
-      "name": "NBA Player",
+      "name": "Oshae Brissett",
       "points": 8.33,
       "reboundsTotal": 3.59,
       "assists": 1.46,
@@ -907,7 +907,7 @@
     },
     {
       "player_id": "1629056",
-      "name": "NBA Player",
+      "name": "Terence Davis",
       "points": 0.74,
       "reboundsTotal": 0.5,
       "assists": 0.7,
@@ -915,7 +915,7 @@
     },
     {
       "player_id": "1629057",
-      "name": "NBA Player",
+      "name": "Robert Williams III",
       "points": 6.8,
       "reboundsTotal": 4.22,
       "assists": 1.09,
@@ -923,7 +923,7 @@
     },
     {
       "player_id": "1629060",
-      "name": "NBA Player",
+      "name": "Rui Hachimura",
       "points": 7.98,
       "reboundsTotal": 4.09,
       "assists": 1.95,
@@ -931,7 +931,7 @@
     },
     {
       "player_id": "1629098",
-      "name": "NBA Player",
+      "name": "Jack McVeigh",
       "points": 2.44,
       "reboundsTotal": 0.99,
       "assists": 0.45,
@@ -939,7 +939,7 @@
     },
     {
       "player_id": "1629111",
-      "name": "NBA Player",
+      "name": "Jock Landale",
       "points": 10.98,
       "reboundsTotal": 4.86,
       "assists": 1.16,
@@ -947,7 +947,7 @@
     },
     {
       "player_id": "1629130",
-      "name": "NBA Player",
+      "name": "Duncan Robinson",
       "points": 12.51,
       "reboundsTotal": 3.09,
       "assists": 2.79,
@@ -955,7 +955,7 @@
     },
     {
       "player_id": "1629162",
-      "name": "NBA Player",
+      "name": "Jordan McLaughlin",
       "points": 0.87,
       "reboundsTotal": 0.47,
       "assists": 0.12,
@@ -963,7 +963,7 @@
     },
     {
       "player_id": "1629216",
-      "name": "NBA Player",
+      "name": "Gabe Vincent",
       "points": 3.26,
       "reboundsTotal": 0.72,
       "assists": 0.67,
@@ -971,7 +971,7 @@
     },
     {
       "player_id": "1629234",
-      "name": "NBA Player",
+      "name": "Drew Eubanks",
       "points": 0.53,
       "reboundsTotal": 0.06,
       "assists": 0.1,
@@ -979,7 +979,7 @@
     },
     {
       "player_id": "1629312",
-      "name": "NBA Player",
+      "name": "Haywood Highsmith",
       "points": 5.28,
       "reboundsTotal": 2.28,
       "assists": 0.79,
@@ -987,7 +987,7 @@
     },
     {
       "player_id": "1629599",
-      "name": "NBA Player",
+      "name": "Amir Coffey",
       "points": 3.3,
       "reboundsTotal": 1.1,
       "assists": 0.49,
@@ -995,7 +995,7 @@
     },
     {
       "player_id": "1629610",
-      "name": "NBA Player",
+      "name": "DaQuan Jeffries",
       "points": 9.02,
       "reboundsTotal": 3.86,
       "assists": 1.54,
@@ -1003,7 +1003,7 @@
     },
     {
       "player_id": "1629611",
-      "name": "NBA Player",
+      "name": "Terance Mann",
       "points": 6.53,
       "reboundsTotal": 3.04,
       "assists": 1.87,
@@ -1011,7 +1011,7 @@
     },
     {
       "player_id": "1629614",
-      "name": "NBA Player",
+      "name": "Andrew Nembhard",
       "points": 8.78,
       "reboundsTotal": 2.24,
       "assists": 4.13,
@@ -1019,7 +1019,7 @@
     },
     {
       "player_id": "1629618",
-      "name": "NBA Player",
+      "name": "Jalen Pickett",
       "points": 3.78,
       "reboundsTotal": 1.66,
       "assists": 0.46,
@@ -1027,7 +1027,7 @@
     },
     {
       "player_id": "1629622",
-      "name": "NBA Player",
+      "name": "Max Strus",
       "points": 11.24,
       "reboundsTotal": 5.03,
       "assists": 3.68,
@@ -1035,7 +1035,7 @@
     },
     {
       "player_id": "1629626",
-      "name": "NBA Player",
+      "name": "Bol Bol",
       "points": 2.8,
       "reboundsTotal": 1.01,
       "assists": 0.53,
@@ -1043,7 +1043,7 @@
     },
     {
       "player_id": "1629627",
-      "name": "NBA Player",
+      "name": "Zion Williamson",
       "points": 22.42,
       "reboundsTotal": 7.27,
       "assists": 3.03,
@@ -1051,7 +1051,7 @@
     },
     {
       "player_id": "1629628",
-      "name": "NBA Player",
+      "name": "RJ Barrett",
       "points": 20.57,
       "reboundsTotal": 4.86,
       "assists": 3.91,
@@ -1059,7 +1059,7 @@
     },
     {
       "player_id": "1629629",
-      "name": "NBA Player",
+      "name": "Cam Reddish",
       "points": 2.49,
       "reboundsTotal": 1.69,
       "assists": 0.23,
@@ -1067,7 +1067,7 @@
     },
     {
       "player_id": "1629630",
-      "name": "NBA Player",
+      "name": "Ja Morant",
       "points": 18.69,
       "reboundsTotal": 3.28,
       "assists": 9.98,
@@ -1075,7 +1075,7 @@
     },
     {
       "player_id": "1629631",
-      "name": "NBA Player",
+      "name": "De'Andre Hunter",
       "points": 7.4,
       "reboundsTotal": 1.77,
       "assists": 0.9,
@@ -1083,7 +1083,7 @@
     },
     {
       "player_id": "1629632",
-      "name": "NBA Player",
+      "name": "Coby White",
       "points": 17.02,
       "reboundsTotal": 3.5,
       "assists": 3.93,
@@ -1091,7 +1091,7 @@
     },
     {
       "player_id": "1629634",
-      "name": "NBA Player",
+      "name": "Brandon Clarke",
       "points": 1.83,
       "reboundsTotal": 1.28,
       "assists": 0.41,
@@ -1099,7 +1099,7 @@
     },
     {
       "player_id": "1629636",
-      "name": "NBA Player",
+      "name": "Darius Garland",
       "points": 15.52,
       "reboundsTotal": 2.32,
       "assists": 5.54,
@@ -1107,7 +1107,7 @@
     },
     {
       "player_id": "1629637",
-      "name": "NBA Player",
+      "name": "Jaxson Hayes",
       "points": 9.46,
       "reboundsTotal": 3.19,
       "assists": 1.82,
@@ -1115,7 +1115,7 @@
     },
     {
       "player_id": "1629638",
-      "name": "NBA Player",
+      "name": "Nickeil Alexander-Walker",
       "points": 16.35,
       "reboundsTotal": 3.12,
       "assists": 4.81,
@@ -1123,7 +1123,7 @@
     },
     {
       "player_id": "1629639",
-      "name": "NBA Player",
+      "name": "Tyler Herro",
       "points": 3.56,
       "reboundsTotal": 1.04,
       "assists": 0.71,
@@ -1131,7 +1131,7 @@
     },
     {
       "player_id": "1629640",
-      "name": "NBA Player",
+      "name": "Keldon Johnson",
       "points": 14.67,
       "reboundsTotal": 4.87,
       "assists": 2.21,
@@ -1139,7 +1139,7 @@
     },
     {
       "player_id": "1629643",
-      "name": "NBA Player",
+      "name": "Chuma Okeke",
       "points": 1.97,
       "reboundsTotal": 0.53,
       "assists": 0.33,
@@ -1147,7 +1147,7 @@
     },
     {
       "player_id": "1629645",
-      "name": "NBA Player",
+      "name": "Kevin Porter Jr.",
       "points": 17.17,
       "reboundsTotal": 6.24,
       "assists": 8.9,
@@ -1155,7 +1155,7 @@
     },
     {
       "player_id": "1629646",
-      "name": "NBA Player",
+      "name": "Charles Bassey",
       "points": 1.6,
       "reboundsTotal": 1.42,
       "assists": 0.38,
@@ -1163,7 +1163,7 @@
     },
     {
       "player_id": "1629650",
-      "name": "NBA Player",
+      "name": "Moses Brown",
       "points": 3.13,
       "reboundsTotal": 2.8,
       "assists": 0.34,
@@ -1171,7 +1171,7 @@
     },
     {
       "player_id": "1629651",
-      "name": "NBA Player",
+      "name": "Nic Claxton",
       "points": 18.18,
       "reboundsTotal": 7.55,
       "assists": 4.22,
@@ -1179,7 +1179,7 @@
     },
     {
       "player_id": "1629652",
-      "name": "NBA Player",
+      "name": "Luguentz Dort",
       "points": 6.58,
       "reboundsTotal": 1.57,
       "assists": 1.26,
@@ -1187,7 +1187,7 @@
     },
     {
       "player_id": "1629655",
-      "name": "NBA Player",
+      "name": "Daniel Gafford",
       "points": 7.01,
       "reboundsTotal": 4.63,
       "assists": 0.43,
@@ -1195,7 +1195,7 @@
     },
     {
       "player_id": "1629656",
-      "name": "NBA Player",
+      "name": "Quentin Grimes",
       "points": 6.56,
       "reboundsTotal": 3.27,
       "assists": 3.48,
@@ -1203,7 +1203,7 @@
     },
     {
       "player_id": "1629659",
-      "name": "NBA Player",
+      "name": "Talen Horton-Tucker",
       "points": 8.57,
       "reboundsTotal": 2.5,
       "assists": 1.85,
@@ -1211,7 +1211,7 @@
     },
     {
       "player_id": "1629660",
-      "name": "NBA Player",
+      "name": "Ty Jerome",
       "points": 15.58,
       "reboundsTotal": 1.74,
       "assists": 4.35,
@@ -1219,7 +1219,7 @@
     },
     {
       "player_id": "1629661",
-      "name": "NBA Player",
+      "name": "Cameron Johnson",
       "points": 8.4,
       "reboundsTotal": 3.92,
       "assists": 1.53,
@@ -1227,7 +1227,7 @@
     },
     {
       "player_id": "1629667",
-      "name": "NBA Player",
+      "name": "Jalen McDaniels",
       "points": 2.15,
       "reboundsTotal": 1.0,
       "assists": 1.23,
@@ -1235,7 +1235,7 @@
     },
     {
       "player_id": "1629669",
-      "name": "NBA Player",
+      "name": "Jaylen Nowell",
       "points": 7.67,
       "reboundsTotal": 1.93,
       "assists": 2.28,
@@ -1243,7 +1243,7 @@
     },
     {
       "player_id": "1629673",
-      "name": "NBA Player",
+      "name": "Jordan Poole",
       "points": 3.47,
       "reboundsTotal": 1.11,
       "assists": 0.5,
@@ -1251,7 +1251,7 @@
     },
     {
       "player_id": "1629674",
-      "name": "NBA Player",
+      "name": "Neemias Queta",
       "points": 9.37,
       "reboundsTotal": 7.57,
       "assists": 1.62,
@@ -1259,7 +1259,7 @@
     },
     {
       "player_id": "1629675",
-      "name": "NBA Player",
+      "name": "Naz Reid",
       "points": 10.62,
       "reboundsTotal": 5.99,
       "assists": 2.22,
@@ -1267,7 +1267,7 @@
     },
     {
       "player_id": "1629680",
-      "name": "NBA Player",
+      "name": "Matisse Thybulle",
       "points": 0.46,
       "reboundsTotal": 0.44,
       "assists": 0.16,
@@ -1275,7 +1275,7 @@
     },
     {
       "player_id": "1629684",
-      "name": "NBA Player",
+      "name": "Grant Williams",
       "points": 7.34,
       "reboundsTotal": 5.5,
       "assists": 2.89,
@@ -1283,7 +1283,7 @@
     },
     {
       "player_id": "1629723",
-      "name": "NBA Player",
+      "name": "John Konchar",
       "points": 1.84,
       "reboundsTotal": 2.43,
       "assists": 1.33,
@@ -1291,7 +1291,7 @@
     },
     {
       "player_id": "1629726",
-      "name": "NBA Player",
+      "name": "Garrison Mathews",
       "points": 5.86,
       "reboundsTotal": 2.04,
       "assists": 0.72,
@@ -1299,7 +1299,7 @@
     },
     {
       "player_id": "1629731",
-      "name": "NBA Player",
+      "name": "Dean Wade",
       "points": 4.44,
       "reboundsTotal": 3.24,
       "assists": 1.38,
@@ -1307,7 +1307,7 @@
     },
     {
       "player_id": "1629750",
-      "name": "NBA Player",
+      "name": "Javonte Green",
       "points": 5.83,
       "reboundsTotal": 3.52,
       "assists": 1.33,
@@ -1315,7 +1315,7 @@
     },
     {
       "player_id": "1630162",
-      "name": "NBA Player",
+      "name": "Anthony Edwards",
       "points": 27.79,
       "reboundsTotal": 4.34,
       "assists": 3.18,
@@ -1323,7 +1323,7 @@
     },
     {
       "player_id": "1630163",
-      "name": "NBA Player",
+      "name": "LaMelo Ball",
       "points": 16.95,
       "reboundsTotal": 3.61,
       "assists": 6.47,
@@ -1331,7 +1331,7 @@
     },
     {
       "player_id": "1630164",
-      "name": "NBA Player",
+      "name": "James Wiseman",
       "points": 4.17,
       "reboundsTotal": 1.15,
       "assists": 0.59,
@@ -1339,7 +1339,7 @@
     },
     {
       "player_id": "1630165",
-      "name": "NBA Player",
+      "name": "Killian Hayes",
       "points": 10.54,
       "reboundsTotal": 3.16,
       "assists": 5.66,
@@ -1347,7 +1347,7 @@
     },
     {
       "player_id": "1630166",
-      "name": "NBA Player",
+      "name": "Deni Avdija",
       "points": 10.24,
       "reboundsTotal": 3.85,
       "assists": 2.25,
@@ -1355,7 +1355,7 @@
     },
     {
       "player_id": "1630167",
-      "name": "NBA Player",
+      "name": "Obi Toppin",
       "points": 10.71,
       "reboundsTotal": 3.77,
       "assists": 0.81,
@@ -1363,7 +1363,7 @@
     },
     {
       "player_id": "1630168",
-      "name": "NBA Player",
+      "name": "Onyeka Okongwu",
       "points": 15.64,
       "reboundsTotal": 4.32,
       "assists": 1.53,
@@ -1371,7 +1371,7 @@
     },
     {
       "player_id": "1630169",
-      "name": "NBA Player",
+      "name": "Tyrese Haliburton",
       "points": 19.54,
       "reboundsTotal": 4.92,
       "assists": 7.68,
@@ -1379,7 +1379,7 @@
     },
     {
       "player_id": "1630170",
-      "name": "NBA Player",
+      "name": "Devin Vassell",
       "points": 8.77,
       "reboundsTotal": 2.91,
       "assists": 2.38,
@@ -1387,7 +1387,7 @@
     },
     {
       "player_id": "1630171",
-      "name": "NBA Player",
+      "name": "Isaac Okoro",
       "points": 8.43,
       "reboundsTotal": 2.97,
       "assists": 3.04,
@@ -1395,7 +1395,7 @@
     },
     {
       "player_id": "1630172",
-      "name": "NBA Player",
+      "name": "Patrick Williams",
       "points": 9.44,
       "reboundsTotal": 2.75,
       "assists": 2.9,
@@ -1403,7 +1403,7 @@
     },
     {
       "player_id": "1630173",
-      "name": "NBA Player",
+      "name": "Precious Achiuwa",
       "points": 6.69,
       "reboundsTotal": 4.9,
       "assists": 1.0,
@@ -1411,7 +1411,7 @@
     },
     {
       "player_id": "1630174",
-      "name": "NBA Player",
+      "name": "Aaron Nesmith",
       "points": 14.49,
       "reboundsTotal": 3.98,
       "assists": 2.43,
@@ -1419,7 +1419,7 @@
     },
     {
       "player_id": "1630175",
-      "name": "NBA Player",
+      "name": "Cole Anthony",
       "points": 7.65,
       "reboundsTotal": 1.89,
       "assists": 2.33,
@@ -1427,7 +1427,7 @@
     },
     {
       "player_id": "1630178",
-      "name": "NBA Player",
+      "name": "Tyrese Maxey",
       "points": 27.57,
       "reboundsTotal": 2.85,
       "assists": 4.89,
@@ -1435,7 +1435,7 @@
     },
     {
       "player_id": "1630180",
-      "name": "NBA Player",
+      "name": "Saddiq Bey",
       "points": 22.47,
       "reboundsTotal": 6.09,
       "assists": 2.85,
@@ -1443,7 +1443,7 @@
     },
     {
       "player_id": "1630182",
-      "name": "NBA Player",
+      "name": "Josh Green",
       "points": 4.72,
       "reboundsTotal": 1.31,
       "assists": 0.55,
@@ -1451,7 +1451,7 @@
     },
     {
       "player_id": "1630183",
-      "name": "NBA Player",
+      "name": "Jaden McDaniels",
       "points": 18.25,
       "reboundsTotal": 4.51,
       "assists": 3.35,
@@ -1459,7 +1459,7 @@
     },
     {
       "player_id": "1630188",
-      "name": "NBA Player",
+      "name": "Jalen Smith",
       "points": 14.68,
       "reboundsTotal": 8.34,
       "assists": 1.43,
@@ -1467,7 +1467,7 @@
     },
     {
       "player_id": "1630191",
-      "name": "NBA Player",
+      "name": "Isaiah Stewart",
       "points": 7.1,
       "reboundsTotal": 3.36,
       "assists": 1.03,
@@ -1475,7 +1475,7 @@
     },
     {
       "player_id": "1630192",
-      "name": "NBA Player",
+      "name": "Zeke Nnaji",
       "points": 3.35,
       "reboundsTotal": 2.68,
       "assists": 0.73,
@@ -1483,7 +1483,7 @@
     },
     {
       "player_id": "1630193",
-      "name": "NBA Player",
+      "name": "Immanuel Quickley",
       "points": 18.38,
       "reboundsTotal": 3.63,
       "assists": 5.7,
@@ -1491,7 +1491,7 @@
     },
     {
       "player_id": "1630194",
-      "name": "NBA Player",
+      "name": "Paul Reed",
       "points": 6.1,
       "reboundsTotal": 2.72,
       "assists": 0.88,
@@ -1499,7 +1499,7 @@
     },
     {
       "player_id": "1630198",
-      "name": "NBA Player",
+      "name": "Isaiah Joe",
       "points": 15.27,
       "reboundsTotal": 1.99,
       "assists": 1.6,
@@ -1507,7 +1507,7 @@
     },
     {
       "player_id": "1630200",
-      "name": "NBA Player",
+      "name": "Tre Jones",
       "points": 3.49,
       "reboundsTotal": 1.36,
       "assists": 2.72,
@@ -1515,7 +1515,7 @@
     },
     {
       "player_id": "1630201",
-      "name": "NBA Player",
+      "name": "Malachi Flynn",
       "points": 3.02,
       "reboundsTotal": 1.1,
       "assists": 0.45,
@@ -1523,7 +1523,7 @@
     },
     {
       "player_id": "1630202",
-      "name": "NBA Player",
+      "name": "Payton Pritchard",
       "points": 22.18,
       "reboundsTotal": 4.44,
       "assists": 6.61,
@@ -1531,7 +1531,7 @@
     },
     {
       "player_id": "1630205",
-      "name": "NBA Player",
+      "name": "Lamar Stevens",
       "points": 3.41,
       "reboundsTotal": 1.41,
       "assists": 0.77,
@@ -1539,7 +1539,7 @@
     },
     {
       "player_id": "1630208",
-      "name": "NBA Player",
+      "name": "Nick Richards",
       "points": 4.34,
       "reboundsTotal": 3.53,
       "assists": 0.47,
@@ -1547,7 +1547,7 @@
     },
     {
       "player_id": "1630214",
-      "name": "NBA Player",
+      "name": "Xavier Tillman",
       "points": 0.33,
       "reboundsTotal": 0.08,
       "assists": 0.07,
@@ -1555,7 +1555,7 @@
     },
     {
       "player_id": "1630215",
-      "name": "NBA Player",
+      "name": "Jared Butler",
       "points": 19.97,
       "reboundsTotal": 4.53,
       "assists": 5.97,
@@ -1563,7 +1563,7 @@
     },
     {
       "player_id": "1630217",
-      "name": "NBA Player",
+      "name": "Desmond Bane",
       "points": 20.16,
       "reboundsTotal": 3.39,
       "assists": 2.68,
@@ -1571,7 +1571,7 @@
     },
     {
       "player_id": "1630222",
-      "name": "NBA Player",
+      "name": "Mason Jones",
       "points": 0.86,
       "reboundsTotal": 0.39,
       "assists": 0.37,
@@ -1579,7 +1579,7 @@
     },
     {
       "player_id": "1630224",
-      "name": "NBA Player",
+      "name": "Jalen Green",
       "points": 10.21,
       "reboundsTotal": 2.37,
       "assists": 2.53,
@@ -1587,7 +1587,7 @@
     },
     {
       "player_id": "1630227",
-      "name": "NBA Player",
+      "name": "Daishen Nix",
       "points": 1.72,
       "reboundsTotal": 0.54,
       "assists": 0.52,
@@ -1595,7 +1595,7 @@
     },
     {
       "player_id": "1630228",
-      "name": "NBA Player",
+      "name": "Jonathan Kuminga",
       "points": 1.83,
       "reboundsTotal": 0.26,
       "assists": 0.28,
@@ -1603,7 +1603,7 @@
     },
     {
       "player_id": "1630230",
-      "name": "NBA Player",
+      "name": "Naji Marshall",
       "points": 24.78,
       "reboundsTotal": 4.57,
       "assists": 2.95,
@@ -1611,7 +1611,7 @@
     },
     {
       "player_id": "1630231",
-      "name": "NBA Player",
+      "name": "Kenyon Martin Jr.",
       "points": 8.23,
       "reboundsTotal": 1.95,
       "assists": 1.49,
@@ -1619,7 +1619,7 @@
     },
     {
       "player_id": "1630241",
-      "name": "NBA Player",
+      "name": "Sam Merrill",
       "points": 11.97,
       "reboundsTotal": 2.07,
       "assists": 2.29,
@@ -1627,7 +1627,7 @@
     },
     {
       "player_id": "1630243",
-      "name": "NBA Player",
+      "name": "Trevelin Queen",
       "points": 1.18,
       "reboundsTotal": 0.99,
       "assists": 0.05,
@@ -1635,7 +1635,7 @@
     },
     {
       "player_id": "1630245",
-      "name": "NBA Player",
+      "name": "Ayo Dosunmu",
       "points": 16.26,
       "reboundsTotal": 3.88,
       "assists": 3.26,
@@ -1643,7 +1643,7 @@
     },
     {
       "player_id": "1630249",
-      "name": "NBA Player",
+      "name": "Vit Krejci",
       "points": 9.86,
       "reboundsTotal": 1.29,
       "assists": 1.08,
@@ -1651,7 +1651,7 @@
     },
     {
       "player_id": "1630256",
-      "name": "NBA Player",
+      "name": "Jae'Sean Tate",
       "points": 2.6,
       "reboundsTotal": 1.28,
       "assists": 0.75,
@@ -1659,7 +1659,7 @@
     },
     {
       "player_id": "1630264",
-      "name": "NBA Player",
+      "name": "Anthony Gill",
       "points": 4.62,
       "reboundsTotal": 3.94,
       "assists": 1.13,
@@ -1667,7 +1667,7 @@
     },
     {
       "player_id": "1630283",
-      "name": "NBA Player",
+      "name": "Kylor Kelley",
       "points": 3.08,
       "reboundsTotal": 2.09,
       "assists": 0.51,
@@ -1675,7 +1675,7 @@
     },
     {
       "player_id": "1630284",
-      "name": "NBA Player",
+      "name": "Kevon Harris",
       "points": 0.43,
       "reboundsTotal": 0.1,
       "assists": 0.13,
@@ -1683,7 +1683,7 @@
     },
     {
       "player_id": "1630288",
-      "name": "NBA Player",
+      "name": "Jeff Dowtin Jr.",
       "points": 11.14,
       "reboundsTotal": 2.41,
       "assists": 3.43,
@@ -1691,7 +1691,7 @@
     },
     {
       "player_id": "1630296",
-      "name": "NBA Player",
+      "name": "Braxton Key",
       "points": 2.07,
       "reboundsTotal": 2.34,
       "assists": 0.4,
@@ -1699,7 +1699,7 @@
     },
     {
       "player_id": "1630311",
-      "name": "NBA Player",
+      "name": "Pat Spencer",
       "points": 8.87,
       "reboundsTotal": 3.73,
       "assists": 3.51,
@@ -1707,7 +1707,7 @@
     },
     {
       "player_id": "1630314",
-      "name": "NBA Player",
+      "name": "Brandon Williams",
       "points": 10.24,
       "reboundsTotal": 2.74,
       "assists": 2.52,
@@ -1715,7 +1715,7 @@
     },
     {
       "player_id": "1630322",
-      "name": "NBA Player",
+      "name": "Lindy Waters III",
       "points": 1.64,
       "reboundsTotal": 0.42,
       "assists": 0.59,
@@ -1723,7 +1723,7 @@
     },
     {
       "player_id": "1630346",
-      "name": "NBA Player",
+      "name": "Matt Ryan",
       "points": 1.93,
       "reboundsTotal": 0.7,
       "assists": 0.22,
@@ -1731,7 +1731,7 @@
     },
     {
       "player_id": "1630526",
-      "name": "NBA Player",
+      "name": "Jeremiah Robinson-Earl",
       "points": 3.38,
       "reboundsTotal": 2.03,
       "assists": 0.56,
@@ -1739,7 +1739,7 @@
     },
     {
       "player_id": "1630527",
-      "name": "NBA Player",
+      "name": "Brandon Boston Jr.",
       "points": 6.83,
       "reboundsTotal": 1.53,
       "assists": 0.99,
@@ -1747,7 +1747,7 @@
     },
     {
       "player_id": "1630528",
-      "name": "NBA Player",
+      "name": "Josh Christopher",
       "points": 1.77,
       "reboundsTotal": 0.65,
       "assists": 0.39,
@@ -1755,7 +1755,7 @@
     },
     {
       "player_id": "1630529",
-      "name": "NBA Player",
+      "name": "Herbert Jones",
       "points": 8.99,
       "reboundsTotal": 4.5,
       "assists": 3.04,
@@ -1763,7 +1763,7 @@
     },
     {
       "player_id": "1630530",
-      "name": "NBA Player",
+      "name": "Trey Murphy III",
       "points": 23.36,
       "reboundsTotal": 4.24,
       "assists": 5.11,
@@ -1771,7 +1771,7 @@
     },
     {
       "player_id": "1630531",
-      "name": "NBA Player",
+      "name": "Jaden Springer",
       "points": 2.29,
       "reboundsTotal": 1.67,
       "assists": 0.6,
@@ -1779,7 +1779,7 @@
     },
     {
       "player_id": "1630532",
-      "name": "NBA Player",
+      "name": "Franz Wagner",
       "points": 10.09,
       "reboundsTotal": 2.69,
       "assists": 3.08,
@@ -1787,7 +1787,7 @@
     },
     {
       "player_id": "1630533",
-      "name": "NBA Player",
+      "name": "Ziaire Williams",
       "points": 12.56,
       "reboundsTotal": 3.06,
       "assists": 1.13,
@@ -1795,7 +1795,7 @@
     },
     {
       "player_id": "1630534",
-      "name": "NBA Player",
+      "name": "Ochai Agbaji",
       "points": 1.05,
       "reboundsTotal": 2.76,
       "assists": 1.04,
@@ -1803,7 +1803,7 @@
     },
     {
       "player_id": "1630536",
-      "name": "NBA Player",
+      "name": "Sharife Cooper",
       "points": 9.58,
       "reboundsTotal": 3.55,
       "assists": 2.92,
@@ -1811,7 +1811,7 @@
     },
     {
       "player_id": "1630537",
-      "name": "NBA Player",
+      "name": "Chris Duarte",
       "points": 1.24,
       "reboundsTotal": 0.77,
       "assists": 0.4,
@@ -1819,7 +1819,7 @@
     },
     {
       "player_id": "1630538",
-      "name": "NBA Player",
+      "name": "Bones Hyland",
       "points": 6.66,
       "reboundsTotal": 2.67,
       "assists": 2.89,
@@ -1827,7 +1827,7 @@
     },
     {
       "player_id": "1630539",
-      "name": "NBA Player",
+      "name": "Kai Jones",
       "points": 9.12,
       "reboundsTotal": 5.76,
       "assists": 1.52,
@@ -1835,7 +1835,7 @@
     },
     {
       "player_id": "1630540",
-      "name": "NBA Player",
+      "name": "Miles McBride",
       "points": 11.98,
       "reboundsTotal": 2.66,
       "assists": 3.63,
@@ -1843,7 +1843,7 @@
     },
     {
       "player_id": "1630541",
-      "name": "NBA Player",
+      "name": "Moses Moody",
       "points": 12.43,
       "reboundsTotal": 5.53,
       "assists": 2.25,
@@ -1851,7 +1851,7 @@
     },
     {
       "player_id": "1630542",
-      "name": "NBA Player",
+      "name": "Marcus Bagley",
       "points": 6.11,
       "reboundsTotal": 5.16,
       "assists": 1.36,
@@ -1859,7 +1859,7 @@
     },
     {
       "player_id": "1630543",
-      "name": "NBA Player",
+      "name": "Isaiah Jackson",
       "points": 2.27,
       "reboundsTotal": 1.56,
       "assists": 0.53,
@@ -1867,7 +1867,7 @@
     },
     {
       "player_id": "1630544",
-      "name": "NBA Player",
+      "name": "Tre Mann",
       "points": 4.32,
       "reboundsTotal": 0.81,
       "assists": 0.33,
@@ -1875,7 +1875,7 @@
     },
     {
       "player_id": "1630545",
-      "name": "NBA Player",
+      "name": "Terrence Shannon Jr.",
       "points": 1.79,
       "reboundsTotal": 0.49,
       "assists": 0.34,
@@ -1883,7 +1883,7 @@
     },
     {
       "player_id": "1630548",
-      "name": "NBA Player",
+      "name": "Johnny Juzang",
       "points": 0.44,
       "reboundsTotal": 0.21,
       "assists": 0.01,
@@ -1891,7 +1891,7 @@
     },
     {
       "player_id": "1630549",
-      "name": "NBA Player",
+      "name": "Day'Ron Sharpe",
       "points": 14.39,
       "reboundsTotal": 9.77,
       "assists": 3.01,
@@ -1899,7 +1899,7 @@
     },
     {
       "player_id": "1630550",
-      "name": "NBA Player",
+      "name": "JT Thor",
       "points": 3.55,
       "reboundsTotal": 2.72,
       "assists": 0.61,
@@ -1907,7 +1907,7 @@
     },
     {
       "player_id": "1630551",
-      "name": "NBA Player",
+      "name": "Justin Champagnie",
       "points": 10.99,
       "reboundsTotal": 6.86,
       "assists": 1.85,
@@ -1915,7 +1915,7 @@
     },
     {
       "player_id": "1630552",
-      "name": "NBA Player",
+      "name": "Jalen Johnson",
       "points": 20.4,
       "reboundsTotal": 11.63,
       "assists": 9.18,
@@ -1923,7 +1923,7 @@
     },
     {
       "player_id": "1630553",
-      "name": "NBA Player",
+      "name": "Keon Johnson",
       "points": 14.94,
       "reboundsTotal": 2.83,
       "assists": 3.51,
@@ -1931,7 +1931,7 @@
     },
     {
       "player_id": "1630554",
-      "name": "NBA Player",
+      "name": "Jason Preston",
       "points": 0.41,
       "reboundsTotal": 0.91,
       "assists": 0.03,
@@ -1939,7 +1939,7 @@
     },
     {
       "player_id": "1630556",
-      "name": "NBA Player",
+      "name": "Kessler Edwards",
       "points": 8.38,
       "reboundsTotal": 3.93,
       "assists": 1.69,
@@ -1947,7 +1947,7 @@
     },
     {
       "player_id": "1630557",
-      "name": "NBA Player",
+      "name": "Corey Kispert",
       "points": 7.02,
       "reboundsTotal": 2.62,
       "assists": 1.93,
@@ -1955,7 +1955,7 @@
     },
     {
       "player_id": "1630558",
-      "name": "NBA Player",
+      "name": "Davion Mitchell",
       "points": 7.69,
       "reboundsTotal": 1.66,
       "assists": 5.56,
@@ -1963,7 +1963,7 @@
     },
     {
       "player_id": "1630559",
-      "name": "NBA Player",
+      "name": "Austin Reaves",
       "points": 14.88,
       "reboundsTotal": 2.52,
       "assists": 4.95,
@@ -1971,7 +1971,7 @@
     },
     {
       "player_id": "1630560",
-      "name": "NBA Player",
+      "name": "Cam Thomas",
       "points": 19.1,
       "reboundsTotal": 3.0,
       "assists": 2.62,
@@ -1979,7 +1979,7 @@
     },
     {
       "player_id": "1630561",
-      "name": "NBA Player",
+      "name": "David Duke Jr.",
       "points": 2.11,
       "reboundsTotal": 1.35,
       "assists": 0.2,
@@ -1987,7 +1987,7 @@
     },
     {
       "player_id": "1630567",
-      "name": "NBA Player",
+      "name": "Scottie Barnes",
       "points": 16.32,
       "reboundsTotal": 9.38,
       "assists": 5.86,
@@ -1995,7 +1995,7 @@
     },
     {
       "player_id": "1630568",
-      "name": "NBA Player",
+      "name": "Luka Garza",
       "points": 4.85,
       "reboundsTotal": 2.05,
       "assists": 0.49,
@@ -2003,7 +2003,7 @@
     },
     {
       "player_id": "1630570",
-      "name": "NBA Player",
+      "name": "Trendon Watford",
       "points": 5.22,
       "reboundsTotal": 2.84,
       "assists": 2.29,
@@ -2011,7 +2011,7 @@
     },
     {
       "player_id": "1630572",
-      "name": "NBA Player",
+      "name": "Sandro Mamukelashvili",
       "points": 13.97,
       "reboundsTotal": 6.86,
       "assists": 2.3,
@@ -2019,7 +2019,7 @@
     },
     {
       "player_id": "1630573",
-      "name": "NBA Player",
+      "name": "Sam Hauser",
       "points": 7.18,
       "reboundsTotal": 3.76,
       "assists": 1.61,
@@ -2027,7 +2027,7 @@
     },
     {
       "player_id": "1630574",
-      "name": "NBA Player",
+      "name": "Ariel Hukporti",
       "points": 3.77,
       "reboundsTotal": 4.18,
       "assists": 0.87,
@@ -2035,7 +2035,7 @@
     },
     {
       "player_id": "1630577",
-      "name": "NBA Player",
+      "name": "Julian Champagnie",
       "points": 7.42,
       "reboundsTotal": 3.52,
       "assists": 1.68,
@@ -2043,7 +2043,7 @@
     },
     {
       "player_id": "1630578",
-      "name": "NBA Player",
+      "name": "Alperen Sengun",
       "points": 16.96,
       "reboundsTotal": 8.97,
       "assists": 5.59,
@@ -2051,7 +2051,7 @@
     },
     {
       "player_id": "1630579",
-      "name": "NBA Player",
+      "name": "Jericho Sims",
       "points": 10.11,
       "reboundsTotal": 6.62,
       "assists": 1.61,
@@ -2059,7 +2059,7 @@
     },
     {
       "player_id": "1630581",
-      "name": "NBA Player",
+      "name": "Josh Giddey",
       "points": 3.97,
       "reboundsTotal": 2.28,
       "assists": 3.36,
@@ -2067,7 +2067,7 @@
     },
     {
       "player_id": "1630583",
-      "name": "NBA Player",
+      "name": "Santi Aldama",
       "points": 11.11,
       "reboundsTotal": 5.86,
       "assists": 1.14,
@@ -2075,7 +2075,7 @@
     },
     {
       "player_id": "1630585",
-      "name": "NBA Player",
+      "name": "Marcus Garrett",
       "points": 5.33,
       "reboundsTotal": 2.48,
       "assists": 5.35,
@@ -2083,7 +2083,7 @@
     },
     {
       "player_id": "1630587",
-      "name": "NBA Player",
+      "name": "Isaiah Livers",
       "points": 0.99,
       "reboundsTotal": 1.1,
       "assists": 0.49,
@@ -2091,7 +2091,7 @@
     },
     {
       "player_id": "1630590",
-      "name": "NBA Player",
+      "name": "Scotty Pippen Jr.",
       "points": 7.65,
       "reboundsTotal": 0.81,
       "assists": 2.32,
@@ -2099,7 +2099,7 @@
     },
     {
       "player_id": "1630591",
-      "name": "NBA Player",
+      "name": "Jalen Suggs",
       "points": 14.16,
       "reboundsTotal": 2.96,
       "assists": 8.49,
@@ -2107,7 +2107,7 @@
     },
     {
       "player_id": "1630592",
-      "name": "NBA Player",
+      "name": "Jalen Wilson",
       "points": 3.99,
       "reboundsTotal": 2.01,
       "assists": 0.58,
@@ -2115,7 +2115,7 @@
     },
     {
       "player_id": "1630595",
-      "name": "NBA Player",
+      "name": "Cade Cunningham",
       "points": 26.83,
       "reboundsTotal": 6.01,
       "assists": 9.46,
@@ -2123,7 +2123,7 @@
     },
     {
       "player_id": "1630596",
-      "name": "NBA Player",
+      "name": "Evan Mobley",
       "points": 19.78,
       "reboundsTotal": 8.59,
       "assists": 4.61,
@@ -2131,7 +2131,7 @@
     },
     {
       "player_id": "1630598",
-      "name": "NBA Player",
+      "name": "Aaron Wiggins",
       "points": 10.37,
       "reboundsTotal": 3.58,
       "assists": 2.29,
@@ -2139,7 +2139,7 @@
     },
     {
       "player_id": "1630600",
-      "name": "NBA Player",
+      "name": "Isaiah Mobley",
       "points": 0.14,
       "reboundsTotal": 0.45,
       "assists": 0.1,
@@ -2147,7 +2147,7 @@
     },
     {
       "player_id": "1630604",
-      "name": "NBA Player",
+      "name": "E.J. Liddell",
       "points": 2.38,
       "reboundsTotal": 0.73,
       "assists": 0.02,
@@ -2155,7 +2155,7 @@
     },
     {
       "player_id": "1630611",
-      "name": "NBA Player",
+      "name": "Gui Santos",
       "points": 9.97,
       "reboundsTotal": 4.67,
       "assists": 3.84,
@@ -2163,7 +2163,7 @@
     },
     {
       "player_id": "1630618",
-      "name": "NBA Player",
+      "name": "D.J. Carton",
       "points": 1.3,
       "reboundsTotal": 1.03,
       "assists": 0.48,
@@ -2171,7 +2171,7 @@
     },
     {
       "player_id": "1630619",
-      "name": "NBA Player",
+      "name": "Moussa Cisse",
       "points": 2.53,
       "reboundsTotal": 4.69,
       "assists": 0.27,
@@ -2179,7 +2179,7 @@
     },
     {
       "player_id": "1630621",
-      "name": "NBA Player",
+      "name": "Hunter Dickinson",
       "points": 0.85,
       "reboundsTotal": 0.16,
       "assists": 0.15,
@@ -2187,7 +2187,7 @@
     },
     {
       "player_id": "1630623",
-      "name": "NBA Player",
+      "name": "Tyson Etienne",
       "points": 0.32,
       "reboundsTotal": 0.25,
       "assists": 0.07,
@@ -2195,7 +2195,7 @@
     },
     {
       "player_id": "1630625",
-      "name": "NBA Player",
+      "name": "Dalano Banton",
       "points": 8.01,
       "reboundsTotal": 3.24,
       "assists": 3.94,
@@ -2203,7 +2203,7 @@
     },
     {
       "player_id": "1630631",
-      "name": "NBA Player",
+      "name": "Jose Alvarado",
       "points": 15.73,
       "reboundsTotal": 2.75,
       "assists": 3.56,
@@ -2211,7 +2211,7 @@
     },
     {
       "player_id": "1630639",
-      "name": "NBA Player",
+      "name": "A.J. Lawson",
       "points": 1.62,
       "reboundsTotal": 0.94,
       "assists": 0.24,
@@ -2219,7 +2219,7 @@
     },
     {
       "player_id": "1630643",
-      "name": "NBA Player",
+      "name": "Jay Huff",
       "points": 9.33,
       "reboundsTotal": 4.15,
       "assists": 1.28,
@@ -2227,7 +2227,7 @@
     },
     {
       "player_id": "1630644",
-      "name": "NBA Player",
+      "name": "Mac McClung",
       "points": 0.99,
       "reboundsTotal": 0.64,
       "assists": 0.31,
@@ -2235,7 +2235,7 @@
     },
     {
       "player_id": "1630647",
-      "name": "NBA Player",
+      "name": "Eugene Omoruyi",
       "points": 1.0,
       "reboundsTotal": 0.18,
       "assists": 0.16,
@@ -2243,7 +2243,7 @@
     },
     {
       "player_id": "1630649",
-      "name": "NBA Player",
+      "name": "Stanley Umude",
       "points": 0.83,
       "reboundsTotal": 0.25,
       "assists": 0.29,
@@ -2251,7 +2251,7 @@
     },
     {
       "player_id": "1630658",
-      "name": "NBA Player",
+      "name": "Colin Castleton",
       "points": 6.81,
       "reboundsTotal": 5.62,
       "assists": 1.09,
@@ -2259,7 +2259,7 @@
     },
     {
       "player_id": "1630667",
-      "name": "NBA Player",
+      "name": "Kyle Mangas",
       "points": 0.12,
       "reboundsTotal": 0.07,
       "assists": 0.05,
@@ -2267,7 +2267,7 @@
     },
     {
       "player_id": "1630678",
-      "name": "NBA Player",
+      "name": "Terry Taylor",
       "points": 0.59,
       "reboundsTotal": 0.24,
       "assists": 0.65,
@@ -2275,7 +2275,7 @@
     },
     {
       "player_id": "1630679",
-      "name": "NBA Player",
+      "name": "Ethan Thompson",
       "points": 5.18,
       "reboundsTotal": 1.53,
       "assists": 1.07,
@@ -2283,7 +2283,7 @@
     },
     {
       "player_id": "1630692",
-      "name": "NBA Player",
+      "name": "Jordan Goodwin",
       "points": 9.5,
       "reboundsTotal": 4.15,
       "assists": 3.08,
@@ -2291,7 +2291,7 @@
     },
     {
       "player_id": "1630695",
-      "name": "NBA Player",
+      "name": "Micah Potter",
       "points": 11.35,
       "reboundsTotal": 7.01,
       "assists": 1.28,
@@ -2299,7 +2299,7 @@
     },
     {
       "player_id": "1630696",
-      "name": "NBA Player",
+      "name": "Dru Smith",
       "points": 5.96,
       "reboundsTotal": 2.75,
       "assists": 2.37,
@@ -2307,7 +2307,7 @@
     },
     {
       "player_id": "1630699",
-      "name": "NBA Player",
+      "name": "MarJon Beauchamp",
       "points": 3.37,
       "reboundsTotal": 1.69,
       "assists": 0.43,
@@ -2315,7 +2315,7 @@
     },
     {
       "player_id": "1630700",
-      "name": "NBA Player",
+      "name": "Dyson Daniels",
       "points": 9.54,
       "reboundsTotal": 5.29,
       "assists": 5.22,
@@ -2323,7 +2323,7 @@
     },
     {
       "player_id": "1630702",
-      "name": "NBA Player",
+      "name": "Jaden Hardy",
       "points": 4.85,
       "reboundsTotal": 1.72,
       "assists": 1.09,
@@ -2331,7 +2331,7 @@
     },
     {
       "player_id": "1630703",
-      "name": "NBA Player",
+      "name": "Scoot Henderson",
       "points": 9.76,
       "reboundsTotal": 2.64,
       "assists": 2.95,
@@ -2339,7 +2339,7 @@
     },
     {
       "player_id": "1630762",
-      "name": "NBA Player",
+      "name": "Phillip Wheeler",
       "points": 4.21,
       "reboundsTotal": 1.8,
       "assists": 0.66,
@@ -2347,7 +2347,7 @@
     },
     {
       "player_id": "1630811",
-      "name": "NBA Player",
+      "name": "Keaton Wallace",
       "points": 2.07,
       "reboundsTotal": 0.5,
       "assists": 0.15,
@@ -2355,7 +2355,7 @@
     },
     {
       "player_id": "1631093",
-      "name": "NBA Player",
+      "name": "Jaden Ivey",
       "points": 8.84,
       "reboundsTotal": 2.8,
       "assists": 1.7,
@@ -2363,7 +2363,7 @@
     },
     {
       "player_id": "1631094",
-      "name": "NBA Player",
+      "name": "Paolo Banchero",
       "points": 18.13,
       "reboundsTotal": 6.07,
       "assists": 3.65,
@@ -2371,7 +2371,7 @@
     },
     {
       "player_id": "1631095",
-      "name": "NBA Player",
+      "name": "Jabari Smith Jr.",
       "points": 14.85,
       "reboundsTotal": 8.79,
       "assists": 1.57,
@@ -2379,7 +2379,7 @@
     },
     {
       "player_id": "1631096",
-      "name": "NBA Player",
+      "name": "Chet Holmgren",
       "points": 11.56,
       "reboundsTotal": 6.57,
       "assists": 1.9,
@@ -2387,7 +2387,7 @@
     },
     {
       "player_id": "1631097",
-      "name": "NBA Player",
+      "name": "Bennedict Mathurin",
       "points": 12.15,
       "reboundsTotal": 4.79,
       "assists": 2.2,
@@ -2395,7 +2395,7 @@
     },
     {
       "player_id": "1631098",
-      "name": "NBA Player",
+      "name": "Johnny Davis",
       "points": 1.04,
       "reboundsTotal": 0.58,
       "assists": 0.43,
@@ -2403,7 +2403,7 @@
     },
     {
       "player_id": "1631099",
-      "name": "NBA Player",
+      "name": "Keegan Murray",
       "points": 12.46,
       "reboundsTotal": 4.02,
       "assists": 1.72,
@@ -2411,7 +2411,7 @@
     },
     {
       "player_id": "1631101",
-      "name": "NBA Player",
+      "name": "Shaedon Sharpe",
       "points": 9.26,
       "reboundsTotal": 1.95,
       "assists": 1.18,
@@ -2419,7 +2419,7 @@
     },
     {
       "player_id": "1631102",
-      "name": "NBA Player",
+      "name": "TyTy Washington Jr.",
       "points": 2.49,
       "reboundsTotal": 0.84,
       "assists": 0.51,
@@ -2427,7 +2427,7 @@
     },
     {
       "player_id": "1631103",
-      "name": "NBA Player",
+      "name": "Malaki Branham",
       "points": 3.02,
       "reboundsTotal": 1.43,
       "assists": 0.83,
@@ -2435,7 +2435,7 @@
     },
     {
       "player_id": "1631104",
-      "name": "NBA Player",
+      "name": "Blake Wesley",
       "points": 6.04,
       "reboundsTotal": 2.85,
       "assists": 3.13,
@@ -2443,7 +2443,7 @@
     },
     {
       "player_id": "1631105",
-      "name": "NBA Player",
+      "name": "Jalen Duren",
       "points": 14.31,
       "reboundsTotal": 7.25,
       "assists": 1.99,
@@ -2451,7 +2451,7 @@
     },
     {
       "player_id": "1631106",
-      "name": "NBA Player",
+      "name": "Tari Eason",
       "points": 11.92,
       "reboundsTotal": 3.73,
       "assists": 1.76,
@@ -2459,7 +2459,7 @@
     },
     {
       "player_id": "1631107",
-      "name": "NBA Player",
+      "name": "Nikola Jovic",
       "points": 6.53,
       "reboundsTotal": 2.25,
       "assists": 0.46,
@@ -2467,7 +2467,7 @@
     },
     {
       "player_id": "1631108",
-      "name": "NBA Player",
+      "name": "Max Christie",
       "points": 11.51,
       "reboundsTotal": 4.23,
       "assists": 2.45,
@@ -2475,7 +2475,7 @@
     },
     {
       "player_id": "1631109",
-      "name": "NBA Player",
+      "name": "Mark Williams",
       "points": 11.31,
       "reboundsTotal": 4.66,
       "assists": 1.13,
@@ -2483,7 +2483,7 @@
     },
     {
       "player_id": "1631110",
-      "name": "NBA Player",
+      "name": "Jeremy Sochan",
       "points": 0.16,
       "reboundsTotal": 0.47,
       "assists": 0.04,
@@ -2491,7 +2491,7 @@
     },
     {
       "player_id": "1631111",
-      "name": "NBA Player",
+      "name": "Wendell Moore Jr.",
       "points": 1.11,
       "reboundsTotal": 1.04,
       "assists": 0.34,
@@ -2499,7 +2499,7 @@
     },
     {
       "player_id": "1631114",
-      "name": "NBA Player",
+      "name": "Jalen Williams",
       "points": 22.17,
       "reboundsTotal": 3.63,
       "assists": 5.08,
@@ -2507,7 +2507,7 @@
     },
     {
       "player_id": "1631115",
-      "name": "NBA Player",
+      "name": "Orlando Robinson",
       "points": 0.61,
       "reboundsTotal": 0.47,
       "assists": 0.17,
@@ -2515,7 +2515,7 @@
     },
     {
       "player_id": "1631116",
-      "name": "NBA Player",
+      "name": "Patrick Baldwin Jr.",
       "points": 2.12,
       "reboundsTotal": 0.64,
       "assists": 0.12,
@@ -2523,7 +2523,7 @@
     },
     {
       "player_id": "1631117",
-      "name": "NBA Player",
+      "name": "Walker Kessler",
       "points": 6.36,
       "reboundsTotal": 4.45,
       "assists": 1.03,
@@ -2531,7 +2531,7 @@
     },
     {
       "player_id": "1631119",
-      "name": "NBA Player",
+      "name": "Jaylin Williams",
       "points": 9.01,
       "reboundsTotal": 6.15,
       "assists": 3.57,
@@ -2539,7 +2539,7 @@
     },
     {
       "player_id": "1631120",
-      "name": "NBA Player",
+      "name": "JD Davison",
       "points": 2.21,
       "reboundsTotal": 0.89,
       "assists": 0.67,
@@ -2547,7 +2547,7 @@
     },
     {
       "player_id": "1631121",
-      "name": "NBA Player",
+      "name": "Bryce McGowens",
       "points": 8.37,
       "reboundsTotal": 2.12,
       "assists": 2.06,
@@ -2555,7 +2555,7 @@
     },
     {
       "player_id": "1631123",
-      "name": "NBA Player",
+      "name": "Jamaree Bouyea",
       "points": 7.09,
       "reboundsTotal": 2.09,
       "assists": 3.43,
@@ -2563,7 +2563,7 @@
     },
     {
       "player_id": "1631124",
-      "name": "NBA Player",
+      "name": "Julian Strawther",
       "points": 10.5,
       "reboundsTotal": 2.22,
       "assists": 2.11,
@@ -2571,7 +2571,7 @@
     },
     {
       "player_id": "1631126",
-      "name": "NBA Player",
+      "name": "Caleb Love",
       "points": 14.8,
       "reboundsTotal": 1.91,
       "assists": 5.0,
@@ -2579,7 +2579,7 @@
     },
     {
       "player_id": "1631127",
-      "name": "NBA Player",
+      "name": "Harrison Ingram",
       "points": 1.13,
       "reboundsTotal": 0.33,
       "assists": 0.22,
@@ -2587,7 +2587,7 @@
     },
     {
       "player_id": "1631128",
-      "name": "NBA Player",
+      "name": "Christian Braun",
       "points": 7.57,
       "reboundsTotal": 3.52,
       "assists": 1.85,
@@ -2595,7 +2595,7 @@
     },
     {
       "player_id": "1631131",
-      "name": "NBA Player",
+      "name": "Oscar Tshiebwe",
       "points": 0.51,
       "reboundsTotal": 0.64,
       "assists": 0.08,
@@ -2603,7 +2603,7 @@
     },
     {
       "player_id": "1631132",
-      "name": "NBA Player",
+      "name": "Christian Koloko",
       "points": 2.78,
       "reboundsTotal": 3.02,
       "assists": 1.03,
@@ -2611,7 +2611,7 @@
     },
     {
       "player_id": "1631133",
-      "name": "NBA Player",
+      "name": "Jabari Walker",
       "points": 2.48,
       "reboundsTotal": 1.54,
       "assists": 0.33,
@@ -2619,7 +2619,7 @@
     },
     {
       "player_id": "1631157",
-      "name": "NBA Player",
+      "name": "Ryan Rollins",
       "points": 16.99,
       "reboundsTotal": 5.56,
       "assists": 4.8,
@@ -2627,7 +2627,7 @@
     },
     {
       "player_id": "1631159",
-      "name": "NBA Player",
+      "name": "Leonard Miller",
       "points": 2.28,
       "reboundsTotal": 1.51,
       "assists": 0.36,
@@ -2635,7 +2635,7 @@
     },
     {
       "player_id": "1631165",
-      "name": "NBA Player",
+      "name": "Keon Ellis",
       "points": 5.16,
       "reboundsTotal": 2.52,
       "assists": 2.15,
@@ -2643,7 +2643,7 @@
     },
     {
       "player_id": "1631166",
-      "name": "NBA Player",
+      "name": "Drew Timme",
       "points": 1.63,
       "reboundsTotal": 2.04,
       "assists": 0.78,
@@ -2651,7 +2651,7 @@
     },
     {
       "player_id": "1631169",
-      "name": "NBA Player",
+      "name": "Josh Minott",
       "points": 0.6,
       "reboundsTotal": 0.15,
       "assists": 0.08,
@@ -2659,7 +2659,7 @@
     },
     {
       "player_id": "1631170",
-      "name": "NBA Player",
+      "name": "Jaime Jaquez Jr.",
       "points": 15.56,
       "reboundsTotal": 6.37,
       "assists": 4.38,
@@ -2667,7 +2667,7 @@
     },
     {
       "player_id": "1631172",
-      "name": "NBA Player",
+      "name": "Ousmane Dieng",
       "points": 6.29,
       "reboundsTotal": 1.63,
       "assists": 0.25,
@@ -2675,7 +2675,7 @@
     },
     {
       "player_id": "1631197",
-      "name": "NBA Player",
+      "name": "Jared Rhoden",
       "points": 11.42,
       "reboundsTotal": 3.47,
       "assists": 1.44,
@@ -2683,7 +2683,7 @@
     },
     {
       "player_id": "1631199",
-      "name": "NBA Player",
+      "name": "Ron Harper Jr.",
       "points": 0.82,
       "reboundsTotal": 1.9,
       "assists": 0.52,
@@ -2691,7 +2691,7 @@
     },
     {
       "player_id": "1631200",
-      "name": "NBA Player",
+      "name": "Kris Murray",
       "points": 0.46,
       "reboundsTotal": 0.44,
       "assists": 0.16,
@@ -2699,7 +2699,7 @@
     },
     {
       "player_id": "1631204",
-      "name": "NBA Player",
+      "name": "Marcus Sasser",
       "points": 3.02,
       "reboundsTotal": 0.3,
       "assists": 0.95,
@@ -2707,7 +2707,7 @@
     },
     {
       "player_id": "1631205",
-      "name": "NBA Player",
+      "name": "Buddy Boeheim",
       "points": 1.13,
       "reboundsTotal": 0.69,
       "assists": 0.08,
@@ -2715,7 +2715,7 @@
     },
     {
       "player_id": "1631207",
-      "name": "NBA Player",
+      "name": "Dalen Terry",
       "points": 3.12,
       "reboundsTotal": 1.71,
       "assists": 1.18,
@@ -2723,7 +2723,7 @@
     },
     {
       "player_id": "1631209",
-      "name": "NBA Player",
+      "name": "Isaiah Wong",
       "points": 4.76,
       "reboundsTotal": 1.41,
       "assists": 1.01,
@@ -2731,7 +2731,7 @@
     },
     {
       "player_id": "1631210",
-      "name": "NBA Player",
+      "name": "Jacob Toppin",
       "points": 0.35,
       "reboundsTotal": 0.25,
       "assists": 0.06,
@@ -2739,7 +2739,7 @@
     },
     {
       "player_id": "1631212",
-      "name": "NBA Player",
+      "name": "Peyton Watson",
       "points": 11.74,
       "reboundsTotal": 2.57,
       "assists": 1.69,
@@ -2747,7 +2747,7 @@
     },
     {
       "player_id": "1631213",
-      "name": "NBA Player",
+      "name": "Tyrese Martin",
       "points": 2.42,
       "reboundsTotal": 1.88,
       "assists": 0.37,
@@ -2755,7 +2755,7 @@
     },
     {
       "player_id": "1631214",
-      "name": "NBA Player",
+      "name": "Alondes Williams",
       "points": 1.98,
       "reboundsTotal": 0.63,
       "assists": 0.2,
@@ -2763,7 +2763,7 @@
     },
     {
       "player_id": "1631216",
-      "name": "NBA Player",
+      "name": "Caleb Houstan",
       "points": 1.36,
       "reboundsTotal": 0.35,
       "assists": 0.13,
@@ -2771,7 +2771,7 @@
     },
     {
       "player_id": "1631217",
-      "name": "NBA Player",
+      "name": "Moussa Diabate",
       "points": 5.44,
       "reboundsTotal": 4.81,
       "assists": 0.98,
@@ -2779,7 +2779,7 @@
     },
     {
       "player_id": "1631218",
-      "name": "NBA Player",
+      "name": "Trayce Jackson-Davis",
       "points": 1.05,
       "reboundsTotal": 2.44,
       "assists": 0.83,
@@ -2787,7 +2787,7 @@
     },
     {
       "player_id": "1631221",
-      "name": "NBA Player",
+      "name": "Collin Gillespie",
       "points": 8.74,
       "reboundsTotal": 3.92,
       "assists": 3.48,
@@ -2795,7 +2795,7 @@
     },
     {
       "player_id": "1631222",
-      "name": "NBA Player",
+      "name": "Jake LaRavia",
       "points": 9.08,
       "reboundsTotal": 3.1,
       "assists": 1.71,
@@ -2803,7 +2803,7 @@
     },
     {
       "player_id": "1631223",
-      "name": "NBA Player",
+      "name": "David Roddy",
       "points": 5.16,
       "reboundsTotal": 1.41,
       "assists": 0.6,
@@ -2811,7 +2811,7 @@
     },
     {
       "player_id": "1631230",
-      "name": "NBA Player",
+      "name": "Dominick Barlow",
       "points": 12.18,
       "reboundsTotal": 4.26,
       "assists": 1.16,
@@ -2819,7 +2819,7 @@
     },
     {
       "player_id": "1631232",
-      "name": "NBA Player",
+      "name": "Keion Brooks Jr.",
       "points": 13.16,
       "reboundsTotal": 4.44,
       "assists": 1.92,
@@ -2827,7 +2827,7 @@
     },
     {
       "player_id": "1631243",
-      "name": "NBA Player",
+      "name": "Mouhamed Gueye",
       "points": 5.7,
       "reboundsTotal": 3.38,
       "assists": 0.6,
@@ -2835,7 +2835,7 @@
     },
     {
       "player_id": "1631245",
-      "name": "NBA Player",
+      "name": "Quenton Jackson",
       "points": 9.41,
       "reboundsTotal": 1.88,
       "assists": 3.19,
@@ -2843,7 +2843,7 @@
     },
     {
       "player_id": "1631246",
-      "name": "NBA Player",
+      "name": "Vince Williams Jr.",
       "points": 7.88,
       "reboundsTotal": 4.91,
       "assists": 2.8,
@@ -2851,7 +2851,7 @@
     },
     {
       "player_id": "1631247",
-      "name": "NBA Player",
+      "name": "Luke Travers",
       "points": 2.48,
       "reboundsTotal": 1.59,
       "assists": 0.32,
@@ -2859,7 +2859,7 @@
     },
     {
       "player_id": "1631248",
-      "name": "NBA Player",
+      "name": "Baylor Scheierman",
       "points": 7.87,
       "reboundsTotal": 5.22,
       "assists": 1.62,
@@ -2867,7 +2867,7 @@
     },
     {
       "player_id": "1631250",
-      "name": "NBA Player",
+      "name": "Pete Nance",
       "points": 4.59,
       "reboundsTotal": 1.54,
       "assists": 0.33,
@@ -2875,7 +2875,7 @@
     },
     {
       "player_id": "1631255",
-      "name": "NBA Player",
+      "name": "Karlo Matkovic",
       "points": 3.84,
       "reboundsTotal": 2.29,
       "assists": 1.25,
@@ -2883,7 +2883,7 @@
     },
     {
       "player_id": "1631260",
-      "name": "NBA Player",
+      "name": "AJ Green",
       "points": 9.87,
       "reboundsTotal": 2.75,
       "assists": 2.41,
@@ -2891,7 +2891,7 @@
     },
     {
       "player_id": "1631288",
-      "name": "NBA Player",
+      "name": "Jamal Cain",
       "points": 0.78,
       "reboundsTotal": 0.31,
       "assists": 0.28,
@@ -2899,7 +2899,7 @@
     },
     {
       "player_id": "1631301",
-      "name": "NBA Player",
+      "name": "Jaylen Sims",
       "points": 2.94,
       "reboundsTotal": 1.81,
       "assists": 1.82,
@@ -2907,7 +2907,7 @@
     },
     {
       "player_id": "1631303",
-      "name": "NBA Player",
+      "name": "Justin Minaya",
       "points": 1.45,
       "reboundsTotal": 0.9,
       "assists": 0.63,
@@ -2915,7 +2915,7 @@
     },
     {
       "player_id": "1631306",
-      "name": "NBA Player",
+      "name": "Cole Swider",
       "points": 4.24,
       "reboundsTotal": 3.93,
       "assists": 0.53,
@@ -2923,7 +2923,7 @@
     },
     {
       "player_id": "1631311",
-      "name": "NBA Player",
+      "name": "Lester Quinones",
       "points": 6.77,
       "reboundsTotal": 2.66,
       "assists": 3.28,
@@ -2931,7 +2931,7 @@
     },
     {
       "player_id": "1631321",
-      "name": "NBA Player",
+      "name": "Sidy Cissoko",
       "points": 6.66,
       "reboundsTotal": 4.32,
       "assists": 2.24,
@@ -2939,7 +2939,7 @@
     },
     {
       "player_id": "1631323",
-      "name": "NBA Player",
+      "name": "Simone Fontecchio",
       "points": 11.79,
       "reboundsTotal": 4.83,
       "assists": 2.28,
@@ -2947,7 +2947,7 @@
     },
     {
       "player_id": "1631342",
-      "name": "NBA Player",
+      "name": "Daeqwon Plowden",
       "points": 8.57,
       "reboundsTotal": 2.44,
       "assists": 0.77,
@@ -2955,7 +2955,7 @@
     },
     {
       "player_id": "1631386",
-      "name": "NBA Player",
+      "name": "Taze Moore",
       "points": 2.74,
       "reboundsTotal": 1.99,
       "assists": 0.91,
@@ -2963,7 +2963,7 @@
     },
     {
       "player_id": "1631451",
-      "name": "NBA Player",
+      "name": "Javonte Cooke",
       "points": 1.67,
       "reboundsTotal": 2.43,
       "assists": 0.22,
@@ -2971,7 +2971,7 @@
     },
     {
       "player_id": "1631466",
-      "name": "NBA Player",
+      "name": "Nate Williams",
       "points": 1.89,
       "reboundsTotal": 0.61,
       "assists": 0.64,
@@ -2979,7 +2979,7 @@
     },
     {
       "player_id": "1641705",
-      "name": "NBA Player",
+      "name": "Victor Wembanyama",
       "points": 24.6,
       "reboundsTotal": 9.21,
       "assists": 3.11,
@@ -2987,7 +2987,7 @@
     },
     {
       "player_id": "1641706",
-      "name": "NBA Player",
+      "name": "Brandon Miller",
       "points": 24.99,
       "reboundsTotal": 7.03,
       "assists": 2.31,
@@ -2995,7 +2995,7 @@
     },
     {
       "player_id": "1641707",
-      "name": "NBA Player",
+      "name": "Taylor Hendricks",
       "points": 5.77,
       "reboundsTotal": 2.38,
       "assists": 0.66,
@@ -3003,7 +3003,7 @@
     },
     {
       "player_id": "1641708",
-      "name": "NBA Player",
+      "name": "Amen Thompson",
       "points": 14.59,
       "reboundsTotal": 5.09,
       "assists": 3.84,
@@ -3011,7 +3011,7 @@
     },
     {
       "player_id": "1641709",
-      "name": "NBA Player",
+      "name": "Ausar Thompson",
       "points": 6.84,
       "reboundsTotal": 4.8,
       "assists": 3.55,
@@ -3019,7 +3019,7 @@
     },
     {
       "player_id": "1641710",
-      "name": "NBA Player",
+      "name": "Anthony Black",
       "points": 13.77,
       "reboundsTotal": 3.21,
       "assists": 3.38,
@@ -3027,7 +3027,7 @@
     },
     {
       "player_id": "1641711",
-      "name": "NBA Player",
+      "name": "Gradey Dick",
       "points": 7.95,
       "reboundsTotal": 2.46,
       "assists": 0.61,
@@ -3035,7 +3035,7 @@
     },
     {
       "player_id": "1641712",
-      "name": "NBA Player",
+      "name": "Rayan Rupert",
       "points": 2.61,
       "reboundsTotal": 0.99,
       "assists": 0.42,
@@ -3043,7 +3043,7 @@
     },
     {
       "player_id": "1641713",
-      "name": "NBA Player",
+      "name": "GG Jackson",
       "points": 15.7,
       "reboundsTotal": 5.39,
       "assists": 2.63,
@@ -3051,7 +3051,7 @@
     },
     {
       "player_id": "1641715",
-      "name": "NBA Player",
+      "name": "Cam Whitmore",
       "points": 3.13,
       "reboundsTotal": 1.08,
       "assists": 0.39,
@@ -3059,7 +3059,7 @@
     },
     {
       "player_id": "1641716",
-      "name": "NBA Player",
+      "name": "Jarace Walker",
       "points": 11.38,
       "reboundsTotal": 4.24,
       "assists": 1.95,
@@ -3067,7 +3067,7 @@
     },
     {
       "player_id": "1641717",
-      "name": "NBA Player",
+      "name": "Cason Wallace",
       "points": 8.38,
       "reboundsTotal": 3.74,
       "assists": 2.32,
@@ -3075,7 +3075,7 @@
     },
     {
       "player_id": "1641718",
-      "name": "NBA Player",
+      "name": "Keyonte George",
       "points": 17.73,
       "reboundsTotal": 2.12,
       "assists": 3.48,
@@ -3083,7 +3083,7 @@
     },
     {
       "player_id": "1641720",
-      "name": "NBA Player",
+      "name": "Jalen Hood-Schifino",
       "points": 6.71,
       "reboundsTotal": 2.23,
       "assists": 3.46,
@@ -3091,7 +3091,7 @@
     },
     {
       "player_id": "1641721",
-      "name": "NBA Player",
+      "name": "Maxwell Lewis",
       "points": 6.16,
       "reboundsTotal": 3.19,
       "assists": 1.32,
@@ -3099,7 +3099,7 @@
     },
     {
       "player_id": "1641722",
-      "name": "NBA Player",
+      "name": "Jordan Hawkins",
       "points": 1.34,
       "reboundsTotal": 0.41,
       "assists": 0.15,
@@ -3107,7 +3107,7 @@
     },
     {
       "player_id": "1641723",
-      "name": "NBA Player",
+      "name": "Kobe Bufkin",
       "points": 4.94,
       "reboundsTotal": 1.19,
       "assists": 0.59,
@@ -3115,7 +3115,7 @@
     },
     {
       "player_id": "1641724",
-      "name": "NBA Player",
+      "name": "Jett Howard",
       "points": 3.59,
       "reboundsTotal": 0.64,
       "assists": 0.48,
@@ -3123,7 +3123,7 @@
     },
     {
       "player_id": "1641725",
-      "name": "NBA Player",
+      "name": "Trey Alexander",
       "points": 0.02,
       "reboundsTotal": 0.25,
       "assists": 0.03,
@@ -3131,7 +3131,7 @@
     },
     {
       "player_id": "1641726",
-      "name": "NBA Player",
+      "name": "Dereck Lively II",
       "points": 5.34,
       "reboundsTotal": 3.41,
       "assists": 1.83,
@@ -3139,7 +3139,7 @@
     },
     {
       "player_id": "1641727",
-      "name": "NBA Player",
+      "name": "Dariq Whitehead",
       "points": 6.49,
       "reboundsTotal": 1.99,
       "assists": 1.61,
@@ -3147,7 +3147,7 @@
     },
     {
       "player_id": "1641729",
-      "name": "NBA Player",
+      "name": "Brice Sensabaugh",
       "points": 14.13,
       "reboundsTotal": 2.63,
       "assists": 1.16,
@@ -3155,7 +3155,7 @@
     },
     {
       "player_id": "1641730",
-      "name": "NBA Player",
+      "name": "Noah Clowney",
       "points": 6.39,
       "reboundsTotal": 3.24,
       "assists": 0.56,
@@ -3163,7 +3163,7 @@
     },
     {
       "player_id": "1641731",
-      "name": "NBA Player",
+      "name": "Bilal Coulibaly",
       "points": 7.03,
       "reboundsTotal": 3.12,
       "assists": 2.18,
@@ -3171,7 +3171,7 @@
     },
     {
       "player_id": "1641732",
-      "name": "NBA Player",
+      "name": "Colby Jones",
       "points": 1.89,
       "reboundsTotal": 1.72,
       "assists": 0.86,
@@ -3179,7 +3179,7 @@
     },
     {
       "player_id": "1641733",
-      "name": "NBA Player",
+      "name": "Nick Smith Jr.",
       "points": 5.78,
       "reboundsTotal": 1.45,
       "assists": 0.97,
@@ -3187,7 +3187,7 @@
     },
     {
       "player_id": "1641734",
-      "name": "NBA Player",
+      "name": "Emoni Bates",
       "points": 0.7,
       "reboundsTotal": 0.33,
       "assists": 0.61,
@@ -3195,7 +3195,7 @@
     },
     {
       "player_id": "1641736",
-      "name": "NBA Player",
+      "name": "Reece Beekman",
       "points": 2.16,
       "reboundsTotal": 1.72,
       "assists": 1.84,
@@ -3203,7 +3203,7 @@
     },
     {
       "player_id": "1641737",
-      "name": "NBA Player",
+      "name": "Adem Bona",
       "points": 5.37,
       "reboundsTotal": 4.5,
       "assists": 0.26,
@@ -3211,7 +3211,7 @@
     },
     {
       "player_id": "1641738",
-      "name": "NBA Player",
+      "name": "Kobe Brown",
       "points": 3.49,
       "reboundsTotal": 3.07,
       "assists": 1.51,
@@ -3219,7 +3219,7 @@
     },
     {
       "player_id": "1641739",
-      "name": "NBA Player",
+      "name": "Toumani Camara",
       "points": 14.32,
       "reboundsTotal": 5.83,
       "assists": 2.06,
@@ -3227,7 +3227,7 @@
     },
     {
       "player_id": "1641740",
-      "name": "NBA Player",
+      "name": "Jaylen Clark",
       "points": 3.72,
       "reboundsTotal": 1.72,
       "assists": 0.56,
@@ -3235,7 +3235,7 @@
     },
     {
       "player_id": "1641741",
-      "name": "NBA Player",
+      "name": "Ricky Council IV",
       "points": 11.85,
       "reboundsTotal": 6.53,
       "assists": 1.77,
@@ -3243,7 +3243,7 @@
     },
     {
       "player_id": "1641744",
-      "name": "NBA Player",
+      "name": "Zach Edey",
       "points": 8.28,
       "reboundsTotal": 6.84,
       "assists": 1.04,
@@ -3251,7 +3251,7 @@
     },
     {
       "player_id": "1641745",
-      "name": "NBA Player",
+      "name": "Adam Flagler",
       "points": 3.29,
       "reboundsTotal": 1.85,
       "assists": 1.79,
@@ -3259,7 +3259,7 @@
     },
     {
       "player_id": "1641747",
-      "name": "NBA Player",
+      "name": "DaRon Holmes II",
       "points": 0.48,
       "reboundsTotal": 0.53,
       "assists": 0.04,
@@ -3267,7 +3267,7 @@
     },
     {
       "player_id": "1641748",
-      "name": "NBA Player",
+      "name": "Andre Jackson Jr.",
       "points": 1.49,
       "reboundsTotal": 1.19,
       "assists": 0.52,
@@ -3275,7 +3275,7 @@
     },
     {
       "player_id": "1641750",
-      "name": "NBA Player",
+      "name": "Ryan Kalkbrenner",
       "points": 6.65,
       "reboundsTotal": 6.34,
       "assists": 0.97,
@@ -3283,7 +3283,7 @@
     },
     {
       "player_id": "1641752",
-      "name": "NBA Player",
+      "name": "Bobi Klintman",
       "points": 0.56,
       "reboundsTotal": 0.78,
       "assists": 0.02,
@@ -3291,7 +3291,7 @@
     },
     {
       "player_id": "1641753",
-      "name": "NBA Player",
+      "name": "Chris Livingston",
       "points": 0.62,
       "reboundsTotal": 0.46,
       "assists": 0.22,
@@ -3299,7 +3299,7 @@
     },
     {
       "player_id": "1641755",
-      "name": "NBA Player",
+      "name": "Kevin McCullar Jr.",
       "points": 4.27,
       "reboundsTotal": 1.36,
       "assists": 0.28,
@@ -3307,7 +3307,7 @@
     },
     {
       "player_id": "1641757",
-      "name": "NBA Player",
+      "name": "Jordan Miller",
       "points": 6.67,
       "reboundsTotal": 3.6,
       "assists": 1.17,
@@ -3315,7 +3315,7 @@
     },
     {
       "player_id": "1641763",
-      "name": "NBA Player",
+      "name": "Julian Phillips",
       "points": 3.06,
       "reboundsTotal": 0.44,
       "assists": 0.16,
@@ -3323,7 +3323,7 @@
     },
     {
       "player_id": "1641764",
-      "name": "NBA Player",
+      "name": "Brandin Podziemski",
       "points": 13.18,
       "reboundsTotal": 5.06,
       "assists": 3.91,
@@ -3331,7 +3331,7 @@
     },
     {
       "player_id": "1641765",
-      "name": "NBA Player",
+      "name": "Olivier-Maxence Prosper",
       "points": 11.61,
       "reboundsTotal": 4.37,
       "assists": 0.6,
@@ -3339,7 +3339,7 @@
     },
     {
       "player_id": "1641766",
-      "name": "NBA Player",
+      "name": "Adama Sanogo",
       "points": 1.66,
       "reboundsTotal": 1.37,
       "assists": 0.61,
@@ -3347,7 +3347,7 @@
     },
     {
       "player_id": "1641767",
-      "name": "NBA Player",
+      "name": "Ben Sheppard",
       "points": 6.97,
       "reboundsTotal": 2.05,
       "assists": 2.72,
@@ -3355,7 +3355,7 @@
     },
     {
       "player_id": "1641772",
-      "name": "NBA Player",
+      "name": "Nae'Qwan Tomlin",
       "points": 8.45,
       "reboundsTotal": 3.76,
       "assists": 0.79,
@@ -3363,7 +3363,7 @@
     },
     {
       "player_id": "1641774",
-      "name": "NBA Player",
+      "name": "Tristan Vukcevic",
       "points": 9.01,
       "reboundsTotal": 3.04,
       "assists": 1.76,
@@ -3371,7 +3371,7 @@
     },
     {
       "player_id": "1641775",
-      "name": "NBA Player",
+      "name": "Jordan Walsh",
       "points": 7.9,
       "reboundsTotal": 4.26,
       "assists": 1.33,
@@ -3379,7 +3379,7 @@
     },
     {
       "player_id": "1641779",
-      "name": "NBA Player",
+      "name": "Jalen Bridges",
       "points": 2.04,
       "reboundsTotal": 0.56,
       "assists": 0.31,
@@ -3387,7 +3387,7 @@
     },
     {
       "player_id": "1641780",
-      "name": "NBA Player",
+      "name": "Johni Broome",
       "points": 1.13,
       "reboundsTotal": 0.44,
       "assists": 0.48,
@@ -3395,7 +3395,7 @@
     },
     {
       "player_id": "1641783",
-      "name": "NBA Player",
+      "name": "Tristan da Silva",
       "points": 4.81,
       "reboundsTotal": 2.68,
       "assists": 0.72,
@@ -3403,7 +3403,7 @@
     },
     {
       "player_id": "1641787",
-      "name": "NBA Player",
+      "name": "Tosan Evbuomwan",
       "points": 0.67,
       "reboundsTotal": 0.21,
       "assists": 0.21,
@@ -3411,7 +3411,7 @@
     },
     {
       "player_id": "1641789",
-      "name": "NBA Player",
+      "name": "Jazian Gortman",
       "points": 1.88,
       "reboundsTotal": 0.81,
       "assists": 0.71,
@@ -3419,7 +3419,7 @@
     },
     {
       "player_id": "1641790",
-      "name": "NBA Player",
+      "name": "PJ Hall",
       "points": 6.32,
       "reboundsTotal": 3.34,
       "assists": 0.81,
@@ -3427,7 +3427,7 @@
     },
     {
       "player_id": "1641794",
-      "name": "NBA Player",
+      "name": "Dillon Jones",
       "points": 3.76,
       "reboundsTotal": 1.08,
       "assists": 0.72,
@@ -3435,7 +3435,7 @@
     },
     {
       "player_id": "1641796",
-      "name": "NBA Player",
+      "name": "Pelle Larsson",
       "points": 7.33,
       "reboundsTotal": 2.14,
       "assists": 2.04,
@@ -3443,7 +3443,7 @@
     },
     {
       "player_id": "1641798",
-      "name": "NBA Player",
+      "name": "Jaylen Martin",
       "points": 6.26,
       "reboundsTotal": 2.91,
       "assists": 1.17,
@@ -3451,7 +3451,7 @@
     },
     {
       "player_id": "1641801",
-      "name": "NBA Player",
+      "name": "Emanuel Miller",
       "points": 2.24,
       "reboundsTotal": 0.84,
       "assists": 0.42,
@@ -3459,7 +3459,7 @@
     },
     {
       "player_id": "1641803",
-      "name": "NBA Player",
+      "name": "Tristen Newton",
       "points": 0.61,
       "reboundsTotal": 0.63,
       "assists": 0.26,
@@ -3467,7 +3467,7 @@
     },
     {
       "player_id": "1641809",
-      "name": "NBA Player",
+      "name": "Drew Peterson",
       "points": 1.9,
       "reboundsTotal": 1.94,
       "assists": 0.3,
@@ -3475,7 +3475,7 @@
     },
     {
       "player_id": "1641810",
-      "name": "NBA Player",
+      "name": "Antonio Reeves",
       "points": 2.74,
       "reboundsTotal": 0.4,
       "assists": 0.33,
@@ -3483,7 +3483,7 @@
     },
     {
       "player_id": "1641813",
-      "name": "NBA Player",
+      "name": "Mark Sears",
       "points": 1.66,
       "reboundsTotal": 0.36,
       "assists": 0.37,
@@ -3491,7 +3491,7 @@
     },
     {
       "player_id": "1641815",
-      "name": "NBA Player",
+      "name": "Isaiah Stevens",
       "points": 2.01,
       "reboundsTotal": 0.59,
       "assists": 1.04,
@@ -3499,7 +3499,7 @@
     },
     {
       "player_id": "1641816",
-      "name": "NBA Player",
+      "name": "Hunter Tyson",
       "points": 4.1,
       "reboundsTotal": 2.08,
       "assists": 0.77,
@@ -3507,7 +3507,7 @@
     },
     {
       "player_id": "1641817",
-      "name": "NBA Player",
+      "name": "Anton Watson",
       "points": 1.42,
       "reboundsTotal": 0.3,
       "assists": 0.15,
@@ -3515,7 +3515,7 @@
     },
     {
       "player_id": "1641824",
-      "name": "NBA Player",
+      "name": "Matas Buzelis",
       "points": 13.66,
       "reboundsTotal": 6.48,
       "assists": 3.42,
@@ -3523,7 +3523,7 @@
     },
     {
       "player_id": "1641842",
-      "name": "NBA Player",
+      "name": "Ronald Holland II",
       "points": 7.03,
       "reboundsTotal": 4.44,
       "assists": 2.02,
@@ -3531,7 +3531,7 @@
     },
     {
       "player_id": "1641854",
-      "name": "NBA Player",
+      "name": "Craig Porter Jr.",
       "points": 2.27,
       "reboundsTotal": 2.96,
       "assists": 3.29,
@@ -3539,7 +3539,7 @@
     },
     {
       "player_id": "1641857",
-      "name": "NBA Player",
+      "name": "Liam Robbins",
       "points": 1.45,
       "reboundsTotal": 0.55,
       "assists": 0.18,
@@ -3547,7 +3547,7 @@
     },
     {
       "player_id": "1641871",
-      "name": "NBA Player",
+      "name": "Duop Reath",
       "points": 1.23,
       "reboundsTotal": 0.94,
       "assists": 0.33,
@@ -3555,7 +3555,7 @@
     },
     {
       "player_id": "1641878",
-      "name": "NBA Player",
+      "name": "Damion Baugh",
       "points": 6.51,
       "reboundsTotal": 2.44,
       "assists": 3.62,
@@ -3563,7 +3563,7 @@
     },
     {
       "player_id": "1641879",
-      "name": "NBA Player",
+      "name": "Yuri Collins",
       "points": 4.91,
       "reboundsTotal": 2.51,
       "assists": 1.29,
@@ -3571,7 +3571,7 @@
     },
     {
       "player_id": "1641890",
-      "name": "NBA Player",
+      "name": "Tyler Smith",
       "points": 0.86,
       "reboundsTotal": 0.5,
       "assists": 0.15,
@@ -3579,7 +3579,7 @@
     },
     {
       "player_id": "1641907",
-      "name": "NBA Player",
+      "name": "Erik Stevenson",
       "points": 1.76,
       "reboundsTotal": 0.17,
       "assists": 0.17,
@@ -3587,7 +3587,7 @@
     },
     {
       "player_id": "1641936",
-      "name": "NBA Player",
+      "name": "Miles Norris",
       "points": 3.0,
       "reboundsTotal": 1.4,
       "assists": 0.77,
@@ -3595,7 +3595,7 @@
     },
     {
       "player_id": "1641989",
-      "name": "NBA Player",
+      "name": "Elijah Harkless",
       "points": 0.55,
       "reboundsTotal": 0.22,
       "assists": 0.48,
@@ -3603,7 +3603,7 @@
     },
     {
       "player_id": "1641998",
-      "name": "NBA Player",
+      "name": "Trey Jemison III",
       "points": 0.93,
       "reboundsTotal": 0.43,
       "assists": 0.09,
@@ -3611,7 +3611,7 @@
     },
     {
       "player_id": "1642013",
-      "name": "NBA Player",
+      "name": "Malik Williams",
       "points": 0.36,
       "reboundsTotal": 0.1,
       "assists": 0.09,
@@ -3619,7 +3619,7 @@
     },
     {
       "player_id": "1642024",
-      "name": "NBA Player",
+      "name": "Alex Reese",
       "points": 7.17,
       "reboundsTotal": 3.65,
       "assists": 0.63,
@@ -3627,7 +3627,7 @@
     },
     {
       "player_id": "1642050",
-      "name": "NBA Player",
+      "name": "Jackson Rowe",
       "points": 1.76,
       "reboundsTotal": 0.6,
       "assists": 0.15,
@@ -3635,7 +3635,7 @@
     },
     {
       "player_id": "1642066",
-      "name": "NBA Player",
+      "name": "Myron Gardner",
       "points": 8.26,
       "reboundsTotal": 5.94,
       "assists": 1.97,
@@ -3643,7 +3643,7 @@
     },
     {
       "player_id": "1642258",
-      "name": "NBA Player",
+      "name": "Zaccharie Risacher",
       "points": 4.8,
       "reboundsTotal": 2.64,
       "assists": 1.16,
@@ -3651,7 +3651,7 @@
     },
     {
       "player_id": "1642259",
-      "name": "NBA Player",
+      "name": "Alex Sarr",
       "points": 14.67,
       "reboundsTotal": 10.07,
       "assists": 3.56,
@@ -3659,7 +3659,7 @@
     },
     {
       "player_id": "1642260",
-      "name": "NBA Player",
+      "name": "Nikola Topic",
       "points": 0.3,
       "reboundsTotal": 0.09,
       "assists": 0.0,
@@ -3667,7 +3667,7 @@
     },
     {
       "player_id": "1642261",
-      "name": "NBA Player",
+      "name": "Dalton Knecht",
       "points": 4.61,
       "reboundsTotal": 2.06,
       "assists": 0.49,
@@ -3675,7 +3675,7 @@
     },
     {
       "player_id": "1642262",
-      "name": "NBA Player",
+      "name": "Cody Williams",
       "points": 9.02,
       "reboundsTotal": 3.83,
       "assists": 2.1,
@@ -3683,7 +3683,7 @@
     },
     {
       "player_id": "1642263",
-      "name": "NBA Player",
+      "name": "Reed Sheppard",
       "points": 10.04,
       "reboundsTotal": 2.8,
       "assists": 2.16,
@@ -3691,7 +3691,7 @@
     },
     {
       "player_id": "1642264",
-      "name": "NBA Player",
+      "name": "Stephon Castle",
       "points": 12.55,
       "reboundsTotal": 3.65,
       "assists": 5.74,
@@ -3699,7 +3699,7 @@
     },
     {
       "player_id": "1642265",
-      "name": "NBA Player",
+      "name": "Rob Dillingham",
       "points": 7.38,
       "reboundsTotal": 1.25,
       "assists": 2.88,
@@ -3707,7 +3707,7 @@
     },
     {
       "player_id": "1642266",
-      "name": "NBA Player",
+      "name": "Ja'Kobe Walter",
       "points": 8.94,
       "reboundsTotal": 2.32,
       "assists": 1.48,
@@ -3715,7 +3715,7 @@
     },
     {
       "player_id": "1642267",
-      "name": "NBA Player",
+      "name": "Bub Carrington",
       "points": 10.15,
       "reboundsTotal": 2.56,
       "assists": 3.81,
@@ -3723,7 +3723,7 @@
     },
     {
       "player_id": "1642268",
-      "name": "NBA Player",
+      "name": "Isaiah Collier",
       "points": 18.51,
       "reboundsTotal": 4.54,
       "assists": 7.05,
@@ -3731,7 +3731,7 @@
     },
     {
       "player_id": "1642269",
-      "name": "NBA Player",
+      "name": "Devin Carter",
       "points": 11.31,
       "reboundsTotal": 3.79,
       "assists": 2.81,
@@ -3739,7 +3739,7 @@
     },
     {
       "player_id": "1642270",
-      "name": "NBA Player",
+      "name": "Donovan Clingan",
       "points": 9.09,
       "reboundsTotal": 11.76,
       "assists": 1.63,
@@ -3747,7 +3747,7 @@
     },
     {
       "player_id": "1642271",
-      "name": "NBA Player",
+      "name": "Kyle Filipowski",
       "points": 7.23,
       "reboundsTotal": 5.28,
       "assists": 1.59,
@@ -3755,7 +3755,7 @@
     },
     {
       "player_id": "1642272",
-      "name": "NBA Player",
+      "name": "Jared McCain",
       "points": 7.54,
       "reboundsTotal": 2.7,
       "assists": 1.37,
@@ -3763,7 +3763,7 @@
     },
     {
       "player_id": "1642273",
-      "name": "NBA Player",
+      "name": "Kyshawn George",
       "points": 13.81,
       "reboundsTotal": 5.02,
       "assists": 3.46,
@@ -3771,7 +3771,7 @@
     },
     {
       "player_id": "1642274",
-      "name": "NBA Player",
+      "name": "Yves Missi",
       "points": 4.19,
       "reboundsTotal": 2.79,
       "assists": 0.87,
@@ -3779,7 +3779,7 @@
     },
     {
       "player_id": "1642275",
-      "name": "NBA Player",
+      "name": "Tidjane Salaun",
       "points": 4.59,
       "reboundsTotal": 3.05,
       "assists": 0.29,
@@ -3787,7 +3787,7 @@
     },
     {
       "player_id": "1642276",
-      "name": "NBA Player",
+      "name": "Kel'el Ware",
       "points": 10.04,
       "reboundsTotal": 8.03,
       "assists": 0.32,
@@ -3795,7 +3795,7 @@
     },
     {
       "player_id": "1642277",
-      "name": "NBA Player",
+      "name": "Johnny Furphy",
       "points": 5.11,
       "reboundsTotal": 4.1,
       "assists": 2.28,
@@ -3803,7 +3803,7 @@
     },
     {
       "player_id": "1642278",
-      "name": "NBA Player",
+      "name": "Tyler Kolek",
       "points": 3.99,
       "reboundsTotal": 2.66,
       "assists": 3.54,
@@ -3811,7 +3811,7 @@
     },
     {
       "player_id": "1642279",
-      "name": "NBA Player",
+      "name": "Ulrich Chomche",
       "points": 1.22,
       "reboundsTotal": 1.04,
       "assists": 0.4,
@@ -3819,7 +3819,7 @@
     },
     {
       "player_id": "1642280",
-      "name": "NBA Player",
+      "name": "Trentyn Flowers",
       "points": 1.58,
       "reboundsTotal": 0.41,
       "assists": 0.06,
@@ -3827,7 +3827,7 @@
     },
     {
       "player_id": "1642281",
-      "name": "NBA Player",
+      "name": "Jaylon Tyson",
       "points": 13.77,
       "reboundsTotal": 5.25,
       "assists": 2.7,
@@ -3835,7 +3835,7 @@
     },
     {
       "player_id": "1642282",
-      "name": "NBA Player",
+      "name": "Hunter Sallis",
       "points": 1.16,
       "reboundsTotal": 0.4,
       "assists": 0.62,
@@ -3843,7 +3843,7 @@
     },
     {
       "player_id": "1642285",
-      "name": "NBA Player",
+      "name": "Cam Spencer",
       "points": 6.85,
       "reboundsTotal": 2.64,
       "assists": 6.56,
@@ -3851,7 +3851,7 @@
     },
     {
       "player_id": "1642345",
-      "name": "NBA Player",
+      "name": "Oso Ighodaro",
       "points": 6.66,
       "reboundsTotal": 4.34,
       "assists": 1.89,
@@ -3859,7 +3859,7 @@
     },
     {
       "player_id": "1642346",
-      "name": "NBA Player",
+      "name": "Ryan Dunn",
       "points": 3.17,
       "reboundsTotal": 4.07,
       "assists": 1.04,
@@ -3867,7 +3867,7 @@
     },
     {
       "player_id": "1642347",
-      "name": "NBA Player",
+      "name": "Jamal Shead",
       "points": 4.17,
       "reboundsTotal": 2.09,
       "assists": 3.17,
@@ -3875,7 +3875,7 @@
     },
     {
       "player_id": "1642348",
-      "name": "NBA Player",
+      "name": "Justin Edwards",
       "points": 3.32,
       "reboundsTotal": 2.12,
       "assists": 0.9,
@@ -3883,7 +3883,7 @@
     },
     {
       "player_id": "1642349",
-      "name": "NBA Player",
+      "name": "Ajay Mitchell",
       "points": 7.0,
       "reboundsTotal": 2.09,
       "assists": 2.66,
@@ -3891,7 +3891,7 @@
     },
     {
       "player_id": "1642352",
-      "name": "NBA Player",
+      "name": "Keshad Johnson",
       "points": 0.77,
       "reboundsTotal": 0.32,
       "assists": 0.16,
@@ -3899,7 +3899,7 @@
     },
     {
       "player_id": "1642353",
-      "name": "NBA Player",
+      "name": "Cam Christie",
       "points": 1.74,
       "reboundsTotal": 1.77,
       "assists": 0.81,
@@ -3907,7 +3907,7 @@
     },
     {
       "player_id": "1642354",
-      "name": "NBA Player",
+      "name": "KJ Simpson",
       "points": 5.5,
       "reboundsTotal": 1.47,
       "assists": 2.27,
@@ -3915,7 +3915,7 @@
     },
     {
       "player_id": "1642355",
-      "name": "NBA Player",
+      "name": "Bronny James",
       "points": 5.2,
       "reboundsTotal": 1.37,
       "assists": 2.63,
@@ -3923,7 +3923,7 @@
     },
     {
       "player_id": "1642357",
-      "name": "NBA Player",
+      "name": "David Jones Garcia",
       "points": 2.57,
       "reboundsTotal": 0.86,
       "assists": 0.09,
@@ -3931,7 +3931,7 @@
     },
     {
       "player_id": "1642358",
-      "name": "NBA Player",
+      "name": "AJ Johnson",
       "points": 3.11,
       "reboundsTotal": 0.24,
       "assists": 0.47,
@@ -3939,7 +3939,7 @@
     },
     {
       "player_id": "1642359",
-      "name": "NBA Player",
+      "name": "Pacome Dadiet",
       "points": 0.82,
       "reboundsTotal": 1.27,
       "assists": 0.49,
@@ -3947,7 +3947,7 @@
     },
     {
       "player_id": "1642363",
-      "name": "NBA Player",
+      "name": "Nique Clifford",
       "points": 8.57,
       "reboundsTotal": 5.12,
       "assists": 3.25,
@@ -3955,7 +3955,7 @@
     },
     {
       "player_id": "1642364",
-      "name": "NBA Player",
+      "name": "Jamir Watkins",
       "points": 10.62,
       "reboundsTotal": 3.71,
       "assists": 1.64,
@@ -3963,7 +3963,7 @@
     },
     {
       "player_id": "1642365",
-      "name": "NBA Player",
+      "name": "Nikola \u0110urisic",
       "points": 0.03,
       "reboundsTotal": 0.02,
       "assists": 0.02,
@@ -3971,7 +3971,7 @@
     },
     {
       "player_id": "1642366",
-      "name": "NBA Player",
+      "name": "Quinten Post",
       "points": 9.61,
       "reboundsTotal": 2.6,
       "assists": 1.31,
@@ -3979,7 +3979,7 @@
     },
     {
       "player_id": "1642367",
-      "name": "NBA Player",
+      "name": "Jonathan Mogbo",
       "points": 2.28,
       "reboundsTotal": 1.12,
       "assists": 0.41,
@@ -3987,7 +3987,7 @@
     },
     {
       "player_id": "1642368",
-      "name": "NBA Player",
+      "name": "N'Faly Dante",
       "points": 0.25,
       "reboundsTotal": 0.06,
       "assists": 0.01,
@@ -3995,7 +3995,7 @@
     },
     {
       "player_id": "1642377",
-      "name": "NBA Player",
+      "name": "Jaylen Wells",
       "points": 14.24,
       "reboundsTotal": 2.39,
       "assists": 0.88,
@@ -4003,7 +4003,7 @@
     },
     {
       "player_id": "1642379",
-      "name": "NBA Player",
+      "name": "Taran Armstrong",
       "points": 0.46,
       "reboundsTotal": 0.13,
       "assists": 0.0,
@@ -4011,7 +4011,7 @@
     },
     {
       "player_id": "1642382",
-      "name": "NBA Player",
+      "name": "Branden Carlson",
       "points": 3.43,
       "reboundsTotal": 5.24,
       "assists": 0.49,
@@ -4019,7 +4019,7 @@
     },
     {
       "player_id": "1642383",
-      "name": "NBA Player",
+      "name": "Walter Clayton Jr.",
       "points": 3.24,
       "reboundsTotal": 1.13,
       "assists": 1.08,
@@ -4027,7 +4027,7 @@
     },
     {
       "player_id": "1642384",
-      "name": "NBA Player",
+      "name": "Isaiah Crawford",
       "points": 0.57,
       "reboundsTotal": 0.42,
       "assists": 0.14,
@@ -4035,7 +4035,7 @@
     },
     {
       "player_id": "1642385",
-      "name": "NBA Player",
+      "name": "Cui Yongxi",
       "points": 1.06,
       "reboundsTotal": 0.35,
       "assists": 0.02,
@@ -4043,7 +4043,7 @@
     },
     {
       "player_id": "1642389",
-      "name": "NBA Player",
+      "name": "Zyon Pullin",
       "points": 0.82,
       "reboundsTotal": 0.54,
       "assists": 0.17,
@@ -4051,7 +4051,7 @@
     },
     {
       "player_id": "1642396",
-      "name": "NBA Player",
+      "name": "Blake Hinson",
       "points": 0.91,
       "reboundsTotal": 0.52,
       "assists": 0.5,
@@ -4059,7 +4059,7 @@
     },
     {
       "player_id": "1642399",
-      "name": "NBA Player",
+      "name": "Jesse Edwards",
       "points": 0.92,
       "reboundsTotal": 0.65,
       "assists": 0.27,
@@ -4067,7 +4067,7 @@
     },
     {
       "player_id": "1642400",
-      "name": "NBA Player",
+      "name": "Tristan Enaruna",
       "points": 1.92,
       "reboundsTotal": 1.6,
       "assists": 0.17,
@@ -4075,7 +4075,7 @@
     },
     {
       "player_id": "1642402",
-      "name": "NBA Player",
+      "name": "Enrique Freeman",
       "points": 1.31,
       "reboundsTotal": 1.97,
       "assists": 0.2,
@@ -4083,7 +4083,7 @@
     },
     {
       "player_id": "1642403",
-      "name": "NBA Player",
+      "name": "Isaac Jones",
       "points": 0.15,
       "reboundsTotal": 0.03,
       "assists": 0.14,
@@ -4091,7 +4091,7 @@
     },
     {
       "player_id": "1642404",
-      "name": "NBA Player",
+      "name": "Chaz Lanier",
       "points": 1.43,
       "reboundsTotal": 0.76,
       "assists": 0.29,
@@ -4099,7 +4099,7 @@
     },
     {
       "player_id": "1642419",
-      "name": "NBA Player",
+      "name": "Jamison Battle",
       "points": 1.45,
       "reboundsTotal": 1.27,
       "assists": 0.18,
@@ -4107,7 +4107,7 @@
     },
     {
       "player_id": "1642422",
-      "name": "NBA Player",
+      "name": "Armel Traore",
       "points": 1.48,
       "reboundsTotal": 0.84,
       "assists": 0.17,
@@ -4115,7 +4115,7 @@
     },
     {
       "player_id": "1642434",
-      "name": "NBA Player",
+      "name": "Riley Minix",
       "points": 0.59,
       "reboundsTotal": 0.4,
       "assists": 0.15,
@@ -4123,7 +4123,7 @@
     },
     {
       "player_id": "1642439",
-      "name": "NBA Player",
+      "name": "Quincy Olivari",
       "points": 2.16,
       "reboundsTotal": 0.55,
       "assists": 0.41,
@@ -4131,7 +4131,7 @@
     },
     {
       "player_id": "1642440",
-      "name": "NBA Player",
+      "name": "Gabe McGlothan",
       "points": 1.7,
       "reboundsTotal": 0.29,
       "assists": 0.59,
@@ -4139,7 +4139,7 @@
     },
     {
       "player_id": "1642443",
-      "name": "NBA Player",
+      "name": "Jahmir Young",
       "points": 0.42,
       "reboundsTotal": 0.24,
       "assists": 0.2,
@@ -4147,7 +4147,7 @@
     },
     {
       "player_id": "1642449",
-      "name": "NBA Player",
+      "name": "Tolu Smith",
       "points": 2.97,
       "reboundsTotal": 1.79,
       "assists": 0.75,
@@ -4155,7 +4155,7 @@
     },
     {
       "player_id": "1642450",
-      "name": "NBA Player",
+      "name": "Daniss Jenkins",
       "points": 7.53,
       "reboundsTotal": 2.51,
       "assists": 2.11,
@@ -4163,7 +4163,7 @@
     },
     {
       "player_id": "1642461",
-      "name": "NBA Player",
+      "name": "Spencer Jones",
       "points": 6.22,
       "reboundsTotal": 3.23,
       "assists": 0.56,
@@ -4171,7 +4171,7 @@
     },
     {
       "player_id": "1642484",
-      "name": "NBA Player",
+      "name": "RayJ Dennis",
       "points": 0.84,
       "reboundsTotal": 0.82,
       "assists": 0.37,
@@ -4179,7 +4179,7 @@
     },
     {
       "player_id": "1642486",
-      "name": "NBA Player",
+      "name": "Boo Buie III",
       "points": 0.22,
       "reboundsTotal": 0.1,
       "assists": 0.0,
@@ -4187,7 +4187,7 @@
     },
     {
       "player_id": "1642502",
-      "name": "NBA Player",
+      "name": "Malevy Leons",
       "points": 1.74,
       "reboundsTotal": 1.04,
       "assists": 0.2,
@@ -4195,7 +4195,7 @@
     },
     {
       "player_id": "1642505",
-      "name": "NBA Player",
+      "name": "Alex Ducas",
       "points": 2.21,
       "reboundsTotal": 1.27,
       "assists": 0.51,
@@ -4203,7 +4203,7 @@
     },
     {
       "player_id": "1642530",
-      "name": "NBA Player",
+      "name": "Yuki Kawamura",
       "points": 2.7,
       "reboundsTotal": 1.05,
       "assists": 0.7,
@@ -4211,7 +4211,7 @@
     },
     {
       "player_id": "1642843",
-      "name": "NBA Player",
+      "name": "Cooper Flagg",
       "points": 24.51,
       "reboundsTotal": 6.9,
       "assists": 3.44,
@@ -4219,7 +4219,7 @@
     },
     {
       "player_id": "1642844",
-      "name": "NBA Player",
+      "name": "Dylan Harper",
       "points": 11.52,
       "reboundsTotal": 4.23,
       "assists": 5.89,
@@ -4227,7 +4227,7 @@
     },
     {
       "player_id": "1642845",
-      "name": "NBA Player",
+      "name": "VJ Edgecombe",
       "points": 13.49,
       "reboundsTotal": 4.96,
       "assists": 2.97,
@@ -4235,7 +4235,7 @@
     },
     {
       "player_id": "1642846",
-      "name": "NBA Player",
+      "name": "Ace Bailey",
       "points": 11.96,
       "reboundsTotal": 4.69,
       "assists": 2.78,
@@ -4243,7 +4243,7 @@
     },
     {
       "player_id": "1642847",
-      "name": "NBA Player",
+      "name": "Jeremiah Fears",
       "points": 9.13,
       "reboundsTotal": 5.68,
       "assists": 4.06,
@@ -4251,7 +4251,7 @@
     },
     {
       "player_id": "1642848",
-      "name": "NBA Player",
+      "name": "Tre Johnson",
       "points": 9.23,
       "reboundsTotal": 2.2,
       "assists": 2.22,
@@ -4259,7 +4259,7 @@
     },
     {
       "player_id": "1642849",
-      "name": "NBA Player",
+      "name": "Nolan Traore",
       "points": 14.99,
       "reboundsTotal": 2.02,
       "assists": 6.1,
@@ -4267,7 +4267,7 @@
     },
     {
       "player_id": "1642851",
-      "name": "NBA Player",
+      "name": "Kon Knueppel",
       "points": 19.96,
       "reboundsTotal": 6.37,
       "assists": 3.29,
@@ -4275,7 +4275,7 @@
     },
     {
       "player_id": "1642852",
-      "name": "NBA Player",
+      "name": "Derik Queen",
       "points": 11.69,
       "reboundsTotal": 5.45,
       "assists": 1.83,
@@ -4283,7 +4283,7 @@
     },
     {
       "player_id": "1642853",
-      "name": "NBA Player",
+      "name": "Rasheer Fleming",
       "points": 1.08,
       "reboundsTotal": 0.56,
       "assists": 0.17,
@@ -4291,7 +4291,7 @@
     },
     {
       "player_id": "1642854",
-      "name": "NBA Player",
+      "name": "Asa Newell",
       "points": 4.64,
       "reboundsTotal": 1.48,
       "assists": 0.81,
@@ -4299,7 +4299,7 @@
     },
     {
       "player_id": "1642855",
-      "name": "NBA Player",
+      "name": "Noa Essengue",
       "points": 0.44,
       "reboundsTotal": 0.07,
       "assists": 0.02,
@@ -4307,7 +4307,7 @@
     },
     {
       "player_id": "1642856",
-      "name": "NBA Player",
+      "name": "Egor Demin",
       "points": 12.19,
       "reboundsTotal": 3.78,
       "assists": 3.76,
@@ -4315,7 +4315,7 @@
     },
     {
       "player_id": "1642857",
-      "name": "NBA Player",
+      "name": "Kasparas Jakucionis",
       "points": 8.2,
       "reboundsTotal": 3.29,
       "assists": 3.3,
@@ -4323,7 +4323,7 @@
     },
     {
       "player_id": "1642859",
-      "name": "NBA Player",
+      "name": "Jase Richardson",
       "points": 2.86,
       "reboundsTotal": 0.76,
       "assists": 1.05,
@@ -4331,7 +4331,7 @@
     },
     {
       "player_id": "1642860",
-      "name": "NBA Player",
+      "name": "Will Riley",
       "points": 8.8,
       "reboundsTotal": 3.79,
       "assists": 2.55,
@@ -4339,7 +4339,7 @@
     },
     {
       "player_id": "1642862",
-      "name": "NBA Player",
+      "name": "Liam McNeeley",
       "points": 0.76,
       "reboundsTotal": 0.88,
       "assists": 0.5,
@@ -4347,7 +4347,7 @@
     },
     {
       "player_id": "1642863",
-      "name": "NBA Player",
+      "name": "Khaman Maluach",
       "points": 2.18,
       "reboundsTotal": 2.19,
       "assists": 0.18,
@@ -4355,7 +4355,7 @@
     },
     {
       "player_id": "1642864",
-      "name": "NBA Player",
+      "name": "Hugo Gonzalez",
       "points": 3.17,
       "reboundsTotal": 2.92,
       "assists": 0.4,
@@ -4363,7 +4363,7 @@
     },
     {
       "player_id": "1642866",
-      "name": "NBA Player",
+      "name": "Joan Beringer",
       "points": 2.19,
       "reboundsTotal": 1.47,
       "assists": 0.17,
@@ -4371,7 +4371,7 @@
     },
     {
       "player_id": "1642867",
-      "name": "NBA Player",
+      "name": "Collin Murray-Boyles",
       "points": 13.63,
       "reboundsTotal": 5.25,
       "assists": 3.56,
@@ -4379,7 +4379,7 @@
     },
     {
       "player_id": "1642868",
-      "name": "NBA Player",
+      "name": "Carter Bryant",
       "points": 4.53,
       "reboundsTotal": 2.4,
       "assists": 0.69,
@@ -4387,7 +4387,7 @@
     },
     {
       "player_id": "1642869",
-      "name": "NBA Player",
+      "name": "Noah Penda",
       "points": 2.79,
       "reboundsTotal": 1.93,
       "assists": 0.41,
@@ -4395,7 +4395,7 @@
     },
     {
       "player_id": "1642873",
-      "name": "NBA Player",
+      "name": "Amari Williams",
       "points": 1.18,
       "reboundsTotal": 1.89,
       "assists": 0.22,
@@ -4403,7 +4403,7 @@
     },
     {
       "player_id": "1642874",
-      "name": "NBA Player",
+      "name": "Danny Wolf",
       "points": 12.68,
       "reboundsTotal": 7.04,
       "assists": 1.73,
@@ -4411,7 +4411,7 @@
     },
     {
       "player_id": "1642875",
-      "name": "NBA Player",
+      "name": "Maxime Raynaud",
       "points": 10.99,
       "reboundsTotal": 8.23,
       "assists": 0.79,
@@ -4419,7 +4419,7 @@
     },
     {
       "player_id": "1642876",
-      "name": "NBA Player",
+      "name": "Adou Thiero",
       "points": 3.2,
       "reboundsTotal": 1.64,
       "assists": 0.68,
@@ -4427,7 +4427,7 @@
     },
     {
       "player_id": "1642877",
-      "name": "NBA Player",
+      "name": "Micah Peavy",
       "points": 2.26,
       "reboundsTotal": 0.68,
       "assists": 0.37,
@@ -4435,7 +4435,7 @@
     },
     {
       "player_id": "1642878",
-      "name": "NBA Player",
+      "name": "Tyrese Proctor",
       "points": 4.17,
       "reboundsTotal": 0.78,
       "assists": 0.98,
@@ -4443,7 +4443,7 @@
     },
     {
       "player_id": "1642879",
-      "name": "NBA Player",
+      "name": "Ben Saraf",
       "points": 9.06,
       "reboundsTotal": 2.44,
       "assists": 1.9,
@@ -4451,7 +4451,7 @@
     },
     {
       "player_id": "1642880",
-      "name": "NBA Player",
+      "name": "Kam Jones",
       "points": 5.84,
       "reboundsTotal": 2.05,
       "assists": 3.17,
@@ -4459,7 +4459,7 @@
     },
     {
       "player_id": "1642883",
-      "name": "NBA Player",
+      "name": "Sion James",
       "points": 3.63,
       "reboundsTotal": 3.75,
       "assists": 2.23,
@@ -4467,7 +4467,7 @@
     },
     {
       "player_id": "1642884",
-      "name": "NBA Player",
+      "name": "Vladislav Goldin",
       "points": 0.63,
       "reboundsTotal": 0.3,
       "assists": 0.22,
@@ -4475,7 +4475,7 @@
     },
     {
       "player_id": "1642885",
-      "name": "NBA Player",
+      "name": "Mohamed Diawara",
       "points": 4.44,
       "reboundsTotal": 2.03,
       "assists": 0.52,
@@ -4483,7 +4483,7 @@
     },
     {
       "player_id": "1642886",
-      "name": "NBA Player",
+      "name": "Koby Brea",
       "points": 3.4,
       "reboundsTotal": 0.64,
       "assists": 0.25,
@@ -4491,7 +4491,7 @@
     },
     {
       "player_id": "1642905",
-      "name": "NBA Player",
+      "name": "Hansen Yang",
       "points": 2.7,
       "reboundsTotal": 1.71,
       "assists": 0.16,
@@ -4499,7 +4499,7 @@
     },
     {
       "player_id": "1642907",
-      "name": "NBA Player",
+      "name": "Cedric Coward",
       "points": 8.25,
       "reboundsTotal": 3.81,
       "assists": 2.84,
@@ -4507,7 +4507,7 @@
     },
     {
       "player_id": "1642910",
-      "name": "NBA Player",
+      "name": "John Tonje",
       "points": 1.13,
       "reboundsTotal": 0.7,
       "assists": 0.45,
@@ -4515,7 +4515,7 @@
     },
     {
       "player_id": "1642914",
-      "name": "NBA Player",
+      "name": "Javon Small",
       "points": 6.52,
       "reboundsTotal": 2.97,
       "assists": 1.8,
@@ -4523,7 +4523,7 @@
     },
     {
       "player_id": "1642917",
-      "name": "NBA Player",
+      "name": "Max Shulga",
       "points": 1.37,
       "reboundsTotal": 0.17,
       "assists": 0.13,
@@ -4531,7 +4531,7 @@
     },
     {
       "player_id": "1642918",
-      "name": "NBA Player",
+      "name": "Alijah Martin",
       "points": 2.25,
       "reboundsTotal": 0.94,
       "assists": 0.27,
@@ -4539,7 +4539,7 @@
     },
     {
       "player_id": "1642920",
-      "name": "NBA Player",
+      "name": "Kobe Sanders",
       "points": 10.86,
       "reboundsTotal": 3.97,
       "assists": 2.81,
@@ -4547,7 +4547,7 @@
     },
     {
       "player_id": "1642926",
-      "name": "NBA Player",
+      "name": "Tamar Bates",
       "points": 0.83,
       "reboundsTotal": 0.14,
       "assists": 0.04,
@@ -4555,7 +4555,7 @@
     },
     {
       "player_id": "1642928",
-      "name": "NBA Player",
+      "name": "Dylan Cardwell",
       "points": 7.68,
       "reboundsTotal": 8.76,
       "assists": 1.53,
@@ -4563,7 +4563,7 @@
     },
     {
       "player_id": "1642933",
-      "name": "NBA Player",
+      "name": "Keshon Gilbert",
       "points": 3.31,
       "reboundsTotal": 2.31,
       "assists": 2.28,
@@ -4571,7 +4571,7 @@
     },
     {
       "player_id": "1642935",
-      "name": "NBA Player",
+      "name": "Chucky Hepburn",
       "points": 0.55,
       "reboundsTotal": 0.31,
       "assists": 0.93,
@@ -4579,7 +4579,7 @@
     },
     {
       "player_id": "1642938",
-      "name": "NBA Player",
+      "name": "Curtis Jones",
       "points": 0.64,
       "reboundsTotal": 0.34,
       "assists": 0.32,
@@ -4587,7 +4587,7 @@
     },
     {
       "player_id": "1642939",
-      "name": "NBA Player",
+      "name": "Miles Kelly",
       "points": 2.66,
       "reboundsTotal": 1.56,
       "assists": 0.77,
@@ -4595,7 +4595,7 @@
     },
     {
       "player_id": "1642942",
-      "name": "NBA Player",
+      "name": "Jahmai Mashack",
       "points": 5.84,
       "reboundsTotal": 1.87,
       "assists": 1.1,
@@ -4603,7 +4603,7 @@
     },
     {
       "player_id": "1642948",
-      "name": "NBA Player",
+      "name": "Ryan Nembhard",
       "points": 5.85,
       "reboundsTotal": 2.61,
       "assists": 4.26,
@@ -4611,7 +4611,7 @@
     },
     {
       "player_id": "1642949",
-      "name": "NBA Player",
+      "name": "Yanic Konan Niederhauser",
       "points": 4.42,
       "reboundsTotal": 3.83,
       "assists": 1.08,
@@ -4619,7 +4619,7 @@
     },
     {
       "player_id": "1642950",
-      "name": "NBA Player",
+      "name": "Lachlan Olbrich",
       "points": 4.18,
       "reboundsTotal": 2.59,
       "assists": 0.67,
@@ -4627,7 +4627,7 @@
     },
     {
       "player_id": "1642954",
-      "name": "NBA Player",
+      "name": "Will Richard",
       "points": 3.46,
       "reboundsTotal": 0.88,
       "assists": 0.66,
@@ -4635,7 +4635,7 @@
     },
     {
       "player_id": "1642955",
-      "name": "NBA Player",
+      "name": "Kadary Richmond",
       "points": 1.97,
       "reboundsTotal": 0.62,
       "assists": 0.42,
@@ -4643,7 +4643,7 @@
     },
     {
       "player_id": "1642959",
-      "name": "NBA Player",
+      "name": "Chris Youngblood",
       "points": 2.75,
       "reboundsTotal": 2.03,
       "assists": 1.15,
@@ -4651,7 +4651,7 @@
     },
     {
       "player_id": "1642962",
-      "name": "NBA Player",
+      "name": "Drake Powell",
       "points": 6.18,
       "reboundsTotal": 1.93,
       "assists": 1.34,
@@ -4659,7 +4659,7 @@
     },
     {
       "player_id": "1642964",
-      "name": "NBA Player",
+      "name": "Brooks Barnhizer",
       "points": 1.27,
       "reboundsTotal": 1.78,
       "assists": 0.18,
@@ -4667,7 +4667,7 @@
     },
     {
       "player_id": "1643007",
-      "name": "NBA Player",
+      "name": "Taelon Peter",
       "points": 6.71,
       "reboundsTotal": 2.4,
       "assists": 1.57,
@@ -4675,7 +4675,7 @@
     },
     {
       "player_id": "1643018",
-      "name": "NBA Player",
+      "name": "LJ Cryer",
       "points": 1.29,
       "reboundsTotal": 0.73,
       "assists": 0.18,
@@ -4683,7 +4683,7 @@
     },
     {
       "player_id": "1643024",
-      "name": "NBA Player",
+      "name": "Chris Manon",
       "points": 1.42,
       "reboundsTotal": 0.63,
       "assists": 0.63,
@@ -4691,7 +4691,7 @@
     },
     {
       "player_id": "1643052",
-      "name": "NBA Player",
+      "name": "Chaney Johnson",
       "points": 0.03,
       "reboundsTotal": 0.01,
       "assists": 0.03,
@@ -4699,7 +4699,7 @@
     },
     {
       "player_id": "1643133",
-      "name": "NBA Player",
+      "name": "Lawson Lovering",
       "points": 1.22,
       "reboundsTotal": 1.28,
       "assists": 0.09,
@@ -4707,7 +4707,7 @@
     },
     {
       "player_id": "1643141",
-      "name": "NBA Player",
+      "name": "Jahmyl Telfort",
       "points": 0.57,
       "reboundsTotal": 0.42,
       "assists": 0.03,
@@ -4715,7 +4715,7 @@
     },
     {
       "player_id": "200768",
-      "name": "NBA Player",
+      "name": "Kyle Lowry",
       "points": 0.84,
       "reboundsTotal": 0.33,
       "assists": 0.24,
@@ -4723,7 +4723,7 @@
     },
     {
       "player_id": "200782",
-      "name": "NBA Player",
+      "name": "P.J. Tucker",
       "points": 1.58,
       "reboundsTotal": 0.33,
       "assists": 0.14,
@@ -4731,7 +4731,7 @@
     },
     {
       "player_id": "201142",
-      "name": "NBA Player",
+      "name": "Kevin Durant",
       "points": 22.4,
       "reboundsTotal": 5.97,
       "assists": 4.31,
@@ -4739,7 +4739,7 @@
     },
     {
       "player_id": "201143",
-      "name": "NBA Player",
+      "name": "Al Horford",
       "points": 10.33,
       "reboundsTotal": 4.44,
       "assists": 2.96,
@@ -4747,7 +4747,7 @@
     },
     {
       "player_id": "201144",
-      "name": "NBA Player",
+      "name": "Mike Conley",
       "points": 1.51,
       "reboundsTotal": 1.08,
       "assists": 1.77,
@@ -4755,7 +4755,7 @@
     },
     {
       "player_id": "201145",
-      "name": "NBA Player",
+      "name": "Jeff Green",
       "points": 0.49,
       "reboundsTotal": 0.31,
       "assists": 0.17,
@@ -4763,7 +4763,7 @@
     },
     {
       "player_id": "201566",
-      "name": "NBA Player",
+      "name": "Russell Westbrook",
       "points": 15.93,
       "reboundsTotal": 2.54,
       "assists": 4.05,
@@ -4771,7 +4771,7 @@
     },
     {
       "player_id": "201567",
-      "name": "NBA Player",
+      "name": "Kevin Love",
       "points": 3.76,
       "reboundsTotal": 5.81,
       "assists": 0.81,
@@ -4779,7 +4779,7 @@
     },
     {
       "player_id": "201569",
-      "name": "NBA Player",
+      "name": "Eric Gordon",
       "points": 0.36,
       "reboundsTotal": 0.22,
       "assists": 0.01,
@@ -4787,7 +4787,7 @@
     },
     {
       "player_id": "201572",
-      "name": "NBA Player",
+      "name": "Brook Lopez",
       "points": 11.44,
       "reboundsTotal": 1.96,
       "assists": 2.2,
@@ -4795,7 +4795,7 @@
     },
     {
       "player_id": "201587",
-      "name": "NBA Player",
+      "name": "Nicolas Batum",
       "points": 3.97,
       "reboundsTotal": 1.29,
       "assists": 0.39,
@@ -4803,7 +4803,7 @@
     },
     {
       "player_id": "201599",
-      "name": "NBA Player",
+      "name": "DeAndre Jordan",
       "points": 0.21,
       "reboundsTotal": 0.06,
       "assists": 0.04,
@@ -4811,7 +4811,7 @@
     },
     {
       "player_id": "201935",
-      "name": "NBA Player",
+      "name": "James Harden",
       "points": 23.31,
       "reboundsTotal": 4.0,
       "assists": 8.52,
@@ -4819,7 +4819,7 @@
     },
     {
       "player_id": "201939",
-      "name": "NBA Player",
+      "name": "Stephen Curry",
       "points": 22.08,
       "reboundsTotal": 1.96,
       "assists": 4.51,
@@ -4827,7 +4827,7 @@
     },
     {
       "player_id": "201942",
-      "name": "NBA Player",
+      "name": "DeMar DeRozan",
       "points": 16.76,
       "reboundsTotal": 3.15,
       "assists": 1.84,
@@ -4835,7 +4835,7 @@
     },
     {
       "player_id": "201949",
-      "name": "NBA Player",
+      "name": "James Johnson",
       "points": 0.35,
       "reboundsTotal": 0.32,
       "assists": 0.03,
@@ -4843,7 +4843,7 @@
     },
     {
       "player_id": "201950",
-      "name": "NBA Player",
+      "name": "Jrue Holiday",
       "points": 16.91,
       "reboundsTotal": 3.55,
       "assists": 5.15,
@@ -4851,7 +4851,7 @@
     },
     {
       "player_id": "201959",
-      "name": "NBA Player",
+      "name": "Taj Gibson",
       "points": 1.63,
       "reboundsTotal": 1.46,
       "assists": 0.48,
@@ -4859,7 +4859,7 @@
     },
     {
       "player_id": "201988",
-      "name": "NBA Player",
+      "name": "Patty Mills",
       "points": 1.6,
       "reboundsTotal": 0.56,
       "assists": 0.23,
@@ -4867,7 +4867,7 @@
     },
     {
       "player_id": "202066",
-      "name": "NBA Player",
+      "name": "Garrett Temple",
       "points": 0.26,
       "reboundsTotal": 0.33,
       "assists": 0.11,
@@ -4875,7 +4875,7 @@
     },
     {
       "player_id": "202331",
-      "name": "NBA Player",
+      "name": "Paul George",
       "points": 3.13,
       "reboundsTotal": 1.15,
       "assists": 1.14,
@@ -4883,7 +4883,7 @@
     },
     {
       "player_id": "202681",
-      "name": "NBA Player",
+      "name": "Kyrie Irving",
       "points": 9.61,
       "reboundsTotal": 2.58,
       "assists": 1.28,
@@ -4891,7 +4891,7 @@
     },
     {
       "player_id": "202684",
-      "name": "NBA Player",
+      "name": "Tristan Thompson",
       "points": 1.94,
       "reboundsTotal": 2.96,
       "assists": 0.66,
@@ -4899,7 +4899,7 @@
     },
     {
       "player_id": "202685",
-      "name": "NBA Player",
+      "name": "Jonas Valanciunas",
       "points": 10.46,
       "reboundsTotal": 6.32,
       "assists": 1.47,
@@ -4907,7 +4907,7 @@
     },
     {
       "player_id": "202687",
-      "name": "NBA Player",
+      "name": "Bismack Biyombo",
       "points": 0.4,
       "reboundsTotal": 0.56,
       "assists": 0.14,
@@ -4915,7 +4915,7 @@
     },
     {
       "player_id": "202691",
-      "name": "NBA Player",
+      "name": "Klay Thompson",
       "points": 13.18,
       "reboundsTotal": 1.75,
       "assists": 1.85,
@@ -4923,7 +4923,7 @@
     },
     {
       "player_id": "202692",
-      "name": "NBA Player",
+      "name": "Alec Burks",
       "points": 6.65,
       "reboundsTotal": 2.91,
       "assists": 1.55,
@@ -4931,7 +4931,7 @@
     },
     {
       "player_id": "202693",
-      "name": "NBA Player",
+      "name": "Markieff Morris",
       "points": 8.59,
       "reboundsTotal": 1.33,
       "assists": 1.11,
@@ -4939,7 +4939,7 @@
     },
     {
       "player_id": "202695",
-      "name": "NBA Player",
+      "name": "Kawhi Leonard",
       "points": 28.42,
       "reboundsTotal": 8.55,
       "assists": 4.9,
@@ -4947,7 +4947,7 @@
     },
     {
       "player_id": "202696",
-      "name": "NBA Player",
+      "name": "Nikola Vucevic",
       "points": 18.46,
       "reboundsTotal": 8.96,
       "assists": 3.6,
@@ -4955,7 +4955,7 @@
     },
     {
       "player_id": "202699",
-      "name": "NBA Player",
+      "name": "Tobias Harris",
       "points": 13.02,
       "reboundsTotal": 4.71,
       "assists": 2.39,
@@ -4963,7 +4963,7 @@
     },
     {
       "player_id": "202704",
-      "name": "NBA Player",
+      "name": "Reggie Jackson",
       "points": 2.24,
       "reboundsTotal": 0.72,
       "assists": 0.52,
@@ -4971,7 +4971,7 @@
     },
     {
       "player_id": "202709",
-      "name": "NBA Player",
+      "name": "Cory Joseph",
       "points": 6.54,
       "reboundsTotal": 1.76,
       "assists": 1.94,
@@ -4979,7 +4979,7 @@
     },
     {
       "player_id": "202710",
-      "name": "NBA Player",
+      "name": "Jimmy Butler III",
       "points": 10.34,
       "reboundsTotal": 2.96,
       "assists": 2.73,
@@ -4987,7 +4987,7 @@
     },
     {
       "player_id": "203076",
-      "name": "NBA Player",
+      "name": "Anthony Davis",
       "points": 22.18,
       "reboundsTotal": 12.11,
       "assists": 3.31,
@@ -4995,7 +4995,7 @@
     },
     {
       "player_id": "203078",
-      "name": "NBA Player",
+      "name": "Bradley Beal",
       "points": 11.46,
       "reboundsTotal": 1.69,
       "assists": 3.09,
@@ -5003,7 +5003,7 @@
     },
     {
       "player_id": "203081",
-      "name": "NBA Player",
+      "name": "Damian Lillard",
       "points": 0.06,
       "reboundsTotal": 0.06,
       "assists": 0.06,
@@ -5011,7 +5011,7 @@
     },
     {
       "player_id": "203083",
-      "name": "NBA Player",
+      "name": "Andre Drummond",
       "points": 2.27,
       "reboundsTotal": 3.33,
       "assists": 0.61,
@@ -5019,7 +5019,7 @@
     },
     {
       "player_id": "203084",
-      "name": "NBA Player",
+      "name": "Harrison Barnes",
       "points": 9.53,
       "reboundsTotal": 3.51,
       "assists": 2.78,
@@ -5027,7 +5027,7 @@
     },
     {
       "player_id": "203109",
-      "name": "NBA Player",
+      "name": "Jae Crowder",
       "points": 0.86,
       "reboundsTotal": 0.31,
       "assists": 0.27,
@@ -5035,7 +5035,7 @@
     },
     {
       "player_id": "203110",
-      "name": "NBA Player",
+      "name": "Draymond Green",
       "points": 7.87,
       "reboundsTotal": 4.89,
       "assists": 3.19,
@@ -5043,7 +5043,7 @@
     },
     {
       "player_id": "203114",
-      "name": "NBA Player",
+      "name": "Khris Middleton",
       "points": 11.39,
       "reboundsTotal": 2.68,
       "assists": 2.92,
@@ -5051,7 +5051,7 @@
     },
     {
       "player_id": "203458",
-      "name": "NBA Player",
+      "name": "Alex Len",
       "points": 1.75,
       "reboundsTotal": 1.02,
       "assists": 0.2,
@@ -5059,7 +5059,7 @@
     },
     {
       "player_id": "203468",
-      "name": "NBA Player",
+      "name": "CJ McCollum",
       "points": 16.6,
       "reboundsTotal": 4.52,
       "assists": 5.06,
@@ -5067,7 +5067,7 @@
     },
     {
       "player_id": "203471",
-      "name": "NBA Player",
+      "name": "Dennis Schroder",
       "points": 8.95,
       "reboundsTotal": 2.44,
       "assists": 3.03,
@@ -5075,7 +5075,7 @@
     },
     {
       "player_id": "203482",
-      "name": "NBA Player",
+      "name": "Kelly Olynyk",
       "points": 0.63,
       "reboundsTotal": 0.24,
       "assists": 0.16,
@@ -5083,7 +5083,7 @@
     },
     {
       "player_id": "203484",
-      "name": "NBA Player",
+      "name": "Kentavious Caldwell-Pope",
       "points": 6.41,
       "reboundsTotal": 2.75,
       "assists": 2.16,
@@ -5091,7 +5091,7 @@
     },
     {
       "player_id": "203486",
-      "name": "NBA Player",
+      "name": "Mason Plumlee",
       "points": 3.68,
       "reboundsTotal": 1.21,
       "assists": 0.78,
@@ -5099,7 +5099,7 @@
     },
     {
       "player_id": "203497",
-      "name": "NBA Player",
+      "name": "Rudy Gobert",
       "points": 14.03,
       "reboundsTotal": 8.86,
       "assists": 1.43,
@@ -5107,7 +5107,7 @@
     },
     {
       "player_id": "203500",
-      "name": "NBA Player",
+      "name": "Steven Adams",
       "points": 6.5,
       "reboundsTotal": 7.36,
       "assists": 1.96,
@@ -5115,7 +5115,7 @@
     },
     {
       "player_id": "203501",
-      "name": "NBA Player",
+      "name": "Tim Hardaway Jr.",
       "points": 19.15,
       "reboundsTotal": 3.34,
       "assists": 1.1,
@@ -5123,7 +5123,7 @@
     },
     {
       "player_id": "203507",
-      "name": "NBA Player",
+      "name": "Giannis Antetokounmpo",
       "points": 22.13,
       "reboundsTotal": 10.33,
       "assists": 5.11,
@@ -5131,7 +5131,7 @@
     },
     {
       "player_id": "203552",
-      "name": "NBA Player",
+      "name": "Seth Curry",
       "points": 2.45,
       "reboundsTotal": 0.57,
       "assists": 0.36,
@@ -5139,7 +5139,7 @@
     },
     {
       "player_id": "203648",
-      "name": "NBA Player",
+      "name": "Thanasis Antetokounmpo",
       "points": 0.8,
       "reboundsTotal": 1.05,
       "assists": 0.35,
@@ -5147,7 +5147,7 @@
     },
     {
       "player_id": "203897",
-      "name": "NBA Player",
+      "name": "Zach LaVine",
       "points": 10.93,
       "reboundsTotal": 2.46,
       "assists": 3.29,
@@ -5155,7 +5155,7 @@
     },
     {
       "player_id": "203901",
-      "name": "NBA Player",
+      "name": "Elfrid Payton",
       "points": 6.96,
       "reboundsTotal": 3.21,
       "assists": 3.95,
@@ -5163,7 +5163,7 @@
     },
     {
       "player_id": "203903",
-      "name": "NBA Player",
+      "name": "Jordan Clarkson",
       "points": 5.41,
       "reboundsTotal": 0.36,
       "assists": 0.84,
@@ -5171,7 +5171,7 @@
     },
     {
       "player_id": "203914",
-      "name": "NBA Player",
+      "name": "Gary Harris",
       "points": 1.82,
       "reboundsTotal": 1.33,
       "assists": 1.36,
@@ -5179,7 +5179,7 @@
     },
     {
       "player_id": "203915",
-      "name": "NBA Player",
+      "name": "Spencer Dinwiddie",
       "points": 11.3,
       "reboundsTotal": 3.76,
       "assists": 5.15,
@@ -5187,7 +5187,7 @@
     },
     {
       "player_id": "203924",
-      "name": "NBA Player",
+      "name": "Jerami Grant",
       "points": 12.52,
       "reboundsTotal": 3.42,
       "assists": 2.46,
@@ -5195,7 +5195,7 @@
     },
     {
       "player_id": "203926",
-      "name": "NBA Player",
+      "name": "Doug McDermott",
       "points": 5.3,
       "reboundsTotal": 0.6,
       "assists": 0.11,
@@ -5203,7 +5203,7 @@
     },
     {
       "player_id": "203932",
-      "name": "NBA Player",
+      "name": "Aaron Gordon",
       "points": 8.02,
       "reboundsTotal": 3.4,
       "assists": 2.62,
@@ -5211,7 +5211,7 @@
     },
     {
       "player_id": "203935",
-      "name": "NBA Player",
+      "name": "Marcus Smart",
       "points": 8.63,
       "reboundsTotal": 2.56,
       "assists": 1.78,
@@ -5219,7 +5219,7 @@
     },
     {
       "player_id": "203937",
-      "name": "NBA Player",
+      "name": "Kyle Anderson",
       "points": 6.61,
       "reboundsTotal": 2.85,
       "assists": 1.63,
@@ -5227,7 +5227,7 @@
     },
     {
       "player_id": "203939",
-      "name": "NBA Player",
+      "name": "Dwight Powell",
       "points": 5.85,
       "reboundsTotal": 3.73,
       "assists": 0.98,
@@ -5235,7 +5235,7 @@
     },
     {
       "player_id": "203944",
-      "name": "NBA Player",
+      "name": "Julius Randle",
       "points": 28.86,
       "reboundsTotal": 6.24,
       "assists": 3.15,
@@ -5243,7 +5243,7 @@
     },
     {
       "player_id": "203952",
-      "name": "NBA Player",
+      "name": "Andrew Wiggins",
       "points": 8.18,
       "reboundsTotal": 2.98,
       "assists": 1.69,
@@ -5251,7 +5251,7 @@
     },
     {
       "player_id": "203954",
-      "name": "NBA Player",
+      "name": "Joel Embiid",
       "points": 27.76,
       "reboundsTotal": 7.33,
       "assists": 5.17,
@@ -5259,7 +5259,7 @@
     },
     {
       "player_id": "203957",
-      "name": "NBA Player",
+      "name": "Dante Exum",
       "points": 2.43,
       "reboundsTotal": 1.24,
       "assists": 1.55,
@@ -5267,7 +5267,7 @@
     },
     {
       "player_id": "203967",
-      "name": "NBA Player",
+      "name": "Dario Saric",
       "points": 0.84,
       "reboundsTotal": 0.51,
       "assists": 0.35,
@@ -5275,7 +5275,7 @@
     },
     {
       "player_id": "203991",
-      "name": "NBA Player",
+      "name": "Clint Capela",
       "points": 3.53,
       "reboundsTotal": 3.93,
       "assists": 0.72,
@@ -5283,7 +5283,7 @@
     },
     {
       "player_id": "203992",
-      "name": "NBA Player",
+      "name": "Bogdan Bogdanovic",
       "points": 3.0,
       "reboundsTotal": 0.75,
       "assists": 0.63,
@@ -5291,7 +5291,7 @@
     },
     {
       "player_id": "203994",
-      "name": "NBA Player",
+      "name": "Jusuf Nurkic",
       "points": 8.67,
       "reboundsTotal": 8.27,
       "assists": 3.34,
@@ -5299,7 +5299,7 @@
     },
     {
       "player_id": "203995",
-      "name": "NBA Player",
+      "name": "Vasilije Micic",
       "points": 1.05,
       "reboundsTotal": 0.69,
       "assists": 0.2,
@@ -5307,7 +5307,7 @@
     },
     {
       "player_id": "203999",
-      "name": "NBA Player",
+      "name": "Nikola Jokic",
       "points": 26.82,
       "reboundsTotal": 12.17,
       "assists": 10.72,
@@ -5315,7 +5315,7 @@
     },
     {
       "player_id": "204001",
-      "name": "NBA Player",
+      "name": "Kristaps Porzingis",
       "points": 1.75,
       "reboundsTotal": 0.85,
       "assists": 0.45,
@@ -5323,7 +5323,7 @@
     },
     {
       "player_id": "204060",
-      "name": "NBA Player",
+      "name": "Joe Ingles",
       "points": 0.18,
       "reboundsTotal": 0.51,
       "assists": 0.28,
@@ -5331,7 +5331,7 @@
     },
     {
       "player_id": "204456",
-      "name": "NBA Player",
+      "name": "T.J. McConnell",
       "points": 5.96,
       "reboundsTotal": 1.21,
       "assists": 1.99,
@@ -5339,7 +5339,7 @@
     },
     {
       "player_id": "2544",
-      "name": "NBA Player",
+      "name": "LeBron James",
       "points": 21.27,
       "reboundsTotal": 5.06,
       "assists": 8.04,

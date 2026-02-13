@@ -8,7 +8,6 @@ import os
 
 # =========================================================
 # 1. PATHS (Keepin it same as the Team Model)
-# =========================================================
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_DIR = os.path.join(BASE_DIR, "archive", "box_scores")
 # The player-specific files we need
@@ -18,7 +17,7 @@ games_path = os.path.join(DATA_DIR, "Games.csv")
 MODEL_PATH = os.path.join(BASE_DIR, "data", "player_prop_models.pkl")
 
 # --- DATA LOADING ---
-print("-- LOADING PLAYER DATA ---")
+print("LOADING")
 try:
     df_players = pd.read_csv(player_stats_path, low_memory=False)
     df_games = pd.read_csv(games_path, low_memory=False)
@@ -26,9 +25,7 @@ except FileNotFoundError as e:
     print(f"Error: {e}. Check if the csv files r in the right folder.")
     exit()
 
-# =========================================================
-# 2. CLEANING IDs (matching the team model logic)
-# =========================================================
+# CLEANING IDs (matching the team model logic)
 def clean_id(x):
     try:
         if pd.isna(x): return ""
@@ -52,12 +49,10 @@ if "gameLabel" in df_games.columns:
     valid_ids = set(df_games[~df_games["gameLabel"].isin(["Preseason", "All-Star Game"])]["gameId"])
     df_players = df_players[df_players["gameId"].isin(valid_ids)]
 
-# =========================================================
-# 3. FEATURE ENGINEERING (The Jupyter logic!)
-# =========================================================
+# FEATURE ENGINEERING 
 print("--- ENGINEERING PLAYER FEATURES ---")
 
-# Memory Fix: October 2024 (2-season memory for cold start)
+# October 2024 
 START_DATE = '2024-10-01'
 df_players['gameDateTimeEst'] = pd.to_datetime(df_players['gameDateTimeEst'], utc=True)
 df_players = df_players[df_players['gameDateTimeEst'] >= START_DATE].sort_values(['personId', 'gameDateTimeEst'])
@@ -66,7 +61,7 @@ TARGETS = ['points', 'reboundsTotal', 'assists', 'threePointersMade']
 FEATURES_TO_ROLL = TARGETS + ['numMinutes']
 
 # Rolling averages: looking back at the last 10 games
-print("Calculating rolling averages...")
+print("Calcrolling averages")
 rolling_df = (
     df_players.groupby("personId")[FEATURES_TO_ROLL]
     .apply(lambda x: x.rolling(window=10, min_periods=1).mean().shift())
@@ -88,10 +83,8 @@ team_def = pd.concat([team_def[['playerteamCity', 'gameId']], team_def_rolling],
 df_model = pd.concat([df_players.reset_index(drop=True), rolling_df.reset_index(drop=True)], axis=1)
 df_model = pd.merge(df_model, team_def, left_on=['opponentteamCity', 'gameId'], right_on=['playerteamCity', 'gameId'], how='left', suffixes=('', '_team'))
 
-# =========================================================
-# 4. TRAINING (The "Brain" building)
-# =========================================================
-print("--- TRAINING PLAYER MODELS ---")
+# TRAINING 
+print("TRAINING Player Model")
 feature_cols = ['home', 'rolling_points', 'rolling_reboundsTotal', 'rolling_assists', 'rolling_numMinutes', 
                 'Opp_L10_points_Allowed', 'Opp_L10_reboundsTotal_Allowed']
 
@@ -115,17 +108,21 @@ for target in TARGETS:
     print(f"MAE: +/- {mae:.2f} {target}")
     trained_models[target] = model
 
-# =========================================================
-# 5. SAVING ARTIFACTS
-# =========================================================
-print("--- SAVING ARTIFACTS ---")
+# --- 5. SAVING ARTIFACTS ---
+print(" SAVING ")
 latest_player_stats = {}
 for pid in df_model["personId"].unique():
     p_data = df_model[df_model["personId"] == pid]
     if not p_data.empty:
-        # save the last row for each guy for daily_update.py
-        latest_player_stats[pid] = p_data.iloc[-1].to_dict()
-
+        last_row = p_data.iloc[-1].to_dict()
+        
+        # We grab firstName and lastName from the CSV headers
+        first = last_row.get('firstName', '')
+        last = last_row.get('lastName', '')
+        last_row['playerName'] = f"{first} {last}".strip()
+        
+        latest_player_stats[pid] = last_row
+print(f"Debug, total players: {len(latest_player_stats)} ")
 os.makedirs(os.path.dirname(MODEL_PATH), exist_ok=True)
 joblib.dump({
     "models": trained_models, 
