@@ -482,16 +482,6 @@
     },
     {
       "date": "2025-11-07",
-      "home_team": "Heat",
-      "away_team": "Hornets",
-      "predicted_winner": "Heat",
-      "actual_winner": "Heat",
-      "is_correct": true,
-      "predicted_home_score": 118.5,
-      "predicted_away_score": 115.7
-    },
-    {
-      "date": "2025-11-07",
       "home_team": "Grizzlies",
       "away_team": "Mavericks",
       "predicted_winner": "Grizzlies",
@@ -499,6 +489,16 @@
       "is_correct": true,
       "predicted_home_score": 118.6,
       "predicted_away_score": 109.0
+    },
+    {
+      "date": "2025-11-07",
+      "home_team": "Heat",
+      "away_team": "Hornets",
+      "predicted_winner": "Heat",
+      "actual_winner": "Heat",
+      "is_correct": true,
+      "predicted_home_score": 118.5,
+      "predicted_away_score": 115.7
     },
     {
       "date": "2025-11-07",
@@ -822,13 +822,13 @@
     },
     {
       "date": "2025-11-12",
-      "home_team": "Hornets",
-      "away_team": "Bucks",
-      "predicted_winner": "Bucks",
-      "actual_winner": "Hornets",
+      "home_team": "Knicks",
+      "away_team": "Magic",
+      "predicted_winner": "Knicks",
+      "actual_winner": "Magic",
       "is_correct": false,
-      "predicted_home_score": 118.6,
-      "predicted_away_score": 119.8
+      "predicted_home_score": 122.5,
+      "predicted_away_score": 116.8
     },
     {
       "date": "2025-11-12",
@@ -842,13 +842,13 @@
     },
     {
       "date": "2025-11-12",
-      "home_team": "Knicks",
-      "away_team": "Magic",
-      "predicted_winner": "Knicks",
-      "actual_winner": "Magic",
+      "home_team": "Hornets",
+      "away_team": "Bucks",
+      "predicted_winner": "Bucks",
+      "actual_winner": "Hornets",
       "is_correct": false,
-      "predicted_home_score": 122.5,
-      "predicted_away_score": 116.8
+      "predicted_home_score": 118.6,
+      "predicted_away_score": 119.8
     },
     {
       "date": "2025-11-12",
@@ -952,16 +952,6 @@
     },
     {
       "date": "2025-11-13",
-      "home_team": "Suns",
-      "away_team": "Pacers",
-      "predicted_winner": "Suns",
-      "actual_winner": "Suns",
-      "is_correct": true,
-      "predicted_home_score": 123.2,
-      "predicted_away_score": 108.8
-    },
-    {
-      "date": "2025-11-13",
       "home_team": "Jazz",
       "away_team": "Hawks",
       "predicted_winner": "Hawks",
@@ -971,14 +961,14 @@
       "predicted_away_score": 116.6
     },
     {
-      "date": "2025-11-14",
-      "home_team": "Knicks",
-      "away_team": "Heat",
-      "predicted_winner": "Knicks",
-      "actual_winner": "Knicks",
+      "date": "2025-11-13",
+      "home_team": "Suns",
+      "away_team": "Pacers",
+      "predicted_winner": "Suns",
+      "actual_winner": "Suns",
       "is_correct": true,
-      "predicted_home_score": 124.3,
-      "predicted_away_score": 117.4
+      "predicted_home_score": 123.2,
+      "predicted_away_score": 108.8
     },
     {
       "date": "2025-11-14",
@@ -989,6 +979,16 @@
       "is_correct": true,
       "predicted_home_score": 118.4,
       "predicted_away_score": 112.7
+    },
+    {
+      "date": "2025-11-14",
+      "home_team": "Knicks",
+      "away_team": "Heat",
+      "predicted_winner": "Knicks",
+      "actual_winner": "Knicks",
+      "is_correct": true,
+      "predicted_home_score": 124.3,
+      "predicted_away_score": 117.4
     },
     {
       "date": "2025-11-14",
@@ -1092,16 +1092,6 @@
     },
     {
       "date": "2025-11-15",
-      "home_team": "Bucks",
-      "away_team": "Lakers",
-      "predicted_winner": "Bucks",
-      "actual_winner": "Lakers",
-      "is_correct": false,
-      "predicted_home_score": 117.8,
-      "predicted_away_score": 115.2
-    },
-    {
-      "date": "2025-11-15",
       "home_team": "Timberwolves",
       "away_team": "Nuggets",
       "predicted_winner": "Nuggets",
@@ -1109,6 +1099,16 @@
       "is_correct": true,
       "predicted_home_score": 117.1,
       "predicted_away_score": 118.4
+    },
+    {
+      "date": "2025-11-15",
+      "home_team": "Bucks",
+      "away_team": "Lakers",
+      "predicted_winner": "Bucks",
+      "actual_winner": "Lakers",
+      "is_correct": false,
+      "predicted_home_score": 117.8,
+      "predicted_away_score": 115.2
     },
     {
       "date": "2025-11-16",
@@ -1172,6 +1172,16 @@
     },
     {
       "date": "2025-11-16",
+      "home_team": "Suns",
+      "away_team": "Hawks",
+      "predicted_winner": "Suns",
+      "actual_winner": "Hawks",
+      "is_correct": false,
+      "predicted_home_score": 118.2,
+      "predicted_away_score": 112.2
+    },
+    {
+      "date": "2025-11-16",
       "home_team": "Jazz",
       "away_team": "Bulls",
       "predicted_winner": "Jazz",
@@ -1181,14 +1191,14 @@
       "predicted_away_score": 122.0
     },
     {
-      "date": "2025-11-16",
-      "home_team": "Suns",
-      "away_team": "Hawks",
-      "predicted_winner": "Suns",
-      "actual_winner": "Hawks",
-      "is_correct": false,
-      "predicted_home_score": 118.2,
-      "predicted_away_score": 112.2
+      "date": "2025-11-17",
+      "home_team": "76ers",
+      "away_team": "Clippers",
+      "predicted_winner": "76ers",
+      "actual_winner": "76ers",
+      "is_correct": true,
+      "predicted_home_score": 116.7,
+      "predicted_away_score": 112.4
     },
     {
       "date": "2025-11-17",
@@ -1212,13 +1222,13 @@
     },
     {
       "date": "2025-11-17",
-      "home_team": "76ers",
-      "away_team": "Clippers",
-      "predicted_winner": "76ers",
-      "actual_winner": "76ers",
+      "home_team": "Raptors",
+      "away_team": "Hornets",
+      "predicted_winner": "Raptors",
+      "actual_winner": "Raptors",
       "is_correct": true,
-      "predicted_home_score": 116.7,
-      "predicted_away_score": 112.4
+      "predicted_home_score": 118.0,
+      "predicted_away_score": 114.8
     },
     {
       "date": "2025-11-17",
@@ -1229,16 +1239,6 @@
       "is_correct": true,
       "predicted_home_score": 121.2,
       "predicted_away_score": 116.1
-    },
-    {
-      "date": "2025-11-17",
-      "home_team": "Raptors",
-      "away_team": "Hornets",
-      "predicted_winner": "Raptors",
-      "actual_winner": "Raptors",
-      "is_correct": true,
-      "predicted_home_score": 118.0,
-      "predicted_away_score": 114.8
     },
     {
       "date": "2025-11-17",
@@ -1282,16 +1282,6 @@
     },
     {
       "date": "2025-11-18",
-      "home_team": "Hawks",
-      "away_team": "Pistons",
-      "predicted_winner": "Hawks",
-      "actual_winner": "Pistons",
-      "is_correct": false,
-      "predicted_home_score": 118.5,
-      "predicted_away_score": 114.4
-    },
-    {
-      "date": "2025-11-18",
       "home_team": "Nets",
       "away_team": "Celtics",
       "predicted_winner": "Celtics",
@@ -1299,6 +1289,16 @@
       "is_correct": true,
       "predicted_home_score": 107.9,
       "predicted_away_score": 116.1
+    },
+    {
+      "date": "2025-11-18",
+      "home_team": "Hawks",
+      "away_team": "Pistons",
+      "predicted_winner": "Hawks",
+      "actual_winner": "Pistons",
+      "is_correct": false,
+      "predicted_home_score": 118.5,
+      "predicted_away_score": 114.4
     },
     {
       "date": "2025-11-18",
@@ -1332,13 +1332,13 @@
     },
     {
       "date": "2025-11-19",
-      "home_team": "Cavaliers",
-      "away_team": "Rockets",
-      "predicted_winner": "Rockets",
-      "actual_winner": "Rockets",
-      "is_correct": true,
-      "predicted_home_score": 117.4,
-      "predicted_away_score": 122.1
+      "home_team": "76ers",
+      "away_team": "Raptors",
+      "predicted_winner": "76ers",
+      "actual_winner": "Raptors",
+      "is_correct": false,
+      "predicted_home_score": 118.5,
+      "predicted_away_score": 115.2
     },
     {
       "date": "2025-11-19",
@@ -1352,13 +1352,13 @@
     },
     {
       "date": "2025-11-19",
-      "home_team": "76ers",
-      "away_team": "Raptors",
-      "predicted_winner": "76ers",
-      "actual_winner": "Raptors",
-      "is_correct": false,
-      "predicted_home_score": 118.5,
-      "predicted_away_score": 115.2
+      "home_team": "Cavaliers",
+      "away_team": "Rockets",
+      "predicted_winner": "Rockets",
+      "actual_winner": "Rockets",
+      "is_correct": true,
+      "predicted_home_score": 117.4,
+      "predicted_away_score": 122.1
     },
     {
       "date": "2025-11-19",
@@ -1532,16 +1532,6 @@
     },
     {
       "date": "2025-11-21",
-      "home_team": "Warriors",
-      "away_team": "Trail Blazers",
-      "predicted_winner": "Warriors",
-      "actual_winner": "Trail Blazers",
-      "is_correct": false,
-      "predicted_home_score": 118.5,
-      "predicted_away_score": 116.1
-    },
-    {
-      "date": "2025-11-21",
       "home_team": "Jazz",
       "away_team": "Thunder",
       "predicted_winner": "Thunder",
@@ -1549,6 +1539,16 @@
       "is_correct": true,
       "predicted_home_score": 116.6,
       "predicted_away_score": 127.3
+    },
+    {
+      "date": "2025-11-21",
+      "home_team": "Warriors",
+      "away_team": "Trail Blazers",
+      "predicted_winner": "Warriors",
+      "actual_winner": "Trail Blazers",
+      "is_correct": false,
+      "predicted_home_score": 118.5,
+      "predicted_away_score": 116.1
     },
     {
       "date": "2025-11-22",
@@ -1582,16 +1582,6 @@
     },
     {
       "date": "2025-11-22",
-      "home_team": "Bulls",
-      "away_team": "Wizards",
-      "predicted_winner": "Wizards",
-      "actual_winner": "Bulls",
-      "is_correct": false,
-      "predicted_home_score": 119.5,
-      "predicted_away_score": 120.2
-    },
-    {
-      "date": "2025-11-22",
       "home_team": "Bucks",
       "away_team": "Pistons",
       "predicted_winner": "Pistons",
@@ -1599,6 +1589,16 @@
       "is_correct": true,
       "predicted_home_score": 117.4,
       "predicted_away_score": 119.9
+    },
+    {
+      "date": "2025-11-22",
+      "home_team": "Bulls",
+      "away_team": "Wizards",
+      "predicted_winner": "Wizards",
+      "actual_winner": "Bulls",
+      "is_correct": false,
+      "predicted_home_score": 119.5,
+      "predicted_away_score": 120.2
     },
     {
       "date": "2025-11-22",
@@ -1632,26 +1632,6 @@
     },
     {
       "date": "2025-11-23",
-      "home_team": "Cavaliers",
-      "away_team": "Clippers",
-      "predicted_winner": "Cavaliers",
-      "actual_winner": "Cavaliers",
-      "is_correct": true,
-      "predicted_home_score": 115.8,
-      "predicted_away_score": 112.9
-    },
-    {
-      "date": "2025-11-23",
-      "home_team": "Raptors",
-      "away_team": "Nets",
-      "predicted_winner": "Raptors",
-      "actual_winner": "Raptors",
-      "is_correct": true,
-      "predicted_home_score": 119.2,
-      "predicted_away_score": 108.7
-    },
-    {
-      "date": "2025-11-23",
       "home_team": "Hawks",
       "away_team": "Hornets",
       "predicted_winner": "Hawks",
@@ -1669,6 +1649,26 @@
       "is_correct": true,
       "predicted_home_score": 111.7,
       "predicted_away_score": 108.5
+    },
+    {
+      "date": "2025-11-23",
+      "home_team": "Cavaliers",
+      "away_team": "Clippers",
+      "predicted_winner": "Cavaliers",
+      "actual_winner": "Cavaliers",
+      "is_correct": true,
+      "predicted_home_score": 115.8,
+      "predicted_away_score": 112.9
+    },
+    {
+      "date": "2025-11-23",
+      "home_team": "Raptors",
+      "away_team": "Nets",
+      "predicted_winner": "Raptors",
+      "actual_winner": "Raptors",
+      "is_correct": true,
+      "predicted_home_score": 119.2,
+      "predicted_away_score": 108.7
     },
     {
       "date": "2025-11-23",
@@ -1702,16 +1702,6 @@
     },
     {
       "date": "2025-11-24",
-      "home_team": "Pacers",
-      "away_team": "Pistons",
-      "predicted_winner": "Pistons",
-      "actual_winner": "Pistons",
-      "is_correct": true,
-      "predicted_home_score": 110.5,
-      "predicted_away_score": 124.4
-    },
-    {
-      "date": "2025-11-24",
       "home_team": "Raptors",
       "away_team": "Cavaliers",
       "predicted_winner": "Cavaliers",
@@ -1719,6 +1709,16 @@
       "is_correct": false,
       "predicted_home_score": 116.6,
       "predicted_away_score": 118.0
+    },
+    {
+      "date": "2025-11-24",
+      "home_team": "Pacers",
+      "away_team": "Pistons",
+      "predicted_winner": "Pistons",
+      "actual_winner": "Pistons",
+      "is_correct": true,
+      "predicted_home_score": 110.5,
+      "predicted_away_score": 124.4
     },
     {
       "date": "2025-11-24",
@@ -1892,6 +1892,16 @@
     },
     {
       "date": "2025-11-26",
+      "home_team": "Warriors",
+      "away_team": "Rockets",
+      "predicted_winner": "Rockets",
+      "actual_winner": "Rockets",
+      "is_correct": true,
+      "predicted_home_score": 114.8,
+      "predicted_away_score": 115.1
+    },
+    {
+      "date": "2025-11-26",
       "home_team": "Trail Blazers",
       "away_team": "Spurs",
       "predicted_winner": "Spurs",
@@ -1911,24 +1921,34 @@
       "predicted_away_score": 126.3
     },
     {
-      "date": "2025-11-26",
-      "home_team": "Warriors",
-      "away_team": "Rockets",
-      "predicted_winner": "Rockets",
-      "actual_winner": "Rockets",
+      "date": "2025-11-28",
+      "home_team": "Knicks",
+      "away_team": "Bucks",
+      "predicted_winner": "Knicks",
+      "actual_winner": "Knicks",
       "is_correct": true,
-      "predicted_home_score": 114.8,
+      "predicted_home_score": 122.6,
+      "predicted_away_score": 114.5
+    },
+    {
+      "date": "2025-11-28",
+      "home_team": "Pacers",
+      "away_team": "Wizards",
+      "predicted_winner": "Pacers",
+      "actual_winner": "Pacers",
+      "is_correct": true,
+      "predicted_home_score": 117.1,
       "predicted_away_score": 115.1
     },
     {
       "date": "2025-11-28",
-      "home_team": "Hawks",
-      "away_team": "Cavaliers",
-      "predicted_winner": "Hawks",
-      "actual_winner": "Hawks",
-      "is_correct": true,
-      "predicted_home_score": 121.4,
-      "predicted_away_score": 117.0
+      "home_team": "Pistons",
+      "away_team": "Magic",
+      "predicted_winner": "Pistons",
+      "actual_winner": "Magic",
+      "is_correct": false,
+      "predicted_home_score": 115.4,
+      "predicted_away_score": 113.5
     },
     {
       "date": "2025-11-28",
@@ -1952,33 +1972,13 @@
     },
     {
       "date": "2025-11-28",
-      "home_team": "Pistons",
-      "away_team": "Magic",
-      "predicted_winner": "Pistons",
-      "actual_winner": "Magic",
-      "is_correct": false,
-      "predicted_home_score": 115.4,
-      "predicted_away_score": 113.5
-    },
-    {
-      "date": "2025-11-28",
-      "home_team": "Pacers",
-      "away_team": "Wizards",
-      "predicted_winner": "Pacers",
-      "actual_winner": "Pacers",
+      "home_team": "Hawks",
+      "away_team": "Cavaliers",
+      "predicted_winner": "Hawks",
+      "actual_winner": "Hawks",
       "is_correct": true,
-      "predicted_home_score": 117.1,
-      "predicted_away_score": 115.1
-    },
-    {
-      "date": "2025-11-28",
-      "home_team": "Knicks",
-      "away_team": "Bucks",
-      "predicted_winner": "Knicks",
-      "actual_winner": "Knicks",
-      "is_correct": true,
-      "predicted_home_score": 122.6,
-      "predicted_away_score": 114.5
+      "predicted_home_score": 121.4,
+      "predicted_away_score": 117.0
     },
     {
       "date": "2025-11-28",
@@ -2012,16 +2012,6 @@
     },
     {
       "date": "2025-11-28",
-      "home_team": "Clippers",
-      "away_team": "Grizzlies",
-      "predicted_winner": "Grizzlies",
-      "actual_winner": "Grizzlies",
-      "is_correct": true,
-      "predicted_home_score": 114.8,
-      "predicted_away_score": 117.6
-    },
-    {
-      "date": "2025-11-28",
       "home_team": "Lakers",
       "away_team": "Mavericks",
       "predicted_winner": "Lakers",
@@ -2029,6 +2019,16 @@
       "is_correct": true,
       "predicted_home_score": 122.5,
       "predicted_away_score": 114.0
+    },
+    {
+      "date": "2025-11-28",
+      "home_team": "Clippers",
+      "away_team": "Grizzlies",
+      "predicted_winner": "Grizzlies",
+      "actual_winner": "Grizzlies",
+      "is_correct": true,
+      "predicted_home_score": 114.8,
+      "predicted_away_score": 117.6
     },
     {
       "date": "2025-11-29",
@@ -2062,16 +2062,6 @@
     },
     {
       "date": "2025-11-29",
-      "home_team": "Heat",
-      "away_team": "Pistons",
-      "predicted_winner": "Pistons",
-      "actual_winner": "Pistons",
-      "is_correct": true,
-      "predicted_home_score": 118.7,
-      "predicted_away_score": 123.7
-    },
-    {
-      "date": "2025-11-29",
       "home_team": "Bucks",
       "away_team": "Nets",
       "predicted_winner": "Bucks",
@@ -2079,6 +2069,16 @@
       "is_correct": true,
       "predicted_home_score": 114.7,
       "predicted_away_score": 110.4
+    },
+    {
+      "date": "2025-11-29",
+      "home_team": "Heat",
+      "away_team": "Pistons",
+      "predicted_winner": "Pistons",
+      "actual_winner": "Pistons",
+      "is_correct": true,
+      "predicted_home_score": 118.7,
+      "predicted_away_score": 123.7
     },
     {
       "date": "2025-11-29",
@@ -2122,23 +2122,13 @@
     },
     {
       "date": "2025-11-30",
-      "home_team": "Trail Blazers",
-      "away_team": "Thunder",
-      "predicted_winner": "Thunder",
-      "actual_winner": "Thunder",
+      "home_team": "Cavaliers",
+      "away_team": "Celtics",
+      "predicted_winner": "Celtics",
+      "actual_winner": "Celtics",
       "is_correct": true,
-      "predicted_home_score": 115.8,
-      "predicted_away_score": 123.0
-    },
-    {
-      "date": "2025-11-30",
-      "home_team": "76ers",
-      "away_team": "Hawks",
-      "predicted_winner": "Hawks",
-      "actual_winner": "Hawks",
-      "is_correct": true,
-      "predicted_home_score": 114.2,
-      "predicted_away_score": 120.1
+      "predicted_home_score": 112.2,
+      "predicted_away_score": 113.0
     },
     {
       "date": "2025-11-30",
@@ -2152,13 +2142,23 @@
     },
     {
       "date": "2025-11-30",
-      "home_team": "Cavaliers",
-      "away_team": "Celtics",
-      "predicted_winner": "Celtics",
-      "actual_winner": "Celtics",
+      "home_team": "76ers",
+      "away_team": "Hawks",
+      "predicted_winner": "Hawks",
+      "actual_winner": "Hawks",
       "is_correct": true,
-      "predicted_home_score": 112.2,
-      "predicted_away_score": 113.0
+      "predicted_home_score": 114.2,
+      "predicted_away_score": 120.1
+    },
+    {
+      "date": "2025-11-30",
+      "home_team": "Trail Blazers",
+      "away_team": "Thunder",
+      "predicted_winner": "Thunder",
+      "actual_winner": "Thunder",
+      "is_correct": true,
+      "predicted_home_score": 115.8,
+      "predicted_away_score": 123.0
     },
     {
       "date": "2025-11-30",
@@ -2192,6 +2192,16 @@
     },
     {
       "date": "2025-12-01",
+      "home_team": "Wizards",
+      "away_team": "Bucks",
+      "predicted_winner": "Wizards",
+      "actual_winner": "Wizards",
+      "is_correct": true,
+      "predicted_home_score": 119.9,
+      "predicted_away_score": 119.7
+    },
+    {
+      "date": "2025-12-01",
       "home_team": "Pistons",
       "away_team": "Hawks",
       "predicted_winner": "Pistons",
@@ -2209,16 +2219,6 @@
       "is_correct": true,
       "predicted_home_score": 114.3,
       "predicted_away_score": 117.3
-    },
-    {
-      "date": "2025-12-01",
-      "home_team": "Wizards",
-      "away_team": "Bucks",
-      "predicted_winner": "Wizards",
-      "actual_winner": "Wizards",
-      "is_correct": true,
-      "predicted_home_score": 119.9,
-      "predicted_away_score": 119.7
     },
     {
       "date": "2025-12-01",
@@ -2252,16 +2252,6 @@
     },
     {
       "date": "2025-12-01",
-      "home_team": "Jazz",
-      "away_team": "Rockets",
-      "predicted_winner": "Rockets",
-      "actual_winner": "Jazz",
-      "is_correct": false,
-      "predicted_home_score": 112.0,
-      "predicted_away_score": 128.2
-    },
-    {
-      "date": "2025-12-01",
       "home_team": "Nuggets",
       "away_team": "Mavericks",
       "predicted_winner": "Nuggets",
@@ -2269,6 +2259,16 @@
       "is_correct": false,
       "predicted_home_score": 126.2,
       "predicted_away_score": 117.9
+    },
+    {
+      "date": "2025-12-01",
+      "home_team": "Jazz",
+      "away_team": "Rockets",
+      "predicted_winner": "Rockets",
+      "actual_winner": "Jazz",
+      "is_correct": false,
+      "predicted_home_score": 112.0,
+      "predicted_away_score": 128.2
     },
     {
       "date": "2025-12-01",
@@ -2302,13 +2302,13 @@
     },
     {
       "date": "2025-12-02",
-      "home_team": "Celtics",
-      "away_team": "Knicks",
-      "predicted_winner": "Celtics",
-      "actual_winner": "Celtics",
+      "home_team": "Spurs",
+      "away_team": "Grizzlies",
+      "predicted_winner": "Spurs",
+      "actual_winner": "Spurs",
       "is_correct": true,
-      "predicted_home_score": 116.8,
-      "predicted_away_score": 110.2
+      "predicted_home_score": 119.2,
+      "predicted_away_score": 110.8
     },
     {
       "date": "2025-12-02",
@@ -2322,13 +2322,13 @@
     },
     {
       "date": "2025-12-02",
-      "home_team": "Spurs",
-      "away_team": "Grizzlies",
-      "predicted_winner": "Spurs",
-      "actual_winner": "Spurs",
+      "home_team": "Celtics",
+      "away_team": "Knicks",
+      "predicted_winner": "Celtics",
+      "actual_winner": "Celtics",
       "is_correct": true,
-      "predicted_home_score": 119.2,
-      "predicted_away_score": 110.8
+      "predicted_home_score": 116.8,
+      "predicted_away_score": 110.2
     },
     {
       "date": "2025-12-02",
@@ -2372,16 +2372,6 @@
     },
     {
       "date": "2025-12-03",
-      "home_team": "Knicks",
-      "away_team": "Hornets",
-      "predicted_winner": "Knicks",
-      "actual_winner": "Knicks",
-      "is_correct": true,
-      "predicted_home_score": 119.6,
-      "predicted_away_score": 108.8
-    },
-    {
-      "date": "2025-12-03",
       "home_team": "Hawks",
       "away_team": "Clippers",
       "predicted_winner": "Clippers",
@@ -2389,6 +2379,16 @@
       "is_correct": true,
       "predicted_home_score": 119.1,
       "predicted_away_score": 120.8
+    },
+    {
+      "date": "2025-12-03",
+      "home_team": "Knicks",
+      "away_team": "Hornets",
+      "predicted_winner": "Knicks",
+      "actual_winner": "Knicks",
+      "is_correct": true,
+      "predicted_home_score": 119.6,
+      "predicted_away_score": 108.8
     },
     {
       "date": "2025-12-03",
@@ -2432,16 +2432,6 @@
     },
     {
       "date": "2025-12-04",
-      "home_team": "76ers",
-      "away_team": "Warriors",
-      "predicted_winner": "Warriors",
-      "actual_winner": "76ers",
-      "is_correct": false,
-      "predicted_home_score": 112.6,
-      "predicted_away_score": 115.1
-    },
-    {
-      "date": "2025-12-04",
       "home_team": "Wizards",
       "away_team": "Celtics",
       "predicted_winner": "Celtics",
@@ -2449,6 +2439,16 @@
       "is_correct": true,
       "predicted_home_score": 108.7,
       "predicted_away_score": 125.3
+    },
+    {
+      "date": "2025-12-04",
+      "home_team": "76ers",
+      "away_team": "Warriors",
+      "predicted_winner": "Warriors",
+      "actual_winner": "76ers",
+      "is_correct": false,
+      "predicted_home_score": 112.6,
+      "predicted_away_score": 115.1
     },
     {
       "date": "2025-12-04",
@@ -2502,26 +2502,6 @@
     },
     {
       "date": "2025-12-05",
-      "home_team": "Raptors",
-      "away_team": "Hornets",
-      "predicted_winner": "Raptors",
-      "actual_winner": "Hornets",
-      "is_correct": false,
-      "predicted_home_score": 117.9,
-      "predicted_away_score": 109.8
-    },
-    {
-      "date": "2025-12-05",
-      "home_team": "Knicks",
-      "away_team": "Jazz",
-      "predicted_winner": "Knicks",
-      "actual_winner": "Knicks",
-      "is_correct": true,
-      "predicted_home_score": 125.7,
-      "predicted_away_score": 119.4
-    },
-    {
-      "date": "2025-12-05",
       "home_team": "Hawks",
       "away_team": "Nuggets",
       "predicted_winner": "Nuggets",
@@ -2552,6 +2532,46 @@
     },
     {
       "date": "2025-12-05",
+      "home_team": "Knicks",
+      "away_team": "Jazz",
+      "predicted_winner": "Knicks",
+      "actual_winner": "Knicks",
+      "is_correct": true,
+      "predicted_home_score": 125.7,
+      "predicted_away_score": 119.4
+    },
+    {
+      "date": "2025-12-05",
+      "home_team": "Raptors",
+      "away_team": "Hornets",
+      "predicted_winner": "Raptors",
+      "actual_winner": "Hornets",
+      "is_correct": false,
+      "predicted_home_score": 117.9,
+      "predicted_away_score": 109.8
+    },
+    {
+      "date": "2025-12-05",
+      "home_team": "Bucks",
+      "away_team": "76ers",
+      "predicted_winner": "76ers",
+      "actual_winner": "76ers",
+      "is_correct": true,
+      "predicted_home_score": 114.5,
+      "predicted_away_score": 120.7
+    },
+    {
+      "date": "2025-12-05",
+      "home_team": "Grizzlies",
+      "away_team": "Clippers",
+      "predicted_winner": "Grizzlies",
+      "actual_winner": "Grizzlies",
+      "is_correct": true,
+      "predicted_home_score": 117.9,
+      "predicted_away_score": 113.9
+    },
+    {
+      "date": "2025-12-05",
       "home_team": "Bulls",
       "away_team": "Pacers",
       "predicted_winner": "Pacers",
@@ -2569,26 +2589,6 @@
       "is_correct": true,
       "predicted_home_score": 117.7,
       "predicted_away_score": 109.8
-    },
-    {
-      "date": "2025-12-05",
-      "home_team": "Grizzlies",
-      "away_team": "Clippers",
-      "predicted_winner": "Grizzlies",
-      "actual_winner": "Grizzlies",
-      "is_correct": true,
-      "predicted_home_score": 117.9,
-      "predicted_away_score": 113.9
-    },
-    {
-      "date": "2025-12-05",
-      "home_team": "Bucks",
-      "away_team": "76ers",
-      "predicted_winner": "76ers",
-      "actual_winner": "76ers",
-      "is_correct": true,
-      "predicted_home_score": 114.5,
-      "predicted_away_score": 120.7
     },
     {
       "date": "2025-12-05",
@@ -2622,16 +2622,6 @@
     },
     {
       "date": "2025-12-06",
-      "home_team": "Pistons",
-      "away_team": "Bucks",
-      "predicted_winner": "Pistons",
-      "actual_winner": "Pistons",
-      "is_correct": true,
-      "predicted_home_score": 116.7,
-      "predicted_away_score": 111.8
-    },
-    {
-      "date": "2025-12-06",
       "home_team": "Cavaliers",
       "away_team": "Warriors",
       "predicted_winner": "Cavaliers",
@@ -2639,6 +2629,16 @@
       "is_correct": false,
       "predicted_home_score": 113.0,
       "predicted_away_score": 112.4
+    },
+    {
+      "date": "2025-12-06",
+      "home_team": "Pistons",
+      "away_team": "Bucks",
+      "predicted_winner": "Pistons",
+      "actual_winner": "Pistons",
+      "is_correct": true,
+      "predicted_home_score": 116.7,
+      "predicted_away_score": 111.8
     },
     {
       "date": "2025-12-06",
@@ -2852,13 +2852,13 @@
     },
     {
       "date": "2025-12-12",
-      "home_team": "Wizards",
-      "away_team": "Cavaliers",
-      "predicted_winner": "Cavaliers",
-      "actual_winner": "Cavaliers",
-      "is_correct": true,
-      "predicted_home_score": 113.7,
-      "predicted_away_score": 128.8
+      "home_team": "Hornets",
+      "away_team": "Bulls",
+      "predicted_winner": "Hornets",
+      "actual_winner": "Bulls",
+      "is_correct": false,
+      "predicted_home_score": 117.9,
+      "predicted_away_score": 114.4
     },
     {
       "date": "2025-12-12",
@@ -2872,16 +2872,6 @@
     },
     {
       "date": "2025-12-12",
-      "home_team": "Hornets",
-      "away_team": "Bulls",
-      "predicted_winner": "Hornets",
-      "actual_winner": "Bulls",
-      "is_correct": false,
-      "predicted_home_score": 117.9,
-      "predicted_away_score": 114.4
-    },
-    {
-      "date": "2025-12-12",
       "home_team": "76ers",
       "away_team": "Pacers",
       "predicted_winner": "76ers",
@@ -2889,6 +2879,16 @@
       "is_correct": true,
       "predicted_home_score": 116.4,
       "predicted_away_score": 111.2
+    },
+    {
+      "date": "2025-12-12",
+      "home_team": "Wizards",
+      "away_team": "Cavaliers",
+      "predicted_winner": "Cavaliers",
+      "actual_winner": "Cavaliers",
+      "is_correct": true,
+      "predicted_home_score": 113.7,
+      "predicted_away_score": 128.8
     },
     {
       "date": "2025-12-12",
@@ -2982,16 +2982,6 @@
     },
     {
       "date": "2025-12-14",
-      "home_team": "Bulls",
-      "away_team": "Pelicans",
-      "predicted_winner": "Pelicans",
-      "actual_winner": "Pelicans",
-      "is_correct": true,
-      "predicted_home_score": 114.8,
-      "predicted_away_score": 117.9
-    },
-    {
-      "date": "2025-12-14",
       "home_team": "Timberwolves",
       "away_team": "Kings",
       "predicted_winner": "Timberwolves",
@@ -2999,6 +2989,16 @@
       "is_correct": true,
       "predicted_home_score": 118.3,
       "predicted_away_score": 109.5
+    },
+    {
+      "date": "2025-12-14",
+      "home_team": "Bulls",
+      "away_team": "Pelicans",
+      "predicted_winner": "Pelicans",
+      "actual_winner": "Pelicans",
+      "is_correct": true,
+      "predicted_home_score": 114.8,
+      "predicted_away_score": 117.9
     },
     {
       "date": "2025-12-14",
@@ -3082,16 +3082,6 @@
     },
     {
       "date": "2025-12-17",
-      "home_team": "Timberwolves",
-      "away_team": "Grizzlies",
-      "predicted_winner": "Timberwolves",
-      "actual_winner": "Grizzlies",
-      "is_correct": false,
-      "predicted_home_score": 116.9,
-      "predicted_away_score": 113.2
-    },
-    {
-      "date": "2025-12-17",
       "home_team": "Bulls",
       "away_team": "Cavaliers",
       "predicted_winner": "Cavaliers",
@@ -3101,14 +3091,14 @@
       "predicted_away_score": 119.9
     },
     {
-      "date": "2025-12-18",
-      "home_team": "Pacers",
-      "away_team": "Knicks",
-      "predicted_winner": "Knicks",
-      "actual_winner": "Knicks",
-      "is_correct": true,
-      "predicted_home_score": 108.6,
-      "predicted_away_score": 115.4
+      "date": "2025-12-17",
+      "home_team": "Timberwolves",
+      "away_team": "Grizzlies",
+      "predicted_winner": "Timberwolves",
+      "actual_winner": "Grizzlies",
+      "is_correct": false,
+      "predicted_home_score": 116.9,
+      "predicted_away_score": 113.2
     },
     {
       "date": "2025-12-18",
@@ -3122,6 +3112,16 @@
     },
     {
       "date": "2025-12-18",
+      "home_team": "Pacers",
+      "away_team": "Knicks",
+      "predicted_winner": "Knicks",
+      "actual_winner": "Knicks",
+      "is_correct": true,
+      "predicted_home_score": 108.6,
+      "predicted_away_score": 115.4
+    },
+    {
+      "date": "2025-12-18",
       "home_team": "Nets",
       "away_team": "Heat",
       "predicted_winner": "Nets",
@@ -3132,23 +3132,13 @@
     },
     {
       "date": "2025-12-18",
-      "home_team": "Thunder",
-      "away_team": "Clippers",
-      "predicted_winner": "Thunder",
-      "actual_winner": "Thunder",
-      "is_correct": true,
-      "predicted_home_score": 119.8,
-      "predicted_away_score": 105.2
-    },
-    {
-      "date": "2025-12-18",
-      "home_team": "Spurs",
-      "away_team": "Wizards",
-      "predicted_winner": "Spurs",
-      "actual_winner": "Spurs",
-      "is_correct": true,
-      "predicted_home_score": 121.7,
-      "predicted_away_score": 108.8
+      "home_team": "Pelicans",
+      "away_team": "Rockets",
+      "predicted_winner": "Rockets",
+      "actual_winner": "Pelicans",
+      "is_correct": false,
+      "predicted_home_score": 113.6,
+      "predicted_away_score": 125.3
     },
     {
       "date": "2025-12-18",
@@ -3162,13 +3152,23 @@
     },
     {
       "date": "2025-12-18",
-      "home_team": "Pelicans",
-      "away_team": "Rockets",
-      "predicted_winner": "Rockets",
-      "actual_winner": "Pelicans",
-      "is_correct": false,
-      "predicted_home_score": 113.6,
-      "predicted_away_score": 125.3
+      "home_team": "Spurs",
+      "away_team": "Wizards",
+      "predicted_winner": "Spurs",
+      "actual_winner": "Spurs",
+      "is_correct": true,
+      "predicted_home_score": 121.7,
+      "predicted_away_score": 108.8
+    },
+    {
+      "date": "2025-12-18",
+      "home_team": "Thunder",
+      "away_team": "Clippers",
+      "predicted_winner": "Thunder",
+      "actual_winner": "Thunder",
+      "is_correct": true,
+      "predicted_home_score": 119.8,
+      "predicted_away_score": 105.2
     },
     {
       "date": "2025-12-18",
@@ -3222,16 +3222,6 @@
     },
     {
       "date": "2025-12-19",
-      "home_team": "Knicks",
-      "away_team": "76ers",
-      "predicted_winner": "Knicks",
-      "actual_winner": "76ers",
-      "is_correct": false,
-      "predicted_home_score": 118.4,
-      "predicted_away_score": 112.1
-    },
-    {
-      "date": "2025-12-19",
       "home_team": "Celtics",
       "away_team": "Heat",
       "predicted_winner": "Celtics",
@@ -3239,6 +3229,16 @@
       "is_correct": true,
       "predicted_home_score": 117.2,
       "predicted_away_score": 111.7
+    },
+    {
+      "date": "2025-12-19",
+      "home_team": "Knicks",
+      "away_team": "76ers",
+      "predicted_winner": "Knicks",
+      "actual_winner": "76ers",
+      "is_correct": false,
+      "predicted_home_score": 118.4,
+      "predicted_away_score": 112.1
     },
     {
       "date": "2025-12-19",
@@ -3482,16 +3482,6 @@
     },
     {
       "date": "2025-12-22",
-      "home_team": "Warriors",
-      "away_team": "Magic",
-      "predicted_winner": "Warriors",
-      "actual_winner": "Warriors",
-      "is_correct": true,
-      "predicted_home_score": 114.6,
-      "predicted_away_score": 108.8
-    },
-    {
-      "date": "2025-12-22",
       "home_team": "Trail Blazers",
       "away_team": "Pistons",
       "predicted_winner": "Trail Blazers",
@@ -3499,6 +3489,16 @@
       "is_correct": false,
       "predicted_home_score": 114.2,
       "predicted_away_score": 114.1
+    },
+    {
+      "date": "2025-12-22",
+      "home_team": "Warriors",
+      "away_team": "Magic",
+      "predicted_winner": "Warriors",
+      "actual_winner": "Warriors",
+      "is_correct": true,
+      "predicted_home_score": 114.6,
+      "predicted_away_score": 108.8
     },
     {
       "date": "2025-12-23",
@@ -3562,16 +3562,6 @@
     },
     {
       "date": "2025-12-23",
-      "home_team": "Timberwolves",
-      "away_team": "Knicks",
-      "predicted_winner": "Timberwolves",
-      "actual_winner": "Timberwolves",
-      "is_correct": true,
-      "predicted_home_score": 112.6,
-      "predicted_away_score": 111.2
-    },
-    {
-      "date": "2025-12-23",
       "home_team": "Mavericks",
       "away_team": "Nuggets",
       "predicted_winner": "Nuggets",
@@ -3579,6 +3569,16 @@
       "is_correct": false,
       "predicted_home_score": 121.5,
       "predicted_away_score": 125.4
+    },
+    {
+      "date": "2025-12-23",
+      "home_team": "Timberwolves",
+      "away_team": "Knicks",
+      "predicted_winner": "Timberwolves",
+      "actual_winner": "Timberwolves",
+      "is_correct": true,
+      "predicted_home_score": 112.6,
+      "predicted_away_score": 111.2
     },
     {
       "date": "2025-12-23",
@@ -3592,16 +3592,6 @@
     },
     {
       "date": "2025-12-23",
-      "home_team": "Suns",
-      "away_team": "Lakers",
-      "predicted_winner": "Suns",
-      "actual_winner": "Suns",
-      "is_correct": true,
-      "predicted_home_score": 115.9,
-      "predicted_away_score": 114.9
-    },
-    {
-      "date": "2025-12-23",
       "home_team": "Jazz",
       "away_team": "Grizzlies",
       "predicted_winner": "Grizzlies",
@@ -3609,6 +3599,16 @@
       "is_correct": true,
       "predicted_home_score": 122.5,
       "predicted_away_score": 124.3
+    },
+    {
+      "date": "2025-12-23",
+      "home_team": "Suns",
+      "away_team": "Lakers",
+      "predicted_winner": "Suns",
+      "actual_winner": "Suns",
+      "is_correct": true,
+      "predicted_home_score": 115.9,
+      "predicted_away_score": 114.9
     },
     {
       "date": "2025-12-23",
@@ -3692,26 +3692,6 @@
     },
     {
       "date": "2025-12-26",
-      "home_team": "Hawks",
-      "away_team": "Heat",
-      "predicted_winner": "Heat",
-      "actual_winner": "Heat",
-      "is_correct": true,
-      "predicted_home_score": 118.8,
-      "predicted_away_score": 123.4
-    },
-    {
-      "date": "2025-12-26",
-      "home_team": "Magic",
-      "away_team": "Hornets",
-      "predicted_winner": "Hornets",
-      "actual_winner": "Hornets",
-      "is_correct": true,
-      "predicted_home_score": 112.4,
-      "predicted_away_score": 118.3
-    },
-    {
-      "date": "2025-12-26",
       "home_team": "Wizards",
       "away_team": "Raptors",
       "predicted_winner": "Wizards",
@@ -3729,6 +3709,26 @@
       "is_correct": true,
       "predicted_home_score": 105.1,
       "predicted_away_score": 120.0
+    },
+    {
+      "date": "2025-12-26",
+      "home_team": "Magic",
+      "away_team": "Hornets",
+      "predicted_winner": "Hornets",
+      "actual_winner": "Hornets",
+      "is_correct": true,
+      "predicted_home_score": 112.4,
+      "predicted_away_score": 118.3
+    },
+    {
+      "date": "2025-12-26",
+      "home_team": "Hawks",
+      "away_team": "Heat",
+      "predicted_winner": "Heat",
+      "actual_winner": "Heat",
+      "is_correct": true,
+      "predicted_home_score": 118.8,
+      "predicted_away_score": 123.4
     },
     {
       "date": "2025-12-26",
@@ -3812,13 +3812,13 @@
     },
     {
       "date": "2025-12-27",
-      "home_team": "Spurs",
-      "away_team": "Jazz",
-      "predicted_winner": "Spurs",
-      "actual_winner": "Jazz",
-      "is_correct": false,
-      "predicted_home_score": 129.1,
-      "predicted_away_score": 112.9
+      "home_team": "Timberwolves",
+      "away_team": "Nets",
+      "predicted_winner": "Nets",
+      "actual_winner": "Nets",
+      "is_correct": true,
+      "predicted_home_score": 111.8,
+      "predicted_away_score": 113.6
     },
     {
       "date": "2025-12-27",
@@ -3832,13 +3832,13 @@
     },
     {
       "date": "2025-12-27",
-      "home_team": "Timberwolves",
-      "away_team": "Nets",
-      "predicted_winner": "Nets",
-      "actual_winner": "Nets",
-      "is_correct": true,
-      "predicted_home_score": 111.8,
-      "predicted_away_score": 113.6
+      "home_team": "Spurs",
+      "away_team": "Jazz",
+      "predicted_winner": "Spurs",
+      "actual_winner": "Jazz",
+      "is_correct": false,
+      "predicted_home_score": 129.1,
+      "predicted_away_score": 112.9
     },
     {
       "date": "2025-12-27",
@@ -3872,16 +3872,6 @@
     },
     {
       "date": "2025-12-28",
-      "home_team": "Raptors",
-      "away_team": "Warriors",
-      "predicted_winner": "Warriors",
-      "actual_winner": "Raptors",
-      "is_correct": false,
-      "predicted_home_score": 107.3,
-      "predicted_away_score": 111.5
-    },
-    {
-      "date": "2025-12-28",
       "home_team": "Thunder",
       "away_team": "76ers",
       "predicted_winner": "Thunder",
@@ -3889,6 +3879,16 @@
       "is_correct": true,
       "predicted_home_score": 118.4,
       "predicted_away_score": 118.3
+    },
+    {
+      "date": "2025-12-28",
+      "home_team": "Raptors",
+      "away_team": "Warriors",
+      "predicted_winner": "Warriors",
+      "actual_winner": "Raptors",
+      "is_correct": false,
+      "predicted_home_score": 107.3,
+      "predicted_away_score": 111.5
     },
     {
       "date": "2025-12-28",
@@ -3952,6 +3952,16 @@
     },
     {
       "date": "2025-12-29",
+      "home_team": "Nets",
+      "away_team": "Warriors",
+      "predicted_winner": "Nets",
+      "actual_winner": "Warriors",
+      "is_correct": false,
+      "predicted_home_score": 111.9,
+      "predicted_away_score": 110.0
+    },
+    {
+      "date": "2025-12-29",
       "home_team": "Heat",
       "away_team": "Nuggets",
       "predicted_winner": "Heat",
@@ -3972,43 +3982,13 @@
     },
     {
       "date": "2025-12-29",
-      "home_team": "Nets",
-      "away_team": "Warriors",
-      "predicted_winner": "Nets",
-      "actual_winner": "Warriors",
+      "home_team": "Spurs",
+      "away_team": "Cavaliers",
+      "predicted_winner": "Spurs",
+      "actual_winner": "Cavaliers",
       "is_correct": false,
-      "predicted_home_score": 111.9,
-      "predicted_away_score": 110.0
-    },
-    {
-      "date": "2025-12-29",
-      "home_team": "Bulls",
-      "away_team": "Timberwolves",
-      "predicted_winner": "Bulls",
-      "actual_winner": "Timberwolves",
-      "is_correct": false,
-      "predicted_home_score": 121.9,
-      "predicted_away_score": 118.5
-    },
-    {
-      "date": "2025-12-29",
-      "home_team": "Rockets",
-      "away_team": "Pacers",
-      "predicted_winner": "Rockets",
-      "actual_winner": "Rockets",
-      "is_correct": true,
-      "predicted_home_score": 117.8,
-      "predicted_away_score": 112.7
-    },
-    {
-      "date": "2025-12-29",
-      "home_team": "Pelicans",
-      "away_team": "Knicks",
-      "predicted_winner": "Pelicans",
-      "actual_winner": "Knicks",
-      "is_correct": false,
-      "predicted_home_score": 120.5,
-      "predicted_away_score": 119.6
+      "predicted_home_score": 122.0,
+      "predicted_away_score": 113.4
     },
     {
       "date": "2025-12-29",
@@ -4022,13 +4002,33 @@
     },
     {
       "date": "2025-12-29",
-      "home_team": "Spurs",
-      "away_team": "Cavaliers",
-      "predicted_winner": "Spurs",
-      "actual_winner": "Cavaliers",
+      "home_team": "Rockets",
+      "away_team": "Pacers",
+      "predicted_winner": "Rockets",
+      "actual_winner": "Rockets",
+      "is_correct": true,
+      "predicted_home_score": 117.8,
+      "predicted_away_score": 112.7
+    },
+    {
+      "date": "2025-12-29",
+      "home_team": "Bulls",
+      "away_team": "Timberwolves",
+      "predicted_winner": "Bulls",
+      "actual_winner": "Timberwolves",
       "is_correct": false,
-      "predicted_home_score": 122.0,
-      "predicted_away_score": 113.4
+      "predicted_home_score": 121.9,
+      "predicted_away_score": 118.5
+    },
+    {
+      "date": "2025-12-29",
+      "home_team": "Pelicans",
+      "away_team": "Knicks",
+      "predicted_winner": "Pelicans",
+      "actual_winner": "Knicks",
+      "is_correct": false,
+      "predicted_home_score": 120.5,
+      "predicted_away_score": 119.6
     },
     {
       "date": "2025-12-29",
@@ -4092,16 +4092,6 @@
     },
     {
       "date": "2025-12-31",
-      "home_team": "Pacers",
-      "away_team": "Magic",
-      "predicted_winner": "Magic",
-      "actual_winner": "Magic",
-      "is_correct": true,
-      "predicted_home_score": 112.8,
-      "predicted_away_score": 115.7
-    },
-    {
-      "date": "2025-12-31",
       "home_team": "Hawks",
       "away_team": "Timberwolves",
       "predicted_winner": "Hawks",
@@ -4109,6 +4099,16 @@
       "is_correct": true,
       "predicted_home_score": 120.3,
       "predicted_away_score": 118.7
+    },
+    {
+      "date": "2025-12-31",
+      "home_team": "Pacers",
+      "away_team": "Magic",
+      "predicted_winner": "Magic",
+      "actual_winner": "Magic",
+      "is_correct": true,
+      "predicted_home_score": 112.8,
+      "predicted_away_score": 115.7
     },
     {
       "date": "2025-12-31",
@@ -4222,16 +4222,6 @@
     },
     {
       "date": "2026-01-02",
-      "home_team": "Pacers",
-      "away_team": "Spurs",
-      "predicted_winner": "Spurs",
-      "actual_winner": "Spurs",
-      "is_correct": true,
-      "predicted_home_score": 108.2,
-      "predicted_away_score": 121.8
-    },
-    {
-      "date": "2026-01-02",
       "home_team": "Wizards",
       "away_team": "Nets",
       "predicted_winner": "Wizards",
@@ -4239,6 +4229,16 @@
       "is_correct": true,
       "predicted_home_score": 115.6,
       "predicted_away_score": 113.6
+    },
+    {
+      "date": "2026-01-02",
+      "home_team": "Pacers",
+      "away_team": "Spurs",
+      "predicted_winner": "Spurs",
+      "actual_winner": "Spurs",
+      "is_correct": true,
+      "predicted_home_score": 108.2,
+      "predicted_away_score": 121.8
     },
     {
       "date": "2026-01-02",
@@ -4332,16 +4332,6 @@
     },
     {
       "date": "2026-01-03",
-      "home_team": "Raptors",
-      "away_team": "Hawks",
-      "predicted_winner": "Raptors",
-      "actual_winner": "Raptors",
-      "is_correct": true,
-      "predicted_home_score": 122.2,
-      "predicted_away_score": 112.1
-    },
-    {
-      "date": "2026-01-03",
       "home_team": "Knicks",
       "away_team": "76ers",
       "predicted_winner": "Knicks",
@@ -4352,13 +4342,13 @@
     },
     {
       "date": "2026-01-03",
-      "home_team": "Bulls",
-      "away_team": "Hornets",
-      "predicted_winner": "Hornets",
-      "actual_winner": "Hornets",
+      "home_team": "Raptors",
+      "away_team": "Hawks",
+      "predicted_winner": "Raptors",
+      "actual_winner": "Raptors",
       "is_correct": true,
-      "predicted_home_score": 116.1,
-      "predicted_away_score": 119.4
+      "predicted_home_score": 122.2,
+      "predicted_away_score": 112.1
     },
     {
       "date": "2026-01-03",
@@ -4369,6 +4359,16 @@
       "is_correct": false,
       "predicted_home_score": 120.7,
       "predicted_away_score": 111.1
+    },
+    {
+      "date": "2026-01-03",
+      "home_team": "Bulls",
+      "away_team": "Hornets",
+      "predicted_winner": "Hornets",
+      "actual_winner": "Hornets",
+      "is_correct": true,
+      "predicted_home_score": 116.1,
+      "predicted_away_score": 119.4
     },
     {
       "date": "2026-01-03",
@@ -4562,16 +4562,6 @@
     },
     {
       "date": "2026-01-06",
-      "home_team": "Wizards",
-      "away_team": "Magic",
-      "predicted_winner": "Wizards",
-      "actual_winner": "Wizards",
-      "is_correct": true,
-      "predicted_home_score": 118.2,
-      "predicted_away_score": 114.4
-    },
-    {
-      "date": "2026-01-06",
       "home_team": "Pacers",
       "away_team": "Cavaliers",
       "predicted_winner": "Cavaliers",
@@ -4582,13 +4572,23 @@
     },
     {
       "date": "2026-01-06",
-      "home_team": "Grizzlies",
-      "away_team": "Spurs",
-      "predicted_winner": "Spurs",
-      "actual_winner": "Grizzlies",
+      "home_team": "Wizards",
+      "away_team": "Magic",
+      "predicted_winner": "Wizards",
+      "actual_winner": "Wizards",
+      "is_correct": true,
+      "predicted_home_score": 118.2,
+      "predicted_away_score": 114.4
+    },
+    {
+      "date": "2026-01-06",
+      "home_team": "Pelicans",
+      "away_team": "Lakers",
+      "predicted_winner": "Pelicans",
+      "actual_winner": "Lakers",
       "is_correct": false,
-      "predicted_home_score": 115.6,
-      "predicted_away_score": 115.7
+      "predicted_home_score": 122.8,
+      "predicted_away_score": 119.5
     },
     {
       "date": "2026-01-06",
@@ -4602,13 +4602,13 @@
     },
     {
       "date": "2026-01-06",
-      "home_team": "Pelicans",
-      "away_team": "Lakers",
-      "predicted_winner": "Pelicans",
-      "actual_winner": "Lakers",
+      "home_team": "Grizzlies",
+      "away_team": "Spurs",
+      "predicted_winner": "Spurs",
+      "actual_winner": "Grizzlies",
       "is_correct": false,
-      "predicted_home_score": 122.8,
-      "predicted_away_score": 119.5
+      "predicted_home_score": 115.6,
+      "predicted_away_score": 115.7
     },
     {
       "date": "2026-01-06",
@@ -4662,16 +4662,6 @@
     },
     {
       "date": "2026-01-07",
-      "home_team": "Knicks",
-      "away_team": "Clippers",
-      "predicted_winner": "Clippers",
-      "actual_winner": "Knicks",
-      "is_correct": false,
-      "predicted_home_score": 111.6,
-      "predicted_away_score": 120.1
-    },
-    {
-      "date": "2026-01-07",
       "home_team": "Hawks",
       "away_team": "Pelicans",
       "predicted_winner": "Hawks",
@@ -4689,6 +4679,16 @@
       "is_correct": true,
       "predicted_home_score": 106.8,
       "predicted_away_score": 107.8
+    },
+    {
+      "date": "2026-01-07",
+      "home_team": "Knicks",
+      "away_team": "Clippers",
+      "predicted_winner": "Clippers",
+      "actual_winner": "Knicks",
+      "is_correct": false,
+      "predicted_home_score": 111.6,
+      "predicted_away_score": 120.1
     },
     {
       "date": "2026-01-07",
@@ -4772,16 +4772,6 @@
     },
     {
       "date": "2026-01-09",
-      "home_team": "Magic",
-      "away_team": "76ers",
-      "predicted_winner": "Magic",
-      "actual_winner": "76ers",
-      "is_correct": false,
-      "predicted_home_score": 117.9,
-      "predicted_away_score": 117.2
-    },
-    {
-      "date": "2026-01-09",
       "home_team": "Celtics",
       "away_team": "Raptors",
       "predicted_winner": "Celtics",
@@ -4789,6 +4779,16 @@
       "is_correct": true,
       "predicted_home_score": 117.0,
       "predicted_away_score": 110.7
+    },
+    {
+      "date": "2026-01-09",
+      "home_team": "Magic",
+      "away_team": "76ers",
+      "predicted_winner": "Magic",
+      "actual_winner": "76ers",
+      "is_correct": false,
+      "predicted_home_score": 117.9,
+      "predicted_away_score": 117.2
     },
     {
       "date": "2026-01-09",
@@ -4842,16 +4842,6 @@
     },
     {
       "date": "2026-01-09",
-      "home_team": "Warriors",
-      "away_team": "Kings",
-      "predicted_winner": "Warriors",
-      "actual_winner": "Warriors",
-      "is_correct": true,
-      "predicted_home_score": 121.5,
-      "predicted_away_score": 111.9
-    },
-    {
-      "date": "2026-01-09",
       "home_team": "Trail Blazers",
       "away_team": "Rockets",
       "predicted_winner": "Trail Blazers",
@@ -4859,6 +4849,16 @@
       "is_correct": true,
       "predicted_home_score": 107.3,
       "predicted_away_score": 106.0
+    },
+    {
+      "date": "2026-01-09",
+      "home_team": "Warriors",
+      "away_team": "Kings",
+      "predicted_winner": "Warriors",
+      "actual_winner": "Warriors",
+      "is_correct": true,
+      "predicted_home_score": 121.5,
+      "predicted_away_score": 111.9
     },
     {
       "date": "2026-01-09",
@@ -4952,16 +4952,6 @@
     },
     {
       "date": "2026-01-11",
-      "home_team": "Raptors",
-      "away_team": "76ers",
-      "predicted_winner": "76ers",
-      "actual_winner": "Raptors",
-      "is_correct": false,
-      "predicted_home_score": 108.5,
-      "predicted_away_score": 110.8
-    },
-    {
-      "date": "2026-01-11",
       "home_team": "Trail Blazers",
       "away_team": "Knicks",
       "predicted_winner": "Trail Blazers",
@@ -4969,6 +4959,16 @@
       "is_correct": false,
       "predicted_home_score": 117.5,
       "predicted_away_score": 114.6
+    },
+    {
+      "date": "2026-01-11",
+      "home_team": "Raptors",
+      "away_team": "76ers",
+      "predicted_winner": "76ers",
+      "actual_winner": "Raptors",
+      "is_correct": false,
+      "predicted_home_score": 108.5,
+      "predicted_away_score": 110.8
     },
     {
       "date": "2026-01-11",
@@ -5042,16 +5042,6 @@
     },
     {
       "date": "2026-01-12",
-      "home_team": "Raptors",
-      "away_team": "76ers",
-      "predicted_winner": "Raptors",
-      "actual_winner": "76ers",
-      "is_correct": false,
-      "predicted_home_score": 115.1,
-      "predicted_away_score": 113.2
-    },
-    {
-      "date": "2026-01-12",
       "home_team": "Pacers",
       "away_team": "Celtics",
       "predicted_winner": "Celtics",
@@ -5059,6 +5049,16 @@
       "is_correct": false,
       "predicted_home_score": 111.4,
       "predicted_away_score": 118.6
+    },
+    {
+      "date": "2026-01-12",
+      "home_team": "Raptors",
+      "away_team": "76ers",
+      "predicted_winner": "Raptors",
+      "actual_winner": "76ers",
+      "is_correct": false,
+      "predicted_home_score": 115.1,
+      "predicted_away_score": 113.2
     },
     {
       "date": "2026-01-12",
@@ -5162,16 +5162,6 @@
     },
     {
       "date": "2026-01-14",
-      "home_team": "76ers",
-      "away_team": "Cavaliers",
-      "predicted_winner": "76ers",
-      "actual_winner": "Cavaliers",
-      "is_correct": false,
-      "predicted_home_score": 117.9,
-      "predicted_away_score": 117.2
-    },
-    {
-      "date": "2026-01-14",
       "home_team": "Pacers",
       "away_team": "Raptors",
       "predicted_winner": "Raptors",
@@ -5179,6 +5169,16 @@
       "is_correct": true,
       "predicted_home_score": 118.0,
       "predicted_away_score": 118.1
+    },
+    {
+      "date": "2026-01-14",
+      "home_team": "76ers",
+      "away_team": "Cavaliers",
+      "predicted_winner": "76ers",
+      "actual_winner": "Cavaliers",
+      "is_correct": false,
+      "predicted_home_score": 117.9,
+      "predicted_away_score": 117.2
     },
     {
       "date": "2026-01-14",
@@ -5322,16 +5322,6 @@
     },
     {
       "date": "2026-01-16",
-      "home_team": "Pacers",
-      "away_team": "Pelicans",
-      "predicted_winner": "Pacers",
-      "actual_winner": "Pacers",
-      "is_correct": true,
-      "predicted_home_score": 120.5,
-      "predicted_away_score": 117.6
-    },
-    {
-      "date": "2026-01-16",
       "home_team": "76ers",
       "away_team": "Cavaliers",
       "predicted_winner": "Cavaliers",
@@ -5339,6 +5329,16 @@
       "is_correct": true,
       "predicted_home_score": 116.5,
       "predicted_away_score": 122.8
+    },
+    {
+      "date": "2026-01-16",
+      "home_team": "Pacers",
+      "away_team": "Pelicans",
+      "predicted_winner": "Pacers",
+      "actual_winner": "Pacers",
+      "is_correct": true,
+      "predicted_home_score": 120.5,
+      "predicted_away_score": 117.6
     },
     {
       "date": "2026-01-16",
@@ -5392,13 +5392,13 @@
     },
     {
       "date": "2026-01-17",
-      "home_team": "Knicks",
-      "away_team": "Suns",
-      "predicted_winner": "Suns",
-      "actual_winner": "Suns",
+      "home_team": "Hawks",
+      "away_team": "Celtics",
+      "predicted_winner": "Celtics",
+      "actual_winner": "Celtics",
       "is_correct": true,
-      "predicted_home_score": 114.3,
-      "predicted_away_score": 118.6
+      "predicted_home_score": 112.4,
+      "predicted_away_score": 116.6
     },
     {
       "date": "2026-01-17",
@@ -5412,13 +5412,13 @@
     },
     {
       "date": "2026-01-17",
-      "home_team": "Hawks",
-      "away_team": "Celtics",
-      "predicted_winner": "Celtics",
-      "actual_winner": "Celtics",
+      "home_team": "Knicks",
+      "away_team": "Suns",
+      "predicted_winner": "Suns",
+      "actual_winner": "Suns",
       "is_correct": true,
-      "predicted_home_score": 112.4,
-      "predicted_away_score": 116.6
+      "predicted_home_score": 114.3,
+      "predicted_away_score": 118.6
     },
     {
       "date": "2026-01-17",
@@ -5562,16 +5562,6 @@
     },
     {
       "date": "2026-01-19",
-      "home_team": "Knicks",
-      "away_team": "Mavericks",
-      "predicted_winner": "Knicks",
-      "actual_winner": "Mavericks",
-      "is_correct": false,
-      "predicted_home_score": 116.5,
-      "predicted_away_score": 112.0
-    },
-    {
-      "date": "2026-01-19",
       "home_team": "Spurs",
       "away_team": "Jazz",
       "predicted_winner": "Spurs",
@@ -5579,6 +5569,16 @@
       "is_correct": true,
       "predicted_home_score": 120.8,
       "predicted_away_score": 107.8
+    },
+    {
+      "date": "2026-01-19",
+      "home_team": "Knicks",
+      "away_team": "Mavericks",
+      "predicted_winner": "Knicks",
+      "actual_winner": "Mavericks",
+      "is_correct": false,
+      "predicted_home_score": 116.5,
+      "predicted_away_score": 112.0
     },
     {
       "date": "2026-01-19",
@@ -5632,16 +5632,6 @@
     },
     {
       "date": "2026-01-20",
-      "home_team": "Rockets",
-      "away_team": "Spurs",
-      "predicted_winner": "Rockets",
-      "actual_winner": "Rockets",
-      "is_correct": true,
-      "predicted_home_score": 109.1,
-      "predicted_away_score": 106.8
-    },
-    {
-      "date": "2026-01-20",
       "home_team": "Bulls",
       "away_team": "Clippers",
       "predicted_winner": "Clippers",
@@ -5649,6 +5639,16 @@
       "is_correct": false,
       "predicted_home_score": 111.9,
       "predicted_away_score": 112.7
+    },
+    {
+      "date": "2026-01-20",
+      "home_team": "Rockets",
+      "away_team": "Spurs",
+      "predicted_winner": "Rockets",
+      "actual_winner": "Rockets",
+      "is_correct": true,
+      "predicted_home_score": 109.1,
+      "predicted_away_score": 106.8
     },
     {
       "date": "2026-01-20",
@@ -5662,13 +5662,13 @@
     },
     {
       "date": "2026-01-20",
-      "home_team": "Nuggets",
-      "away_team": "Lakers",
-      "predicted_winner": "Nuggets",
-      "actual_winner": "Lakers",
-      "is_correct": false,
-      "predicted_home_score": 121.3,
-      "predicted_away_score": 110.7
+      "home_team": "Kings",
+      "away_team": "Heat",
+      "predicted_winner": "Heat",
+      "actual_winner": "Heat",
+      "is_correct": true,
+      "predicted_home_score": 115.0,
+      "predicted_away_score": 115.8
     },
     {
       "date": "2026-01-20",
@@ -5682,13 +5682,13 @@
     },
     {
       "date": "2026-01-20",
-      "home_team": "Kings",
-      "away_team": "Heat",
-      "predicted_winner": "Heat",
-      "actual_winner": "Heat",
-      "is_correct": true,
-      "predicted_home_score": 115.0,
-      "predicted_away_score": 115.8
+      "home_team": "Nuggets",
+      "away_team": "Lakers",
+      "predicted_winner": "Nuggets",
+      "actual_winner": "Lakers",
+      "is_correct": false,
+      "predicted_home_score": 121.3,
+      "predicted_away_score": 110.7
     },
     {
       "date": "2026-01-21",
@@ -5762,13 +5762,13 @@
     },
     {
       "date": "2026-01-22",
-      "home_team": "Wizards",
-      "away_team": "Nuggets",
-      "predicted_winner": "Nuggets",
-      "actual_winner": "Nuggets",
+      "home_team": "Magic",
+      "away_team": "Hornets",
+      "predicted_winner": "Hornets",
+      "actual_winner": "Hornets",
       "is_correct": true,
-      "predicted_home_score": 111.3,
-      "predicted_away_score": 114.7
+      "predicted_home_score": 113.4,
+      "predicted_away_score": 116.6
     },
     {
       "date": "2026-01-22",
@@ -5782,13 +5782,13 @@
     },
     {
       "date": "2026-01-22",
-      "home_team": "Magic",
-      "away_team": "Hornets",
-      "predicted_winner": "Hornets",
-      "actual_winner": "Hornets",
+      "home_team": "Wizards",
+      "away_team": "Nuggets",
+      "predicted_winner": "Nuggets",
+      "actual_winner": "Nuggets",
       "is_correct": true,
-      "predicted_home_score": 113.4,
-      "predicted_away_score": 116.6
+      "predicted_home_score": 111.3,
+      "predicted_away_score": 114.7
     },
     {
       "date": "2026-01-22",
@@ -5822,16 +5822,6 @@
     },
     {
       "date": "2026-01-22",
-      "home_team": "Clippers",
-      "away_team": "Lakers",
-      "predicted_winner": "Clippers",
-      "actual_winner": "Clippers",
-      "is_correct": true,
-      "predicted_home_score": 117.5,
-      "predicted_away_score": 109.6
-    },
-    {
-      "date": "2026-01-22",
       "home_team": "Trail Blazers",
       "away_team": "Heat",
       "predicted_winner": "Trail Blazers",
@@ -5839,6 +5829,16 @@
       "is_correct": true,
       "predicted_home_score": 122.0,
       "predicted_away_score": 111.2
+    },
+    {
+      "date": "2026-01-22",
+      "home_team": "Clippers",
+      "away_team": "Lakers",
+      "predicted_winner": "Clippers",
+      "actual_winner": "Clippers",
+      "is_correct": true,
+      "predicted_home_score": 117.5,
+      "predicted_away_score": 109.6
     },
     {
       "date": "2026-01-23",
@@ -5882,16 +5882,6 @@
     },
     {
       "date": "2026-01-23",
-      "home_team": "Thunder",
-      "away_team": "Pacers",
-      "predicted_winner": "Thunder",
-      "actual_winner": "Pacers",
-      "is_correct": false,
-      "predicted_home_score": 119.3,
-      "predicted_away_score": 106.2
-    },
-    {
-      "date": "2026-01-23",
       "home_team": "Grizzlies",
       "away_team": "Pelicans",
       "predicted_winner": "Grizzlies",
@@ -5899,6 +5889,16 @@
       "is_correct": false,
       "predicted_home_score": 120.7,
       "predicted_away_score": 118.0
+    },
+    {
+      "date": "2026-01-23",
+      "home_team": "Thunder",
+      "away_team": "Pacers",
+      "predicted_winner": "Thunder",
+      "actual_winner": "Pacers",
+      "is_correct": false,
+      "predicted_home_score": 119.3,
+      "predicted_away_score": 106.2
     },
     {
       "date": "2026-01-23",
@@ -6002,16 +6002,6 @@
     },
     {
       "date": "2026-01-25",
-      "home_team": "Spurs",
-      "away_team": "Pelicans",
-      "predicted_winner": "Spurs",
-      "actual_winner": "Pelicans",
-      "is_correct": false,
-      "predicted_home_score": 114.4,
-      "predicted_away_score": 106.3
-    },
-    {
-      "date": "2026-01-25",
       "home_team": "Thunder",
       "away_team": "Raptors",
       "predicted_winner": "Thunder",
@@ -6019,6 +6009,16 @@
       "is_correct": false,
       "predicted_home_score": 113.4,
       "predicted_away_score": 111.5
+    },
+    {
+      "date": "2026-01-25",
+      "home_team": "Spurs",
+      "away_team": "Pelicans",
+      "predicted_winner": "Spurs",
+      "actual_winner": "Pelicans",
+      "is_correct": false,
+      "predicted_home_score": 114.4,
+      "predicted_away_score": 106.3
     },
     {
       "date": "2026-01-25",
@@ -6072,6 +6072,16 @@
     },
     {
       "date": "2026-01-26",
+      "home_team": "Rockets",
+      "away_team": "Grizzlies",
+      "predicted_winner": "Grizzlies",
+      "actual_winner": "Rockets",
+      "is_correct": false,
+      "predicted_home_score": 109.0,
+      "predicted_away_score": 109.6
+    },
+    {
+      "date": "2026-01-26",
       "home_team": "Celtics",
       "away_team": "Trail Blazers",
       "predicted_winner": "Celtics",
@@ -6089,16 +6099,6 @@
       "is_correct": false,
       "predicted_home_score": 112.9,
       "predicted_away_score": 109.9
-    },
-    {
-      "date": "2026-01-26",
-      "home_team": "Rockets",
-      "away_team": "Grizzlies",
-      "predicted_winner": "Grizzlies",
-      "actual_winner": "Rockets",
-      "is_correct": false,
-      "predicted_home_score": 109.0,
-      "predicted_away_score": 109.6
     },
     {
       "date": "2026-01-26",
@@ -6182,16 +6182,6 @@
     },
     {
       "date": "2026-01-28",
-      "home_team": "Cavaliers",
-      "away_team": "Lakers",
-      "predicted_winner": "Cavaliers",
-      "actual_winner": "Cavaliers",
-      "is_correct": true,
-      "predicted_home_score": 121.2,
-      "predicted_away_score": 111.8
-    },
-    {
-      "date": "2026-01-28",
       "home_team": "Pacers",
       "away_team": "Bulls",
       "predicted_winner": "Bulls",
@@ -6199,6 +6189,16 @@
       "is_correct": false,
       "predicted_home_score": 106.2,
       "predicted_away_score": 112.8
+    },
+    {
+      "date": "2026-01-28",
+      "home_team": "Cavaliers",
+      "away_team": "Lakers",
+      "predicted_winner": "Cavaliers",
+      "actual_winner": "Cavaliers",
+      "is_correct": true,
+      "predicted_home_score": 121.2,
+      "predicted_away_score": 111.8
     },
     {
       "date": "2026-01-28",
@@ -6362,23 +6362,13 @@
     },
     {
       "date": "2026-01-30",
-      "home_team": "Pelicans",
-      "away_team": "Grizzlies",
-      "predicted_winner": "Pelicans",
-      "actual_winner": "Pelicans",
-      "is_correct": true,
-      "predicted_home_score": 118.9,
-      "predicted_away_score": 114.8
-    },
-    {
-      "date": "2026-01-30",
-      "home_team": "Knicks",
-      "away_team": "Trail Blazers",
-      "predicted_winner": "Knicks",
-      "actual_winner": "Knicks",
-      "is_correct": true,
+      "home_team": "Magic",
+      "away_team": "Raptors",
+      "predicted_winner": "Raptors",
+      "actual_winner": "Magic",
+      "is_correct": false,
       "predicted_home_score": 111.4,
-      "predicted_away_score": 108.4
+      "predicted_away_score": 112.5
     },
     {
       "date": "2026-01-30",
@@ -6392,13 +6382,23 @@
     },
     {
       "date": "2026-01-30",
-      "home_team": "Magic",
-      "away_team": "Raptors",
-      "predicted_winner": "Raptors",
-      "actual_winner": "Magic",
-      "is_correct": false,
+      "home_team": "Knicks",
+      "away_team": "Trail Blazers",
+      "predicted_winner": "Knicks",
+      "actual_winner": "Knicks",
+      "is_correct": true,
       "predicted_home_score": 111.4,
-      "predicted_away_score": 112.5
+      "predicted_away_score": 108.4
+    },
+    {
+      "date": "2026-01-30",
+      "home_team": "Pelicans",
+      "away_team": "Grizzlies",
+      "predicted_winner": "Pelicans",
+      "actual_winner": "Pelicans",
+      "is_correct": true,
+      "predicted_home_score": 118.9,
+      "predicted_away_score": 114.8
     },
     {
       "date": "2026-01-30",
@@ -6672,16 +6672,6 @@
     },
     {
       "date": "2026-02-03",
-      "home_team": "Nets",
-      "away_team": "Lakers",
-      "predicted_winner": "Lakers",
-      "actual_winner": "Lakers",
-      "is_correct": true,
-      "predicted_home_score": 109.8,
-      "predicted_away_score": 116.5
-    },
-    {
-      "date": "2026-02-03",
       "home_team": "Heat",
       "away_team": "Hawks",
       "predicted_winner": "Heat",
@@ -6689,6 +6679,16 @@
       "is_correct": false,
       "predicted_home_score": 117.8,
       "predicted_away_score": 117.1
+    },
+    {
+      "date": "2026-02-03",
+      "home_team": "Nets",
+      "away_team": "Lakers",
+      "predicted_winner": "Lakers",
+      "actual_winner": "Lakers",
+      "is_correct": true,
+      "predicted_home_score": 109.8,
+      "predicted_away_score": 116.5
     },
     {
       "date": "2026-02-03",
@@ -6912,16 +6912,6 @@
     },
     {
       "date": "2026-02-06",
-      "home_team": "Bucks",
-      "away_team": "Pacers",
-      "predicted_winner": "Pacers",
-      "actual_winner": "Bucks",
-      "is_correct": false,
-      "predicted_home_score": 113.7,
-      "predicted_away_score": 118.4
-    },
-    {
-      "date": "2026-02-06",
       "home_team": "Timberwolves",
       "away_team": "Pelicans",
       "predicted_winner": "Pelicans",
@@ -6929,6 +6919,16 @@
       "is_correct": true,
       "predicted_home_score": 112.6,
       "predicted_away_score": 113.1
+    },
+    {
+      "date": "2026-02-06",
+      "home_team": "Bucks",
+      "away_team": "Pacers",
+      "predicted_winner": "Pacers",
+      "actual_winner": "Bucks",
+      "is_correct": false,
+      "predicted_home_score": 113.7,
+      "predicted_away_score": 118.4
     },
     {
       "date": "2026-02-06",
@@ -7032,16 +7032,6 @@
     },
     {
       "date": "2026-02-07",
-      "home_team": "Trail Blazers",
-      "away_team": "Grizzlies",
-      "predicted_winner": "Trail Blazers",
-      "actual_winner": "Trail Blazers",
-      "is_correct": true,
-      "predicted_home_score": 122.1,
-      "predicted_away_score": 114.2
-    },
-    {
-      "date": "2026-02-07",
       "home_team": "Kings",
       "away_team": "Cavaliers",
       "predicted_winner": "Cavaliers",
@@ -7049,6 +7039,16 @@
       "is_correct": true,
       "predicted_home_score": 115.1,
       "predicted_away_score": 125.6
+    },
+    {
+      "date": "2026-02-07",
+      "home_team": "Trail Blazers",
+      "away_team": "Grizzlies",
+      "predicted_winner": "Trail Blazers",
+      "actual_winner": "Trail Blazers",
+      "is_correct": true,
+      "predicted_home_score": 122.1,
+      "predicted_away_score": 114.2
     },
     {
       "date": "2026-02-08",
@@ -7162,6 +7162,16 @@
     },
     {
       "date": "2026-02-09",
+      "home_team": "Trail Blazers",
+      "away_team": "76ers",
+      "predicted_winner": "Trail Blazers",
+      "actual_winner": "Trail Blazers",
+      "is_correct": true,
+      "predicted_home_score": 119.2,
+      "predicted_away_score": 114.0
+    },
+    {
+      "date": "2026-02-09",
       "home_team": "Warriors",
       "away_team": "Grizzlies",
       "predicted_winner": "Warriors",
@@ -7179,16 +7189,6 @@
       "is_correct": false,
       "predicted_home_score": 112.4,
       "predicted_away_score": 110.9
-    },
-    {
-      "date": "2026-02-09",
-      "home_team": "Trail Blazers",
-      "away_team": "76ers",
-      "predicted_winner": "Trail Blazers",
-      "actual_winner": "Trail Blazers",
-      "is_correct": true,
-      "predicted_home_score": 119.2,
-      "predicted_away_score": 114.0
     },
     {
       "date": "2026-02-10",
@@ -7262,23 +7262,13 @@
     },
     {
       "date": "2026-02-11",
-      "home_team": "Celtics",
-      "away_team": "Bulls",
-      "predicted_winner": "Celtics",
-      "actual_winner": "Celtics",
+      "home_team": "Raptors",
+      "away_team": "Pistons",
+      "predicted_winner": "Pistons",
+      "actual_winner": "Pistons",
       "is_correct": true,
-      "predicted_home_score": 119.5,
-      "predicted_away_score": 107.2
-    },
-    {
-      "date": "2026-02-11",
-      "home_team": "Nets",
-      "away_team": "Pacers",
-      "predicted_winner": "Nets",
-      "actual_winner": "Pacers",
-      "is_correct": false,
-      "predicted_home_score": 114.8,
-      "predicted_away_score": 114.2
+      "predicted_home_score": 109.5,
+      "predicted_away_score": 117.8
     },
     {
       "date": "2026-02-11",
@@ -7292,13 +7282,23 @@
     },
     {
       "date": "2026-02-11",
-      "home_team": "Raptors",
-      "away_team": "Pistons",
-      "predicted_winner": "Pistons",
-      "actual_winner": "Pistons",
+      "home_team": "Nets",
+      "away_team": "Pacers",
+      "predicted_winner": "Nets",
+      "actual_winner": "Pacers",
+      "is_correct": false,
+      "predicted_home_score": 114.8,
+      "predicted_away_score": 114.2
+    },
+    {
+      "date": "2026-02-11",
+      "home_team": "Celtics",
+      "away_team": "Bulls",
+      "predicted_winner": "Celtics",
+      "actual_winner": "Celtics",
       "is_correct": true,
-      "predicted_home_score": 109.5,
-      "predicted_away_score": 117.8
+      "predicted_home_score": 119.5,
+      "predicted_away_score": 107.2
     },
     {
       "date": "2026-02-11",
@@ -7332,16 +7332,6 @@
     },
     {
       "date": "2026-02-11",
-      "home_team": "Nuggets",
-      "away_team": "Grizzlies",
-      "predicted_winner": "Nuggets",
-      "actual_winner": "Nuggets",
-      "is_correct": true,
-      "predicted_home_score": 117.9,
-      "predicted_away_score": 111.9
-    },
-    {
-      "date": "2026-02-11",
       "home_team": "Suns",
       "away_team": "Thunder",
       "predicted_winner": "Thunder",
@@ -7359,6 +7349,16 @@
       "is_correct": true,
       "predicted_home_score": 122.0,
       "predicted_away_score": 117.0
+    },
+    {
+      "date": "2026-02-11",
+      "home_team": "Nuggets",
+      "away_team": "Grizzlies",
+      "predicted_winner": "Nuggets",
+      "actual_winner": "Nuggets",
+      "is_correct": true,
+      "predicted_home_score": 117.9,
+      "predicted_away_score": 111.9
     },
     {
       "date": "2026-02-11",
@@ -7532,16 +7532,6 @@
     },
     {
       "date": "2026-02-20",
-      "home_team": "Grizzlies",
-      "away_team": "Jazz",
-      "predicted_winner": "Grizzlies",
-      "actual_winner": "Grizzlies",
-      "is_correct": true,
-      "predicted_home_score": 121.4,
-      "predicted_away_score": 117.7
-    },
-    {
-      "date": "2026-02-20",
       "home_team": "Hornets",
       "away_team": "Cavaliers",
       "predicted_winner": "Hornets",
@@ -7559,6 +7549,16 @@
       "is_correct": true,
       "predicted_home_score": 113.7,
       "predicted_away_score": 112.9
+    },
+    {
+      "date": "2026-02-20",
+      "home_team": "Grizzlies",
+      "away_team": "Jazz",
+      "predicted_winner": "Grizzlies",
+      "actual_winner": "Grizzlies",
+      "is_correct": true,
+      "predicted_home_score": 121.4,
+      "predicted_away_score": 117.7
     },
     {
       "date": "2026-02-20",
@@ -7602,16 +7602,6 @@
     },
     {
       "date": "2026-02-20",
-      "home_team": "Lakers",
-      "away_team": "Clippers",
-      "predicted_winner": "Clippers",
-      "actual_winner": "Lakers",
-      "is_correct": false,
-      "predicted_home_score": 110.6,
-      "predicted_away_score": 113.2
-    },
-    {
-      "date": "2026-02-20",
       "home_team": "Trail Blazers",
       "away_team": "Nuggets",
       "predicted_winner": "Trail Blazers",
@@ -7619,6 +7609,16 @@
       "is_correct": false,
       "predicted_home_score": 117.9,
       "predicted_away_score": 112.5
+    },
+    {
+      "date": "2026-02-20",
+      "home_team": "Lakers",
+      "away_team": "Clippers",
+      "predicted_winner": "Clippers",
+      "actual_winner": "Lakers",
+      "is_correct": false,
+      "predicted_home_score": 110.6,
+      "predicted_away_score": 113.2
     },
     {
       "date": "2026-02-21",
@@ -7642,6 +7642,16 @@
     },
     {
       "date": "2026-02-21",
+      "home_team": "Heat",
+      "away_team": "Grizzlies",
+      "predicted_winner": "Heat",
+      "actual_winner": "Unknown",
+      "is_correct": false,
+      "predicted_home_score": 118.4,
+      "predicted_away_score": 112.7
+    },
+    {
+      "date": "2026-02-21",
       "home_team": "Bulls",
       "away_team": "Pistons",
       "predicted_winner": "Pistons",
@@ -7662,16 +7672,6 @@
     },
     {
       "date": "2026-02-21",
-      "home_team": "Heat",
-      "away_team": "Grizzlies",
-      "predicted_winner": "Heat",
-      "actual_winner": "Unknown",
-      "is_correct": false,
-      "predicted_home_score": 118.4,
-      "predicted_away_score": 112.7
-    },
-    {
-      "date": "2026-02-21",
       "home_team": "Knicks",
       "away_team": "Rockets",
       "predicted_winner": "Knicks",
@@ -7679,6 +7679,46 @@
       "is_correct": false,
       "predicted_home_score": 108.7,
       "predicted_away_score": 105.4
+    },
+    {
+      "date": "2026-02-22",
+      "home_team": "Thunder",
+      "away_team": "Cavaliers",
+      "predicted_winner": "Thunder",
+      "actual_winner": "Unknown",
+      "is_correct": false,
+      "predicted_home_score": 112.5,
+      "predicted_away_score": 111.3
+    },
+    {
+      "date": "2026-02-22",
+      "home_team": "Hawks",
+      "away_team": "Nets",
+      "predicted_winner": "Hawks",
+      "actual_winner": "Unknown",
+      "is_correct": false,
+      "predicted_home_score": 115.6,
+      "predicted_away_score": 107.7
+    },
+    {
+      "date": "2026-02-22",
+      "home_team": "Bucks",
+      "away_team": "Raptors",
+      "predicted_winner": "Bucks",
+      "actual_winner": "Unknown",
+      "is_correct": false,
+      "predicted_home_score": 114.2,
+      "predicted_away_score": 112.8
+    },
+    {
+      "date": "2026-02-22",
+      "home_team": "Warriors",
+      "away_team": "Nuggets",
+      "predicted_winner": "Warriors",
+      "actual_winner": "Unknown",
+      "is_correct": false,
+      "predicted_home_score": 114.5,
+      "predicted_away_score": 113.2
     }
   ]
 }

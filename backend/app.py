@@ -251,23 +251,57 @@ def get_prediction_history():
 
 # ---------- PLAYER PROPS (SERVE SNAPSHOT) ----------
 
+MARKET_MAPPING = {
+    "player_points": "points",
+    "player_rebounds": "reboundsTotal",
+    "player_assists": "assists",
+    "player_threes": "threePointersMade"
+}
 
 @app.route("/api/player-props")
 def get_player_props():
     try:
-        json_path = os.path.join(DATA_DIR, "player_props.json")
-        with open(json_path, "r") as f:
-            data = json.load(f)
-        return jsonify(data.get("props", []))
+        # 1. Load the raw odds from the Odds API
+        odds_path = os.path.join(DATA_DIR, "player_props.json")
+        with open(odds_path, "r") as f:
+            odds_data = json.load(f).get("props", [])
+
+        # 2. Load the Machine Learning predictions
+        # Note: daily_update.py saves this in BASE_DIR, not DATA_DIR
+        proj_path = os.path.join(BASE_DIR, "todays_player_projections.json")
+        
+        proj_map = {}
+        if os.path.exists(proj_path):
+            with open(proj_path, "r") as f:
+                ml_data = json.load(f)
+                # Build a dictionary for instant lookups using lowercase names to prevent typos
+                for p in ml_data.get("projections", []):
+                    proj_map[p["name"].lower()] = p
+
+        # 3. Merge the ML predictions into the Odds payload
+        for prop in odds_data:
+            player_name = prop.get("player", "").lower()
+            market = prop.get("market")
+            
+            # If we trained a model for this player AND this specific stat category
+            if player_name in proj_map and market in MARKET_MAPPING:
+                ml_key = MARKET_MAPPING[market]
+                model_proj = proj_map[player_name].get(ml_key)
+                
+                if model_proj is not None:
+                    line = prop.get("line")
+                    
+                    # Inject the exact variables React is looking for
+                    prop["prop_prediction"] = {"expected_value": model_proj}
+                    
+                    # Calculate Edge (Positive = Model likes the OVER, Negative = Model likes the UNDER)
+                    if line is not None:
+                        prop["edge_vs_line"] = round(float(model_proj) - float(line), 2)
+
+        return jsonify(odds_data)
+
     except FileNotFoundError:
-        return (
-            jsonify(
-                {
-                    "error": "No player props snapshot found. Run run_openbet_all.py (daily_player_props.py)."
-                }
-            ),
-            404,
-        )
+        return jsonify({"error": "Data files missing. Run daily scripts first."}), 404
     except Exception as e:
         print("Player props error:", e)
         return jsonify({"error": str(e)}), 500
