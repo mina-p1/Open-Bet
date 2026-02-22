@@ -2,4 +2,4 @@
 # Single place to store The Odds API key.
 
 # TODO: put your real key here
-ODDS_API_KEY = "a891e02841d8158da565b12bfb44ada7"
+ODDS_API_KEY = "759a78e00325404b7b27bb7b21ca1e50"

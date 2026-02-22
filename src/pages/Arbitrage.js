@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import Loader from '../components/layout/Loader';
+import Loader from "../components/layout/Loader";
 
-
+// Format tipoff time
 function formatTimestamp(isoString) {
   if (!isoString) return "";
   const date = new Date(isoString);
@@ -17,8 +17,7 @@ function formatTimestamp(isoString) {
   });
 }
 
-// LOGIC IS NOT RIGHT, WORK ON IT!!!!
-
+// Display American odds with + sign
 function formatOdds(num) {
   if (num === undefined || num === null || num === "-") return "-";
   const n = Number(num);
@@ -26,32 +25,78 @@ function formatOdds(num) {
   return n > 0 ? `+${n}` : `${n}`;
 }
 
-// helper to compute $10 payout for a single line
+// Convert American odds to decimal odds
+function americanToDecimal(american) {
+  const n = Number(american);
+  if (isNaN(n)) return null;
+  if (n > 0) {
+    return 1 + n / 100;
+  }
+  // n < 0
+  return 1 + 100 / Math.abs(n);
+}
+
+// Helper to compute payout for a $10 bet at American odds (stake + profit)
 function payout10(odds) {
   const n = Number(odds);
   if (isNaN(n)) return null;
-  let win;
+  let profit;
   if (n > 0) {
-    win = (10 * n) / 100;
+    profit = (10 * n) / 100;
   } else {
-    win = (10 * 100) / Math.abs(n);
+    profit = (10 * 100) / Math.abs(n);
   }
-  return 10 + win; // stake + win
+  return 10 + profit;
+}
+
+// Compute arbitrage stakes for 2-way market given American odds and total risk
+function computeArbStakes(awayPrice, homePrice, totalRisk) {
+  const decAway = americanToDecimal(awayPrice);
+  const decHome = americanToDecimal(homePrice);
+  if (!decAway || !decHome) return null;
+
+  const invAway = 1 / decAway;
+  const invHome = 1 / decHome;
+  const invSum = invAway + invHome;
+
+  // Check if true arb (sum of implied probs < 1)
+  const arbPercent = invSum * 100;
+  if (arbPercent >= 100) {
+    return null; // no guaranteed profit
+  }
+
+  // Stake proportions so payout is the same whichever side wins
+  const stakeAway = (totalRisk * invAway) / invSum;
+  const stakeHome = totalRisk - stakeAway;
+
+  const payoutIfAwayWins = stakeAway * decAway;
+  const payoutIfHomeWins = stakeHome * decHome;
+
+  // Both payouts should be (almost) equal; use their average
+  const avgPayout = (payoutIfAwayWins + payoutIfHomeWins) / 2;
+  const profit = avgPayout - totalRisk;
+  const edgePct = (profit / totalRisk) * 100;
+
+  return {
+    stakeAway,
+    stakeHome,
+    profit,
+    edgePct,
+    payout: avgPayout,
+    arbPercent,
+  };
 }
 
 function ArbCard({ arb }) {
   const awayOdds = formatOdds(arb.away_price);
   const homeOdds = formatOdds(arb.home_price);
 
-  // Backend stakes/profit are based on a 100‑unit bankroll (total risk = 100).
-  // For the UI example, scale that down so risk is $20 ($10 on each side).
-  const totalRiskBackend = arb.bankroll; // should be 100
-  const targetRisk = 20; // $10 + $10
-  const scale = targetRisk / totalRiskBackend;
+  // Target total risk for UI example (not backend bankroll)
+  const targetRisk = 20; // e.g. ~$20 total risk
 
-  const profitExample = arb.guaranteed_profit * scale;
-  const payoutExample = targetRisk + profitExample;
+  const arbCalc = computeArbStakes(arb.away_price, arb.home_price, targetRisk);
 
+  // Example: what happens if you just bet $10 on each side (NOT arb sizing)
   const awayPayout10 = payout10(arb.away_price);
   const homePayout10 = payout10(arb.home_price);
 
@@ -68,7 +113,7 @@ function ArbCard({ arb }) {
         display: "flex",
         flexDirection: "column",
         boxShadow: "0 2px 16px #1d23366c",
-        border: "2px solid #22c55e88",
+        border: arbCalc ? "2px solid #22c55e88" : "2px solid #4b5563",
       }}
     >
       {/* Matchup header */}
@@ -248,12 +293,12 @@ function ArbCard({ arb }) {
           padding: "10px 12px",
           background: "#151e34",
           borderRadius: 11,
-          border: "1px solid #22c55e88",
+          border: arbCalc ? "1px solid #22c55e88" : "1px solid #4b5563",
           fontSize: 13,
           color: "#e5e7eb",
         }}
       >
-        
+        {/* Edge row */}
         <div
           style={{
             display: "flex",
@@ -262,13 +307,51 @@ function ArbCard({ arb }) {
           }}
         >
           <span>Edge</span>
-          <span style={{ color: "#4ade80", fontWeight: 700 }}>
-            +{arb.guaranteed_profit_pct.toFixed(2)}%
+          <span
+            style={{
+              color: arbCalc ? "#4ade80" : "#f97316",
+              fontWeight: 700,
+            }}
+          >
+            {arbCalc
+              ? `+${arbCalc.edgePct.toFixed(2)}%`
+              : "No guaranteed edge"}
           </span>
         </div>
-        
 
-        {/* $10 on each team explanation */}
+        {/* Arb bet sizing (true surebet) */}
+        {arbCalc && (
+          <div
+            style={{
+              marginTop: 4,
+              paddingTop: 6,
+              borderTop: "1px solid #1f2937",
+              fontSize: 12,
+              color: "#9ca3af",
+            }}
+          >
+            To lock in profit with about{" "}
+            <strong>${targetRisk.toFixed(2)} total</strong>, bet{" "}
+            <strong>
+              ${arbCalc.stakeAway.toFixed(2)} on {arb.away_team}
+            </strong>{" "}
+            at {awayOdds} and{" "}
+            <strong>
+              ${arbCalc.stakeHome.toFixed(2)} on {arb.home_team}
+            </strong>{" "}
+            at {homeOdds}. Your total payout will be approximately{" "}
+            <span style={{ color: "#e5e7eb", fontWeight: 600 }}>
+              ${arbCalc.payout.toFixed(2)}
+            </span>{" "}
+            no matter who wins, which is about{" "}
+            <span style={{ color: "#4ade80", fontWeight: 600 }}>
+              ${arbCalc.profit.toFixed(2)} profit
+            </span>
+            .
+          </div>
+        )}
+
+        {/* $10 on each team explanation (illustrative, not arb sizing) */}
         <div
           style={{
             marginTop: 6,
@@ -278,6 +361,9 @@ function ArbCard({ arb }) {
             color: "#9ca3af",
           }}
         >
+          Example payouts with{" "}
+          <strong>$10 on each side separately</strong>:
+          <br />
           If you bet <strong>$10 on {arb.away_team}</strong> at this line, you
           would get back{" "}
           {awayPayout10 ? (
@@ -299,10 +385,6 @@ function ArbCard({ arb }) {
             "—"
           )}{" "}
           if they win.
-          <br />
-          The green numbers above show how to size both bets together so, when
-          you place them at the same time, you lock in profit no matter who
-          wins.
         </div>
       </div>
     </div>
@@ -319,13 +401,14 @@ function Arbitrage() {
     setError(null);
 
     const url = "https://open-bet-capstone.onrender.com/api/arbitrage";
-    // For Render: const url = "https://open-bet-capstone.onrender.com/api/arbitrage";
 
     fetch(url)
       .then((res) => res.json())
       .then((data) => {
         if (data.error) {
-          setError(typeof data.error === "string" ? data.error : JSON.stringify(data));
+          setError(
+            typeof data.error === "string" ? data.error : JSON.stringify(data)
+          );
         } else {
           setArbs(data);
         }

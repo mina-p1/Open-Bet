@@ -52,7 +52,7 @@ cd Open-Bet/backend
 python3 app.py
 
 # Terminal 2 (React Frontend)
-cd src/frontend
+cd Open-Bet
 npm start
 
 
