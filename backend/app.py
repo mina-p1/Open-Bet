@@ -222,7 +222,7 @@ def get_historical_data():
 @app.route("/api/live-nba-odds")
 def get_live_nba_odds():
     try:
-        json_path = os.path.join(DATA_DIR, "todays_data.json")
+        json_path = os.path.join(BASE_DIR, "todays_data.json")
         with open(json_path, "r") as f:
             data = json.load(f)
         return jsonify(data["games"])
