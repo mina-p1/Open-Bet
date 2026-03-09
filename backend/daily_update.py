@@ -48,7 +48,7 @@ def main():
     # 2. FETCH LIVE ODDS
     # ---------------------------------------------------------
     print("Fetching live matchups...")
-    params = {"regions": "us", "markets": "h2h,spreads", "oddsFormat": "american", "apiKey": API_KEY}
+    params = {"regions": "us", "markets": "h2h,spreads,totals", "oddsFormat": "american", "apiKey": API_KEY}
     resp = requests.get(ODDS_API_URL, params=params)
     
     try:
