@@ -60,3 +60,6 @@ jobs:
           commit_message: "Automated ML Pipeline: Updated daily JSON predictions"
           # Only committing  JSONs
           file_pattern: "**/*.json"
+          
+      - name: Trigger Render Deployment
+        run: curl -X POST "${{ secrets.RENDER_DEPLOY_HOOK }}"
