@@ -34,17 +34,19 @@ jobs:
         run: |
           kaggle datasets download -d eoinamoore/historical-nba-data-and-player-box-scores --unzip -o
           
-          mkdir -p data/box_scores
-          mkdir -p archive/box_scores
+          mkdir -p backend/data/box_scores
+          mkdir -p backend/archive/box_scores
           
-          cp *.csv data/box_scores/
-          cp *.csv archive/box_scores/
+          cp *.csv backend/data/box_scores/
+          cp *.csv backend/archive/box_scores/
 
       - name: Create API Config File
+        working-directory: ./backend
         run: |
           echo "ODDS_API_KEY = '${{ secrets.ODDS_API_KEY }}'" > config_odds.py
 
       - name: Run Prediction Scripts
+        working-directory: ./backend
         run: |
           python update_history.py
           python model_train.py
@@ -57,4 +59,4 @@ jobs:
         with:
           commit_message: "Automated ML Pipeline: Updated daily JSON predictions"
           # Only committing  JSONs
-          file_pattern: "*.json"
+          file_pattern: "**/*.json"
