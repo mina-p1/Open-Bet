@@ -175,18 +175,20 @@ function PredictionDisplay({ prediction }) {
                 {prediction.message}
             </div>
 
-            {/* Score Predicion*/}
-            {prediction.home_score && (
+            {/* Score Prediction FIX: Added "predicted_" to match JSON */}
+            {prediction.predicted_home_score && (
                 <div style={{ fontSize: 15, color: "#94a3b8", marginBottom: 6, fontWeight: 500 }}>
                     Projected Score: <span style={{ color: "#fff", fontWeight: 700 }}>
-                        {Math.round(prediction.away_score)} - {Math.round(prediction.home_score)}
+                        {Math.round(prediction.predicted_away_score)} - {Math.round(prediction.predicted_home_score)}
                     </span>
                 </div>
             )}
 
-            {/*Margin display */}
+            {/* Margin FIX: Added a quick math fallback in case it is missing from JSON */}
             <div style={{ fontSize: 13, color: "#cbd5e1" }}>
-                Predicted Margin: <span style={{ color: "#818cf8", fontWeight: 700 }}>{prediction.predicted_margin}</span> pts
+                Predicted Margin: <span style={{ color: "#818cf8", fontWeight: 700 }}>
+                    {prediction.predicted_margin || Math.abs(prediction.predicted_home_score - prediction.predicted_away_score).toFixed(1)}
+                </span> pts
             </div>
         </div>
     );
@@ -390,6 +392,8 @@ function OddsTable({ gamesData }) {
         return gameEstDateStr === estDateStr;
     });
 
+    const lastUpdate = filteredGames[0]?.bookmakers?.[0]?.last_update;
+
     // List available bookmakers for the filtered games:
     const allBookmakerKeys = Array.from(
         new Set(filteredGames.flatMap(g => g.bookmakers ? g.bookmakers.map(b => b.key) : []))
@@ -402,7 +406,7 @@ function OddsTable({ gamesData }) {
 
         {/* DAILY UPDATE */}
       <p style={{ textAlign: "center", color: "#94a3b8", fontSize: "0.85em", marginTop: "-20px", marginBottom: "25px", fontStyle: "italic" }}>
-        Odds are as of 9:00 AM EST, 12/09/2025
+        Odds are as of {lastUpdate ? formatTimestamp(lastUpdate) : "Updating..."}
         </p>
          {/* ------------------------- */}
 

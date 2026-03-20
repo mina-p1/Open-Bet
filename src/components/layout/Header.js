@@ -69,23 +69,31 @@ function Header({ user, setUser }) {
           <div className="flex items-center">
             {user ? (
               <div className="flex items-center gap-3">
-                {user.picture && (
+                {user.picture ? (
                   <img
                     src={user.picture}
-                    alt="me"
-                    className="w-8 h-8 rounded-full border border-slate-600 shadow-sm"
+                    alt="Profile"
+                    style={{ width: '36px', height: '36px', minWidth: '36px', minHeight: '36px' }}
+                    className="object-cover rounded-full border-2 border-slate-600 shadow-sm"
                   />
+                ) : (
+                  <div 
+                    style={{ width: '36px', height: '36px', minWidth: '36px', minHeight: '36px' }}
+                    className="flex items-center justify-center bg-sky-600 text-white rounded-full font-bold text-sm border-2 border-slate-600 shadow-sm"
+                  >
+                    {user.name ? user.name.charAt(0).toUpperCase() : "U"}
+                  </div>
                 )}
                 <button
                   onClick={handleLogout}
-                  className="text-[11px] font-semibold text-slate-200 hover:text-sky-300"
+                  className="text-xs font-semibold text-slate-200 hover:text-sky-300 transition-colors"
                 >
                   Logout
                 </button>
               </div>
             ) : (
-              <div className="scale-90 origin-right">
-                <LoginButton onLogin={(userData) => setUser(userData)} />
+              <div className="scale-90">
+                <LoginButton onLogin={setUser} />
               </div>
             )}
           </div>

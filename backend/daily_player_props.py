@@ -218,8 +218,26 @@ def fetch_player_props():
                     team_side = map_player_to_side(
                         player_name, home_team, away_team, player_team_map
                     )
+
+                    # NEW PP fix
                     if team_side not in ("HOME", "AWAY"):
-                        team_side = "UNKNOWN"
+                        # Search the ML stat for the player's city
+                        for stats in latest_player_stats.values():
+                            name = stats.get("playerName", "")
+                            
+                            # If a name match check their city against the game teams
+                            if name and player_name.lower() in name.lower():
+                                p_city = str(stats.get("playerteamCity", "")).lower()
+                                
+                                if p_city and p_city in home_team.lower():
+                                    team_side = "HOME"
+                                elif p_city and p_city in away_team.lower():
+                                    team_side = "AWAY"
+                                break
+                        
+                        # If they still can't be found
+                        if team_side not in ("HOME", "AWAY"):
+                            team_side = "UNKNOWN"
 
                     # ---------- NEW: model prediction for points / reb / ast ----------
                     prediction = predict_player_stat(

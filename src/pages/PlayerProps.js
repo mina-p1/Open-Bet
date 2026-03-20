@@ -7,7 +7,6 @@ const MARKET_LABELS = {
   player_rebounds: "Rebounds",
   player_assists: "Assists",
   player_threes: "3-Pointers",
-  player_points_rebounds_assists: "PRA",
 };
 
 const MARKET_ORDER = [
@@ -15,7 +14,6 @@ const MARKET_ORDER = [
   "player_rebounds",
   "player_assists",
   "player_threes",
-  "player_points_rebounds_assists",
 ];
 
 function formatCommence(timeStr) {
@@ -142,6 +140,9 @@ function PlayerProps() {
   const currentMarketRows = useMemo(() => {
     if (!selectedGame) return { home: [], away: [] };
 
+    // DEbug
+    console.log("DEBUG RAW PROP:", selectedGame.props[0]);
+
     const homeRows = {};
     const awayRows = {};
 
@@ -151,10 +152,9 @@ function PlayerProps() {
       if (!p.player || p.line == null) return;
 
       // require a valid side; default unknown to away so at least shown
-      const teamSide =
-        p.team_side === "HOME" || p.team_side === "AWAY"
-          ? p.team_side
-          : "AWAY";
+      // FIXED
+      const isHomePlayer = p.team_side === "HOME" || p.team === selectedGame.home_team;
+      const teamSide = isHomePlayer ? "HOME" : "AWAY";
 
       const targetMap = teamSide === "HOME" ? homeRows : awayRows;
       const key = `${p.player}-${p.line}-${p.bookmaker}`;
