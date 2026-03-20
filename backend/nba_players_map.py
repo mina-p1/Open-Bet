@@ -11,7 +11,7 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_DIR = os.path.join(BASE_DIR, "data")
 CACHE_FILE = os.path.join(DATA_DIR, "nba_player_team_map.json")
 
-CACHE_TTL_DAYS = 1  # refresh daily
+CACHE_TTL_DAYS = 3650  # refresh daily
 
 
 def normalize_player_name(name: str) -> str:
@@ -103,3 +103,6 @@ def build_player_team_map():
 
     _save_cache(mapping)
     return mapping
+    
+if __name__ == "__main__":
+    build_player_team_map()
