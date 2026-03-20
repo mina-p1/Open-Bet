@@ -3,9 +3,9 @@ name: Daily OpenBet ML Pipeline
 # This schedules the script to run automatically
 on:
   schedule:
-    # Runs at 10:00 AM UTC (5:00 AM EST) every single day
+    # Runs at 5:00 AM EST every single day
     - cron: '0 10 * * *'
-  # Allows you to click a button in GitHub to run it manually for testing
+  # manual test run
   workflow_dispatch: 
 
 jobs:
@@ -54,12 +54,30 @@ jobs:
           python daily_update.py
           python daily_player_props.py
 
+      - name: Shrink CSVs to Current Season Only (Prevent Repo Bloat)
+        working-directory: ./backend
+        run: |
+          python -c "
+          import pandas as pd
+          cutoff = pd.Timestamp.now(tz='UTC') - pd.DateOffset(months=6)
+
+          for file in ['data/box_scores/Games.csv', 'data/box_scores/TeamStatistics.csv']:
+              try:
+                  df = pd.read_csv(file, low_memory=False)
+                  df['gameDateTimeEst'] = pd.to_datetime(df['gameDateTimeEst'], utc=True, errors='coerce')
+                  df_small = df[df['gameDateTimeEst'] >= cutoff]
+                  df_small.to_csv(file, index=False)
+                  print(f'Successfully shrunk {file} down to {len(df_small)} rows!')
+              except Exception as e:
+                  print(f'Could not shrink {file}: {e}')
+          "
+
       - name: Commit and Push Updated Data
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "Automated ML Pipeline: Updated daily JSON predictions"
-          # Only committing  JSONs
-          file_pattern: "**/*.json"
+          commit_message: "Automated ML Pipeline: Updated daily JSON and mini-CSVs"
+          # Committing both JSONs and csvs
+          file_pattern: "**/*.json **/*.csv"
           
       - name: Trigger Render Deployment
         run: curl -X POST "${{ secrets.RENDER_DEPLOY_HOOK }}"
