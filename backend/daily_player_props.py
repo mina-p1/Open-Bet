@@ -48,39 +48,34 @@ except Exception as e:
 
 
 def map_player_to_side(player_name, home_team, away_team, player_team_map):
-    """
-    Decide whether this player belongs to the home or away team.
-
-    Uses:
-    - player_team_map (from nba_api) to get normalized team name.
-    - normalized home/away team names from Odds API.
-
-    Returns "HOME", "AWAY", or None (if we are not confident).
-    """
     if not player_name:
-        return None
+        return "UNKNOWN"
 
     norm_name = normalize_player_name(player_name)
-    player_team_norm = player_team_map.get(norm_name)
-    if not player_team_norm:
-        return None
-
     home_norm = normalize_team_name(home_team)
     away_norm = normalize_team_name(away_team)
 
-    # exact match
-    if player_team_norm == home_norm:
-        return "HOME"
-    if player_team_norm == away_norm:
-        return "AWAY"
+    player_team_norm = player_team_map.get(norm_name)
+    if player_team_norm:
+        if player_team_norm in home_norm or home_norm in player_team_norm:
+            return "HOME"
+        if player_team_norm in away_norm or away_norm in player_team_norm:
+            return "AWAY"
 
-    # loose contains match, e.g., "los angeles lakers" vs "lakers"
-    if player_team_norm in home_norm or home_norm in player_team_norm:
-        return "HOME"
-    if player_team_norm in away_norm or away_norm in player_team_norm:
-        return "AWAY"
+    
+    norm_parts = norm_name.split()
+    if len(norm_parts) > 1:
+        last_name = norm_parts[-1]
+        for roster_name, roster_team in player_team_map.items():
+            roster_parts = roster_name.split()
 
-    return None
+            if len(roster_parts) > 1 and roster_parts[-1] == last_name:
+                if roster_team in home_norm or home_norm in roster_team:
+                    return "HOME"
+                if roster_team in away_norm or away_norm in roster_team:
+                    return "AWAY"
+
+    return "UNKNOWN"
 
 
 def predict_player_stat(
@@ -219,32 +214,7 @@ def fetch_player_props():
                         player_name, home_team, away_team, player_team_map
                     )
 
-                    # NEW PP fix
-                    if team_side not in ("HOME", "AWAY"):
-                        # Look through our ML stats for specific player
-                        for stats in latest_player_stats.values():
-                            p_ml_name = stats.get("playerName", "").lower()
-                            
-                            
-                            if p_ml_name and player_name.lower() in p_ml_name:
-                                # Get their team info from our ML data
-                                p_city = str(stats.get("playerteamCity", "")).lower()
-                                p_team = str(stats.get("playerteamName", "")).lower()
-                                
-                                h_matchup = home_team.lower()
-                                a_matchup = away_team.lower()
-
-                                # Check City OR Team Name in the Matchup string
-                            
-                                if (p_city and p_city in h_matchup) or (p_team and p_team in h_matchup):
-                                    team_side = "HOME"
-                                elif (p_city and p_city in a_matchup) or (p_team and p_team in a_matchup):
-                                    team_side = "AWAY"
-                                break
-                        
-                        # If we still can't find them, default to UNKNOWN
-                        if team_side not in ("HOME", "AWAY"):
-                            team_side = "UNKNOWN"
+                   
 
                     # ---------- NEW: model prediction for points / reb / ast ----------
                     prediction = predict_player_stat(
