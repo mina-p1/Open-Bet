@@ -221,21 +221,28 @@ def fetch_player_props():
 
                     # NEW PP fix
                     if team_side not in ("HOME", "AWAY"):
-                        # Search the ML stat for the player's city
+                        # Look through our ML stats for specific player
                         for stats in latest_player_stats.values():
-                            name = stats.get("playerName", "")
+                            p_ml_name = stats.get("playerName", "").lower()
                             
-                            # If a name match check their city against the game teams
-                            if name and player_name.lower() in name.lower():
+                            
+                            if p_ml_name and player_name.lower() in p_ml_name:
+                                # Get their team info from our ML data
                                 p_city = str(stats.get("playerteamCity", "")).lower()
+                                p_team = str(stats.get("playerteamName", "")).lower()
                                 
-                                if p_city and p_city in home_team.lower():
+                                h_matchup = home_team.lower()
+                                a_matchup = away_team.lower()
+
+                                # Check City OR Team Name in the Matchup string
+                            
+                                if (p_city and p_city in h_matchup) or (p_team and p_team in h_matchup):
                                     team_side = "HOME"
-                                elif p_city and p_city in away_team.lower():
+                                elif (p_city and p_city in a_matchup) or (p_team and p_team in a_matchup):
                                     team_side = "AWAY"
                                 break
                         
-                        # If they still can't be found
+                        # If we still can't find them, default to UNKNOWN
                         if team_side not in ("HOME", "AWAY"):
                             team_side = "UNKNOWN"
 
