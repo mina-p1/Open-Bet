@@ -23,80 +23,89 @@ function Header({ user, setUser }) {
 
   return (
     <header className="sticky top-0 z-30 border-b border-slate-800 bg-[#020617]/95 backdrop-blur-xl">
-      <nav className="mx-auto flex max-w-6xl items-center justify-between gap-6 px-4 py-3">
-        {/* Brand */}
-        <Link to="/" className="flex items-center gap-2 text-slate-100">
-          <div className="leading-tight">
-            <div className="text-lg font-extrabold tracking-[0.18em] uppercase">
-              OpenBet
+      <nav className="mx-auto flex w-full max-w-7xl items-center justify-between gap-6 px-4 py-3">
+        {/* Left: Brand */}
+        <div className="flex items-center">
+          <Link to="/" className="flex items-center gap-2 text-slate-100">
+            <div className="leading-tight">
+              <div className="text-lg font-extrabold tracking-[0.18em] uppercase">
+                OpenBet
+              </div>
+              <div className="text-[10px] font-medium uppercase text-slate-400 tracking-[0.22em]">
+                The Smart Basketball Betting Tool
+              </div>
             </div>
-            <div className="text-[10px] font-medium uppercase text-slate-400 tracking-[0.22em]">
-              The Smart Basketball Betting Tool
-            </div>
-          </div>
+          </Link>
+        </div>
+
+        {/* Center: nav pills */}
+ {/* Center: nav pills */}
+<div className="flex-1 flex justify-center overflow-x-hidden">
+  <div className="inline-flex flex-nowrap items-center justify-center gap-4 rounded-full bg-slate-900/60 px-4 py-1.5 shadow-[0_0_40px_rgba(15,23,42,0.9)] ring-1 ring-slate-700">
+    {mainNav.map((item) => {
+      const active = isActive(item.to);
+
+      return (
+        <Link
+          key={item.to}
+          to={item.to}
+          className={`relative inline-flex items-center justify-center whitespace-nowrap rounded-full px-6 py-1.5 text-xs font-semibold tracking-wide transition-all duration-200 text-white ${
+            active
+              ? "bg-sky-500/30 backdrop-blur-md border border-sky-300 shadow-[0_0_24px_rgba(56,189,248,0.9)]"
+              : "bg-slate-900/70 border border-slate-700 hover:bg-sky-600 hover:border-sky-400 hover:shadow-[0_0_18px_rgba(56,189,248,0.7)]"
+          }`}
+        >
+          {active && (
+            <span className="pointer-events-none absolute inset-[-4px] rounded-full bg-sky-400/35 blur-[12px]" />
+          )}
+          <span className="relative">{item.label}</span>
         </Link>
+      );
+    })}
+  </div>
+</div>
 
-        {/* Center nav + right auth */}
-        <div className="flex flex-1 items-center justify-end gap-4">
-          {/* Nav pills */}
-          <div className="inline-flex max-w-full flex-wrap items-center justify-end gap-2 rounded-full bg-slate-900/60 px-2 py-1 shadow-[0_0_40px_rgba(15,23,42,0.9)] ring-1 ring-slate-700/80">
-            {mainNav.map((item) => {
-              const active = isActive(item.to);
-              return (
-                <Link
-                  key={item.to}
-                  to={item.to}
-                  className={[
-                    "relative inline-flex items-center justify-center whitespace-nowrap rounded-full px-3.5 py-1.5 text-xs font-medium transition-all duration-200",
-                    "border border-slate-700/70 bg-slate-900/60 text-slate-300",
-                    "hover:text-slate-50 hover:border-sky-400/70 hover:bg-slate-900/90 hover:shadow-[0_0_18px_rgba(56,189,248,0.45)]",
-                    active &&
-                      "border-transparent bg-gradient-to-r from-sky-400 via-cyan-300 to-emerald-300 text-slate-950 shadow-[0_0_25px_rgba(56,189,248,0.9)]",
-                  ]
-                    .filter(Boolean)
-                    .join(" ")}
+        {/* Right: auth area */}
+        <div className="flex items-center justify-end min-w-[180px]">
+          {user ? (
+            <div className="flex items-center gap-3">
+              {user.picture ? (
+                <img
+                  src={user.picture}
+                  alt="Profile"
+                  style={{
+                    width: "36px",
+                    height: "36px",
+                    minWidth: "36px",
+                    minHeight: "36px",
+                  }}
+                  className="object-cover rounded-full border-2 border-slate-600 shadow-sm"
+                />
+              ) : (
+                <div
+                  style={{
+                    width: "36px",
+                    height: "36px",
+                    minWidth: "36px",
+                    minHeight: "36px",
+                  }}
+                  className="flex items-center justify-center bg-sky-600 text-white rounded-full font-bold text-sm border-2 border-slate-600 shadow-sm"
                 >
-                  {active && (
-                    <span className="pointer-events-none absolute inset-[-2px] rounded-full bg-sky-400/40 blur-[6px]" />
-                  )}
-                  <span className="relative">{item.label}</span>
-                </Link>
-              );
-            })}
-          </div>
-
-          {/* Auth area (outside pill) */}
-          <div className="flex items-center">
-            {user ? (
-              <div className="flex items-center gap-3">
-                {user.picture ? (
-                  <img
-                    src={user.picture}
-                    alt="Profile"
-                    style={{ width: '36px', height: '36px', minWidth: '36px', minHeight: '36px' }}
-                    className="object-cover rounded-full border-2 border-slate-600 shadow-sm"
-                  />
-                ) : (
-                  <div 
-                    style={{ width: '36px', height: '36px', minWidth: '36px', minHeight: '36px' }}
-                    className="flex items-center justify-center bg-sky-600 text-white rounded-full font-bold text-sm border-2 border-slate-600 shadow-sm"
-                  >
-                    {user.name ? user.name.charAt(0).toUpperCase() : "U"}
-                  </div>
-                )}
-                <button
-                  onClick={handleLogout}
-                  className="text-xs font-semibold text-slate-200 hover:text-sky-300 transition-colors"
-                >
-                  Logout
-                </button>
-              </div>
-            ) : (
-              <div className="scale-90">
-                <LoginButton onLogin={setUser} />
-              </div>
-            )}
-          </div>
+                  {user.name ? user.name.charAt(0).toUpperCase() : "U"}
+                </div>
+              )}
+              <button
+                onClick={handleLogout}
+                className="text-xs font-semibold text-slate-200 hover:text-sky-300 transition-colors"
+              >
+                Logout
+              </button>
+            </div>
+          ) : (
+            <div className="scale-90">
+              <LoginButton onLogin={setUser} />
+            </div>
+          )}
         </div>
       </nav>
     </header>

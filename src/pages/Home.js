@@ -248,9 +248,10 @@ function HomePage() {
       <section className="flex w-full max-w-5xl flex-col items-center justify-center py-6">
         {/* main card */}
         <div className="mx-auto w-full max-w-xl rounded-2xl bg-slate-900/90 p-8 text-center shadow-xl ring-1 ring-slate-800">
-          <h1 className="mb-3 text-3xl font-extrabold tracking-tight text-sky-300">
+          <h1 className="mb-5 text-6xl font-extrabold tracking-tight text-sky-300">
             Welcome to OpenBet!
           </h1>
+
           <h2 className="mb-4 text-xl font-bold tracking-tight text-sky-200">
             Historical Basketball Scores
           </h2>
@@ -301,8 +302,8 @@ function HomePage() {
           <div className="mt-6">
             <a
               href={`/liveodds?date=${effectiveDate}`}
-              className="inline-flex w-full max-w-xs items-center justify-center rounded-full bg-sky-500 px-6 py-2 text-sm font-semibold text-slate-950 shadow-md transition hover:bg-sky-400"
-            >
+              className="inline-flex w-full max-w-xs items-center justify-center rounded-full bg-sky-500 px-6 py-2 text-sm font-semibold text-white transition hover:bg-sky-400"
+              >
               View Live Odds
             </a>
           </div>

@@ -203,16 +203,30 @@ function PlayerProps() {
 
   // ---- Styles ----
   const styles = {
-    container: {
-      padding: "20px",
-      maxWidth: "1200px",
-      margin: "0 auto",
-      color: "#fff",
-      position: "relative",
-    },
-    header: { marginBottom: "20px" },
-    title: { fontSize: "28px", fontWeight: "bold", marginBottom: "8px" },
-    subtitle: { color: "#aaa", fontSize: "14px" },
+  container: {
+    padding: "20px",
+    maxWidth: "1200px",
+    margin: "0 auto",
+    color: "#fff",
+    position: "relative",
+  },
+  header: {
+    marginBottom: "20px",
+    maxWidth: "800px",
+    marginLeft: "auto",
+    marginRight: "auto",
+    textAlign: "center",
+  },
+  title: {
+    fontSize: "28px",
+    fontWeight: "bold",
+    marginBottom: "8px",
+  },
+  subtitle: {
+    color: "#aaa",
+    fontSize: "14px",
+    margin: 0,
+  },
     error: { color: "#ff6b6b", padding: "20px", textAlign: "center" },
     gamesGrid: {
       display: "grid",
@@ -349,14 +363,14 @@ function PlayerProps() {
   };
 
   return (
-    <div style={styles.container}>
-      <div style={styles.header}>
-        <h1 style={styles.title}>Player Props</h1>
-        <p style={styles.subtitle}>
-          Click a game to open a popup with player prop lines. Use the tabs and
-          bookmaker dropdown to explore different markets.
-        </p>
-      </div>
+  <div style={styles.container}>
+    <div style={styles.header}>
+      <h1 style={styles.title}>Player Props</h1>
+      <p style={styles.subtitle}>
+        Click a game to open a popup with player prop lines. Use the tabs and
+        bookmaker dropdown to explore different markets.
+      </p>
+    </div>
 
       {isLoading && <Loader />}
       {error && <div style={styles.error}>Error: {error}</div>}

@@ -1,19 +1,48 @@
 import React from "react";
 
+const styles = {
+  container: {
+    padding: "20px",
+    maxWidth: "1200px",
+    margin: "0 auto",
+    color: "#fff",
+    position: "relative",
+    textAlign: "center",
+  },
+  header: {
+    marginBottom: "20px",
+    maxWidth: "800px",
+    marginLeft: "auto",
+    marginRight: "auto",
+    textAlign: "center",
+  },
+  title: {
+    fontSize: "28px",
+    fontWeight: "bold",
+    marginBottom: "8px",
+    color: "#ffffff",    
+  },
+  subtitle: {
+    color: "#aaa",
+    fontSize: "14px",
+    margin: 0,
+  },
+};
+
 export default function About() {
   return (
-    <div className="container mx-auto py-12 px-4">
-      <h2 className="text-3xl font-semibold text-center mb-4 text-blue-500">
-        About OpenBet
-      </h2>
-      <p className="mb-8 text-gray-200 text-center max-w-2xl mx-auto">
-        OpenBet compares our <strong>machine learning predictions</strong> against{" "}
-        <strong>live sportsbook lines</strong> to highlight spots where the numbers
-        may be in your favor. The goal is to make basketball betting easier to
-        understand, not to tell you what to bet.
-      </p>
+    <div className="px-4 pt-28 pb-12">
+    <div style={styles.container}>
+    <h1 style={styles.title}>About OpenBet</h1>
+        <p style={styles.subtitle}>
+          OpenBet compares our <strong>machine learning predictions</strong> against{" "}
+          <strong>live sportsbook lines</strong> to highlight spots where the
+          numbers may be in your favor. The goal is to make basketball betting
+          easier to understand, not to tell you what to bet.
+        </p>
+      </div>
 
-      <div className="w-full max-w-3xl mx-auto space-y-4">
+      <div className="mt-4 w-full max-w-3xl mx-auto space-y-4">
         {/* What it does */}
         <div className="collapse collapse-arrow bg-base-200">
           <input type="checkbox" className="peer" />
