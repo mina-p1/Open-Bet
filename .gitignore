@@ -4,13 +4,14 @@ src/backend/archive/nba.sqlite
 # Ignore the entire folder of large CSV files
 src/backend/archive/csv/
 
+*.csv
 # Ignore all node_modules folders (anywhere in the project)
 **/node_modules/
 
 # Ignore Python cache directories (anywhere in the project)
 **/__pycache__/
 
-# --- NEW: Ignore the ML Brain ---
+#NEW: Ignore the ML Brain
 # Keeps the model on your laptop, but keeps it off GitHub/Render
 *.pkl
 src/backend/nba_model.pkl

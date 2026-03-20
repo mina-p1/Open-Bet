@@ -7,7 +7,6 @@ const mainNav = [
   { to: "/liveodds", label: "Live Odds" },
   { to: "/player-props", label: "Player Props" },
   { to: "/arbitrage", label: "Arbitrage" },
-  { to: "/my-bets", label: "My Bets" },
   { to: "/profile", label: "Profile" },
   { to: "/discussions", label: "Discussions" },
   { to: "/about", label: "About" },
