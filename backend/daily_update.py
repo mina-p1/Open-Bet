@@ -70,7 +70,8 @@ def main():
         if h_id and a_id and h_id in t_latest and a_id in t_latest:
             h_stats, a_stats = t_latest[h_id], t_latest[a_id]
             
-            feat = pd.DataFrame([{
+            # 1. Predict Home Score
+            feat_home = pd.DataFrame([{
                 "home": 1, "fatigue_index": 0,
                 "home_strength_rating": h_stats.get("home_strength_rating", 0),
                 "rolling_teamScore": h_stats.get("rolling_teamScore", 0),
@@ -81,9 +82,34 @@ def main():
                 "opp_rolling_opponentScore": a_stats.get("rolling_opponentScore", 0),
                 "opp_fatigue_index": 0, "opp_home_strength_rating": a_stats.get("home_strength_rating", 0)
             }])
-            
-            pred_home = t_model.predict(feat)[0]
-            game["openbet_prediction"] = {"predicted_home_score": round(pred_home, 1)}
+            pred_home = round(t_model.predict(feat_home)[0], 1)
+
+            # 2. Predict Away Score (Flip the stats!)
+            feat_away = pd.DataFrame([{
+                "home": 0, "fatigue_index": 0,
+                "home_strength_rating": a_stats.get("home_strength_rating", 0),
+                "rolling_teamScore": a_stats.get("rolling_teamScore", 0),
+                "rolling_possessions": a_stats.get("rolling_possessions", 0),
+                "rolling_fieldGoalsPercentage": a_stats.get("rolling_fieldGoalsPercentage", 0),
+                "opp_rolling_teamScore": h_stats.get("rolling_teamScore", 0),
+                "opp_rolling_possessions": h_stats.get("rolling_possessions", 0),
+                "opp_rolling_opponentScore": h_stats.get("rolling_opponentScore", 0),
+                "opp_fatigue_index": 0, "opp_home_strength_rating": h_stats.get("home_strength_rating", 0)
+            }])
+            pred_away = round(t_model.predict(feat_away)[0], 1)
+
+            # 3. Calculate Margin and Message
+            margin = round(abs(pred_home - pred_away), 1)
+            winner_name = h_name if pred_home > pred_away else a_name
+            message = f"{winner_name} to Win"
+
+            # 4. Save everything to the JSON
+            game["openbet_prediction"] = {
+                "predicted_home_score": pred_home,
+                "predicted_away_score": pred_away,
+                "predicted_margin": margin,
+                "message": message
+            }
 
     # 4. PLAYER PROP PROJECTIONS (Pts, Reb, Ast, 3PM)
     print("Generating Player Projections...")
