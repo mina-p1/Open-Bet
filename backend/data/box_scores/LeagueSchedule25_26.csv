@@ -1096,22 +1096,22 @@ gameId,gameDateTimeEst,homeTeamId,awayTeamId,homeTeamCity,homeTeamName,awayTeamC
 22500987,2026-03-16 20:00:00,1610612741,1610612763,Chicago,Bulls,Memphis,Grizzlies,Mon,United Center,Chicago,IL,,,,,22
 22500988,2026-03-16 20:00:00,1610612740,1610612742,New Orleans,Pelicans,Dallas,Mavericks,Mon,Smoothie King Center,New Orleans,LA,,,,,22
 22500989,2026-03-16 21:30:00,1610612745,1610612747,Houston,Rockets,Los Angeles,Lakers,Mon,Toyota Center,Houston,TX,,,,,22
-22500990,2026-03-16 22:30:00,1610612746,1610612759,LA,Clippers,San Antonio,Spurs,Mon,Intuit Dome,Inglewood,CA,,,,,22
+22500990,2026-03-16 22:00:00,1610612746,1610612759,LA,Clippers,San Antonio,Spurs,Mon,Intuit Dome,Inglewood,CA,,,,,22
 22500991,2026-03-17 19:00:00,1610612766,1610612748,Charlotte,Hornets,Miami,Heat,Tue,Spectrum Center,Charlotte,NC,,,,,22
 22500992,2026-03-17 19:00:00,1610612753,1610612760,Orlando,Magic,Oklahoma City,Thunder,Tue,Kia Center,Orlando,FL,,,,,22
 22500993,2026-03-17 19:00:00,1610612764,1610612765,Washington,Wizards,Detroit,Pistons,Tue,Capital One Arena,Washington,DC,,,,,22
 22500994,2026-03-17 19:30:00,1610612752,1610612754,New York,Knicks,Indiana,Pacers,Tue,Madison Square Garden,New York,NY,,,,,22
 22500995,2026-03-17 20:00:00,1610612749,1610612739,Milwaukee,Bucks,Cleveland,Cavaliers,Tue,Fiserv Forum,Milwaukee,WI,,,,,22
 22500996,2026-03-17 20:00:00,1610612750,1610612756,Minnesota,Timberwolves,Phoenix,Suns,Tue,Target Center,Minneapolis,MN,,,,,22
-22500997,2026-03-17 21:00:00,1610612743,1610612755,Denver,Nuggets,Philadelphia,76ers,Tue,Ball Arena,Denver,CO,,,,,22
-22500998,2026-03-17 23:00:00,1610612758,1610612759,Sacramento,Kings,San Antonio,Spurs,Tue,Golden 1 Center,Sacramento,CA,,,,,22
+22500997,2026-03-17 22:00:00,1610612743,1610612755,Denver,Nuggets,Philadelphia,76ers,Tue,Ball Arena,Denver,CO,,,,,22
+22500998,2026-03-17 22:00:00,1610612758,1610612759,Sacramento,Kings,San Antonio,Spurs,Tue,Golden 1 Center,Sacramento,CA,,,,,22
 22500999,2026-03-18 19:00:00,1610612738,1610612744,Boston,Celtics,Golden State,Warriors,Wed,TD Garden,Boston,MA,,,,,22
 22501000,2026-03-18 19:30:00,1610612751,1610612760,Brooklyn,Nets,Oklahoma City,Thunder,Wed,Barclays Center,Brooklyn,NY,,,,,22
 22501001,2026-03-18 19:30:00,1610612754,1610612757,Indiana,Pacers,Portland,Trail Blazers,Wed,Gainbridge Fieldhouse,Indianapolis,IN,,,,,22
-22500651,2026-03-18 20:00:00,1610612763,1610612743,Memphis,Grizzlies,Denver,Nuggets,Wed,FedExForum,Memphis,TN,,,,,22
 22501002,2026-03-18 20:00:00,1610612741,1610612761,Chicago,Bulls,Toronto,Raptors,Wed,United Center,Chicago,IL,,,,,22
 22501004,2026-03-18 20:00:00,1610612750,1610612762,Minnesota,Timberwolves,Utah,Jazz,Wed,Target Center,Minneapolis,MN,,,,,22
 22501005,2026-03-18 20:00:00,1610612740,1610612746,New Orleans,Pelicans,LA,Clippers,Wed,Smoothie King Center,New Orleans,LA,,,,,22
+22500651,2026-03-18 20:30:00,1610612763,1610612743,Memphis,Grizzlies,Denver,Nuggets,Wed,FedExForum,Memphis,TN,,,,,22
 22501006,2026-03-18 20:30:00,1610612742,1610612737,Dallas,Mavericks,Atlanta,Hawks,Wed,American Airlines Center,Dallas,TX,,,,,22
 22501007,2026-03-18 21:30:00,1610612745,1610612747,Houston,Rockets,Los Angeles,Lakers,Wed,Toyota Center,Houston,TX,,,,,22
 22501008,2026-03-19 19:00:00,1610612766,1610612753,Charlotte,Hornets,Orlando,Magic,Thu,Spectrum Center,Charlotte,NC,,,,,22
@@ -1183,10 +1183,10 @@ gameId,gameDateTimeEst,homeTeamId,awayTeamId,homeTeamCity,homeTeamName,awayTeamC
 22501074,2026-03-27 22:00:00,1610612757,1610612742,Portland,Trail Blazers,Dallas,Mavericks,Fri,Moda Center,Portland,OR,,,,,23
 22501075,2026-03-27 22:30:00,1610612747,1610612751,Los Angeles,Lakers,Brooklyn,Nets,Fri,Crypto.com Arena,Los Angeles,CA,,,,,23
 22501076,2026-03-28 15:00:00,1610612749,1610612759,Milwaukee,Bucks,San Antonio,Spurs,Sat,Fiserv Forum,Milwaukee,WI,,,,,23
+22501080,2026-03-28 17:30:00,1610612750,1610612765,Minnesota,Timberwolves,Detroit,Pistons,Sat,Target Center,Minneapolis,MN,,,,,23
 22501077,2026-03-28 18:00:00,1610612766,1610612755,Charlotte,Hornets,Philadelphia,76ers,Sat,Spectrum Center,Charlotte,NC,,,,,23
 22501078,2026-03-28 19:30:00,1610612737,1610612758,Atlanta,Hawks,Sacramento,Kings,Sat,State Farm Arena,Atlanta,GA,,,,,23
 22501079,2026-03-28 20:00:00,1610612763,1610612741,Memphis,Grizzlies,Chicago,Bulls,Sat,FedExForum,Memphis,TN,,,,,23
-22501080,2026-03-28 20:00:00,1610612750,1610612765,Minnesota,Timberwolves,Detroit,Pistons,Sat,Target Center,Minneapolis,MN,,,,,23
 22501081,2026-03-28 22:00:00,1610612756,1610612762,Phoenix,Suns,Utah,Jazz,Sat,Mortgage Matchup Center,Phoenix,AZ,,,,,23
 22501082,2026-03-29 15:30:00,1610612749,1610612746,Milwaukee,Bucks,LA,Clippers,Sun,Fiserv Forum,Milwaukee,WI,,,,,23
 22501083,2026-03-29 17:00:00,1610612754,1610612748,Indiana,Pacers,Miami,Heat,Sun,Gainbridge Fieldhouse,Indianapolis,IN,,,,,23
