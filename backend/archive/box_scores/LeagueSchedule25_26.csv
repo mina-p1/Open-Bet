@@ -1256,10 +1256,10 @@ gameId,gameDateTimeEst,homeTeamId,awayTeamId,homeTeamCity,homeTeamName,awayTeamC
 22501146,2026-04-06 20:00:00,1610612759,1610612755,San Antonio,Spurs,Philadelphia,76ers,Mon,Frost Bank Center,San Antonio,TX,,,,,25
 22501147,2026-04-06 21:00:00,1610612743,1610612757,Denver,Nuggets,Portland,Trail Blazers,Mon,Ball Arena,Denver,CO,,,,,25
 22501148,2026-04-07 19:00:00,1610612764,1610612741,Washington,Wizards,Chicago,Bulls,Tue,Capital One Arena,Washington,DC,,,,,25
-22501149,2026-04-07 19:30:00,1610612738,1610612766,Boston,Celtics,Charlotte,Hornets,Tue,TD Garden,Boston,MA,,,,,25
+22501152,2026-04-07 19:00:00,1610612754,1610612750,Indiana,Pacers,Minnesota,Timberwolves,Tue,Gainbridge Fieldhouse,Indianapolis,IN,,,,,25
 22501150,2026-04-07 19:30:00,1610612751,1610612749,Brooklyn,Nets,Milwaukee,Bucks,Tue,Barclays Center,Brooklyn,NY,,,,,25
 22501151,2026-04-07 19:30:00,1610612761,1610612748,Toronto,Raptors,Miami,Heat,Tue,Scotiabank Arena,Toronto,ON,,,,,25
-22501152,2026-04-07 20:00:00,1610612754,1610612750,Indiana,Pacers,Minnesota,Timberwolves,Tue,Gainbridge Fieldhouse,Indianapolis,IN,,,,,25
+22501149,2026-04-07 20:00:00,1610612738,1610612766,Boston,Celtics,Charlotte,Hornets,Tue,TD Garden,Boston,MA,,,,,25
 22501153,2026-04-07 20:00:00,1610612740,1610612762,New Orleans,Pelicans,Utah,Jazz,Tue,Smoothie King Center,New Orleans,LA,,,,,25
 22501154,2026-04-07 22:00:00,1610612744,1610612758,Golden State,Warriors,Sacramento,Kings,Tue,Chase Center,San Francisco,CA,,,,,25
 22501155,2026-04-07 22:30:00,1610612747,1610612760,Los Angeles,Lakers,Oklahoma City,Thunder,Tue,Crypto.com Arena,Los Angeles,CA,,,,,25
