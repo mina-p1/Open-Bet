@@ -6,8 +6,6 @@ import { fetchLiveNBAOdds } from '../api/oddsApi';
 
 const styles = {
   container: {
-    padding: "20px",
-    maxWidth: "1200px",
     margin: "0 auto",
     color: "#fff",
     position: "relative",
