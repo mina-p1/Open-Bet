@@ -70,32 +70,65 @@ def main():
         if h_id and a_id and h_id in t_latest and a_id in t_latest:
             h_stats, a_stats = t_latest[h_id], t_latest[a_id]
             
-            # 1. Predict Home Score
-            feat_home = pd.DataFrame([{
-                "home": 1, "fatigue_index": 0,
+            # 1. Predict Home Score (Expanded 23 features)
+            feat_home_dict = {
+                "home": 1,
+                "fatigue_index": 0,
                 "home_strength_rating": h_stats.get("home_strength_rating", 0),
                 "rolling_teamScore": h_stats.get("rolling_teamScore", 0),
                 "rolling_possessions": h_stats.get("rolling_possessions", 0),
                 "rolling_fieldGoalsPercentage": h_stats.get("rolling_fieldGoalsPercentage", 0),
+                "rolling_opponentScore": h_stats.get("rolling_opponentScore", 0),
+                "L3_teamScore": h_stats.get("L3_teamScore", 0),
+                "L3_oppScore": h_stats.get("L3_oppScore", 0),
+                "L5_teamScore": h_stats.get("L5_teamScore", 0),
+                "L5_oppScore": h_stats.get("L5_oppScore", 0),
+                "L5_net_margin": h_stats.get("L5_net_margin", 0),
+
                 "opp_rolling_teamScore": a_stats.get("rolling_teamScore", 0),
                 "opp_rolling_possessions": a_stats.get("rolling_possessions", 0),
                 "opp_rolling_opponentScore": a_stats.get("rolling_opponentScore", 0),
-                "opp_fatigue_index": 0, "opp_home_strength_rating": a_stats.get("home_strength_rating", 0)
-            }])
+                "opp_rolling_fieldGoalsPercentage": a_stats.get("rolling_fieldGoalsPercentage", 0),
+                "opp_L3_teamScore": a_stats.get("L3_teamScore", 0),
+                "opp_L3_oppScore": a_stats.get("L3_oppScore", 0),
+                "opp_L5_teamScore": a_stats.get("L5_teamScore", 0),
+                "opp_L5_oppScore": a_stats.get("L5_oppScore", 0),
+                "opp_L5_net_margin": a_stats.get("L5_net_margin", 0),
+                "opp_fatigue_index": 0,
+                "opp_home_strength_rating": a_stats.get("home_strength_rating", 0),
+            }
+            # Enforce column order to match training exactly
+            feat_home = pd.DataFrame([feat_home_dict])[t_features]
             pred_home = round(t_model.predict(feat_home)[0], 1)
 
             # 2. Predict Away Score (Flip the stats!)
-            feat_away = pd.DataFrame([{
-                "home": 0, "fatigue_index": 0,
+            feat_away_dict = {
+                "home": 0,
+                "fatigue_index": 0,
                 "home_strength_rating": a_stats.get("home_strength_rating", 0),
                 "rolling_teamScore": a_stats.get("rolling_teamScore", 0),
                 "rolling_possessions": a_stats.get("rolling_possessions", 0),
                 "rolling_fieldGoalsPercentage": a_stats.get("rolling_fieldGoalsPercentage", 0),
+                "rolling_opponentScore": a_stats.get("rolling_opponentScore", 0),
+                "L3_teamScore": a_stats.get("L3_teamScore", 0),
+                "L3_oppScore": a_stats.get("L3_oppScore", 0),
+                "L5_teamScore": a_stats.get("L5_teamScore", 0),
+                "L5_oppScore": a_stats.get("L5_oppScore", 0),
+                "L5_net_margin": a_stats.get("L5_net_margin", 0),
+
                 "opp_rolling_teamScore": h_stats.get("rolling_teamScore", 0),
                 "opp_rolling_possessions": h_stats.get("rolling_possessions", 0),
                 "opp_rolling_opponentScore": h_stats.get("rolling_opponentScore", 0),
-                "opp_fatigue_index": 0, "opp_home_strength_rating": h_stats.get("home_strength_rating", 0)
-            }])
+                "opp_rolling_fieldGoalsPercentage": h_stats.get("rolling_fieldGoalsPercentage", 0),
+                "opp_L3_teamScore": h_stats.get("L3_teamScore", 0),
+                "opp_L3_oppScore": h_stats.get("L3_oppScore", 0),
+                "opp_L5_teamScore": h_stats.get("L5_teamScore", 0),
+                "opp_L5_oppScore": h_stats.get("L5_oppScore", 0),
+                "opp_L5_net_margin": h_stats.get("L5_net_margin", 0),
+                "opp_fatigue_index": 0,
+                "opp_home_strength_rating": h_stats.get("home_strength_rating", 0),
+            }
+            feat_away = pd.DataFrame([feat_away_dict])[t_features]
             pred_away = round(t_model.predict(feat_away)[0], 1)
 
             # 3. Calculate Margin and Message
@@ -110,7 +143,6 @@ def main():
                 "predicted_margin": margin,
                 "message": message
             }
-
     # 4. PLAYER PROP PROJECTIONS (Pts, Reb, Ast, 3PM)
     print("Generating Player Projections...")
     p_models = play_art["models"]
