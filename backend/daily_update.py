@@ -44,6 +44,7 @@ def main():
     print("Loading Team and Player brains...")
     team_art = joblib.load(TEAM_MODEL_PATH)
     play_art = joblib.load(PLAYER_MODEL_PATH)
+    t_features = team_art.get("feature_cols", [])
 
     # 2. FETCH LIVE ODDS
     # ---------------------------------------------------------
