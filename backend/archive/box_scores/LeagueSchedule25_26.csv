@@ -1308,12 +1308,12 @@ gameId,gameDateTimeEst,homeTeamId,awayTeamId,homeTeamCity,homeTeamName,awayTeamC
 22501198,2026-04-12 20:30:00,1610612747,1610612762,Los Angeles,Lakers,Utah,Jazz,Sun,Crypto.com Arena,Los Angeles,CA,,,,,25
 22501199,2026-04-12 20:30:00,1610612746,1610612744,LA,Clippers,Golden State,Warriors,Sun,Intuit Dome,Inglewood,CA,,,,,25
 22501200,2026-04-12 20:30:00,1610612757,1610612758,Portland,Trail Blazers,Sacramento,Kings,Sun,Moda Center,Portland,OR,,,,,25
-52500101,2026-04-14 00:00:00,0,0,,,,,Tue,"","","",SoFi Play-In Tournament,,,,26
-52500121,2026-04-14 00:00:00,0,0,,,,,Tue,"","","",SoFi Play-In Tournament,,,,26
-52500111,2026-04-15 00:00:00,0,0,,,,,Wed,"","","",SoFi Play-In Tournament,,,,26
-52500131,2026-04-15 00:00:00,0,0,,,,,Wed,"","","",SoFi Play-In Tournament,,,,26
-52500201,2026-04-17 00:00:00,0,0,,,,,Fri,"","","",SoFi Play-In Tournament,East,,,26
-52500211,2026-04-17 00:00:00,0,0,,,,,Fri,"","","",SoFi Play-In Tournament,West,,,26
+52500101,2026-04-14 19:30:00,0,0,,,,,Tue,"","","",SoFi Play-In Tournament,,,,26
+52500121,2026-04-14 22:00:00,1610612756,0,Phoenix,Suns,,,Tue,Mortgage Matchup Center,Phoenix,AZ,SoFi Play-In Tournament,,,,26
+52500111,2026-04-15 19:30:00,0,0,,,,,Wed,"","","",SoFi Play-In Tournament,,,,26
+52500131,2026-04-15 22:00:00,0,1610612744,,,Golden State,Warriors,Wed,"","","",SoFi Play-In Tournament,,,,26
+52500201,2026-04-17 19:30:00,0,0,,,,,Fri,"","","",SoFi Play-In Tournament,East,,,26
+52500211,2026-04-17 22:00:00,0,0,,,,,Fri,"","","",SoFi Play-In Tournament,West,,,26
 42500401,2026-06-03 20:30:00,0,0,,,,,Wed,"","","",NBA Finals,Game 1,,Game 1,33
 42500402,2026-06-05 20:30:00,0,0,,,,,Fri,"","","",NBA Finals,Game 2,,Game 2,33
 42500403,2026-06-08 20:30:00,0,0,,,,,Mon,"","","",NBA Finals,Game 3,,Game 3,34
