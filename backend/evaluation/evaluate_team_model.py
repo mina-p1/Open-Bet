@@ -235,7 +235,7 @@ def compute_confusion_matrix_from_history() -> dict:
 
 def run_team_evaluation(verbose: bool = True) -> dict:
     if verbose:
-        print("\n=== OpenBet Team Model Evaluation ===")
+        print("\n OpenBet Team Model Evaluation")
 
     full_data, feature_cols = build_feature_matrix()
 
@@ -265,7 +265,7 @@ def run_team_evaluation(verbose: bool = True) -> dict:
     r2   = float(r2_score(y_test, y_pred))
 
     if verbose:
-        print(f"\n── Regression Metrics (held-out 20%) ──")
+        print(f"\n Regression Metrics (held-out 20%):")
         print(f"  MAE  : {mae:.3f} points")
         print(f"  RMSE : {rmse:.3f} points")
         print(f"  R²   : {r2:.4f}")
@@ -277,12 +277,12 @@ def run_team_evaluation(verbose: bool = True) -> dict:
     csv_path = RESULTS_DIR / "team_predictions_vs_actuals.csv"
     results_df.to_csv(csv_path, index=False)
     if verbose:
-        print(f"\n  Predictions saved → {csv_path}")
+        print(f"\n  Predictions saved to {csv_path}")
 
     # confusion matrix from history
     cm = compute_confusion_matrix_from_history()
     if verbose:
-        print(f"\n── Confusion Matrix (N={cm['n_games']} predictions from history) ──")
+        print(f"\n Confusion Matrix (N={cm['n_games']} predictions from history):")
         print(f"  Binary rule : predicted_winner == home_team")
         print(f"  TP={cm['TP']}  FP={cm['FP']}  TN={cm['TN']}  FN={cm['FN']}")
         print(f"  FPR       = {cm['FPR']:.4f}  ({cm['FP']}/{cm['FP']+cm['TN']})")

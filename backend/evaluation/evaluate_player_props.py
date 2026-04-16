@@ -97,18 +97,15 @@ def _eval_one_stat(df: pd.DataFrame, target: str) -> dict:
 
 
 def run_player_prop_evaluation(verbose: bool = True) -> dict[str, dict]:
-    """
-    Runs evaluation for every stat category.
-    Returns a dict keyed by target name.
-    """
+    # Runs evaluation for every stat category
     if verbose:
-        print("\n=== OpenBet Player Prop Model Evaluation ===")
+        print("\nOpenBet Player Prop Model Evaluation")
         print(f"Loading {TEST_STATS.name}…")
 
     df = _load_and_prepare()
 
     if verbose:
-        print(f"Rows loaded: {len(df)}  |  Players: {df['playerName'].nunique()}")
+        print(f"Rows loaded: {len(df)} and Players: {df['playerName'].nunique()}")
 
     all_results: dict[str, dict] = {}
     all_preds_rows: list[dict]   = []
@@ -121,7 +118,7 @@ def run_player_prop_evaluation(verbose: bool = True) -> dict[str, dict]:
             if "error" in res:
                 print(f"\n  {target}: SKIPPED – {res['error']}")
             else:
-                print(f"\n  ── {target} ──")
+                print(f"\n {target}: ")
                 print(f"    MAE={res['MAE']:.3f}  RMSE={res['RMSE']:.3f}  R²={res['R2']:.4f}")
                 print(f"    Binary rule: pred > median ({res['threshold']}) = OVER signal")
                 print(f"    TP={res['TP']}  FP={res['FP']}  TN={res['TN']}  FN={res['FN']}")
