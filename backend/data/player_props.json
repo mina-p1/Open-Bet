@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-20T10:43:21.732843Z",
+  "last_updated": "2026-08-21T10:42:06.900040Z",
   "props": [
     {
       "game_id": "26b036ff107f3c658258eaf4a6f26228",
@@ -371,7 +371,7 @@
       "market": "player_points_rebounds_assists",
       "player": "Jalen Brunson",
       "line": 35.5,
-      "price": -122,
+      "price": -128,
       "over_under": "Over",
       "prop_prediction": null,
       "edge_vs_line": null
@@ -386,7 +386,7 @@
       "market": "player_points_rebounds_assists",
       "player": "Jalen Brunson",
       "line": 35.5,
-      "price": -108,
+      "price": -104,
       "over_under": "Under",
       "prop_prediction": null,
       "edge_vs_line": null
@@ -416,7 +416,7 @@
       "market": "player_rebounds",
       "player": "Jalen Brunson",
       "line": 2.5,
-      "price": 130,
+      "price": 128,
       "over_under": "Under",
       "prop_prediction": null,
       "edge_vs_line": null
