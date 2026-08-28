@@ -1,36 +1,6 @@
 {
-  "last_updated": "2026-08-27T20:22:14.364902Z",
+  "last_updated": "2026-08-28T21:15:17.192016Z",
   "props": [
-    {
-      "game_id": "26b036ff107f3c658258eaf4a6f26228",
-      "home_team": "Detroit Pistons",
-      "away_team": "Boston Celtics",
-      "commence_time": "2026-10-20T19:00:00Z",
-      "team_side": "AWAY",
-      "bookmaker": "FanDuel",
-      "market": "player_assists",
-      "player": "Jayson Tatum",
-      "line": 5.5,
-      "price": -130,
-      "over_under": "Over",
-      "prop_prediction": null,
-      "edge_vs_line": null
-    },
-    {
-      "game_id": "26b036ff107f3c658258eaf4a6f26228",
-      "home_team": "Detroit Pistons",
-      "away_team": "Boston Celtics",
-      "commence_time": "2026-10-20T19:00:00Z",
-      "team_side": "AWAY",
-      "bookmaker": "FanDuel",
-      "market": "player_assists",
-      "player": "Jayson Tatum",
-      "line": 5.5,
-      "price": -102,
-      "over_under": "Under",
-      "prop_prediction": null,
-      "edge_vs_line": null
-    },
     {
       "game_id": "26b036ff107f3c658258eaf4a6f26228",
       "home_team": "Detroit Pistons",
@@ -57,6 +27,36 @@
       "player": "Cade Cunningham",
       "line": 9.5,
       "price": -122,
+      "over_under": "Under",
+      "prop_prediction": null,
+      "edge_vs_line": null
+    },
+    {
+      "game_id": "26b036ff107f3c658258eaf4a6f26228",
+      "home_team": "Detroit Pistons",
+      "away_team": "Boston Celtics",
+      "commence_time": "2026-10-20T19:00:00Z",
+      "team_side": "AWAY",
+      "bookmaker": "FanDuel",
+      "market": "player_assists",
+      "player": "Jayson Tatum",
+      "line": 5.5,
+      "price": -130,
+      "over_under": "Over",
+      "prop_prediction": null,
+      "edge_vs_line": null
+    },
+    {
+      "game_id": "26b036ff107f3c658258eaf4a6f26228",
+      "home_team": "Detroit Pistons",
+      "away_team": "Boston Celtics",
+      "commence_time": "2026-10-20T19:00:00Z",
+      "team_side": "AWAY",
+      "bookmaker": "FanDuel",
+      "market": "player_assists",
+      "player": "Jayson Tatum",
+      "line": 5.5,
+      "price": -102,
       "over_under": "Under",
       "prop_prediction": null,
       "edge_vs_line": null
@@ -461,7 +461,7 @@
       "market": "player_assists",
       "player": "Victor Wembanyama",
       "line": 2.5,
-      "price": -186,
+      "price": -182,
       "over_under": "Over",
       "prop_prediction": null,
       "edge_vs_line": null
@@ -476,7 +476,7 @@
       "market": "player_assists",
       "player": "Victor Wembanyama",
       "line": 2.5,
-      "price": 138,
+      "price": 136,
       "over_under": "Under",
       "prop_prediction": null,
       "edge_vs_line": null
@@ -491,7 +491,7 @@
       "market": "player_assists",
       "player": "Shai Gilgeous-Alexander",
       "line": 5.5,
-      "price": -114,
+      "price": -138,
       "over_under": "Over",
       "prop_prediction": null,
       "edge_vs_line": null
@@ -506,7 +506,7 @@
       "market": "player_assists",
       "player": "Shai Gilgeous-Alexander",
       "line": 5.5,
-      "price": -114,
+      "price": 104,
       "over_under": "Under",
       "prop_prediction": null,
       "edge_vs_line": null
@@ -580,8 +580,8 @@
       "bookmaker": "FanDuel",
       "market": "player_points_rebounds_assists",
       "player": "Shai Gilgeous-Alexander",
-      "line": 39.5,
-      "price": -122,
+      "line": 40.5,
+      "price": -110,
       "over_under": "Over",
       "prop_prediction": null,
       "edge_vs_line": null
@@ -595,8 +595,8 @@
       "bookmaker": "FanDuel",
       "market": "player_points_rebounds_assists",
       "player": "Shai Gilgeous-Alexander",
-      "line": 39.5,
-      "price": -108,
+      "line": 40.5,
+      "price": -120,
       "over_under": "Under",
       "prop_prediction": null,
       "edge_vs_line": null
@@ -611,7 +611,7 @@
       "market": "player_points_rebounds_assists",
       "player": "Victor Wembanyama",
       "line": 40.5,
-      "price": -114,
+      "price": -112,
       "over_under": "Over",
       "prop_prediction": null,
       "edge_vs_line": null
@@ -626,7 +626,7 @@
       "market": "player_points_rebounds_assists",
       "player": "Victor Wembanyama",
       "line": 40.5,
-      "price": -114,
+      "price": -118,
       "over_under": "Under",
       "prop_prediction": null,
       "edge_vs_line": null
