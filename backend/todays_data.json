@@ -11,11 +11,11 @@
         {
           "key": "fanduel",
           "title": "FanDuel",
-          "last_update": "2026-09-02T14:21:06Z",
+          "last_update": "2026-09-03T14:24:45Z",
           "markets": [
             {
               "key": "h2h",
-              "last_update": "2026-09-02T14:21:06Z",
+              "last_update": "2026-09-03T14:24:45Z",
               "outcomes": [
                 {
                   "name": "Boston Celtics",
@@ -29,7 +29,7 @@
             },
             {
               "key": "spreads",
-              "last_update": "2026-09-02T14:21:06Z",
+              "last_update": "2026-09-03T14:24:45Z",
               "outcomes": [
                 {
                   "name": "Boston Celtics",
@@ -45,7 +45,7 @@
             },
             {
               "key": "totals",
-              "last_update": "2026-09-02T14:21:06Z",
+              "last_update": "2026-09-03T14:24:45Z",
               "outcomes": [
                 {
                   "name": "Over",
@@ -64,11 +64,11 @@
         {
           "key": "betrivers",
           "title": "BetRivers",
-          "last_update": "2026-09-02T14:20:37Z",
+          "last_update": "2026-09-03T14:24:43Z",
           "markets": [
             {
               "key": "h2h",
-              "last_update": "2026-09-02T14:20:37Z",
+              "last_update": "2026-09-03T14:24:43Z",
               "outcomes": [
                 {
                   "name": "Boston Celtics",
@@ -82,7 +82,7 @@
             },
             {
               "key": "spreads",
-              "last_update": "2026-09-02T14:20:37Z",
+              "last_update": "2026-09-03T14:24:43Z",
               "outcomes": [
                 {
                   "name": "Boston Celtics",
@@ -98,7 +98,7 @@
             },
             {
               "key": "totals",
-              "last_update": "2026-09-02T14:20:37Z",
+              "last_update": "2026-09-03T14:24:43Z",
               "outcomes": [
                 {
                   "name": "Over",
@@ -117,11 +117,11 @@
         {
           "key": "betmgm",
           "title": "BetMGM",
-          "last_update": "2026-09-02T14:20:36Z",
+          "last_update": "2026-09-03T14:24:41Z",
           "markets": [
             {
               "key": "h2h",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:41Z",
               "outcomes": [
                 {
                   "name": "Boston Celtics",
@@ -135,7 +135,7 @@
             },
             {
               "key": "spreads",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:41Z",
               "outcomes": [
                 {
                   "name": "Boston Celtics",
@@ -151,7 +151,7 @@
             },
             {
               "key": "totals",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:41Z",
               "outcomes": [
                 {
                   "name": "Over",
@@ -170,11 +170,11 @@
         {
           "key": "draftkings",
           "title": "DraftKings",
-          "last_update": "2026-09-02T14:20:36Z",
+          "last_update": "2026-09-03T14:24:15Z",
           "markets": [
             {
               "key": "h2h",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Boston Celtics",
@@ -188,7 +188,7 @@
             },
             {
               "key": "spreads",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Boston Celtics",
@@ -204,17 +204,17 @@
             },
             {
               "key": "totals",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Over",
-                  "price": -115,
-                  "point": 222.5
+                  "price": -110,
+                  "point": 221.5
                 },
                 {
                   "name": "Under",
-                  "price": -105,
-                  "point": 222.5
+                  "price": -110,
+                  "point": 221.5
                 }
               ]
             }
@@ -223,11 +223,11 @@
         {
           "key": "betonlineag",
           "title": "BetOnline.ag",
-          "last_update": "2026-09-02T14:21:06Z",
+          "last_update": "2026-09-03T14:24:45Z",
           "markets": [
             {
               "key": "spreads",
-              "last_update": "2026-09-02T14:21:06Z",
+              "last_update": "2026-09-03T14:24:45Z",
               "outcomes": [
                 {
                   "name": "Boston Celtics",
@@ -243,7 +243,7 @@
             },
             {
               "key": "totals",
-              "last_update": "2026-09-02T14:21:06Z",
+              "last_update": "2026-09-03T14:24:45Z",
               "outcomes": [
                 {
                   "name": "Over",
@@ -262,11 +262,11 @@
         {
           "key": "lowvig",
           "title": "LowVig.ag",
-          "last_update": "2026-09-02T14:20:36Z",
+          "last_update": "2026-09-03T14:24:16Z",
           "markets": [
             {
               "key": "spreads",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:16Z",
               "outcomes": [
                 {
                   "name": "Boston Celtics",
@@ -282,7 +282,7 @@
             },
             {
               "key": "totals",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:16Z",
               "outcomes": [
                 {
                   "name": "Over",
@@ -301,11 +301,11 @@
         {
           "key": "bovada",
           "title": "Bovada",
-          "last_update": "2026-09-02T14:19:56Z",
+          "last_update": "2026-09-03T14:24:49Z",
           "markets": [
             {
               "key": "h2h",
-              "last_update": "2026-09-02T14:19:56Z",
+              "last_update": "2026-09-03T14:24:49Z",
               "outcomes": [
                 {
                   "name": "Boston Celtics",
@@ -319,7 +319,7 @@
             },
             {
               "key": "spreads",
-              "last_update": "2026-09-02T14:19:56Z",
+              "last_update": "2026-09-03T14:24:49Z",
               "outcomes": [
                 {
                   "name": "Boston Celtics",
@@ -335,17 +335,17 @@
             },
             {
               "key": "totals",
-              "last_update": "2026-09-02T14:19:56Z",
+              "last_update": "2026-09-03T14:24:49Z",
               "outcomes": [
                 {
                   "name": "Over",
-                  "price": -115,
-                  "point": 222.5
+                  "price": -110,
+                  "point": 221.5
                 },
                 {
                   "name": "Under",
-                  "price": -105,
-                  "point": 222.5
+                  "price": -110,
+                  "point": 221.5
                 }
               ]
             }
@@ -370,11 +370,11 @@
         {
           "key": "fanduel",
           "title": "FanDuel",
-          "last_update": "2026-09-02T14:21:06Z",
+          "last_update": "2026-09-03T14:24:45Z",
           "markets": [
             {
               "key": "h2h",
-              "last_update": "2026-09-02T14:21:06Z",
+              "last_update": "2026-09-03T14:24:45Z",
               "outcomes": [
                 {
                   "name": "New York Knicks",
@@ -388,7 +388,7 @@
             },
             {
               "key": "spreads",
-              "last_update": "2026-09-02T14:21:06Z",
+              "last_update": "2026-09-03T14:24:45Z",
               "outcomes": [
                 {
                   "name": "New York Knicks",
@@ -404,7 +404,7 @@
             },
             {
               "key": "totals",
-              "last_update": "2026-09-02T14:21:06Z",
+              "last_update": "2026-09-03T14:24:45Z",
               "outcomes": [
                 {
                   "name": "Over",
@@ -423,11 +423,11 @@
         {
           "key": "betrivers",
           "title": "BetRivers",
-          "last_update": "2026-09-02T14:20:37Z",
+          "last_update": "2026-09-03T14:24:43Z",
           "markets": [
             {
               "key": "h2h",
-              "last_update": "2026-09-02T14:20:37Z",
+              "last_update": "2026-09-03T14:24:43Z",
               "outcomes": [
                 {
                   "name": "New York Knicks",
@@ -441,7 +441,7 @@
             },
             {
               "key": "spreads",
-              "last_update": "2026-09-02T14:20:37Z",
+              "last_update": "2026-09-03T14:24:43Z",
               "outcomes": [
                 {
                   "name": "New York Knicks",
@@ -457,7 +457,7 @@
             },
             {
               "key": "totals",
-              "last_update": "2026-09-02T14:20:37Z",
+              "last_update": "2026-09-03T14:24:43Z",
               "outcomes": [
                 {
                   "name": "Over",
@@ -476,11 +476,11 @@
         {
           "key": "betmgm",
           "title": "BetMGM",
-          "last_update": "2026-09-02T14:20:36Z",
+          "last_update": "2026-09-03T14:24:41Z",
           "markets": [
             {
               "key": "h2h",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:41Z",
               "outcomes": [
                 {
                   "name": "New York Knicks",
@@ -494,7 +494,7 @@
             },
             {
               "key": "spreads",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:41Z",
               "outcomes": [
                 {
                   "name": "New York Knicks",
@@ -510,7 +510,7 @@
             },
             {
               "key": "totals",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:41Z",
               "outcomes": [
                 {
                   "name": "Over",
@@ -529,11 +529,11 @@
         {
           "key": "draftkings",
           "title": "DraftKings",
-          "last_update": "2026-09-02T14:20:36Z",
+          "last_update": "2026-09-03T14:24:15Z",
           "markets": [
             {
               "key": "h2h",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "New York Knicks",
@@ -547,7 +547,7 @@
             },
             {
               "key": "spreads",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "New York Knicks",
@@ -563,7 +563,7 @@
             },
             {
               "key": "totals",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Over",
@@ -582,11 +582,11 @@
         {
           "key": "betonlineag",
           "title": "BetOnline.ag",
-          "last_update": "2026-09-02T14:21:06Z",
+          "last_update": "2026-09-03T14:24:45Z",
           "markets": [
             {
               "key": "spreads",
-              "last_update": "2026-09-02T14:21:06Z",
+              "last_update": "2026-09-03T14:24:45Z",
               "outcomes": [
                 {
                   "name": "New York Knicks",
@@ -602,7 +602,7 @@
             },
             {
               "key": "totals",
-              "last_update": "2026-09-02T14:21:06Z",
+              "last_update": "2026-09-03T14:24:45Z",
               "outcomes": [
                 {
                   "name": "Over",
@@ -621,11 +621,11 @@
         {
           "key": "lowvig",
           "title": "LowVig.ag",
-          "last_update": "2026-09-02T14:20:36Z",
+          "last_update": "2026-09-03T14:24:16Z",
           "markets": [
             {
               "key": "spreads",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:16Z",
               "outcomes": [
                 {
                   "name": "New York Knicks",
@@ -641,7 +641,7 @@
             },
             {
               "key": "totals",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:16Z",
               "outcomes": [
                 {
                   "name": "Over",
@@ -660,11 +660,11 @@
         {
           "key": "bovada",
           "title": "Bovada",
-          "last_update": "2026-09-02T14:19:56Z",
+          "last_update": "2026-09-03T14:24:49Z",
           "markets": [
             {
               "key": "h2h",
-              "last_update": "2026-09-02T14:19:56Z",
+              "last_update": "2026-09-03T14:24:49Z",
               "outcomes": [
                 {
                   "name": "New York Knicks",
@@ -678,7 +678,7 @@
             },
             {
               "key": "spreads",
-              "last_update": "2026-09-02T14:19:56Z",
+              "last_update": "2026-09-03T14:24:49Z",
               "outcomes": [
                 {
                   "name": "New York Knicks",
@@ -694,7 +694,7 @@
             },
             {
               "key": "totals",
-              "last_update": "2026-09-02T14:19:56Z",
+              "last_update": "2026-09-03T14:24:49Z",
               "outcomes": [
                 {
                   "name": "Over",
@@ -729,11 +729,11 @@
         {
           "key": "fanduel",
           "title": "FanDuel",
-          "last_update": "2026-09-02T14:21:06Z",
+          "last_update": "2026-09-03T14:24:45Z",
           "markets": [
             {
               "key": "h2h",
-              "last_update": "2026-09-02T14:21:06Z",
+              "last_update": "2026-09-03T14:24:45Z",
               "outcomes": [
                 {
                   "name": "Oklahoma City Thunder",
@@ -747,7 +747,7 @@
             },
             {
               "key": "spreads",
-              "last_update": "2026-09-02T14:21:06Z",
+              "last_update": "2026-09-03T14:24:45Z",
               "outcomes": [
                 {
                   "name": "Oklahoma City Thunder",
@@ -763,7 +763,7 @@
             },
             {
               "key": "totals",
-              "last_update": "2026-09-02T14:21:06Z",
+              "last_update": "2026-09-03T14:24:45Z",
               "outcomes": [
                 {
                   "name": "Over",
@@ -782,11 +782,11 @@
         {
           "key": "betrivers",
           "title": "BetRivers",
-          "last_update": "2026-09-02T14:20:37Z",
+          "last_update": "2026-09-03T14:24:43Z",
           "markets": [
             {
               "key": "h2h",
-              "last_update": "2026-09-02T14:20:37Z",
+              "last_update": "2026-09-03T14:24:43Z",
               "outcomes": [
                 {
                   "name": "Oklahoma City Thunder",
@@ -800,7 +800,7 @@
             },
             {
               "key": "spreads",
-              "last_update": "2026-09-02T14:20:37Z",
+              "last_update": "2026-09-03T14:24:43Z",
               "outcomes": [
                 {
                   "name": "Oklahoma City Thunder",
@@ -816,7 +816,7 @@
             },
             {
               "key": "totals",
-              "last_update": "2026-09-02T14:20:37Z",
+              "last_update": "2026-09-03T14:24:43Z",
               "outcomes": [
                 {
                   "name": "Over",
@@ -835,11 +835,11 @@
         {
           "key": "betmgm",
           "title": "BetMGM",
-          "last_update": "2026-09-02T14:20:36Z",
+          "last_update": "2026-09-03T14:24:41Z",
           "markets": [
             {
               "key": "h2h",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:41Z",
               "outcomes": [
                 {
                   "name": "Oklahoma City Thunder",
@@ -853,7 +853,7 @@
             },
             {
               "key": "spreads",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:41Z",
               "outcomes": [
                 {
                   "name": "Oklahoma City Thunder",
@@ -869,7 +869,7 @@
             },
             {
               "key": "totals",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:41Z",
               "outcomes": [
                 {
                   "name": "Over",
@@ -888,11 +888,11 @@
         {
           "key": "draftkings",
           "title": "DraftKings",
-          "last_update": "2026-09-02T14:20:36Z",
+          "last_update": "2026-09-03T14:24:15Z",
           "markets": [
             {
               "key": "h2h",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Oklahoma City Thunder",
@@ -906,7 +906,7 @@
             },
             {
               "key": "spreads",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Oklahoma City Thunder",
@@ -922,7 +922,7 @@
             },
             {
               "key": "totals",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Over",
@@ -941,11 +941,11 @@
         {
           "key": "betonlineag",
           "title": "BetOnline.ag",
-          "last_update": "2026-09-02T14:21:06Z",
+          "last_update": "2026-09-03T14:24:45Z",
           "markets": [
             {
               "key": "spreads",
-              "last_update": "2026-09-02T14:21:06Z",
+              "last_update": "2026-09-03T14:24:45Z",
               "outcomes": [
                 {
                   "name": "Oklahoma City Thunder",
@@ -961,7 +961,7 @@
             },
             {
               "key": "totals",
-              "last_update": "2026-09-02T14:21:06Z",
+              "last_update": "2026-09-03T14:24:45Z",
               "outcomes": [
                 {
                   "name": "Over",
@@ -980,11 +980,11 @@
         {
           "key": "lowvig",
           "title": "LowVig.ag",
-          "last_update": "2026-09-02T14:20:36Z",
+          "last_update": "2026-09-03T14:24:16Z",
           "markets": [
             {
               "key": "spreads",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:16Z",
               "outcomes": [
                 {
                   "name": "Oklahoma City Thunder",
@@ -1000,7 +1000,7 @@
             },
             {
               "key": "totals",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:16Z",
               "outcomes": [
                 {
                   "name": "Over",
@@ -1019,11 +1019,11 @@
         {
           "key": "bovada",
           "title": "Bovada",
-          "last_update": "2026-09-02T14:19:56Z",
+          "last_update": "2026-09-03T14:24:49Z",
           "markets": [
             {
               "key": "h2h",
-              "last_update": "2026-09-02T14:19:56Z",
+              "last_update": "2026-09-03T14:24:49Z",
               "outcomes": [
                 {
                   "name": "Oklahoma City Thunder",
@@ -1037,7 +1037,7 @@
             },
             {
               "key": "spreads",
-              "last_update": "2026-09-02T14:19:56Z",
+              "last_update": "2026-09-03T14:24:49Z",
               "outcomes": [
                 {
                   "name": "Oklahoma City Thunder",
@@ -1053,7 +1053,7 @@
             },
             {
               "key": "totals",
-              "last_update": "2026-09-02T14:19:56Z",
+              "last_update": "2026-09-03T14:24:49Z",
               "outcomes": [
                 {
                   "name": "Over",
@@ -1088,11 +1088,11 @@
         {
           "key": "draftkings",
           "title": "DraftKings",
-          "last_update": "2026-09-02T14:20:36Z",
+          "last_update": "2026-09-03T14:24:15Z",
           "markets": [
             {
               "key": "h2h",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Atlanta Hawks",
@@ -1106,7 +1106,7 @@
             },
             {
               "key": "spreads",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Atlanta Hawks",
@@ -1122,7 +1122,7 @@
             },
             {
               "key": "totals",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Over",
@@ -1141,11 +1141,11 @@
         {
           "key": "bovada",
           "title": "Bovada",
-          "last_update": "2026-09-02T14:19:56Z",
+          "last_update": "2026-09-03T14:24:49Z",
           "markets": [
             {
               "key": "h2h",
-              "last_update": "2026-09-02T14:19:56Z",
+              "last_update": "2026-09-03T14:24:49Z",
               "outcomes": [
                 {
                   "name": "Atlanta Hawks",
@@ -1159,7 +1159,7 @@
             },
             {
               "key": "spreads",
-              "last_update": "2026-09-02T14:19:56Z",
+              "last_update": "2026-09-03T14:24:49Z",
               "outcomes": [
                 {
                   "name": "Atlanta Hawks",
@@ -1175,7 +1175,7 @@
             },
             {
               "key": "totals",
-              "last_update": "2026-09-02T14:19:56Z",
+              "last_update": "2026-09-03T14:24:49Z",
               "outcomes": [
                 {
                   "name": "Over",
@@ -1194,11 +1194,11 @@
         {
           "key": "betmgm",
           "title": "BetMGM",
-          "last_update": "2026-09-02T14:20:36Z",
+          "last_update": "2026-09-03T14:24:41Z",
           "markets": [
             {
               "key": "h2h",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:41Z",
               "outcomes": [
                 {
                   "name": "Atlanta Hawks",
@@ -1212,7 +1212,7 @@
             },
             {
               "key": "spreads",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:41Z",
               "outcomes": [
                 {
                   "name": "Atlanta Hawks",
@@ -1228,7 +1228,7 @@
             },
             {
               "key": "totals",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:41Z",
               "outcomes": [
                 {
                   "name": "Over",
@@ -1263,11 +1263,11 @@
         {
           "key": "draftkings",
           "title": "DraftKings",
-          "last_update": "2026-09-02T14:20:36Z",
+          "last_update": "2026-09-03T14:24:15Z",
           "markets": [
             {
               "key": "h2h",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Milwaukee Bucks",
@@ -1281,7 +1281,7 @@
             },
             {
               "key": "spreads",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Milwaukee Bucks",
@@ -1297,7 +1297,7 @@
             },
             {
               "key": "totals",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Over",
@@ -1316,11 +1316,11 @@
         {
           "key": "bovada",
           "title": "Bovada",
-          "last_update": "2026-09-02T14:19:56Z",
+          "last_update": "2026-09-03T14:24:49Z",
           "markets": [
             {
               "key": "h2h",
-              "last_update": "2026-09-02T14:19:56Z",
+              "last_update": "2026-09-03T14:24:49Z",
               "outcomes": [
                 {
                   "name": "Milwaukee Bucks",
@@ -1334,7 +1334,7 @@
             },
             {
               "key": "spreads",
-              "last_update": "2026-09-02T14:19:56Z",
+              "last_update": "2026-09-03T14:24:49Z",
               "outcomes": [
                 {
                   "name": "Milwaukee Bucks",
@@ -1350,7 +1350,7 @@
             },
             {
               "key": "totals",
-              "last_update": "2026-09-02T14:19:56Z",
+              "last_update": "2026-09-03T14:24:49Z",
               "outcomes": [
                 {
                   "name": "Over",
@@ -1369,11 +1369,11 @@
         {
           "key": "betmgm",
           "title": "BetMGM",
-          "last_update": "2026-09-02T14:20:36Z",
+          "last_update": "2026-09-03T14:24:41Z",
           "markets": [
             {
               "key": "h2h",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:41Z",
               "outcomes": [
                 {
                   "name": "Milwaukee Bucks",
@@ -1387,7 +1387,7 @@
             },
             {
               "key": "spreads",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:41Z",
               "outcomes": [
                 {
                   "name": "Milwaukee Bucks",
@@ -1403,7 +1403,7 @@
             },
             {
               "key": "totals",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:41Z",
               "outcomes": [
                 {
                   "name": "Over",
@@ -1438,11 +1438,11 @@
         {
           "key": "draftkings",
           "title": "DraftKings",
-          "last_update": "2026-09-02T14:20:36Z",
+          "last_update": "2026-09-03T14:24:15Z",
           "markets": [
             {
               "key": "h2h",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Brooklyn Nets",
@@ -1456,7 +1456,7 @@
             },
             {
               "key": "spreads",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Brooklyn Nets",
@@ -1472,7 +1472,7 @@
             },
             {
               "key": "totals",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Over",
@@ -1491,11 +1491,11 @@
         {
           "key": "bovada",
           "title": "Bovada",
-          "last_update": "2026-09-02T14:19:56Z",
+          "last_update": "2026-09-03T14:24:49Z",
           "markets": [
             {
               "key": "h2h",
-              "last_update": "2026-09-02T14:19:56Z",
+              "last_update": "2026-09-03T14:24:49Z",
               "outcomes": [
                 {
                   "name": "Brooklyn Nets",
@@ -1509,7 +1509,7 @@
             },
             {
               "key": "spreads",
-              "last_update": "2026-09-02T14:19:56Z",
+              "last_update": "2026-09-03T14:24:49Z",
               "outcomes": [
                 {
                   "name": "Brooklyn Nets",
@@ -1525,7 +1525,7 @@
             },
             {
               "key": "totals",
-              "last_update": "2026-09-02T14:19:56Z",
+              "last_update": "2026-09-03T14:24:49Z",
               "outcomes": [
                 {
                   "name": "Over",
@@ -1544,11 +1544,11 @@
         {
           "key": "betmgm",
           "title": "BetMGM",
-          "last_update": "2026-09-02T14:20:36Z",
+          "last_update": "2026-09-03T14:24:41Z",
           "markets": [
             {
               "key": "h2h",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:41Z",
               "outcomes": [
                 {
                   "name": "Brooklyn Nets",
@@ -1562,7 +1562,7 @@
             },
             {
               "key": "spreads",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:41Z",
               "outcomes": [
                 {
                   "name": "Brooklyn Nets",
@@ -1578,7 +1578,7 @@
             },
             {
               "key": "totals",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:41Z",
               "outcomes": [
                 {
                   "name": "Over",
@@ -1613,11 +1613,11 @@
         {
           "key": "draftkings",
           "title": "DraftKings",
-          "last_update": "2026-09-02T14:20:36Z",
+          "last_update": "2026-09-03T14:24:15Z",
           "markets": [
             {
               "key": "h2h",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Miami Heat",
@@ -1631,7 +1631,7 @@
             },
             {
               "key": "spreads",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Miami Heat",
@@ -1647,7 +1647,7 @@
             },
             {
               "key": "totals",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Over",
@@ -1666,11 +1666,11 @@
         {
           "key": "fanduel",
           "title": "FanDuel",
-          "last_update": "2026-09-02T14:21:06Z",
+          "last_update": "2026-09-03T14:24:45Z",
           "markets": [
             {
               "key": "h2h",
-              "last_update": "2026-09-02T14:21:06Z",
+              "last_update": "2026-09-03T14:24:45Z",
               "outcomes": [
                 {
                   "name": "Miami Heat",
@@ -1684,7 +1684,7 @@
             },
             {
               "key": "spreads",
-              "last_update": "2026-09-02T14:21:06Z",
+              "last_update": "2026-09-03T14:24:45Z",
               "outcomes": [
                 {
                   "name": "Miami Heat",
@@ -1700,7 +1700,7 @@
             },
             {
               "key": "totals",
-              "last_update": "2026-09-02T14:21:06Z",
+              "last_update": "2026-09-03T14:24:45Z",
               "outcomes": [
                 {
                   "name": "Over",
@@ -1719,11 +1719,11 @@
         {
           "key": "bovada",
           "title": "Bovada",
-          "last_update": "2026-09-02T14:19:56Z",
+          "last_update": "2026-09-03T14:24:49Z",
           "markets": [
             {
               "key": "h2h",
-              "last_update": "2026-09-02T14:19:56Z",
+              "last_update": "2026-09-03T14:24:49Z",
               "outcomes": [
                 {
                   "name": "Miami Heat",
@@ -1737,7 +1737,7 @@
             },
             {
               "key": "spreads",
-              "last_update": "2026-09-02T14:19:56Z",
+              "last_update": "2026-09-03T14:24:49Z",
               "outcomes": [
                 {
                   "name": "Miami Heat",
@@ -1753,7 +1753,7 @@
             },
             {
               "key": "totals",
-              "last_update": "2026-09-02T14:19:56Z",
+              "last_update": "2026-09-03T14:24:49Z",
               "outcomes": [
                 {
                   "name": "Over",
@@ -1772,11 +1772,11 @@
         {
           "key": "betmgm",
           "title": "BetMGM",
-          "last_update": "2026-09-02T14:20:36Z",
+          "last_update": "2026-09-03T14:24:41Z",
           "markets": [
             {
               "key": "h2h",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:41Z",
               "outcomes": [
                 {
                   "name": "Miami Heat",
@@ -1790,7 +1790,7 @@
             },
             {
               "key": "spreads",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:41Z",
               "outcomes": [
                 {
                   "name": "Miami Heat",
@@ -1806,7 +1806,7 @@
             },
             {
               "key": "totals",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:41Z",
               "outcomes": [
                 {
                   "name": "Over",
@@ -1841,51 +1841,51 @@
         {
           "key": "draftkings",
           "title": "DraftKings",
-          "last_update": "2026-09-02T14:20:36Z",
+          "last_update": "2026-09-03T14:24:15Z",
           "markets": [
             {
               "key": "h2h",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Indiana Pacers",
-                  "price": -162
+                  "price": -166
                 },
                 {
                   "name": "New Orleans Pelicans",
-                  "price": 136
+                  "price": 140
                 }
               ]
             },
             {
               "key": "spreads",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Indiana Pacers",
-                  "price": -102,
-                  "point": -4.5
+                  "price": -118,
+                  "point": -3.5
                 },
                 {
                   "name": "New Orleans Pelicans",
-                  "price": -118,
-                  "point": 4.5
+                  "price": -102,
+                  "point": 3.5
                 }
               ]
             },
             {
               "key": "totals",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Over",
-                  "price": -105,
-                  "point": 243.5
+                  "price": -115,
+                  "point": 242.5
                 },
                 {
                   "name": "Under",
-                  "price": -115,
-                  "point": 243.5
+                  "price": -105,
+                  "point": 242.5
                 }
               ]
             }
@@ -1894,64 +1894,11 @@
         {
           "key": "bovada",
           "title": "Bovada",
-          "last_update": "2026-09-02T14:19:56Z",
+          "last_update": "2026-09-03T14:24:49Z",
           "markets": [
             {
               "key": "h2h",
-              "last_update": "2026-09-02T14:19:56Z",
-              "outcomes": [
-                {
-                  "name": "Indiana Pacers",
-                  "price": -160
-                },
-                {
-                  "name": "New Orleans Pelicans",
-                  "price": 135
-                }
-              ]
-            },
-            {
-              "key": "spreads",
-              "last_update": "2026-09-02T14:19:56Z",
-              "outcomes": [
-                {
-                  "name": "Indiana Pacers",
-                  "price": 100,
-                  "point": -4.5
-                },
-                {
-                  "name": "New Orleans Pelicans",
-                  "price": -120,
-                  "point": 4.5
-                }
-              ]
-            },
-            {
-              "key": "totals",
-              "last_update": "2026-09-02T14:19:56Z",
-              "outcomes": [
-                {
-                  "name": "Over",
-                  "price": -105,
-                  "point": 243.5
-                },
-                {
-                  "name": "Under",
-                  "price": -115,
-                  "point": 243.5
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "key": "betmgm",
-          "title": "BetMGM",
-          "last_update": "2026-09-02T14:20:36Z",
-          "markets": [
-            {
-              "key": "h2h",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:49Z",
               "outcomes": [
                 {
                   "name": "Indiana Pacers",
@@ -1965,7 +1912,60 @@
             },
             {
               "key": "spreads",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:49Z",
+              "outcomes": [
+                {
+                  "name": "Indiana Pacers",
+                  "price": -120,
+                  "point": -3.5
+                },
+                {
+                  "name": "New Orleans Pelicans",
+                  "price": 100,
+                  "point": 3.5
+                }
+              ]
+            },
+            {
+              "key": "totals",
+              "last_update": "2026-09-03T14:24:49Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "price": -115,
+                  "point": 242.5
+                },
+                {
+                  "name": "Under",
+                  "price": -105,
+                  "point": 242.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "betmgm",
+          "title": "BetMGM",
+          "last_update": "2026-09-03T14:24:41Z",
+          "markets": [
+            {
+              "key": "h2h",
+              "last_update": "2026-09-03T14:24:41Z",
+              "outcomes": [
+                {
+                  "name": "Indiana Pacers",
+                  "price": -165
+                },
+                {
+                  "name": "New Orleans Pelicans",
+                  "price": 140
+                }
+              ]
+            },
+            {
+              "key": "spreads",
+              "last_update": "2026-09-03T14:24:41Z",
               "outcomes": [
                 {
                   "name": "Indiana Pacers",
@@ -1981,7 +1981,7 @@
             },
             {
               "key": "totals",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:41Z",
               "outcomes": [
                 {
                   "name": "Over",
@@ -2016,11 +2016,11 @@
         {
           "key": "draftkings",
           "title": "DraftKings",
-          "last_update": "2026-09-02T14:20:36Z",
+          "last_update": "2026-09-03T14:24:15Z",
           "markets": [
             {
               "key": "h2h",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Memphis Grizzlies",
@@ -2034,7 +2034,7 @@
             },
             {
               "key": "spreads",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Memphis Grizzlies",
@@ -2050,7 +2050,7 @@
             },
             {
               "key": "totals",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Over",
@@ -2069,11 +2069,11 @@
         {
           "key": "bovada",
           "title": "Bovada",
-          "last_update": "2026-09-02T14:19:56Z",
+          "last_update": "2026-09-03T14:24:49Z",
           "markets": [
             {
               "key": "h2h",
-              "last_update": "2026-09-02T14:19:56Z",
+              "last_update": "2026-09-03T14:24:49Z",
               "outcomes": [
                 {
                   "name": "Memphis Grizzlies",
@@ -2087,7 +2087,7 @@
             },
             {
               "key": "spreads",
-              "last_update": "2026-09-02T14:19:56Z",
+              "last_update": "2026-09-03T14:24:49Z",
               "outcomes": [
                 {
                   "name": "Memphis Grizzlies",
@@ -2103,7 +2103,7 @@
             },
             {
               "key": "totals",
-              "last_update": "2026-09-02T14:19:56Z",
+              "last_update": "2026-09-03T14:24:49Z",
               "outcomes": [
                 {
                   "name": "Over",
@@ -2122,11 +2122,11 @@
         {
           "key": "betmgm",
           "title": "BetMGM",
-          "last_update": "2026-09-02T14:20:36Z",
+          "last_update": "2026-09-03T14:24:41Z",
           "markets": [
             {
               "key": "h2h",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:41Z",
               "outcomes": [
                 {
                   "name": "Memphis Grizzlies",
@@ -2140,7 +2140,7 @@
             },
             {
               "key": "spreads",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:41Z",
               "outcomes": [
                 {
                   "name": "Memphis Grizzlies",
@@ -2156,7 +2156,7 @@
             },
             {
               "key": "totals",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:41Z",
               "outcomes": [
                 {
                   "name": "Over",
@@ -2191,11 +2191,11 @@
         {
           "key": "draftkings",
           "title": "DraftKings",
-          "last_update": "2026-09-02T14:20:36Z",
+          "last_update": "2026-09-03T14:24:15Z",
           "markets": [
             {
               "key": "h2h",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Dallas Mavericks",
@@ -2209,7 +2209,7 @@
             },
             {
               "key": "spreads",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Dallas Mavericks",
@@ -2225,7 +2225,7 @@
             },
             {
               "key": "totals",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Over",
@@ -2244,11 +2244,11 @@
         {
           "key": "bovada",
           "title": "Bovada",
-          "last_update": "2026-09-02T14:19:56Z",
+          "last_update": "2026-09-03T14:24:49Z",
           "markets": [
             {
               "key": "h2h",
-              "last_update": "2026-09-02T14:19:56Z",
+              "last_update": "2026-09-03T14:24:49Z",
               "outcomes": [
                 {
                   "name": "Dallas Mavericks",
@@ -2262,7 +2262,7 @@
             },
             {
               "key": "spreads",
-              "last_update": "2026-09-02T14:19:56Z",
+              "last_update": "2026-09-03T14:24:49Z",
               "outcomes": [
                 {
                   "name": "Dallas Mavericks",
@@ -2278,7 +2278,7 @@
             },
             {
               "key": "totals",
-              "last_update": "2026-09-02T14:19:56Z",
+              "last_update": "2026-09-03T14:24:49Z",
               "outcomes": [
                 {
                   "name": "Over",
@@ -2297,11 +2297,11 @@
         {
           "key": "betmgm",
           "title": "BetMGM",
-          "last_update": "2026-09-02T14:20:36Z",
+          "last_update": "2026-09-03T14:24:41Z",
           "markets": [
             {
               "key": "h2h",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:41Z",
               "outcomes": [
                 {
                   "name": "Dallas Mavericks",
@@ -2315,7 +2315,7 @@
             },
             {
               "key": "spreads",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:41Z",
               "outcomes": [
                 {
                   "name": "Dallas Mavericks",
@@ -2331,7 +2331,7 @@
             },
             {
               "key": "totals",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:41Z",
               "outcomes": [
                 {
                   "name": "Over",
@@ -2366,11 +2366,11 @@
         {
           "key": "draftkings",
           "title": "DraftKings",
-          "last_update": "2026-09-02T14:20:36Z",
+          "last_update": "2026-09-03T14:24:15Z",
           "markets": [
             {
               "key": "h2h",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Golden State Warriors",
@@ -2384,7 +2384,7 @@
             },
             {
               "key": "spreads",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Golden State Warriors",
@@ -2400,7 +2400,7 @@
             },
             {
               "key": "totals",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Over",
@@ -2419,11 +2419,11 @@
         {
           "key": "fanduel",
           "title": "FanDuel",
-          "last_update": "2026-09-02T14:21:06Z",
+          "last_update": "2026-09-03T14:24:45Z",
           "markets": [
             {
               "key": "h2h",
-              "last_update": "2026-09-02T14:21:06Z",
+              "last_update": "2026-09-03T14:24:45Z",
               "outcomes": [
                 {
                   "name": "Golden State Warriors",
@@ -2437,7 +2437,7 @@
             },
             {
               "key": "spreads",
-              "last_update": "2026-09-02T14:21:06Z",
+              "last_update": "2026-09-03T14:24:45Z",
               "outcomes": [
                 {
                   "name": "Golden State Warriors",
@@ -2453,7 +2453,7 @@
             },
             {
               "key": "totals",
-              "last_update": "2026-09-02T14:21:06Z",
+              "last_update": "2026-09-03T14:24:45Z",
               "outcomes": [
                 {
                   "name": "Over",
@@ -2472,11 +2472,11 @@
         {
           "key": "bovada",
           "title": "Bovada",
-          "last_update": "2026-09-02T14:19:56Z",
+          "last_update": "2026-09-03T14:24:49Z",
           "markets": [
             {
               "key": "h2h",
-              "last_update": "2026-09-02T14:19:56Z",
+              "last_update": "2026-09-03T14:24:49Z",
               "outcomes": [
                 {
                   "name": "Golden State Warriors",
@@ -2490,7 +2490,7 @@
             },
             {
               "key": "spreads",
-              "last_update": "2026-09-02T14:19:56Z",
+              "last_update": "2026-09-03T14:24:49Z",
               "outcomes": [
                 {
                   "name": "Golden State Warriors",
@@ -2506,7 +2506,7 @@
             },
             {
               "key": "totals",
-              "last_update": "2026-09-02T14:19:56Z",
+              "last_update": "2026-09-03T14:24:49Z",
               "outcomes": [
                 {
                   "name": "Over",
@@ -2525,11 +2525,11 @@
         {
           "key": "betmgm",
           "title": "BetMGM",
-          "last_update": "2026-09-02T14:20:36Z",
+          "last_update": "2026-09-03T14:24:41Z",
           "markets": [
             {
               "key": "h2h",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:41Z",
               "outcomes": [
                 {
                   "name": "Golden State Warriors",
@@ -2543,7 +2543,7 @@
             },
             {
               "key": "spreads",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:41Z",
               "outcomes": [
                 {
                   "name": "Golden State Warriors",
@@ -2559,7 +2559,7 @@
             },
             {
               "key": "totals",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:41Z",
               "outcomes": [
                 {
                   "name": "Over",
@@ -2594,11 +2594,11 @@
         {
           "key": "draftkings",
           "title": "DraftKings",
-          "last_update": "2026-09-02T14:20:36Z",
+          "last_update": "2026-09-03T14:24:15Z",
           "markets": [
             {
               "key": "h2h",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Phoenix Suns",
@@ -2612,7 +2612,7 @@
             },
             {
               "key": "spreads",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Phoenix Suns",
@@ -2628,7 +2628,7 @@
             },
             {
               "key": "totals",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Over",
@@ -2647,11 +2647,11 @@
         {
           "key": "bovada",
           "title": "Bovada",
-          "last_update": "2026-09-02T14:19:56Z",
+          "last_update": "2026-09-03T14:24:49Z",
           "markets": [
             {
               "key": "h2h",
-              "last_update": "2026-09-02T14:19:56Z",
+              "last_update": "2026-09-03T14:24:49Z",
               "outcomes": [
                 {
                   "name": "Phoenix Suns",
@@ -2665,7 +2665,7 @@
             },
             {
               "key": "spreads",
-              "last_update": "2026-09-02T14:19:56Z",
+              "last_update": "2026-09-03T14:24:49Z",
               "outcomes": [
                 {
                   "name": "Phoenix Suns",
@@ -2681,7 +2681,7 @@
             },
             {
               "key": "totals",
-              "last_update": "2026-09-02T14:19:56Z",
+              "last_update": "2026-09-03T14:24:49Z",
               "outcomes": [
                 {
                   "name": "Over",
@@ -2700,11 +2700,11 @@
         {
           "key": "betmgm",
           "title": "BetMGM",
-          "last_update": "2026-09-02T14:20:36Z",
+          "last_update": "2026-09-03T14:24:41Z",
           "markets": [
             {
               "key": "h2h",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:41Z",
               "outcomes": [
                 {
                   "name": "Phoenix Suns",
@@ -2718,7 +2718,7 @@
             },
             {
               "key": "spreads",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:41Z",
               "outcomes": [
                 {
                   "name": "Phoenix Suns",
@@ -2734,7 +2734,7 @@
             },
             {
               "key": "totals",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:41Z",
               "outcomes": [
                 {
                   "name": "Over",
@@ -2769,64 +2769,11 @@
         {
           "key": "draftkings",
           "title": "DraftKings",
-          "last_update": "2026-09-02T14:20:36Z",
+          "last_update": "2026-09-03T14:24:15Z",
           "markets": [
             {
               "key": "h2h",
-              "last_update": "2026-09-02T14:20:36Z",
-              "outcomes": [
-                {
-                  "name": "Cleveland Cavaliers",
-                  "price": 142
-                },
-                {
-                  "name": "Philadelphia 76ers",
-                  "price": -170
-                }
-              ]
-            },
-            {
-              "key": "spreads",
-              "last_update": "2026-09-02T14:20:36Z",
-              "outcomes": [
-                {
-                  "name": "Cleveland Cavaliers",
-                  "price": -110,
-                  "point": 4.5
-                },
-                {
-                  "name": "Philadelphia 76ers",
-                  "price": -110,
-                  "point": -4.5
-                }
-              ]
-            },
-            {
-              "key": "totals",
-              "last_update": "2026-09-02T14:20:36Z",
-              "outcomes": [
-                {
-                  "name": "Over",
-                  "price": -105,
-                  "point": 234.5
-                },
-                {
-                  "name": "Under",
-                  "price": -115,
-                  "point": 234.5
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "key": "betmgm",
-          "title": "BetMGM",
-          "last_update": "2026-09-02T14:20:36Z",
-          "markets": [
-            {
-              "key": "h2h",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Cleveland Cavaliers",
@@ -2840,7 +2787,7 @@
             },
             {
               "key": "spreads",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Cleveland Cavaliers",
@@ -2856,7 +2803,60 @@
             },
             {
               "key": "totals",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "price": -115,
+                  "point": 233.5
+                },
+                {
+                  "name": "Under",
+                  "price": -105,
+                  "point": 233.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "betmgm",
+          "title": "BetMGM",
+          "last_update": "2026-09-03T14:24:41Z",
+          "markets": [
+            {
+              "key": "h2h",
+              "last_update": "2026-09-03T14:24:41Z",
+              "outcomes": [
+                {
+                  "name": "Cleveland Cavaliers",
+                  "price": 145
+                },
+                {
+                  "name": "Philadelphia 76ers",
+                  "price": -175
+                }
+              ]
+            },
+            {
+              "key": "spreads",
+              "last_update": "2026-09-03T14:24:41Z",
+              "outcomes": [
+                {
+                  "name": "Cleveland Cavaliers",
+                  "price": -110,
+                  "point": 4.5
+                },
+                {
+                  "name": "Philadelphia 76ers",
+                  "price": -110,
+                  "point": -4.5
+                }
+              ]
+            },
+            {
+              "key": "totals",
+              "last_update": "2026-09-03T14:24:41Z",
               "outcomes": [
                 {
                   "name": "Over",
@@ -2891,11 +2891,11 @@
         {
           "key": "draftkings",
           "title": "DraftKings",
-          "last_update": "2026-09-02T14:20:36Z",
+          "last_update": "2026-09-03T14:24:15Z",
           "markets": [
             {
               "key": "h2h",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Denver Nuggets",
@@ -2909,7 +2909,7 @@
             },
             {
               "key": "spreads",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Denver Nuggets",
@@ -2925,7 +2925,7 @@
             },
             {
               "key": "totals",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Over",
@@ -2944,11 +2944,11 @@
         {
           "key": "betmgm",
           "title": "BetMGM",
-          "last_update": "2026-09-02T14:20:36Z",
+          "last_update": "2026-09-03T14:24:41Z",
           "markets": [
             {
               "key": "h2h",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:41Z",
               "outcomes": [
                 {
                   "name": "Denver Nuggets",
@@ -2962,7 +2962,7 @@
             },
             {
               "key": "spreads",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:41Z",
               "outcomes": [
                 {
                   "name": "Denver Nuggets",
@@ -2978,7 +2978,7 @@
             },
             {
               "key": "totals",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:41Z",
               "outcomes": [
                 {
                   "name": "Over",
@@ -3013,11 +3013,11 @@
         {
           "key": "draftkings",
           "title": "DraftKings",
-          "last_update": "2026-09-02T14:20:36Z",
+          "last_update": "2026-09-03T14:24:15Z",
           "markets": [
             {
               "key": "h2h",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Boston Celtics",
@@ -3031,7 +3031,7 @@
             },
             {
               "key": "spreads",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Boston Celtics",
@@ -3047,7 +3047,7 @@
             },
             {
               "key": "totals",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Over",
@@ -3082,11 +3082,11 @@
         {
           "key": "draftkings",
           "title": "DraftKings",
-          "last_update": "2026-09-02T14:20:36Z",
+          "last_update": "2026-09-03T14:24:15Z",
           "markets": [
             {
               "key": "h2h",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Houston Rockets",
@@ -3100,7 +3100,7 @@
             },
             {
               "key": "spreads",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Houston Rockets",
@@ -3116,7 +3116,7 @@
             },
             {
               "key": "totals",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Over",
@@ -3151,11 +3151,11 @@
         {
           "key": "draftkings",
           "title": "DraftKings",
-          "last_update": "2026-09-02T14:20:36Z",
+          "last_update": "2026-09-03T14:24:15Z",
           "markets": [
             {
               "key": "h2h",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Charlotte Hornets",
@@ -3169,7 +3169,7 @@
             },
             {
               "key": "spreads",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Charlotte Hornets",
@@ -3185,7 +3185,7 @@
             },
             {
               "key": "totals",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Over",
@@ -3220,11 +3220,11 @@
         {
           "key": "draftkings",
           "title": "DraftKings",
-          "last_update": "2026-09-02T14:20:36Z",
+          "last_update": "2026-09-03T14:24:15Z",
           "markets": [
             {
               "key": "h2h",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Boston Celtics",
@@ -3238,7 +3238,7 @@
             },
             {
               "key": "spreads",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Boston Celtics",
@@ -3254,7 +3254,7 @@
             },
             {
               "key": "totals",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Over",
@@ -3289,11 +3289,11 @@
         {
           "key": "draftkings",
           "title": "DraftKings",
-          "last_update": "2026-09-02T14:20:36Z",
+          "last_update": "2026-09-03T14:24:15Z",
           "markets": [
             {
               "key": "h2h",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Brooklyn Nets",
@@ -3307,7 +3307,7 @@
             },
             {
               "key": "spreads",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Brooklyn Nets",
@@ -3323,7 +3323,7 @@
             },
             {
               "key": "totals",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Over",
@@ -3358,11 +3358,11 @@
         {
           "key": "draftkings",
           "title": "DraftKings",
-          "last_update": "2026-09-02T14:20:36Z",
+          "last_update": "2026-09-03T14:24:15Z",
           "markets": [
             {
               "key": "h2h",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "New York Knicks",
@@ -3376,23 +3376,23 @@
             },
             {
               "key": "spreads",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "New York Knicks",
-                  "price": -105,
-                  "point": 1.5
+                  "price": -115,
+                  "point": 2.5
                 },
                 {
                   "name": "Philadelphia 76ers",
-                  "price": -115,
-                  "point": -1.5
+                  "price": -105,
+                  "point": -2.5
                 }
               ]
             },
             {
               "key": "totals",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Over",
@@ -3427,11 +3427,11 @@
         {
           "key": "draftkings",
           "title": "DraftKings",
-          "last_update": "2026-09-02T14:20:36Z",
+          "last_update": "2026-09-03T14:24:15Z",
           "markets": [
             {
               "key": "h2h",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Dallas Mavericks",
@@ -3445,7 +3445,7 @@
             },
             {
               "key": "spreads",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Dallas Mavericks",
@@ -3461,7 +3461,7 @@
             },
             {
               "key": "totals",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Over",
@@ -3496,11 +3496,11 @@
         {
           "key": "draftkings",
           "title": "DraftKings",
-          "last_update": "2026-09-02T14:20:36Z",
+          "last_update": "2026-09-03T14:24:15Z",
           "markets": [
             {
               "key": "h2h",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Indiana Pacers",
@@ -3514,7 +3514,7 @@
             },
             {
               "key": "spreads",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Indiana Pacers",
@@ -3530,17 +3530,17 @@
             },
             {
               "key": "totals",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Over",
-                  "price": -105,
-                  "point": 242.5
+                  "price": -115,
+                  "point": 241.5
                 },
                 {
                   "name": "Under",
-                  "price": -115,
-                  "point": 242.5
+                  "price": -105,
+                  "point": 241.5
                 }
               ]
             }
@@ -3565,11 +3565,11 @@
         {
           "key": "draftkings",
           "title": "DraftKings",
-          "last_update": "2026-09-02T14:20:36Z",
+          "last_update": "2026-09-03T14:24:15Z",
           "markets": [
             {
               "key": "h2h",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Denver Nuggets",
@@ -3583,7 +3583,7 @@
             },
             {
               "key": "spreads",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Denver Nuggets",
@@ -3599,7 +3599,7 @@
             },
             {
               "key": "totals",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Over",
@@ -3634,11 +3634,11 @@
         {
           "key": "draftkings",
           "title": "DraftKings",
-          "last_update": "2026-09-02T14:20:36Z",
+          "last_update": "2026-09-03T14:24:15Z",
           "markets": [
             {
               "key": "h2h",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Golden State Warriors",
@@ -3652,7 +3652,7 @@
             },
             {
               "key": "spreads",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Golden State Warriors",
@@ -3668,7 +3668,7 @@
             },
             {
               "key": "totals",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Over",
@@ -3703,25 +3703,25 @@
         {
           "key": "draftkings",
           "title": "DraftKings",
-          "last_update": "2026-09-02T14:20:36Z",
+          "last_update": "2026-09-03T14:24:15Z",
           "markets": [
             {
               "key": "h2h",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Cleveland Cavaliers",
-                  "price": -120
+                  "price": -122
                 },
                 {
                   "name": "Philadelphia 76ers",
-                  "price": 100
+                  "price": 102
                 }
               ]
             },
             {
               "key": "spreads",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Cleveland Cavaliers",
@@ -3737,17 +3737,17 @@
             },
             {
               "key": "totals",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Over",
-                  "price": -105,
-                  "point": 234.5
+                  "price": -115,
+                  "point": 233.5
                 },
                 {
                   "name": "Under",
-                  "price": -115,
-                  "point": 234.5
+                  "price": -105,
+                  "point": 233.5
                 }
               ]
             }
@@ -3772,11 +3772,11 @@
         {
           "key": "draftkings",
           "title": "DraftKings",
-          "last_update": "2026-09-02T14:20:36Z",
+          "last_update": "2026-09-03T14:24:15Z",
           "markets": [
             {
               "key": "h2h",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Los Angeles Lakers",
@@ -3790,7 +3790,7 @@
             },
             {
               "key": "spreads",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Los Angeles Lakers",
@@ -3806,7 +3806,7 @@
             },
             {
               "key": "totals",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Over",
@@ -3841,11 +3841,11 @@
         {
           "key": "draftkings",
           "title": "DraftKings",
-          "last_update": "2026-09-02T14:20:36Z",
+          "last_update": "2026-09-03T14:24:15Z",
           "markets": [
             {
               "key": "h2h",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Indiana Pacers",
@@ -3859,7 +3859,7 @@
             },
             {
               "key": "spreads",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Indiana Pacers",
@@ -3875,7 +3875,7 @@
             },
             {
               "key": "totals",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Over",
@@ -3910,11 +3910,11 @@
         {
           "key": "draftkings",
           "title": "DraftKings",
-          "last_update": "2026-09-02T14:20:36Z",
+          "last_update": "2026-09-03T14:24:15Z",
           "markets": [
             {
               "key": "h2h",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Golden State Warriors",
@@ -3928,7 +3928,7 @@
             },
             {
               "key": "spreads",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Golden State Warriors",
@@ -3944,7 +3944,7 @@
             },
             {
               "key": "totals",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Over",
@@ -3979,11 +3979,11 @@
         {
           "key": "draftkings",
           "title": "DraftKings",
-          "last_update": "2026-09-02T14:20:36Z",
+          "last_update": "2026-09-03T14:24:15Z",
           "markets": [
             {
               "key": "h2h",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Denver Nuggets",
@@ -3997,7 +3997,7 @@
             },
             {
               "key": "spreads",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Denver Nuggets",
@@ -4013,7 +4013,7 @@
             },
             {
               "key": "totals",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Over",
@@ -4048,11 +4048,11 @@
         {
           "key": "draftkings",
           "title": "DraftKings",
-          "last_update": "2026-09-02T14:20:36Z",
+          "last_update": "2026-09-03T14:24:15Z",
           "markets": [
             {
               "key": "h2h",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Boston Celtics",
@@ -4066,7 +4066,7 @@
             },
             {
               "key": "spreads",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Boston Celtics",
@@ -4082,7 +4082,7 @@
             },
             {
               "key": "totals",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Over",
@@ -4117,11 +4117,11 @@
         {
           "key": "draftkings",
           "title": "DraftKings",
-          "last_update": "2026-09-02T14:20:36Z",
+          "last_update": "2026-09-03T14:24:15Z",
           "markets": [
             {
               "key": "h2h",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Dallas Mavericks",
@@ -4135,7 +4135,7 @@
             },
             {
               "key": "spreads",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Dallas Mavericks",
@@ -4151,7 +4151,7 @@
             },
             {
               "key": "totals",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Over",
@@ -4186,11 +4186,11 @@
         {
           "key": "draftkings",
           "title": "DraftKings",
-          "last_update": "2026-09-02T14:20:36Z",
+          "last_update": "2026-09-03T14:24:15Z",
           "markets": [
             {
               "key": "h2h",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Miami Heat",
@@ -4204,7 +4204,7 @@
             },
             {
               "key": "spreads",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Miami Heat",
@@ -4220,7 +4220,7 @@
             },
             {
               "key": "totals",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Over",
@@ -4255,11 +4255,11 @@
         {
           "key": "draftkings",
           "title": "DraftKings",
-          "last_update": "2026-09-02T14:20:36Z",
+          "last_update": "2026-09-03T14:24:15Z",
           "markets": [
             {
               "key": "h2h",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Minnesota Timberwolves",
@@ -4273,7 +4273,7 @@
             },
             {
               "key": "spreads",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Minnesota Timberwolves",
@@ -4289,7 +4289,7 @@
             },
             {
               "key": "totals",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Over",
@@ -4324,11 +4324,11 @@
         {
           "key": "draftkings",
           "title": "DraftKings",
-          "last_update": "2026-09-02T14:20:36Z",
+          "last_update": "2026-09-03T14:24:15Z",
           "markets": [
             {
               "key": "h2h",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Portland Trail Blazers",
@@ -4342,7 +4342,7 @@
             },
             {
               "key": "spreads",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Portland Trail Blazers",
@@ -4358,7 +4358,7 @@
             },
             {
               "key": "totals",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Over",
@@ -4393,25 +4393,25 @@
         {
           "key": "draftkings",
           "title": "DraftKings",
-          "last_update": "2026-09-02T14:20:36Z",
+          "last_update": "2026-09-03T14:24:15Z",
           "markets": [
             {
               "key": "h2h",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Miami Heat",
-                  "price": 160
+                  "price": 164
                 },
                 {
                   "name": "New York Knicks",
-                  "price": -192
+                  "price": -198
                 }
               ]
             },
             {
               "key": "spreads",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Miami Heat",
@@ -4427,17 +4427,17 @@
             },
             {
               "key": "totals",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Over",
-                  "price": -105,
-                  "point": 233.5
+                  "price": -115,
+                  "point": 232.5
                 },
                 {
                   "name": "Under",
-                  "price": -115,
-                  "point": 233.5
+                  "price": -105,
+                  "point": 232.5
                 }
               ]
             }
@@ -4462,11 +4462,11 @@
         {
           "key": "draftkings",
           "title": "DraftKings",
-          "last_update": "2026-09-02T14:20:36Z",
+          "last_update": "2026-09-03T14:24:15Z",
           "markets": [
             {
               "key": "h2h",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Los Angeles Lakers",
@@ -4480,7 +4480,7 @@
             },
             {
               "key": "spreads",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Los Angeles Lakers",
@@ -4496,7 +4496,7 @@
             },
             {
               "key": "totals",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Over",
@@ -4531,11 +4531,11 @@
         {
           "key": "fanduel",
           "title": "FanDuel",
-          "last_update": "2026-09-02T14:21:06Z",
+          "last_update": "2026-09-03T14:24:45Z",
           "markets": [
             {
               "key": "h2h",
-              "last_update": "2026-09-02T14:21:06Z",
+              "last_update": "2026-09-03T14:24:45Z",
               "outcomes": [
                 {
                   "name": "New York Knicks",
@@ -4549,7 +4549,7 @@
             },
             {
               "key": "spreads",
-              "last_update": "2026-09-02T14:21:06Z",
+              "last_update": "2026-09-03T14:24:45Z",
               "outcomes": [
                 {
                   "name": "New York Knicks",
@@ -4565,7 +4565,7 @@
             },
             {
               "key": "totals",
-              "last_update": "2026-09-02T14:21:06Z",
+              "last_update": "2026-09-03T14:24:45Z",
               "outcomes": [
                 {
                   "name": "Over",
@@ -4584,11 +4584,11 @@
         {
           "key": "betrivers",
           "title": "BetRivers",
-          "last_update": "2026-09-02T14:20:37Z",
+          "last_update": "2026-09-03T14:24:43Z",
           "markets": [
             {
               "key": "h2h",
-              "last_update": "2026-09-02T14:20:37Z",
+              "last_update": "2026-09-03T14:24:43Z",
               "outcomes": [
                 {
                   "name": "New York Knicks",
@@ -4602,7 +4602,7 @@
             },
             {
               "key": "spreads",
-              "last_update": "2026-09-02T14:20:37Z",
+              "last_update": "2026-09-03T14:24:43Z",
               "outcomes": [
                 {
                   "name": "New York Knicks",
@@ -4618,7 +4618,7 @@
             },
             {
               "key": "totals",
-              "last_update": "2026-09-02T14:20:37Z",
+              "last_update": "2026-09-03T14:24:43Z",
               "outcomes": [
                 {
                   "name": "Over",
@@ -4637,11 +4637,11 @@
         {
           "key": "draftkings",
           "title": "DraftKings",
-          "last_update": "2026-09-02T14:20:36Z",
+          "last_update": "2026-09-03T14:24:15Z",
           "markets": [
             {
               "key": "h2h",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "New York Knicks",
@@ -4655,7 +4655,7 @@
             },
             {
               "key": "spreads",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "New York Knicks",
@@ -4671,7 +4671,7 @@
             },
             {
               "key": "totals",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Over",
@@ -4690,11 +4690,11 @@
         {
           "key": "betmgm",
           "title": "BetMGM",
-          "last_update": "2026-09-02T14:20:36Z",
+          "last_update": "2026-09-03T14:24:41Z",
           "markets": [
             {
               "key": "h2h",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:41Z",
               "outcomes": [
                 {
                   "name": "New York Knicks",
@@ -4708,7 +4708,7 @@
             },
             {
               "key": "spreads",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:41Z",
               "outcomes": [
                 {
                   "name": "New York Knicks",
@@ -4724,7 +4724,7 @@
             },
             {
               "key": "totals",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:41Z",
               "outcomes": [
                 {
                   "name": "Over",
@@ -4743,11 +4743,11 @@
         {
           "key": "bovada",
           "title": "Bovada",
-          "last_update": "2026-09-02T14:19:56Z",
+          "last_update": "2026-09-03T14:24:49Z",
           "markets": [
             {
               "key": "h2h",
-              "last_update": "2026-09-02T14:19:56Z",
+              "last_update": "2026-09-03T14:24:49Z",
               "outcomes": [
                 {
                   "name": "New York Knicks",
@@ -4761,7 +4761,7 @@
             },
             {
               "key": "spreads",
-              "last_update": "2026-09-02T14:19:56Z",
+              "last_update": "2026-09-03T14:24:49Z",
               "outcomes": [
                 {
                   "name": "New York Knicks",
@@ -4777,7 +4777,7 @@
             },
             {
               "key": "totals",
-              "last_update": "2026-09-02T14:19:56Z",
+              "last_update": "2026-09-03T14:24:49Z",
               "outcomes": [
                 {
                   "name": "Over",
@@ -4812,11 +4812,11 @@
         {
           "key": "fanduel",
           "title": "FanDuel",
-          "last_update": "2026-09-02T14:21:06Z",
+          "last_update": "2026-09-03T14:24:45Z",
           "markets": [
             {
               "key": "h2h",
-              "last_update": "2026-09-02T14:21:06Z",
+              "last_update": "2026-09-03T14:24:45Z",
               "outcomes": [
                 {
                   "name": "Boston Celtics",
@@ -4830,7 +4830,7 @@
             },
             {
               "key": "spreads",
-              "last_update": "2026-09-02T14:21:06Z",
+              "last_update": "2026-09-03T14:24:45Z",
               "outcomes": [
                 {
                   "name": "Boston Celtics",
@@ -4846,7 +4846,7 @@
             },
             {
               "key": "totals",
-              "last_update": "2026-09-02T14:21:06Z",
+              "last_update": "2026-09-03T14:24:45Z",
               "outcomes": [
                 {
                   "name": "Over",
@@ -4865,11 +4865,11 @@
         {
           "key": "betrivers",
           "title": "BetRivers",
-          "last_update": "2026-09-02T14:20:37Z",
+          "last_update": "2026-09-03T14:24:43Z",
           "markets": [
             {
               "key": "h2h",
-              "last_update": "2026-09-02T14:20:37Z",
+              "last_update": "2026-09-03T14:24:43Z",
               "outcomes": [
                 {
                   "name": "Boston Celtics",
@@ -4883,7 +4883,7 @@
             },
             {
               "key": "spreads",
-              "last_update": "2026-09-02T14:20:37Z",
+              "last_update": "2026-09-03T14:24:43Z",
               "outcomes": [
                 {
                   "name": "Boston Celtics",
@@ -4899,7 +4899,7 @@
             },
             {
               "key": "totals",
-              "last_update": "2026-09-02T14:20:37Z",
+              "last_update": "2026-09-03T14:24:43Z",
               "outcomes": [
                 {
                   "name": "Over",
@@ -4918,11 +4918,11 @@
         {
           "key": "draftkings",
           "title": "DraftKings",
-          "last_update": "2026-09-02T14:20:36Z",
+          "last_update": "2026-09-03T14:24:15Z",
           "markets": [
             {
               "key": "h2h",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Boston Celtics",
@@ -4936,7 +4936,7 @@
             },
             {
               "key": "spreads",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Boston Celtics",
@@ -4952,7 +4952,7 @@
             },
             {
               "key": "totals",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Over",
@@ -4971,11 +4971,11 @@
         {
           "key": "betmgm",
           "title": "BetMGM",
-          "last_update": "2026-09-02T14:20:36Z",
+          "last_update": "2026-09-03T14:24:41Z",
           "markets": [
             {
               "key": "h2h",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:41Z",
               "outcomes": [
                 {
                   "name": "Boston Celtics",
@@ -4989,7 +4989,7 @@
             },
             {
               "key": "spreads",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:41Z",
               "outcomes": [
                 {
                   "name": "Boston Celtics",
@@ -5005,7 +5005,7 @@
             },
             {
               "key": "totals",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:41Z",
               "outcomes": [
                 {
                   "name": "Over",
@@ -5024,11 +5024,11 @@
         {
           "key": "bovada",
           "title": "Bovada",
-          "last_update": "2026-09-02T14:19:56Z",
+          "last_update": "2026-09-03T14:24:49Z",
           "markets": [
             {
               "key": "h2h",
-              "last_update": "2026-09-02T14:19:56Z",
+              "last_update": "2026-09-03T14:24:49Z",
               "outcomes": [
                 {
                   "name": "Boston Celtics",
@@ -5042,7 +5042,7 @@
             },
             {
               "key": "spreads",
-              "last_update": "2026-09-02T14:19:56Z",
+              "last_update": "2026-09-03T14:24:49Z",
               "outcomes": [
                 {
                   "name": "Boston Celtics",
@@ -5058,7 +5058,7 @@
             },
             {
               "key": "totals",
-              "last_update": "2026-09-02T14:19:56Z",
+              "last_update": "2026-09-03T14:24:49Z",
               "outcomes": [
                 {
                   "name": "Over",
@@ -5093,11 +5093,11 @@
         {
           "key": "fanduel",
           "title": "FanDuel",
-          "last_update": "2026-09-02T14:21:06Z",
+          "last_update": "2026-09-03T14:24:45Z",
           "markets": [
             {
               "key": "h2h",
-              "last_update": "2026-09-02T14:21:06Z",
+              "last_update": "2026-09-03T14:24:45Z",
               "outcomes": [
                 {
                   "name": "Los Angeles Lakers",
@@ -5111,7 +5111,7 @@
             },
             {
               "key": "spreads",
-              "last_update": "2026-09-02T14:21:06Z",
+              "last_update": "2026-09-03T14:24:45Z",
               "outcomes": [
                 {
                   "name": "Los Angeles Lakers",
@@ -5127,7 +5127,7 @@
             },
             {
               "key": "totals",
-              "last_update": "2026-09-02T14:21:06Z",
+              "last_update": "2026-09-03T14:24:45Z",
               "outcomes": [
                 {
                   "name": "Over",
@@ -5146,11 +5146,11 @@
         {
           "key": "betrivers",
           "title": "BetRivers",
-          "last_update": "2026-09-02T14:20:37Z",
+          "last_update": "2026-09-03T14:24:43Z",
           "markets": [
             {
               "key": "h2h",
-              "last_update": "2026-09-02T14:20:37Z",
+              "last_update": "2026-09-03T14:24:43Z",
               "outcomes": [
                 {
                   "name": "Los Angeles Lakers",
@@ -5164,7 +5164,7 @@
             },
             {
               "key": "spreads",
-              "last_update": "2026-09-02T14:20:37Z",
+              "last_update": "2026-09-03T14:24:43Z",
               "outcomes": [
                 {
                   "name": "Los Angeles Lakers",
@@ -5180,7 +5180,7 @@
             },
             {
               "key": "totals",
-              "last_update": "2026-09-02T14:20:37Z",
+              "last_update": "2026-09-03T14:24:43Z",
               "outcomes": [
                 {
                   "name": "Over",
@@ -5199,11 +5199,11 @@
         {
           "key": "draftkings",
           "title": "DraftKings",
-          "last_update": "2026-09-02T14:20:36Z",
+          "last_update": "2026-09-03T14:24:15Z",
           "markets": [
             {
               "key": "h2h",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Los Angeles Lakers",
@@ -5217,7 +5217,7 @@
             },
             {
               "key": "spreads",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Los Angeles Lakers",
@@ -5233,7 +5233,7 @@
             },
             {
               "key": "totals",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Over",
@@ -5252,11 +5252,11 @@
         {
           "key": "betmgm",
           "title": "BetMGM",
-          "last_update": "2026-09-02T14:20:36Z",
+          "last_update": "2026-09-03T14:24:41Z",
           "markets": [
             {
               "key": "h2h",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:41Z",
               "outcomes": [
                 {
                   "name": "Los Angeles Lakers",
@@ -5270,7 +5270,7 @@
             },
             {
               "key": "spreads",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:41Z",
               "outcomes": [
                 {
                   "name": "Los Angeles Lakers",
@@ -5286,7 +5286,7 @@
             },
             {
               "key": "totals",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:41Z",
               "outcomes": [
                 {
                   "name": "Over",
@@ -5305,11 +5305,11 @@
         {
           "key": "bovada",
           "title": "Bovada",
-          "last_update": "2026-09-02T14:19:56Z",
+          "last_update": "2026-09-03T14:24:49Z",
           "markets": [
             {
               "key": "h2h",
-              "last_update": "2026-09-02T14:19:56Z",
+              "last_update": "2026-09-03T14:24:49Z",
               "outcomes": [
                 {
                   "name": "Los Angeles Lakers",
@@ -5323,7 +5323,7 @@
             },
             {
               "key": "spreads",
-              "last_update": "2026-09-02T14:19:56Z",
+              "last_update": "2026-09-03T14:24:49Z",
               "outcomes": [
                 {
                   "name": "Los Angeles Lakers",
@@ -5339,7 +5339,7 @@
             },
             {
               "key": "totals",
-              "last_update": "2026-09-02T14:19:56Z",
+              "last_update": "2026-09-03T14:24:49Z",
               "outcomes": [
                 {
                   "name": "Over",
@@ -5374,11 +5374,11 @@
         {
           "key": "fanduel",
           "title": "FanDuel",
-          "last_update": "2026-09-02T14:21:06Z",
+          "last_update": "2026-09-03T14:24:45Z",
           "markets": [
             {
               "key": "h2h",
-              "last_update": "2026-09-02T14:21:06Z",
+              "last_update": "2026-09-03T14:24:45Z",
               "outcomes": [
                 {
                   "name": "Minnesota Timberwolves",
@@ -5392,7 +5392,7 @@
             },
             {
               "key": "spreads",
-              "last_update": "2026-09-02T14:21:06Z",
+              "last_update": "2026-09-03T14:24:45Z",
               "outcomes": [
                 {
                   "name": "Minnesota Timberwolves",
@@ -5408,7 +5408,7 @@
             },
             {
               "key": "totals",
-              "last_update": "2026-09-02T14:21:06Z",
+              "last_update": "2026-09-03T14:24:45Z",
               "outcomes": [
                 {
                   "name": "Over",
@@ -5427,11 +5427,11 @@
         {
           "key": "betrivers",
           "title": "BetRivers",
-          "last_update": "2026-09-02T14:20:37Z",
+          "last_update": "2026-09-03T14:24:43Z",
           "markets": [
             {
               "key": "h2h",
-              "last_update": "2026-09-02T14:20:37Z",
+              "last_update": "2026-09-03T14:24:43Z",
               "outcomes": [
                 {
                   "name": "Minnesota Timberwolves",
@@ -5445,7 +5445,7 @@
             },
             {
               "key": "spreads",
-              "last_update": "2026-09-02T14:20:37Z",
+              "last_update": "2026-09-03T14:24:43Z",
               "outcomes": [
                 {
                   "name": "Minnesota Timberwolves",
@@ -5461,7 +5461,7 @@
             },
             {
               "key": "totals",
-              "last_update": "2026-09-02T14:20:37Z",
+              "last_update": "2026-09-03T14:24:43Z",
               "outcomes": [
                 {
                   "name": "Over",
@@ -5480,11 +5480,11 @@
         {
           "key": "draftkings",
           "title": "DraftKings",
-          "last_update": "2026-09-02T14:20:36Z",
+          "last_update": "2026-09-03T14:24:15Z",
           "markets": [
             {
               "key": "h2h",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Minnesota Timberwolves",
@@ -5498,7 +5498,7 @@
             },
             {
               "key": "spreads",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Minnesota Timberwolves",
@@ -5514,7 +5514,7 @@
             },
             {
               "key": "totals",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Over",
@@ -5533,11 +5533,11 @@
         {
           "key": "betmgm",
           "title": "BetMGM",
-          "last_update": "2026-09-02T14:20:36Z",
+          "last_update": "2026-09-03T14:24:41Z",
           "markets": [
             {
               "key": "h2h",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:41Z",
               "outcomes": [
                 {
                   "name": "Minnesota Timberwolves",
@@ -5551,7 +5551,7 @@
             },
             {
               "key": "spreads",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:41Z",
               "outcomes": [
                 {
                   "name": "Minnesota Timberwolves",
@@ -5567,7 +5567,7 @@
             },
             {
               "key": "totals",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:41Z",
               "outcomes": [
                 {
                   "name": "Over",
@@ -5586,11 +5586,11 @@
         {
           "key": "bovada",
           "title": "Bovada",
-          "last_update": "2026-09-02T14:19:56Z",
+          "last_update": "2026-09-03T14:24:49Z",
           "markets": [
             {
               "key": "h2h",
-              "last_update": "2026-09-02T14:19:56Z",
+              "last_update": "2026-09-03T14:24:49Z",
               "outcomes": [
                 {
                   "name": "Minnesota Timberwolves",
@@ -5604,7 +5604,7 @@
             },
             {
               "key": "spreads",
-              "last_update": "2026-09-02T14:19:56Z",
+              "last_update": "2026-09-03T14:24:49Z",
               "outcomes": [
                 {
                   "name": "Minnesota Timberwolves",
@@ -5620,7 +5620,7 @@
             },
             {
               "key": "totals",
-              "last_update": "2026-09-02T14:19:56Z",
+              "last_update": "2026-09-03T14:24:49Z",
               "outcomes": [
                 {
                   "name": "Over",
@@ -5655,11 +5655,11 @@
         {
           "key": "fanduel",
           "title": "FanDuel",
-          "last_update": "2026-09-02T14:21:06Z",
+          "last_update": "2026-09-03T14:24:45Z",
           "markets": [
             {
               "key": "h2h",
-              "last_update": "2026-09-02T14:21:06Z",
+              "last_update": "2026-09-03T14:24:45Z",
               "outcomes": [
                 {
                   "name": "Denver Nuggets",
@@ -5673,7 +5673,7 @@
             },
             {
               "key": "spreads",
-              "last_update": "2026-09-02T14:21:06Z",
+              "last_update": "2026-09-03T14:24:45Z",
               "outcomes": [
                 {
                   "name": "Denver Nuggets",
@@ -5689,7 +5689,7 @@
             },
             {
               "key": "totals",
-              "last_update": "2026-09-02T14:21:06Z",
+              "last_update": "2026-09-03T14:24:45Z",
               "outcomes": [
                 {
                   "name": "Over",
@@ -5708,11 +5708,11 @@
         {
           "key": "betrivers",
           "title": "BetRivers",
-          "last_update": "2026-09-02T14:20:37Z",
+          "last_update": "2026-09-03T14:24:43Z",
           "markets": [
             {
               "key": "h2h",
-              "last_update": "2026-09-02T14:20:37Z",
+              "last_update": "2026-09-03T14:24:43Z",
               "outcomes": [
                 {
                   "name": "Denver Nuggets",
@@ -5726,7 +5726,7 @@
             },
             {
               "key": "spreads",
-              "last_update": "2026-09-02T14:20:37Z",
+              "last_update": "2026-09-03T14:24:43Z",
               "outcomes": [
                 {
                   "name": "Denver Nuggets",
@@ -5742,7 +5742,7 @@
             },
             {
               "key": "totals",
-              "last_update": "2026-09-02T14:20:37Z",
+              "last_update": "2026-09-03T14:24:43Z",
               "outcomes": [
                 {
                   "name": "Over",
@@ -5761,11 +5761,11 @@
         {
           "key": "draftkings",
           "title": "DraftKings",
-          "last_update": "2026-09-02T14:20:36Z",
+          "last_update": "2026-09-03T14:24:15Z",
           "markets": [
             {
               "key": "h2h",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Denver Nuggets",
@@ -5779,7 +5779,7 @@
             },
             {
               "key": "spreads",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Denver Nuggets",
@@ -5795,7 +5795,7 @@
             },
             {
               "key": "totals",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:15Z",
               "outcomes": [
                 {
                   "name": "Over",
@@ -5814,11 +5814,11 @@
         {
           "key": "betmgm",
           "title": "BetMGM",
-          "last_update": "2026-09-02T14:20:36Z",
+          "last_update": "2026-09-03T14:24:41Z",
           "markets": [
             {
               "key": "h2h",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:41Z",
               "outcomes": [
                 {
                   "name": "Denver Nuggets",
@@ -5832,7 +5832,7 @@
             },
             {
               "key": "spreads",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:41Z",
               "outcomes": [
                 {
                   "name": "Denver Nuggets",
@@ -5848,7 +5848,7 @@
             },
             {
               "key": "totals",
-              "last_update": "2026-09-02T14:20:36Z",
+              "last_update": "2026-09-03T14:24:41Z",
               "outcomes": [
                 {
                   "name": "Over",
@@ -5867,11 +5867,11 @@
         {
           "key": "bovada",
           "title": "Bovada",
-          "last_update": "2026-09-02T14:19:56Z",
+          "last_update": "2026-09-03T14:24:49Z",
           "markets": [
             {
               "key": "h2h",
-              "last_update": "2026-09-02T14:19:56Z",
+              "last_update": "2026-09-03T14:24:49Z",
               "outcomes": [
                 {
                   "name": "Denver Nuggets",
@@ -5885,7 +5885,7 @@
             },
             {
               "key": "spreads",
-              "last_update": "2026-09-02T14:19:56Z",
+              "last_update": "2026-09-03T14:24:49Z",
               "outcomes": [
                 {
                   "name": "Denver Nuggets",
@@ -5901,7 +5901,7 @@
             },
             {
               "key": "totals",
-              "last_update": "2026-09-02T14:19:56Z",
+              "last_update": "2026-09-03T14:24:49Z",
               "outcomes": [
                 {
                   "name": "Over",
@@ -5926,5 +5926,5 @@
       }
     }
   ],
-  "last_updated": "2026-09-02 14:21:25.987428"
+  "last_updated": "2026-09-03 14:25:08.569843"
 }
