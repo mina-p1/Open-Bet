@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-03T14:42:33.762056Z",
+  "last_updated": "2026-10-04T15:19:40.343511Z",
   "props": [
     {
       "game_id": "26b036ff107f3c658258eaf4a6f26228",
@@ -521,7 +521,7 @@
       "market": "player_points",
       "player": "Shai Gilgeous-Alexander",
       "line": 29.5,
-      "price": -125,
+      "price": -122,
       "over_under": "Over",
       "prop_prediction": null,
       "edge_vs_line": null
@@ -536,7 +536,7 @@
       "market": "player_points",
       "player": "Shai Gilgeous-Alexander",
       "line": 29.5,
-      "price": -106,
+      "price": -108,
       "over_under": "Under",
       "prop_prediction": null,
       "edge_vs_line": null
@@ -551,7 +551,7 @@
       "market": "player_points",
       "player": "Victor Wembanyama",
       "line": 26.5,
-      "price": 100,
+      "price": -102,
       "over_under": "Over",
       "prop_prediction": null,
       "edge_vs_line": null
@@ -566,7 +566,7 @@
       "market": "player_points",
       "player": "Victor Wembanyama",
       "line": 26.5,
-      "price": -132,
+      "price": -130,
       "over_under": "Under",
       "prop_prediction": null,
       "edge_vs_line": null
@@ -581,7 +581,7 @@
       "market": "player_points_rebounds_assists",
       "player": "Shai Gilgeous-Alexander",
       "line": 40.5,
-      "price": -110,
+      "price": -108,
       "over_under": "Over",
       "prop_prediction": null,
       "edge_vs_line": null
@@ -596,7 +596,7 @@
       "market": "player_points_rebounds_assists",
       "player": "Shai Gilgeous-Alexander",
       "line": 40.5,
-      "price": -120,
+      "price": -122,
       "over_under": "Under",
       "prop_prediction": null,
       "edge_vs_line": null
@@ -611,7 +611,7 @@
       "market": "player_points_rebounds_assists",
       "player": "Victor Wembanyama",
       "line": 40.5,
-      "price": -112,
+      "price": -114,
       "over_under": "Over",
       "prop_prediction": null,
       "edge_vs_line": null
@@ -626,7 +626,7 @@
       "market": "player_points_rebounds_assists",
       "player": "Victor Wembanyama",
       "line": 40.5,
-      "price": -118,
+      "price": -114,
       "over_under": "Under",
       "prop_prediction": null,
       "edge_vs_line": null
@@ -641,7 +641,7 @@
       "market": "player_rebounds",
       "player": "Victor Wembanyama",
       "line": 11.5,
-      "price": 104,
+      "price": 102,
       "over_under": "Over",
       "prop_prediction": null,
       "edge_vs_line": null
@@ -656,7 +656,7 @@
       "market": "player_rebounds",
       "player": "Victor Wembanyama",
       "line": 11.5,
-      "price": -138,
+      "price": -136,
       "over_under": "Under",
       "prop_prediction": null,
       "edge_vs_line": null
