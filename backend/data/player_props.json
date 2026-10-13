@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-12T19:47:54.559340Z",
+  "last_updated": "2026-10-13T17:33:30.598956Z",
   "props": [
     {
       "game_id": "26b036ff107f3c658258eaf4a6f26228",
@@ -461,7 +461,7 @@
       "market": "player_assists",
       "player": "Victor Wembanyama",
       "line": 2.5,
-      "price": -180,
+      "price": -182,
       "over_under": "Over",
       "prop_prediction": null,
       "edge_vs_line": null
